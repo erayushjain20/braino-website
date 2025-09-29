@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braino - AI-Powered Academic Revolution</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0a0a0a;
+            --primary-purple: #6366f1;
+            --primary-cyan: #06b6d4;
+            --primary-pink: #ec4899;
+            --accent-yellow: #fbbf24;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-accent: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-cyber: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--primary-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(ellipse at top, rgba(99, 102, 241, 0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at bottom, rgba(6, 182, 212, 0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at left, rgba(236, 72, 153, 0.2) 0%, transparent 50%);
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
+            50% { opacity: 0.8; transform: scale(1.1) rotate(180deg); }
+        }
+
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Modern Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(20px);
+            background: rgba(10, 10, 10, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--gradient-cyber);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--primary-cyan);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+            transform: translateY(-2px);
+        }
+
+        .nav-links a:hover::before {
+            width: 100%;
+        }
+
+        .cta-nav {
+            background: var(--gradient-primary);
+            border: none;
+            padding: 12px 32px;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .cta-nav::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .cta-nav:hover::before {
+            left: 100%;
+        }
+
+        .cta-nav:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 100px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #a855f7 50%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: textGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes textGlow {
+            from { filter: brightness(1); }
+            to { filter: brightness(1.2); }
+        }
+
+        .hero-text p {
+            font-size: 1.4rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--gradient-accent);
+            border: none;
+            padding: 18px 48px;
+            border-radius: 50px;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 15px 35px rgba(245, 87, 108, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(245, 87, 108, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 16px 46px;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-3px);
+        }
+
+        /* Phone Mockup with Real Screenshots */
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .phone-mockup-3d {
+            width: 340px;
+            height: 680px;
+            background: linear-gradient(135deg, #1e1e1e 0%, #3a3a3a 100%);
+            border-radius: 45px;
+            padding: 15px;
+            position: relative;
+            transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
+            transition: transform 0.5s ease;
+            box-shadow: 
+                0 50px 100px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                inset 0 0 20px rgba(255, 255, 255, 0.05);
+        }
+
+        .phone-mockup-3d:hover {
+            transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1.05);
+        }
+
+        .phone-notch {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 25px;
+            background: #000;
+            border-radius: 0 0 15px 15px;
+            z-index: 10;
+        }
+
+        .phone-screen-container {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: 35px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .screenshot-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .floating-glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: floatGlow 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes floatGlow {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(20px, -20px) scale(1.1); }
+        }
+
+        /* Features Section */
+        .features {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            background: var(--gradient-cyber);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2.5rem;
+            z-index: 2;
+            position: relative;
+        }
+
+        .feature-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3rem 2.5rem;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            border-color: rgba(99, 102, 241, 0.5);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: white;
+            position: relative;
+        }
+
+        .feature-icon::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: var(--gradient-primary);
+            border-radius: 22px;
+            z-index: -1;
+            filter: blur(10px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon::after {
+            opacity: 0.7;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* Multi-Profile Section */
+        .multi-profile {
+            padding: 100px 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .profile-screenshot {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 24px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Snap & Solve Section */
+        .snap-solve {
+            padding: 120px 0;
+            position: relative;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(30, 30, 30, 0.9) 100%);
+        }
+
+        .snap-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .snap-text h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .snap-features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .snap-features li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .snap-features li:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(10px);
+        }
+
+        .snap-features i {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .snap-screenshot-container {
+            position: relative;
+        }
+
+        .snap-screenshot {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 24px;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Academic Focus Section */
+        .academic-focus {
+            padding: 100px 0;
+        }
+
+        .safety-badges {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .safety-badge {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .safety-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .safety-badge:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            border-color: rgba(99, 102, 241, 0.5);
+        }
+
+        .safety-badge:hover::before {
+            transform: scaleX(1);
+        }
+
+        .badge-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.8rem;
+            color: white;
+            position: relative;
+        }
+
+        .badge-icon::after {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            background: var(--gradient-primary);
+            border-radius: 21px;
+            z-index: -1;
+            filter: blur(8px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .safety-badge:hover .badge-icon::after {
+            opacity: 0.6;
+        }
+
+        .safety-badge h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+        }
+
+        .safety-badge p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Interactive Demo */
+        .demo-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3rem;
+            margin: 4rem 0;
+        }
+
+        .demo-input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 1.5rem;
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .demo-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .demo-input:focus {
+            outline: none;
+            border-color: var(--primary-cyan);
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+        }
+
+        .demo-response {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 4rem auto 0;
+        }
+
+        .pricing-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 32px;
+            padding: 3rem 2.5rem;
+            position: relative;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .pricing-card.featured {
+            transform: scale(1.05);
+            border-color: rgba(99, 102, 241, 0.5);
+            box-shadow: 0 30px 60px rgba(99, 102, 241, 0.2);
+        }
+
+        .pricing-card.featured::before {
+            transform: scaleX(1);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+        }
+
+        .pricing-card.featured:hover {
+            transform: translateY(-15px) scale(1.07);
+        }
+
+        .pricing-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .plan-badge {
+            background: var(--gradient-accent);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .plan-name {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-price {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: var(--gradient-cyber);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2rem;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 2.5rem;
+        }
+
+        .plan-features li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .plan-features i {
+            width: 20px;
+            height: 20px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .plan-cta {
+            width: 100%;
+            background: var(--gradient-primary);
+            border: none;
+            padding: 18px;
+            border-radius: 16px;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .plan-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(99, 102, 241, 0.4);
+        }
+
+        /* CTA Section */
+        .final-cta {
+            padding: 120px 0;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+            text-align: center;
+            position: relative;
+        }
+
+        .cta-content h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #667eea 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .mega-cta {
+            background: var(--gradient-accent);
+            border: none;
+            padding: 24px 60px;
+            border-radius: 60px;
+            color: white;
+            font-weight: 800;
+            font-size: 1.3rem;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 20px 40px rgba(245, 87, 108, 0.3);
+        }
+
+        .mega-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .mega-cta:hover::before {
+            left: 100%;
+        }
+
+        .mega-cta:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 30px 60px rgba(245, 87, 108, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 80px 0 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-cyber);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-bottom: 0.75rem;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content,
+            .snap-content,
+            .profile-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 3rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .phone-mockup-3d {
+                width: 280px;
+                height: 560px;
+            }
+
+            .profile-screenshot,
+            .snap-screenshot {
+                margin: 0 auto;
+            }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo-container">
+                <!-- Replace LOGO_IMAGE_URL with your hosted logo image -->
+                <img src="./logo.png" alt="Braino Logo" class="logo-img">
+                <span class="logo">Braino</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#snap-solve">Snap & Solve</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#pricing" class="cta-nav">Get Started</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>The Future of Academic Learning</h1>
+                    <p>Revolutionary AI tutor that adapts to your exact curriculum, grade, and board. From concepts and definitions to derivations and problem-solving, everything explained instantly, keeping you fully focused on studies.</p>
+                    <div class="hero-buttons">
+                        <a href="#pricing" class="btn-primary">Start Learning Revolution</a>
+                        <a href="#features" class="btn-secondary">Discover Features</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-glow"></div>
+                    <div class="phone-mockup-3d">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen-container">
+                            <!-- Replace HOME_SCREEN_IMAGE_URL with Image 1 (home screen) -->
+                            <img src="./home-screen.png" alt="Braino Home Screen" class="screenshot-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Revolutionary AI Features</h2>
+                <p class="section-subtitle">Experience the next generation of personalized academic assistance</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Curriculum Aligned</h3>
+                    <p>Learning content is designed around your child’s class and board, adapting explanations to match their curriculum. From concepts and definitions to problems and derivations, learning stays relevant and closely aligned with school studies.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Academic-Only Focus</h3>
+                    <p>Advanced AI filtering ensures zero distractions. Only curriculum-aligned content with strict subject validation per class and board.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI-Powered Personalization</h3>
+                    <p>Responses automatically adjust to your exact class, board, and learning pattern. Multiple student profiles with individualized experiences.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3>24/7 Availability</h3>
+                    <p>Your personal tutor never sleeps. From basic concepts to quantum mechanics - get instant help anytime, anywhere.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI-Powered Intelligence</h3>
+                    <p>Advanced AI understands your learning patterns and provides targeted help for problem-solving, comprehension, and grammar improvement.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3>Multi-Profile Family</h3>
+                    <p>Perfect for families with multiple students. Individual profiles with grade-specific content and progress tracking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-Profile Section -->
+    <section class="multi-profile">
+        <div class="container">
+            <div class="profile-content">
+                <div class="fade-in">
+                    <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; margin-bottom: 2rem; background: var(--gradient-cyber); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Multiple Profiles Per Account</h2>
+                    <p style="font-size: 1.3rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.6;">Perfect for families with multiple students. Each child gets their own personalized profile with grade-specific content, progress tracking, and curriculum alignment.</p>
+                    <ul style="list-style: none; margin: 2rem 0;">
+                        <li style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; padding: 1rem; background: rgba(255, 255, 255, 0.05); border-radius: 12px;">
+                            <i class="fas fa-user-circle" style="color: var(--primary-cyan); font-size: 1.5rem;"></i>
+                            <span>Individual learning profiles</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; padding: 1rem; background: rgba(255, 255, 255, 0.05); border-radius: 12px;">
+                            <i class="fas fa-graduation-cap" style="color: var(--primary-purple); font-size: 1.5rem;"></i>
+                            <span>Grade and board specific content</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; padding: 1rem; background: rgba(255, 255, 255, 0.05); border-radius: 12px;">
+                            <i class="fas fa-chart-line" style="color: var(--primary-pink); font-size: 1.5rem;"></i>
+                            <span>Separate progress tracking</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fade-in">
+                    <!-- Replace PROFILE_SCREEN_IMAGE_URL with Image 3 (profile selection) -->
+                    <img src="./profile.png" alt="Multiple Student Profiles" class="profile-screenshot">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Snap & Solve Section -->
+    <section class="snap-solve" id="snap-solve">
+        <div class="container">
+            <div class="snap-content">
+                <div class="snap-text">
+                    <h2>Snap & Solve Revolution</h2>
+                    <p style="font-size: 1.3rem; color: var(--text-secondary); margin-bottom: 2rem;">Transform any question into instant learning with our groundbreaking image recognition AI.</p>
+                    
+                    <ul class="snap-features">
+                        <li>
+                            <i class="fas fa-camera"></i>
+                            <span>Photo any question or complex diagram</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-magic"></i>
+                            <span>AI recognizes both text and visual elements</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-bolt"></i>
+                            <span>Instant step-by-step solutions</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Grade-appropriate explanations</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-pencil-alt"></i>
+                            <span>Works with handwritten notes</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="#pricing" class="btn-primary">Experience Snap & Solve</a>
+                </div>
+                
+                <div class="snap-screenshot-container fade-in">
+                    <!-- Replace SNAP_SOLVE_IMAGE_URL with Image 2 (science question with diagram) -->
+                    <img src="./snap-solve.png" alt="Snap & Solve in Action" class="snap-screenshot">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Focus Section -->
+    <section class="academic-focus">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">100% Academic Focus</h2>
+                <p class="section-subtitle">Unlike general chatbots, Braino ensures your child stays academically focused with strict content validation and curriculum alignment.</p>
+            </div>
+            
+            <div class="safety-badges">
+                <div class="safety-badge fade-in">
+                    <div class="badge-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h4>Content Filtered</h4>
+                    <p>Advanced AI filtering blocks all non-academic content</p>
+                </div>
+                <div class="safety-badge fade-in">
+                    <div class="badge-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h4>Curriculum Aligned</h4>
+                    <p>Strict alignment with your specific board and syllabus</p>
+                </div>
+                <div class="safety-badge fade-in">
+                    <div class="badge-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h4>Grade Appropriate</h4>
+                    <p>Responses tailored to your exact academic level</p>
+                </div>
+                <div class="safety-badge fade-in">
+                    <div class="badge-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Progress Tracking</h4>
+                    <p>Monitor learning progress and identify weak areas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo -->
+    <section style="padding: 80px 0; background: rgba(0,0,0,0.5);">
+        <div class="container">
+            <div class="demo-section fade-in">
+                <h3 style="font-size: 2rem; margin-bottom: 1rem; text-align: center;">Try Braino Demo</h3>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">Ask any academic question and see how Braino responds</p>
+                <div style="max-width: 600px; margin: 0 auto;">
+                    <!-- Replace ENGLISH_SCREEN_IMAGE_URL with Image 4 (English explanation) -->
+                    <div style="margin-bottom: 2rem;">
+                        <img src="./text-ans.png" alt="Braino explaining concepts" style="width: 100%; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+                    </div>
+                    <input type="text" class="demo-input" placeholder="E.g., Explain Newton's second law of motion..." id="demoInput">
+                    <div style="text-align: center;">
+                        <button class="btn-primary" onclick="showDemo()" style="display: inline-block; border: none; cursor: pointer;">Ask Braino</button>
+                    </div>
+                    <div class="demo-response" id="demoResponse">
+                        <strong style="color: var(--primary-cyan);">Braino AI:</strong> Excellent question! Newton's second law states that Force = Mass × Acceleration (F = ma). This means the force applied to an object equals its mass multiplied by its acceleration. For your grade level, think of it like pushing a shopping cart - the harder you push (more force), the faster it accelerates. A heavier cart (more mass) needs more force to accelerate at the same rate. Would you like me to show you some practice problems?
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon -->
+    <section style="padding: 80px 0;">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Coming Soon</h2>
+                <p class="section-subtitle">Next-generation AI features launching soon</p>
+            </div>
+            <div class="features-grid" style="max-width: 900px; margin: 0 auto;">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Adaptive AI Quizzes</h3>
+                    <p>Auto-generated quizzes that adapt to your weak topics, powered by advanced AI analysis of your learning patterns and performance.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Smart Recommendations</h3>
+                    <p>AI-powered study recommendations based on your unique learning journey, progress tracking, and academic goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Choose Your Learning Revolution</h2>
+                <p class="section-subtitle">Flexible plans designed for every student's journey</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in">
+                    <div class="plan-badge">Starter</div>
+                    <h3 class="plan-name">Free</h3>
+                    <div class="plan-price">₹0</div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i>5 questions per day</li>
+                        <li><i class="fas fa-check"></i>Basic subjects coverage</li>
+                        <li><i class="fas fa-check"></i>Text-only questions</li>
+                        <li><i class="fas fa-check"></i>1 Image upload & analysis</li>
+                        <li><i class="fas fa-check"></i>Academic-only responses</li>
+                        <li><i class="fas fa-check"></i>Grade-appropriate content</li>
+                    </ul>
+                    <a href="#" class="plan-cta">Start Free</a>
+                </div>
+
+                <div class="pricing-card fade-in">
+                    <div class="plan-badge">Essential</div>
+                    <h3 class="plan-name">Basic</h3>
+                    <div class="plan-price">₹499</div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i>50 questions per day</li>
+                        <li><i class="fas fa-check"></i>All subjects & topics</li>
+                        <li><i class="fas fa-check"></i>10 Image upload & solve (text only)</li>
+                        <li><i class="fas fa-check"></i>Advanced AI model</li>
+                        <li><i class="fas fa-check"></i>2 student profiles</li>
+                        <li><i class="fas fa-check"></i>Detailed explanations</li>
+                    </ul>
+                    <a href="#" class="plan-cta">Choose Basic</a>
+                </div>
+
+                <div class="pricing-card featured fade-in">
+                    <div class="plan-badge">Most Popular</div>
+                    <h3 class="plan-name">Premium</h3>
+                    <div class="plan-price">₹999</div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i>100 questions per day</li>
+                        <li><i class="fas fa-check"></i>All subjects & topics</li>
+                        <li><i class="fas fa-check"></i>20 Image upload & solve (text + diagram)</li>
+                        <li><i class="fas fa-check"></i>Advanced AI model</li>
+                        <li><i class="fas fa-check"></i>Priority Snap & Solve</li>
+                        <li><i class="fas fa-check"></i>Snap & Solve feature</li>
+                        <li><i class="fas fa-check"></i>2 student profiles</li>
+                        <li><i class="fas fa-check"></i>Detailed explanations</li>
+                    </ul>
+                    <a href="#" class="plan-cta">Go Premium</a>
+                </div>
+
+                <div class="pricing-card fade-in">
+                    <div class="plan-badge">Ultimate</div>
+                    <h3 class="plan-name">Family</h3>
+                    <div class="plan-price">₹1999</div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i>200 questions per day</li>
+                        <li><i class="fas fa-check"></i>All subjects & topics</li>
+                        <li><i class="fas fa-check"></i>50 Image upload & analysis</li>
+                        <li><i class="fas fa-check"></i>Advanced AI model</li>
+                        <li><i class="fas fa-check"></i>Priority Snap & Solve</li>
+                        <li><i class="fas fa-check"></i>Snap & Solve feature</li>
+                        <li><i class="fas fa-check"></i>2 student profiles</li>
+                        <li><i class="fas fa-check"></i>Detailed explanations</li>
+                    </ul>
+                    <a href="#" class="plan-cta">Choose Family</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content fade-in">
+                <h2>Ready for Revolutionary Learning?</h2>
+                <p style="font-size: 1.4rem; color: var(--text-secondary); margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">Join thousands of students who've already transformed their academic journey with Braino's AI-powered tutoring revolution.</p>
+                <a href="#pricing" class="mega-cta">Start Your Free Trial Now</a>
+                <p style="font-size: 1rem; color: var(--text-secondary); margin-top: 1.5rem;">No credit card required • Instant setup • Cancel anytime</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Braino</h3>
+                    <p>The world's most advanced AI academic tutor, designed to revolutionize how students learn with personalized, curriculum-aligned responses.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="#" style="display: inline-block; margin-right: 1rem; color: var(--primary-cyan);"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="#" style="display: inline-block; margin-right: 1rem; color: var(--primary-purple);"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" style="display: inline-block; margin-right: 1rem; color: var(--primary-pink);"><i class="fab fa-linkedin fa-2x"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Product</h3>
+                    <a href="#features">Features</a>
+                    <a href="#snap-solve">Snap & Solve</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#">Download App</a>
+                    <a href="#">API Access</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <a href="#">Help Center</a>
+                    <a href="#">Contact Support</a>
+                    <a href="#">Community Forum</a>
+                    <a href="#">Status Page</a>
+                    <a href="#">Bug Reports</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Press Kit</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Braino. All rights reserved. Revolutionizing education with AI • Made with ❤️ for students worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Demo functionality
+        function showDemo() {
+            const input = document.getElementById('demoInput');
+            const response = document.getElementById('demoResponse');
+            
+            if (input.value.trim()) {
+                response.style.display = 'block';
+                response.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        // Enter key for demo
+        document.getElementById('demoInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') showDemo();
+        });
+
+        // Dynamic header
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.style.background = 'rgba(10, 10, 10, 0.95)';
+                header.style.backdropFilter = 'blur(20px)';
+            } else {
+                header.style.background = 'rgba(10, 10, 10, 0.8)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // CTA interactions
+        document.querySelectorAll('.plan-cta, .btn-primary, .mega-cta').forEach(button => {
+            button.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#' || this.getAttribute('href') === '#pricing') {
+                    if (this.getAttribute('href') === '#pricing') return;
+                    
+                    e.preventDefault();
+                    const originalText = this.textContent;
+                    this.textContent = 'Loading...';
+                    this.style.opacity = '0.8';
+                    
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.style.opacity = '1';
+                        alert('🚀 Braino is launching soon! We\'ll notify you when it\'s ready. Thank you for your interest!');
+                    }, 1500);
+                }
+            });
+        });
+
+        // Parallax effect for hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.3;
+            const phone = document.querySelector('.phone-mockup-3d');
+            if (phone && scrolled < window.innerHeight) {
+                phone.style.transform = `perspective(1000px) rotateX(5deg) rotateY(-5deg) translateY(${rate}px)`;
+            }
+        });
+
+        // Initialize
+        console.log('🚀 Braino - Revolutionary AI Learning Platform Loaded!');
+    </script>
+</body>
+</html>
+
+
