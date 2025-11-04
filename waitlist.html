@@ -604,7 +604,9 @@
             googleFormData.append(ENTRY_IDS.phone, formData.get('phone') || '');
             googleFormData.append(ENTRY_IDS.grade, formData.get('grade') || '');
             googleFormData.append(ENTRY_IDS.board, formData.get('board') || '');
-            googleFormData.append(ENTRY_IDS.plan, selectedPlans.join(', ') || '');
+            selectedPlans.forEach(plan => {
+                googleFormData.append(ENTRY_IDS.plan, plan);
+            });
 
             try {
                 // Submit to Google Forms
