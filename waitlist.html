@@ -513,20 +513,12 @@
 
                         <div class="form-group">
                             <label>Interested In</label>
-                            <div class="checkbox-group">
-                                <div class="checkbox-item">
-                                    <input type="checkbox" id="free" name="plan" value="Free Plan">
-                                    <label for="free">Free Plan</label>
-                                </div>
-                                <div class="checkbox-item">
-                                    <input type="checkbox" id="basic" name="plan" value="Basic">
-                                    <label for="basic">Basic Plan (₹499/month)</label>
-                                </div>
-                                <div class="checkbox-item">
-                                    <input type="checkbox" id="premium" name="plan" value="Premium">
-                                    <label for="premium">Premium Plan (₹999/month)</label>
-                                </div>
-                            </div>
+                            <select name="plan">
+                                <option value="">Select Plan</option>
+                                <option value="Free Plan">Free Plan</option>
+                                <option value="Basic">Basic Plan (₹499/month)</option>
+                                <option value="Premium">Premium Plan (₹999/month)</option>
+                            </select>
                         </div>
 
                         <button type="submit" class="submit-btn" id="submitBtn">
@@ -580,55 +572,35 @@
             plan: 'entry.1335124204'
         };
 
+        // Update the form submission:
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             
-            // Disable button
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Joining...';
             errorMessage.style.display = 'none';
-
-            // Get form data
-            const formData = new FormData(form);
             
-            // Get selected plans
-            const selectedPlans = [];
-            document.querySelectorAll('input[name="plan"]:checked').forEach(checkbox => {
-                selectedPlans.push(checkbox.value);
-            });
-
-            // Create Google Forms data
+            const formData = new FormData(form);
             const googleFormData = new FormData();
+            
             googleFormData.append(ENTRY_IDS.name, formData.get('name'));
             googleFormData.append(ENTRY_IDS.email, formData.get('email'));
             googleFormData.append(ENTRY_IDS.phone, formData.get('phone') || '');
             googleFormData.append(ENTRY_IDS.grade, formData.get('grade') || '');
             googleFormData.append(ENTRY_IDS.board, formData.get('board') || '');
-            selectedPlans.forEach(plan => {
-                googleFormData.append(ENTRY_IDS.plan, plan);
-            });
-
+            googleFormData.append(ENTRY_IDS.plan, formData.get('plan') || '');
+            
             try {
-                // Submit to Google Forms
                 await fetch(GOOGLE_FORM_ACTION, {
                     method: 'POST',
-                    body: googleFormData,
-                    mode: 'no-cors' // Important for Google Forms
+                    mode: 'no-cors',
+                    body: googleFormData
                 });
-
-                // Show success message
+                
                 form.style.display = 'none';
                 successMessage.style.display = 'block';
-
-                // Update waitlist count
                 updateWaitlistCount();
-
-                // Optional: Track conversion
-                console.log('Waitlist signup successful');
-
             } catch (error) {
-                // Even if there's an error, Google Forms usually receives the data
-                // Show success anyway (no-cors mode doesn't return response)
                 form.style.display = 'none';
                 successMessage.style.display = 'block';
                 updateWaitlistCount();
