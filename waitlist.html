@@ -411,6 +411,367 @@
                 gap: 1.5rem;
             }
         }
+
+        /* Comparison Section */
+.comparison-section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    background: linear-gradient(135deg, #ffffff 0%, #a855f7 50%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.comparison-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 2.5rem;
+    transition: all 0.4s ease;
+}
+
+.comparison-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.braino-card {
+    border: 2px solid rgba(99, 102, 241, 0.5);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+}
+
+.braino-card:hover {
+    border-color: var(--primary-purple);
+    box-shadow: 0 30px 60px rgba(99, 102, 241, 0.4);
+}
+
+.generic-card {
+    opacity: 0.7;
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-header i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.braino-card .card-header i {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.generic-card .card-header i {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.card-header h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: var(--gradient-accent);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: white;
+}
+
+.badge.generic {
+    background: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.feature-list {
+    list-style: none;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.feature-list i {
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+}
+
+.braino-card .feature-list .fa-check-circle {
+    color: #22c55e;
+}
+
+.generic-card .feature-list .fa-times-circle {
+    color: #ef4444;
+}
+
+.generic-card .feature-list .fa-minus-circle {
+    color: #f59e0b;
+}
+
+.cta-box {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(99, 102, 241, 0.3), transparent);
+    animation: rotate 10s linear infinite;
+}
+
+.cta-box h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-box p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--gradient-accent);
+    color: white;
+    padding: 1.25rem 2.5rem;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 15px 35px rgba(245, 87, 108, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 25px 50px rgba(245, 87, 108, 0.5);
+}
+
+@media (max-width: 968px) {
+    .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .comparison-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .cta-box {
+        padding: 2rem;
+    }
+}
+
+/* Detailed Comparison Tables */
+.detailed-comparison {
+    margin: 4rem 0;
+}
+
+.comparison-table-wrapper {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.table-title {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 2rem;
+    background: var(--gradient-cyber);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.comparison-table {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1.5fr 1.5fr;
+    background: rgba(10, 10, 10, 0.8);
+}
+
+.table-header {
+    background: rgba(99, 102, 241, 0.2);
+}
+
+.table-header .table-cell {
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.table-cell {
+    padding: 1.25rem 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.table-cell.highlight {
+    background: rgba(99, 102, 241, 0.1);
+    border-left: 3px solid var(--primary-purple);
+    font-weight: 600;
+}
+
+.mission-box {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(99, 102, 241, 0.5);
+    border-radius: 24px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+}
+
+.mission-box h3 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.mission-points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.mission-point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mission-point i {
+    font-size: 2.5rem;
+    color: var(--primary-cyan);
+}
+
+.mission-point p {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.mission-statement {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.highlight-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-yellow);
+    margin-bottom: 1rem;
+}
+
+.mission-tagline {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+}
+
+.mission-tagline strong {
+    color: var(--primary-purple);
+}
+
+@media (max-width: 968px) {
+    .table-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .table-cell {
+        padding: 1rem;
+    }
+    
+    .table-header .table-cell:first-child {
+        display: none;
+    }
+    
+    .mission-points {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .comparison-table-wrapper {
+        padding: 1.5rem;
+    }
+}
     </style>
 </head>
 <body>
@@ -544,6 +905,128 @@
             </div>
         </div>
     </section>
+
+    <!-- Comparison Section -->
+<section class="comparison-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Why Braino Stands Apart</h2>
+            <p>Not just another AI chatbot. Built specifically for Indian K-12 students.</p>
+        </div>
+
+        <div class="comparison-grid">
+            <!-- Braino Column -->
+            <div class="comparison-card braino-card">
+                <div class="card-header">
+                    <i class="fas fa-brain"></i>
+                    <h3>Braino</h3>
+                    <span class="badge">Made for Students</span>
+                </div>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> Grade-specific response complexity</li>
+                    <li><i class="fas fa-check-circle"></i> Strict academic focus (no distractions)</li>
+                    <li><i class="fas fa-check-circle"></i> Detailed derivations & step-by-step solutions</li>
+                    <li><i class="fas fa-check-circle"></i> Parent progress tracking & WhatsApp reports - Coming Soon</li>
+                    <li><i class="fas fa-check-circle"></i> Multi-student profiles for families</li>
+                    <li><i class="fas fa-check-circle"></i> Adaptive quizzes for weak areas - Coming Soon</li>
+                </ul>
+            </div>
+
+            <!-- Generic AI Column -->
+            <div class="comparison-card generic-card">
+                <div class="card-header">
+                    <i class="fas fa-robot"></i>
+                    <h3>Generic AI Chatbots</h3>
+                    <span class="badge generic">One-Size-Fits-All</span>
+                </div>
+                <ul class="feature-list">
+                    <li><i class="fas fa-times-circle"></i> Same explanation for all ages</li>
+                    <li><i class="fas fa-times-circle"></i> No academic filtering (distractions possible)</li>
+                    <li><i class="fas fa-times-circle"></i> Often skips important steps</li>
+                    <li><i class="fas fa-times-circle"></i> No parent oversight or tracking</li>
+                    <li><i class="fas fa-times-circle"></i> Single generic experience</li>
+                    <li><i class="fas fa-times-circle"></i> No personalized learning path</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="braino-power-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>The Braino Revolution</h2>
+            <p>Harness the power of India's most advanced AI tutor built for every student, every class, every dream.</p>
+        </div>
+
+        <div class="comparison-grid">
+            <div class="comparison-card braino-card">
+                <div class="card-header">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Braino Power</h3>
+                    <span class="badge">Revolutionary Learning</span>
+                </div>
+
+                <ul class="feature-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Curriculum-Aligned Intelligence:</strong> Every response is tailored to your child’s class and board — keeping explanations perfectly in sync with school-level studies and classroom learning.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Voice-First Learning:</strong> Students can ask any question naturally — no typing, no limits.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Personalized Explanations:</strong> Braino adapts tone, depth, and examples to the student’s learning level.</span>
+                    </li>
+                    
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Knowledge Without Barriers:</strong> Available 24/7, making quality education as accessible as a conversation.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="comparison-card braino-card">
+                <div class="card-header">
+                    <i class="fas fa-infinity"></i>
+                    <h3>The Braino Vision</h3>
+                    <span class="badge">India’s AI Education Revolution</span>
+                </div>
+
+                <ul class="feature-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Built for Bharat:</strong> Designed to reach every child — from metros to small towns — in their own language and context.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Always Improving:</strong> Braino learns from student patterns to suggest smarter, personalized quizzes and learning paths.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Mission:</strong> No child should need a coaching center to learn like a topper.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Driven by India’s Future:</strong> A movement to make learning independent, joyful, and deeply personal.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+        <div class="cta-box">
+            <h3>Be Part of the Braino Revolution</h3>
+            <p>Join our early access waitlist today — because the future of learning begins with you.</p>
+            <a href="#waitlistForm" class="cta-btn">
+                <i class="fas fa-rocket"></i> Join the Revolution
+            </a>
+        </div>
+    </div>
+</section>
+</section>
+
+
 
     <!-- Footer -->
     <div id="footer-placeholder"></div>

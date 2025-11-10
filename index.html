@@ -1336,6 +1336,218 @@
                 font-size: 0.9rem;
             }
         }
+
+        /* Comparison Section */
+.comparison-section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    background: linear-gradient(135deg, #ffffff 0%, #a855f7 50%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.comparison-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 2.5rem;
+    transition: all 0.4s ease;
+}
+
+.comparison-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.braino-card {
+    border: 2px solid rgba(99, 102, 241, 0.5);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+}
+
+.braino-card:hover {
+    border-color: var(--primary-purple);
+    box-shadow: 0 30px 60px rgba(99, 102, 241, 0.4);
+}
+
+.generic-card {
+    opacity: 0.7;
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-header i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.braino-card .card-header i {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.generic-card .card-header i {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.card-header h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: var(--gradient-accent);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: white;
+}
+
+.badge.generic {
+    background: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.feature-list {
+    list-style: none;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.feature-list i {
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+}
+
+.braino-card .feature-list .fa-check-circle {
+    color: #22c55e;
+}
+
+.generic-card .feature-list .fa-times-circle {
+    color: #ef4444;
+}
+
+.generic-card .feature-list .fa-minus-circle {
+    color: #f59e0b;
+}
+
+.cta-box {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(99, 102, 241, 0.3), transparent);
+    animation: rotate 10s linear infinite;
+}
+
+.cta-box h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-box p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--gradient-accent);
+    color: white;
+    padding: 1.25rem 2.5rem;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 15px 35px rgba(245, 87, 108, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 25px 50px rgba(245, 87, 108, 0.5);
+}
+
+@media (max-width: 968px) {
+    .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .comparison-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .cta-box {
+        padding: 2rem;
+    }
+}
     </style>
 </head>
 <body>
@@ -1425,6 +1637,115 @@
             </div>
         </div>
     </section>
+
+    <section class="comparison-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Why Braino Stands Apart</h2>
+            <p>Not just another AI chatbot. Built specifically for Indian K-12 students.</p>
+        </div>
+
+        <div class="comparison-grid">
+            <!-- Braino Column -->
+            <div class="comparison-card braino-card">
+                <div class="card-header">
+                    <i class="fas fa-brain"></i>
+                    <h3>Braino</h3>
+                    <span class="badge">Made for Students</span>
+                </div>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> Delivers grade-specific explanations — adapting tone, depth, and examples to each student’s class level.</li>
+                    <li><i class="fas fa-check-circle"></i> Strict academic focus (no distractions)</li>
+                    <li><i class="fas fa-check-circle"></i> Detailed derivations & step-by-step solutions</li>
+                    <li><i class="fas fa-check-circle"></i> Parent progress tracking & WhatsApp reports - Coming Soon</li>
+                    <li><i class="fas fa-check-circle"></i> Multi-student profiles for families</li>
+                    <li><i class="fas fa-check-circle"></i> Adaptive quizzes for weak areas - Coming Soon</li>
+                </ul>
+            </div>
+
+            <!-- Generic AI Column -->
+            <div class="comparison-card generic-card">
+                <div class="card-header">
+                    <i class="fas fa-robot"></i>
+                    <h3>Generic AI Chatbots</h3>
+                    <span class="badge generic">One-Size-Fits-All</span>
+                </div>
+                <ul class="feature-list">
+                    <li><i class="fas fa-times-circle"></i> Same explanation for all ages</li>
+                    <li><i class="fas fa-times-circle"></i> No academic filtering (distractions possible)</li>
+                    <li><i class="fas fa-times-circle"></i> Often skips important steps</li>
+                    <li><i class="fas fa-times-circle"></i> No parent oversight or tracking</li>
+                    <li><i class="fas fa-times-circle"></i> Single generic experience</li>
+                    <li><i class="fas fa-times-circle"></i> No personalized learning path</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="braino-power-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>The Braino Revolution</h2>
+            <p>Harness the power of India's most advanced AI tutor built for every student, every class, every dream.</p>
+        </div>
+
+        <div class="comparison-grid">
+            <div class="comparison-card braino-card">
+                <div class="card-header">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Braino Power</h3>
+                    <span class="badge">Revolutionary Learning</span>
+                </div>
+
+                <ul class="feature-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Curriculum-Aligned Intelligence:</strong> Every response is tailored to your child’s class and board — keeping explanations perfectly in sync with school-level studies and classroom learning.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Voice-First Learning:</strong> Students can ask any question naturally — no typing, no limits.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Personalized Explanations:</strong> Braino adapts tone, depth, and examples to the student’s learning level.</span>
+                    </li>
+                    
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Knowledge Without Barriers:</strong> Available 24/7, making quality education as accessible as a conversation.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="comparison-card braino-card">
+                <div class="card-header">
+                    <i class="fas fa-infinity"></i>
+                    <h3>The Braino Vision</h3>
+                    <span class="badge">India’s AI Education Revolution</span>
+                </div>
+
+                <ul class="feature-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Built for Bharat:</strong> Designed to reach every child — from metros to small towns — in their own language and context.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Always Improving:</strong> Braino learns from student patterns to suggest smarter, personalized quizzes and learning paths.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Mission:</strong> No child should need a coaching center to learn like a topper.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Driven by India’s Future:</strong> A movement to make learning independent, joyful, and deeply personal.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Features Section -->
     <section class="features" id="features">
@@ -1800,7 +2121,7 @@
         // Uncomment below to enable auto-popup
          setTimeout(() => {
              openModal();
-        }, 3600000);
+        }, 3000);
 
         // Show modal once per session (optional)
         // if (!sessionStorage.getItem('modalShown')) {
