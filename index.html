@@ -9,11 +9,33 @@
     <meta property="og:title" content="Braino – India’s AI Academic Tutor" />
     <meta property="og:description" content="Every child deserves to learn like a topper. Braino personalizes learning for every student." />
     <meta property="og:image" content="https://braino.in/images/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:url" content="https://braino.in" />
     <meta property="og:type" content="website" />
 
     <title>Braino - AI-Powered Academic Revolution</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "name": "Braino AI",
+          "alternateName": "Braino Technologies",
+          "url": "https://braino.in",
+          "logo": "https://braino.in/images/logo.png",
+          "description": "Braino is India’s AI-powered academic tutor that helps students learn like toppers with personalized guidance.",
+          "founder": {
+            "@type": "Person",
+            "name": "Ayush Jain"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/braino-ai/",
+            "https://www.youtube.com/@braino-ai",
+          ]
+        }
+    </script>
+
     <style>
         :root {
             --primary-dark: #0a0a0a;
@@ -2045,11 +2067,36 @@
                 <div class="footer-section">
                     <h3>Braino</h3>
                     <p>The world’s most advanced AI tutor, empowering Bharat’s students with personalized, school-level learning for every board and class.</p>
-                    <div style="margin-top: 1.5rem;">
-                        <a href="#" style="display: inline-block; margin-right: 1rem; color: var(--primary-cyan);"><i class="fab fa-twitter fa-2x"></i></a>
-                        <a href="#" style="display: inline-block; margin-right: 1rem; color: var(--primary-purple);"><i class="fab fa-instagram fa-2x"></i></a>
-                        <a href="#" style="display: inline-block; margin-right: 1rem; color: var(--primary-pink);"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <style>
+                        .social-icon {
+                            transition: all 0.3s ease;
+                        }
+                        .social-icon:hover {
+                            transform: scale(1.18);
+                            filter: drop-shadow(0 0 8px rgba(0,0,0,0.2));
+                        }
+                    </style>
+
+                    <div style="
+                        margin-top: 1.8rem; 
+                        display: flex; 
+                        gap: 1.2rem;
+                    ">
+                        <a href="https://www.linkedin.com/company/braino-ai" 
+                           target="_blank"
+                           class="social-icon"
+                           style="color: #0A66C2;">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+
+                        <a href="https://www.youtube.com/@braino_ai" 
+                           target="_blank"
+                           class="social-icon"
+                           style="color: #FF0000;">
+                            <i class="fab fa-youtube fa-2x"></i>
+                        </a>
                     </div>
+
                 </div>
                 <div class="footer-section">
                     <h3>Product</h3>
@@ -2069,11 +2116,9 @@
                 </div>
                 <div class="footer-section">
                     <h3>Company</h3>
-                    <p style="font-size: 14px; color: #bbb; margin-bottom: 10px;">
+                    <!--<p style="font-size: 14px; color: #bbb; margin-bottom: 10px;">
                          <strong>Ayush Jain</strong><br>
-                            Flat no 128, Tower 2A, Landcraft Golflinks, NH 24, Ghaziabad - 201002
-
-                    </p>
+                    </p>-->
                     <a href="#">About Us</a>
                     <a href="#">Careers</a>
                     <a href="#">Press Kit</a>
