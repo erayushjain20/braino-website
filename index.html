@@ -1590,7 +1590,8 @@
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <a href="#pricing" class="cta-nav">Get Started</a>
+            <!-- <a href="#pricing" class="cta-nav">Get Started</a> -->
+            <a href="https://play.google.com/store/apps/details?id=com.aitutorapp" class="cta-nav">Download App</a>
         </nav>
     </header>
 
@@ -1642,6 +1643,12 @@
                     <div class="hero-buttons">
                         <a href="#pricing" class="btn-primary">Start Learning Revolution</a>
                         <a href="#features" class="btn-secondary">Discover Features</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.aitutorapp" 
+       style="margin-top: 1rem; display: inline-block;">
+        <img src="images/google-play-badge.png" 
+             alt="Get it on Google Play" 
+             style="height: 48px;">
+    </a>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -1992,7 +1999,7 @@
                         <li><i class="fas fa-check"></i>Academic-only responses</li>
                         <li><i class="fas fa-check"></i>Grade-appropriate content</li>
                     </ul>
-                    <a href="#" class="plan-cta">Start Free</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.aitutorapp" class="plan-cta">Start Free</a>
                 </div>
 
                 <div class="pricing-card fade-in">
@@ -2008,7 +2015,7 @@
                         <li><i class="fas fa-check"></i>Detailed explanations</li>
                         
                     </ul>
-                    <a href="#" class="plan-cta">Choose Basic</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.aitutorapp" class="plan-cta">Choose Basic</a>
                 </div>
 
                 <div class="pricing-card featured fade-in">
@@ -2016,16 +2023,14 @@
                     <h3 class="plan-name">Premium</h3>
                     <div class="plan-price">₹999</div>
                     <ul class="plan-features">
-                        <li><i class="fas fa-check"></i>50 questions per day</li>
+                        <li><i class="fas fa-check"></i>100 questions per day</li>
                         <li><i class="fas fa-check"></i>All subjects</li>
                         <li><i class="fas fa-check"></i>20 Image upload & solve</li>
                         <li><i class="fas fa-check"></i>Advanced AI model</li>
-                        <li><i class="fas fa-check"></i>Priority Snap & Solve</li>
-                        <li><i class="fas fa-check"></i>Snap & Solve feature</li>
                         <li><i class="fas fa-check"></i>2 student profiles</li>
                         <li><i class="fas fa-check"></i>Detailed explanations</li>
                     </ul>
-                    <a href="#" class="plan-cta">Go Premium</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.aitutorapp" class="plan-cta">Go Premium</a>
                 </div>
 
                 <!-- <div class="pricing-card fade-in">
@@ -2055,6 +2060,17 @@
                 <h2>Ready to Revolutionary Learning?</h2>
                 <p style="font-size: 1.4rem; color: var(--text-secondary); margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">Join thousands of students who've already transformed their academic journey with Braino's AI-powered tutoring revolution.</p>
                 <a href="#pricing" class="mega-cta">Start Your Free Trial Now</a>
+                <div style="margin-top: 2.2rem; text-align: center;">
+    <a href="https://play.google.com/store/apps/details?id=com.aitutorapp"
+       style="display: inline-block;">
+        <img src="images/google-play-badge.png" 
+             alt="Download on Play Store"
+             style="
+                height: 88px; 
+                filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.15));
+             ">
+    </a>
+</div>
                 <p style="font-size: 1rem; color: var(--text-secondary); margin-top: 1.5rem;">No credit card required • Instant setup • Cancel anytime</p>
             </div>
         </div>
@@ -2082,6 +2098,12 @@
                         display: flex; 
                         gap: 1.2rem;
                     ">
+                        <a href="https://play.google.com/store/apps/details?id=com.aitutorapp">
+        <img src="images/google-play-badge.png"
+             alt="Download on Play Store"
+             style="height: 36px;">
+    </a>
+
                         <a href="https://www.linkedin.com/company/braino-ai" 
                            target="_blank"
                            class="social-icon"
@@ -2103,7 +2125,7 @@
                     <a href="#features">Features</a>
                     <a href="#snap-solve">Snap & Solve</a>
                     <a href="#pricing">Pricing</a>
-                    <a href="#">Download App</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.aitutorapp">Download App</a>
                     <a href="#">API Access</a>
                 </div>
                 <div class="footer-section">
@@ -2164,9 +2186,9 @@
 
         // Auto-open modal after 3 seconds (optional)
         // Uncomment below to enable auto-popup
-         setTimeout(() => {
-             openModal();
-        }, 3000);
+        // setTimeout(() => {
+        //     openModal();
+        // }, 3000);
 
         // Show modal once per session (optional)
         // if (!sessionStorage.getItem('modalShown')) {
@@ -2238,7 +2260,7 @@
         });
 
         // CTA interactions
-        document.querySelectorAll('.plan-cta, .btn-primary, .mega-cta').forEach(button => {
+        document.querySelectorAll('.btn-primary, .mega-cta').forEach(button => {
             button.addEventListener('click', function(e) {
                 if (this.getAttribute('href') === '#' || this.getAttribute('href') === '#pricing') {
                     if (this.getAttribute('href') === '#pricing') return;
