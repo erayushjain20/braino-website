@@ -722,6 +722,37 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
+                // --- MOBILE MENU LOGIC STARTS HERE ---
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        if(menuBtn && navLinks) {
+            const icon = menuBtn.querySelector('i');
+            
+            // Toggle Menu
+            menuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                
+                // Toggle Icon
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // Close menu when clicking a link
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+        }
+        // --- MOBILE MENU LOGIC ENDS HERE ---
             });
     </script>
 
