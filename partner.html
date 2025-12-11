@@ -7,730 +7,352 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <title>Partner & Educator Program - Braino</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
     <style>
         :root {
-            --primary-dark: #0a0a0a;
-            --primary-purple: #6366f1;
-            --primary-cyan: #06b6d4;
-            --primary-pink: #ec4899;
-            --accent-yellow: #fbbf24;
-            --glass-bg: rgba(255, 255, 255, 0.1);
-            --glass-border: rgba(255, 255, 255, 0.2);
-            --text-primary: #ffffff;
-            --text-secondary: rgba(255, 255, 255, 0.8);
-            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-accent: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --gradient-cyber: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            /* --- COPYING THE CORE PALETTE FROM INDEX --- */
+            --color-trust: #1e293b; 
+            --color-trust-dark: #0f172a;
+            --color-curiosity: #06b6d4;
+            --color-curiosity-hover: #0891b2;
+            --color-success: #22c55e;
+            --color-bg: #f8fafc;
+            --color-surface: #ffffff;
+            --color-border: #e2e8f0;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-pill: 999px;
+            --shadow-card: 0 10px 30px -5px rgba(0,0,0,0.08);
+            --shadow-curiosity: 0 10px 30px -5px rgba(6, 182, 212, 0.3);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: var(--primary-dark);
-            color: var(--text-primary);
-            overflow-x: hidden;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--color-bg);
+            color: var(--text-main);
             line-height: 1.6;
         }
 
-        .animated-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: 
-                radial-gradient(ellipse at top, rgba(99, 102, 241, 0.3) 0%, transparent 50%),
-                radial-gradient(ellipse at bottom, rgba(6, 182, 212, 0.3) 0%, transparent 50%),
-                radial-gradient(ellipse at left, rgba(236, 72, 153, 0.2) 0%, transparent 50%);
-            animation: gradientShift 15s ease infinite;
-        }
-
-        @keyframes gradientShift {
-            0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
-            50% { opacity: 0.8; transform: scale(1.1) rotate(180deg); }
-        }
-
-        .glass {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-        }
-
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1.5rem;
         }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 0;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding-left: 2rem;
-            padding-right: 2rem;
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: 800;
-            background: var(--gradient-cyber);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--text-primary);
-        }
-
-        .cta-nav {
-            background: var(--gradient-primary);
-            border: none;
-            padding: 12px 32px;
-            border-radius: 50px;
-            color: white;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .cta-nav:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.4);
-        }
-
-        /* Hero Section */
-        .hero-section {
-            padding: 180px 0 120px;
-            text-align: center;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            padding: 0.75rem 1.5rem;
-            border-radius: 50px;
-            margin-bottom: 2rem;
-            font-size: 1rem;
-            font-weight: 600;
-        }
-
-        .hero-title {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #ffffff 0%, #a855f7 50%, #06b6d4 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            color: var(--text-secondary);
-            max-width: 700px;
-            margin: 0 auto 3rem;
-        }
-
-        .hero-commission {
-            display: inline-flex;
-            align-items: center;
-            gap: 1rem;
-            background: var(--gradient-primary);
-            padding: 1.5rem 3rem;
-            border-radius: 20px;
-            font-size: 1.8rem;
-            font-weight: 900;
-            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.4);
-            margin-bottom: 2rem;
-        }
-
-        .warning-banner {
-            display: inline-flex;
-            align-items: center;
-            gap: 1rem;
-            background: linear-gradient(135deg, rgba(251, 191, 36, 0.2) 0%, rgba(245, 158, 11, 0.2) 100%);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(251, 191, 36, 0.3);
-            padding: 1rem 2rem;
-            border-radius: 16px;
-            margin-top: 2rem;
-        }
-
-        /* Two Column Section */
-        .two-col-section {
-            padding: 100px 0;
-        }
-
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
-            align-items: center;
-        }
-
-        .section-label {
-            font-size: 0.9rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--primary-cyan);
-            margin-bottom: 1rem;
-        }
-
-        .section-heading {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 900;
-            margin-bottom: 1.5rem;
-            background: var(--gradient-cyber);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .section-text {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
-        }
-
-        .roles-showcase {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .role-item {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 2.5rem 2rem;
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .role-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
-            border-color: rgba(99, 102, 241, 0.5);
-        }
-
-        .role-emoji {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-            display: block;
-        }
-
-        .role-name {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .role-desc {
-            color: var(--text-secondary);
-            font-size: 1rem;
-        }
-
-        /* Steps Section */
-        .steps-section {
-            padding: 100px 0;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(30, 30, 30, 0.9) 100%);
-        }
-
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .step-card {
-            position: relative;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .step-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80%;
-            height: 3px;
-            background: var(--gradient-primary);
-            border-radius: 10px;
-        }
-
-        .step-num {
-            width: 70px;
-            height: 70px;
-            margin: 0 auto 1.5rem;
-            background: var(--gradient-accent);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            font-weight: 900;
-            box-shadow: 0 20px 40px rgba(245, 87, 108, 0.4);
-        }
-
-        .step-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .step-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-        }
-
-        .step-desc {
-            color: var(--text-secondary);
-            font-size: 1rem;
-        }
-
-        /* Benefits Section */
-        .benefits-section {
-            padding: 100px 0;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-
-        .benefit-card {
-            display: flex;
-            gap: 2rem;
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 3rem;
-            transition: all 0.4s ease;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
-            border-color: rgba(99, 102, 241, 0.5);
-        }
-
-        .benefit-icon-wrap {
-            width: 90px;
-            height: 90px;
-            background: var(--gradient-primary);
-            border-radius: 22px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            flex-shrink: 0;
-            position: relative;
-        }
-
-        .benefit-icon-wrap::after {
-            content: '';
-            position: absolute;
-            inset: -3px;
-            background: var(--gradient-primary);
-            border-radius: 25px;
-            z-index: -1;
-            filter: blur(15px);
-            opacity: 0.7;
-        }
-
-        .benefit-content h3 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-        }
-
-        .benefit-content p {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        /* Form Section */
-        .form-section {
-            padding: 100px 0;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
-        }
-
-        .form-wrapper {
-            max-width: 900px;
-            margin: 4rem auto 0;
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 32px;
-            padding: 4rem;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .form-group {
-            margin-bottom: 2rem;
-        }
-
-        .form-label {
-            display: block;
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-            color: var(--text-primary);
-        }
-
-        .form-input, .form-select, .form-textarea {
-            width: 100%;
-            padding: 1.2rem 1.5rem;
-            border-radius: 16px;
-            border: 1px solid var(--glass-border);
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-primary);
-            font-size: 1rem;
-            font-family: inherit;
-            outline: none;
-            transition: all 0.3s ease;
-        }
-
-        .form-input::placeholder, .form-textarea::placeholder {
-            color: rgba(255, 255, 255, 0.4);
-        }
-
-        .form-input:focus, .form-select:focus, .form-textarea:focus {
-            border-color: var(--primary-cyan);
-            box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        .form-textarea {
-            resize: vertical;
-            min-height: 140px;
-        }
-
-        .submit-btn {
-            width: 100%;
-            background: var(--gradient-accent);
-            border: none;
-            padding: 1.5rem 3rem;
-            border-radius: 18px;
-            color: white;
-            font-weight: 800;
-            font-size: 1.3rem;
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 15px 35px rgba(245, 87, 108, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 25px 50px rgba(245, 87, 108, 0.5);
-        }
-
-        /* Terms Section */
-        .terms-section {
-            padding: 100px 0;
-        }
-
-        .terms-box {
-            max-width: 1000px;
-            margin: 3rem auto 0;
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 3rem;
-        }
-
-        .terms-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--primary-cyan);
-        }
-
-        .terms-list {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            line-height: 2;
-        }
-
-        /* Contact CTA */
-        .contact-cta {
-            padding: 100px 0;
-            text-align: center;
-        }
-
-        .contact-box {
-            max-width: 700px;
-            margin: 3rem auto;
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 3rem;
-            transition: all 0.3s ease;
-        }
-
-        .contact-box:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
-        }
-
-        .contact-emoji {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-heading {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .contact-email {
-            font-size: 1.3rem;
-            color: var(--primary-cyan);
-            font-weight: 600;
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .grid-2 {
-                grid-template-columns: 1fr;
-                gap: 4rem;
-            }
-
-            .roles-showcase {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .steps-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .roles-showcase, .steps-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .form-wrapper {
-                padding: 2rem;
-            }
-        }
-
+        /* --- Animations --- */
         .fade-in {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(20px);
             transition: all 0.6s ease;
         }
-
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* --- Section Utilities --- */
+        .section-padding { padding: 6rem 0; }
+        
+        .section-header { text-align: center; margin-bottom: 4rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .section-header .badge { 
+            display: inline-block; padding: 0.35rem 1rem; background: #e0f2fe; 
+            color: var(--color-curiosity-hover); font-weight: 700; font-size: 0.85rem; 
+            border-radius: var(--radius-pill); margin-bottom: 1rem;
+        }
+        .section-header h2 { font-size: 2.5rem; font-weight: 800; color: var(--color-trust); margin-bottom: 1rem; }
+        .section-header p { color: var(--text-muted); font-size: 1.1rem; }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 8rem 0 4rem;
+            text-align: center;
+            background: white;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            color: var(--color-trust);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        
+        .hero h1 span { color: var(--color-curiosity); }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .commission-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--color-trust);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-pill);
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 15px 30px -10px rgba(30, 41, 59, 0.4);
+        }
+
+        /* --- Cards Grid (Who can join) --- */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .role-card {
+            background: var(--color-surface);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-border);
+            text-align: center;
+            transition: 0.3s;
+        }
+        
+        .role-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-curiosity);
+            box-shadow: var(--shadow-card);
+        }
+
+        .role-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .role-card h3 { margin-bottom: 0.5rem; color: var(--color-trust); }
+        .role-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* --- How It Works --- */
+        .steps-section { background: white; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+        
+        .step-card {
+            position: relative;
+            padding: 2rem;
+            text-align: left;
+        }
+
+        .step-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #f1f5f9;
+            line-height: 1;
+            margin-bottom: -1.5rem;
+            position: relative;
+            z-index: 0;
+        }
+        
+        .step-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .step-content h3 { font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--color-trust); }
+        .step-content p { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* --- Form Section --- */
+        .form-container {
+            background: var(--color-surface);
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--color-border);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-trust);
+        }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border-radius: 12px;
+            border: 2px solid var(--color-border);
+            background: #fff;
+            color: var(--text-main);
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            border-color: var(--color-curiosity);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: var(--color-curiosity);
+            color: white;
+            padding: 1rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow-curiosity);
+            transition: 0.2s;
+        }
+        .submit-btn:hover { background: var(--color-curiosity-hover); transform: translateY(-2px); }
+
+        /* --- Terms & Contact --- */
+        .terms-box {
+            background: #f1f5f9;
+            padding: 2rem;
+            border-radius: 16px;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        .terms-box ul { padding-left: 1.5rem; }
+        .terms-box li { margin-bottom: 0.5rem; }
+
+        .contact-cta { text-align: center; margin-top: 4rem; }
+        .contact-email { 
+            color: var(--color-curiosity); 
+            font-weight: 700; 
+            font-size: 1.25rem; 
+            text-decoration: none; 
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .form-grid { grid-template-columns: 1fr; }
+            .form-container { padding: 1.5rem; }
+            .hero h1 { font-size: 2.5rem; }
+        }
     </style>
 </head>
 <body>
-    <div class="animated-bg"></div>
 
     <div id="header-placeholder"></div>
 
     <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="hero-badge">
-                <span>🤝</span>
-                Partner Program
+    <section class="hero">
+        <div class="container fade-in">
+            <div style="margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px; background: #ecfeff; border-radius: 50%; color: var(--color-curiosity); font-size: 1.5rem;">
+                <i class="fas fa-handshake"></i>
             </div>
-            <h1 class="hero-title">Partner & Educator Program</h1>
-            <p class="hero-subtitle">Join Braino's mission to revolutionize education and earn while making an impact</p>
-            <div class="hero-commission">
-                <span>💰</span>
+            <h1>Partner & Educator<br><span>Program</span></h1>
+            <p>Join Braino's mission to revolutionize education in India. Empower students and earn while making a real impact.</p>
+            
+            <div class="commission-pill">
+                <span style="color: #fbbf24; margin-right: 0.5rem;">✨</span>
                 Earn 10% Commission
             </div>
         </div>
     </section>
 
-    <!-- Who Can Join -->
-    <section class="two-col-section" id="who">
+    <!-- Roles Section -->
+    <section class="section-padding" id="who">
         <div class="container">
-            <div class="grid-2">
-                <div class="fade-in">
-                    <div class="section-label">Eligibility</div>
-                    <h2 class="section-heading">Who Can Join?</h2>
-                    <p class="section-text">We're looking for passionate educators, content creators, and community leaders who want to help students access world-class AI tutoring. Whether you're in the classroom or online, there's a place for you in our partner program.</p>
+            <div class="section-header fade-in">
+                <span class="badge">Eligibility</span>
+                <h2>Who Can Join?</h2>
+                <p>We are looking for passionate individuals who care about the future of education.</p>
+            </div>
+
+            <div class="grid-3 fade-in">
+                <div class="role-card">
+                    <span class="role-icon">👨‍🏫</span>
+                    <h3>Teachers</h3>
+                    <p>School & college educators looking to provide extra support to students.</p>
                 </div>
-                <div class="roles-showcase fade-in">
-                    <div class="role-item">
-                        <span class="role-emoji">👨‍🏫</span>
-                        <h3 class="role-name">Teachers</h3>
-                        <p class="role-desc">School & college educators</p>
-                    </div>
-                    <div class="role-item">
-                        <span class="role-emoji">👨‍👩‍👧</span>
-                        <h3 class="role-name">Parents</h3>
-                        <p class="role-desc">Parent communities</p>
-                    </div>
-                    <div class="role-item">
-                        <span class="role-emoji">📹</span>
-                        <h3 class="role-name">YouTubers</h3>
-                        <p class="role-desc">Education content creators</p>
-                    </div>
-                    <div class="role-item">
-                        <span class="role-emoji">📚</span>
-                        <h3 class="role-name">Tutors</h3>
-                        <p class="role-desc">Home & online tutors</p>
-                    </div>
-                    <div class="role-item">
-                        <span class="role-emoji">⭐</span>
-                        <h3 class="role-name">Influencers</h3>
-                        <p class="role-desc">Education influencers</p>
-                    </div>
-                    <div class="role-item">
-                        <span class="role-emoji">🏢</span>
-                        <h3 class="role-name">Institutions</h3>
-                        <p class="role-desc">Coaching centers</p>
-                    </div>
+                <div class="role-card">
+                    <span class="role-icon">📹</span>
+                    <h3>Content Creators</h3>
+                    <p>YouTubers & Influencers making educational content for students.</p>
+                </div>
+                <div class="role-card">
+                    <span class="role-icon">📚</span>
+                    <h3>Tutors</h3>
+                    <p>Private tutors and coaching center owners.</p>
+                </div>
+                <div class="role-card">
+                    <span class="role-icon">👨‍👩‍👧</span>
+                    <h3>Parents</h3>
+                    <p>Active community members in parent groups and forums.</p>
+                </div>
+                <div class="role-card">
+                    <span class="role-icon">🎓</span>
+                    <h3>College Students</h3>
+                    <p>Seniors guiding juniors in their academic journey.</p>
+                </div>
+                <div class="role-card">
+                    <span class="role-icon">🏢</span>
+                    <h3>Institutions</h3>
+                    <p>Small coaching centers wanting to add AI capabilities.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- How It Works -->
-    <section class="steps-section" id="how">
+    <section class="section-padding steps-section" id="how">
         <div class="container">
-            <div style="text-align: center;" class="fade-in">
-                <div class="section-label">Process</div>
-                <h2 class="section-heading">How It Works</h2>
-                <p class="section-text" style="max-width: 700px; margin: 0 auto;">Simple 4-step process to start earning with Braino</p>
+            <div class="section-header fade-in">
+                <span class="badge">Process</span>
+                <h2>How It Works</h2>
+                <p>Simple 4-step process to start earning.</p>
             </div>
-            <div class="steps-grid">
-                <div class="step-card fade-in">
-                    <div class="step-num">1</div>
-                    <div class="step-icon">✍️</div>
-                    <h3 class="step-title">Apply to Join</h3>
-                    <p class="step-desc">Fill the form below with your details</p>
-                </div>
-                <div class="step-card fade-in">
-                    <div class="step-num">2</div>
-                    <div class="step-icon">✅</div>
-                    <h3 class="step-title">Get Approved</h3>
-                    <p class="step-desc">We'll review and contact you within 48 hours</p>
-                </div>
-                <div class="step-card fade-in">
-                    <div class="step-num">3</div>
-                    <div class="step-icon">📢</div>
-                    <h3 class="step-title">Promote Braino</h3>
-                    <p class="step-desc">Share with your audience using your methods</p>
-                </div>
-                <div class="step-card fade-in">
-                    <div class="step-num">4</div>
-                    <div class="step-icon">💵</div>
-                    <h3 class="step-title">Earn Commission</h3>
-                    <p class="step-desc">Get 10% on every paid subscription</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Benefits -->
-    <section class="benefits-section" id="benefits">
-        <div class="container">
-            <div style="text-align: center;" class="fade-in">
-                <div class="section-label">Advantages</div>
-                <h2 class="section-heading">Program Benefits</h2>
-                <p class="section-text" style="max-width: 700px; margin: 0 auto;">Everything you need to succeed as a Braino partner</p>
-            </div>
-            <div class="benefits-grid">
-                <div class="benefit-card fade-in">
-                    <div class="benefit-icon-wrap">💯</div>
-                    <div class="benefit-content">
-                        <h3>10% Commission</h3>
-                        <p>Recurring commission on subscriptions. Earn continuously from every student you refer.</p>
+            <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                <div class="step-card fade-in">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Apply to Join</h3>
+                        <p>Fill the form below with your details. Takes less than 2 minutes.</p>
                     </div>
                 </div>
-                <div class="benefit-card fade-in">
-                    <div class="benefit-icon-wrap">⚡</div>
-                    <div class="benefit-content">
-                        <h3>Marketing Support</h3>
-                        <p>Promotional materials and guidance to help you succeed with your audience.</p>
+                <div class="step-card fade-in">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Get Approved</h3>
+                        <p>Our team reviews your profile and approves within 48 hours.</p>
                     </div>
                 </div>
-                <div class="benefit-card fade-in">
-                    <div class="benefit-icon-wrap">📈</div>
-                    <div class="benefit-content">
-                        <h3>Monthly Payouts</h3>
-                        <p>Transparent tracking and timely payments directly to your bank account.</p>
+                <div class="step-card fade-in">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Promote Braino</h3>
+                        <p>Share your unique link with your students or audience.</p>
                     </div>
                 </div>
-                <div class="benefit-card fade-in">
-                    <div class="benefit-icon-wrap">🏆</div>
-                    <div class="benefit-content">
-                        <h3>Partnership Badge</h3>
-                        <p>Official Braino partner recognition to build trust with your community.</p>
+                <div class="step-card fade-in">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Earn Rewards</h3>
+                        <p>Get 10% commission on every paid subscription, paid monthly.</p>
                     </div>
                 </div>
             </div>
@@ -738,178 +360,115 @@
     </section>
 
     <!-- Application Form -->
-    <section class="form-section" id="apply">
+    <section class="section-padding" id="apply">
         <div class="container">
-            <div style="text-align: center;" class="fade-in">
-                <div class="section-label">Get Started</div>
-                <h2 class="section-heading">Apply Now</h2>
-                <p class="section-text" style="max-width: 700px; margin: 0 auto;">Fill out the application form and we'll get back to you within 48 hours</p>
+            <div class="section-header fade-in">
+                <span class="badge">Get Started</span>
+                <h2>Apply Now</h2>
+                <p>Ready to join? Fill out the details below.</p>
             </div>
-            <div class="form-wrapper fade-in">
+
+            <div class="form-container fade-in">
                 <form id="partnerForm">
-                    <div class="form-row">
+                    <div class="form-grid">
                         <div class="form-group">
-                            <label class="form-label">Full Name *</label>
-                            <input class="form-input" type="text" name="name" placeholder="Enter your full name" required>
+                            <label>Full Name *</label>
+                            <input class="form-input" type="text" name="name" placeholder="John Doe" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Email Address *</label>
-                            <input class="form-input" type="email" name="email" placeholder="your.email@example.com" required>
+                            <label>Email Address *</label>
+                            <input class="form-input" type="email" name="email" placeholder="john@example.com" required>
                         </div>
                     </div>
-                    <div class="form-row">
+
+                    <div class="form-grid">
                         <div class="form-group">
-                            <label class="form-label">Phone Number *</label>
+                            <label>Phone Number *</label>
                             <input class="form-input" type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Your Role *</label>
+                            <label>Your Role *</label>
                             <select class="form-select" name="role" required>
                                 <option value="">Select your role</option>
                                 <option value="teacher">Teacher</option>
+                                <option value="youtuber">Content Creator</option>
+                                <option value="tutor">Tutor</option>
                                 <option value="parent">Parent</option>
-                                <option value="youtuber">YouTuber/Content Creator</option>
-                                <option value="tutor">Home/Online Tutor</option>
-                                <option value="influencer">Education Influencer</option>
-                                <option value="institution">Coaching Center/Institution</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="form-label">Tell Us About Yourself (Optional)</label>
-                        <textarea class="form-textarea" name="message" placeholder="Your experience, audience size, platform links, etc." rows="5"></textarea>
+
+                    <div class="form-group" style="margin-bottom: 2rem;">
+                        <label>Tell us about yourself (Optional)</label>
+                        <textarea class="form-textarea" name="message" placeholder="Audience size, social media links, or teaching experience..." rows="4"></textarea>
                     </div>
+
                     <button type="submit" class="submit-btn">
-                        <span>📤</span>
                         Submit Application
                     </button>
                 </form>
             </div>
-        </div>
-    </section>
 
-    <!-- Terms -->
-    <section class="terms-section">
-        <div class="container">
-            <div style="text-align: center;" class="fade-in">
-                <div class="section-label">Legal</div>
-                <h2 class="section-heading">Program Terms</h2>
-            </div>
+            <!-- Terms Box -->
             <div class="terms-box fade-in">
-                <div class="terms-list">
-                    • Must be 18 years or older to participate<br/>
-                    • Commission applies only to paid subscriptions<br/>
-                    • No automated referral codes or links provided<br/>
-                    • Partners promote through their own channels and methods<br/>
-                    • Monthly commission payouts via bank transfer<br/>
-                    • Braino reserves the right to review and approve applications<br/>
-                    • Fraudulent activity will result in immediate termination
-                </div>
+                <h4 style="color: var(--color-trust); margin-bottom: 1rem;">Program Terms</h4>
+                <ul>
+                    <li>You must be 18 years or older to participate.</li>
+                    <li>Commission applies only to paid subscriptions attributable to your referral.</li>
+                    <li>No spamming or unethical marketing practices allowed.</li>
+                    <li>Payouts are processed monthly via bank transfer for earnings above ₹1000.</li>
+                    <li>Braino reserves the right to reject applications that don't meet our quality standards.</li>
+                </ul>
             </div>
+
+            <div class="contact-cta fade-in">
+                <p style="color: var(--text-muted); margin-bottom: 0.5rem;">Have questions before joining?</p>
+                <a href="mailto:support@braino.in" class="contact-email">support@braino.in</a>
+            </div>
+
         </div>
     </section>
 
-    <!-- Contact CTA -->
-    <section class="contact-cta">
-        <div class="container">
-            <div class="contact-box fade-in">
-                <div class="contact-emoji">❓</div>
-                <h3 class="contact-heading">Have Questions?</h3>
-                <p class="contact-email">partners@braino.app</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <div id="footer-placeholder"></div>
 
     <script>
+        // Load Header & Footer
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
 
         fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            }).catch(error => console.error('Footer load failed:', error));
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
 
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-            });
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
+        // Animation Observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1 });
 
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        // Form submission
+        // Form Handling
         document.getElementById('partnerForm').addEventListener('submit', function(e) {
             e.preventDefault();
+            const btn = this.querySelector('.submit-btn');
+            const originalText = btn.innerText;
             
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            if (!data.name || !data.email || !data.phone || !data.role) {
-                alert('Please fill in all required fields');
-                return;
-            }
-            
-            const button = this.querySelector('.submit-btn');
-            const originalHTML = button.innerHTML;
-            button.innerHTML = '<span>⏳</span> Submitting...';
-            button.style.opacity = '0.7';
-            button.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+            btn.style.opacity = '0.8';
             
             setTimeout(() => {
-                alert('Application Submitted! Our team will contact you within 48 hours');
+                alert('Application Submitted Successfully! We will contact you shortly.');
                 this.reset();
-                button.innerHTML = originalHTML;
-                button.style.opacity = '1';
-                button.disabled = false;
+                btn.innerText = originalText;
+                btn.style.opacity = '1';
             }, 1500);
         });
-
-        // Dynamic header on scroll
-        let lastScroll = 0;
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > 100) {
-                header.style.background = 'rgba(10, 10, 10, 0.95)';
-            } else {
-                header.style.background = 'rgba(10, 10, 10, 0.8)';
-            }
-            
-            lastScroll = currentScroll;
-        });
-
-        console.log('🤝 Braino Partner Program Loaded!');
     </script>
 </body>
 </html>

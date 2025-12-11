@@ -1,195 +1,240 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <title>Braino Header</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary-dark: #0a0a0a;
-            --primary-cyan: #06b6d4;
-            --text-primary: #ffffff;
-            --text-secondary: rgba(255, 255, 255, 0.8);
-            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-cyber: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        }
+<!-- FONTS & ICONS -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<style>
+    :root {
+        /* --- CORE PALETTE --- */
+        --color-trust: #1e293b; 
+        --color-trust-dark: #0f172a;
+        --color-curiosity: #06b6d4;
+        --color-curiosity-hover: #0891b2;
+        --color-bg: #f8fafc;
+        --color-surface: #ffffff;
+        --color-border: #e2e8f0;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        
+        /* --- SPACING & UI --- */
+        --radius-pill: 999px;
+        --shadow-curiosity: 0 10px 30px -5px rgba(6, 182, 212, 0.3);
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    /* Basic Resets */
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: var(--primary-dark);
-            color: var(--text-primary);
-        }
+    /* Utility Classes */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
 
-        /* Modern Header */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            backdrop-filter: blur(20px);
-            background: rgba(10, 10, 10, 0.8);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        font-weight: 700;
+        border-radius: var(--radius-pill);
+        transition: all 0.2s ease;
+        font-size: 1rem;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+    }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+    .btn-primary {
+        background-color: var(--color-curiosity);
+        color: white;
+        box-shadow: var(--shadow-curiosity);
+    }
+    .btn-primary:hover {
+        background-color: var(--color-curiosity-hover);
+        transform: translateY(-2px);
+    }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 0;
-        }
+    /* --- HEADER STYLES --- */
+    header {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(12px);
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid var(--color-border);
+        width: 100%;
+    }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            text-decoration: none;
-        }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 72px;
+        position: relative;
+    }
 
-        .logo-img {
+    .logo {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--color-trust);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        z-index: 1001;
+    }
+
+    .logo-img {
             width: 50px;
             height: 50px;
             object-fit: contain;
-            background: none;
-            border: none;
+            background: none; /* force transparency */
+            border: none ;            /* remove any outline */
             display: block;
         }
 
-        .logo {
-            font-size: 2rem;
-            font-weight: 800;
-            background: var(--gradient-cyber);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-decoration: none;
+    .nav-links { 
+        display: flex; 
+        gap: 2rem; 
+        list-style: none; 
+        margin: 0; 
+        padding: 0; 
+    }
+    
+    .nav-links a { 
+        color: var(--text-muted); 
+        font-weight: 600; 
+        font-size: 0.95rem; 
+        text-decoration: none; 
+        transition: 0.2s; 
+    }
+    .nav-links a:hover { color: var(--color-curiosity); }
+
+    /* HIDDEN ON DESKTOP BY DEFAULT */
+    .mobile-menu-btn { display: none; }
+    .mobile-only-btn { display: none; }
+
+    /* --- MOBILE RESPONSIVE STYLES --- */
+    @media (max-width: 968px) {
+        /* Hide desktop button */
+        .btn-header-desktop { display: none; }
+        
+        /* Show mobile trigger */
+        .mobile-menu-btn { 
+            display: block;
+            font-size: 1.5rem; 
+            color: var(--text-main); 
+            background: none; 
+            border: none; 
+            cursor: pointer; 
+            z-index: 1001;
         }
 
+        /* Show mobile specific list items */
+        .mobile-only-btn { display: block; }
+
         .nav-links {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: white;
+            flex-direction: column;
+            padding: 1.5rem;
+            gap: 1.5rem;
+            border-bottom: 1px solid var(--color-border);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            
+            /* Hidden state */
+            display: none; 
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+
+        /* Active state (toggled by JS) */
+        .nav-links.active {
             display: flex;
-            list-style: none;
-            gap: 2.5rem;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .nav-links li {
+            width: 100%;
+            text-align: center;
         }
 
         .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 500;
-            position: relative;
-            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            display: block;
+            padding: 0.5rem;
         }
+    }
+</style>
 
-        .nav-links a::before {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: var(--primary-cyan);
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-
-        .nav-links a:hover {
-            color: var(--text-primary);
-            transform: translateY(-2px);
-        }
-
-        .nav-links a:hover::before {
-            width: 100%;
-        }
-
-        .cta-nav {
-            background: var(--gradient-primary);
-            border: none;
-            padding: 12px 32px;
-            border-radius: 50px;
-            color: white;
-            font-weight: 600;
-            text-decoration: none;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .cta-nav::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .cta-nav:hover::before {
-            left: 100%;
-        }
-
-        .cta-nav:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.4);
-        }
-
-        /* Mobile Optimizations */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <nav class="container">
-            <a href="#" class="logo-container">
+<header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">
+                <!-- <i class="fas fa-brain" style="color: var(--color-curiosity);"></i>
+                Braino -->
                 <img src="./images/logo.png" alt="Braino Logo" class="logo-img">
                 <span class="logo">Braino</span>
             </a>
-            <ul class="nav-links">
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#how-it-works">How it Works</a></li>
                 <li><a href="index.html#features">Features</a></li>
-                <li><a href="partner.html">Partner Program</a></li>
-                <li><a href="index.html#snap-solve">Snap & Solve</a></li>
+                <li><a href="index.html#parents">For Parents</a></li>
                 <li><a href="index.html#pricing">Pricing</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="partner.html">Partner Program</a></li>
+                
+                <!-- This will now be hidden on desktop -->
+                <li style="margin-top: 0.5rem;" class="mobile-only-btn">
+                     <a href="https://play.google.com/store/apps/details?id=com.aitutorapp" style="color: var(--color-curiosity); font-weight: 700;">Download App</a>
+                </li>
             </ul>
-            <a href="#pricing" class="cta-nav">Get Started</a>
-        </nav>
-    </header>
 
-    <script>
-        // Dynamic header on scroll
-        let lastScroll = 0;
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            const currentScroll = window.pageYOffset;
+            <a href="https://play.google.com/store/apps/details?id=com.aitutorapp" class="btn btn-primary btn-header-desktop">
+                <i class="fab fa-google-play"></i> Get the App
+            </a>
             
-            if (currentScroll > 100) {
-                header.style.background = 'rgba(10, 10, 10, 0.95)';
-                header.style.backdropFilter = 'blur(20px)';
-            } else {
-                header.style.background = 'rgba(10, 10, 10, 0.8)';
-            }
-            
-            lastScroll = currentScroll;
-        });
-    </script>
-</body>
-</html>
+            <button class="mobile-menu-btn" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
+        const icon = menuBtn.querySelector('i');
+
+        if(menuBtn && navLinks) {
+            menuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // Close menu on link click
+            const links = navLinks.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+        }
+    });
+</script>
