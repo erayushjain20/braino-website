@@ -1,5 +1,5 @@
 {
   "version": "1.0.1",
-  "updateMode": "FLEXIBLE",
-  "isMaintenance": true
+  "updateMode": "IMMEDIATE",
+  "isMaintenance": false
 }
