@@ -6,29 +6,51 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <meta property="og:title" content="Braino – India’s AI Academic Tutor" />
-    <meta property="og:description" content="Every child deserves to learn like a topper. Braino personalizes learning for every student." />
+
+    <title>Braino: AI Doubt Solver & Homework App (CBSE/ICSE)</title>
+    <meta name="description" content="Instant solutions for Class 1-12 Maths, Science & NCERT. The best AI Tutor for CBSE & State Boards. Speak your question and get step-by-step answers.">
+    <meta name="keywords" content="AI tutor, homework helper, doubt solving app, CBSE, ICSE, NCERT solutions, maths solver, class 1 to 12, exam preparation">
+    
+    <meta property="og:title" content="Braino: AI Doubt Solver for Class 1-12" />
+    <meta property="og:description" content="Stuck on Homework? Get instant step-by-step solutions for Maths, Science & CBSE/ICSE. Try Braino AI now." />
     <meta property="og:image" content="https://braino.in/images/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:url" content="https://braino.in" />
     <meta property="og:type" content="website" />
-    <title>Braino - India's Smartest AI Tutor</title>
-    <meta name="description" content="Turn curiosity into grades. Braino is the AI tutor that explains the 'Why', not just the 'What'. aligned with CBSE/ICSE curriculum.">
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
+    <!-- SCHEMA: Fixed Syntax Error -->
     <script type="application/ld+json">
         {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Braino AI",
+        "@type": "SoftwareApplication",
+        "name": "Braino: AI Tutor",
+        "operatingSystem": "ANDROID",
+        "applicationCategory": "EducationalApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR"
+        },
         "alternateName": "Braino Technologies",
         "url": "https://braino.in",
         "logo": "https://braino.in/images/logo.png",
-        "description": "Braino is India’s AI-powered academic tutor that helps students learn like toppers with personalized guidance.",
+        "description": "Braino is an AI-powered doubt solving and homework help app for Class 1-12 students in CBSE and ICSE boards.",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "100"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Braino AI",
+            "url": "https://braino.in",
+            "logo": "https://braino.in/images/logo.png"
+        },
         "founder": {
             "@type": "Person",
             "name": "Ayush Jain"
@@ -48,27 +70,18 @@
     <style>
         :root {
             /* --- PALETTE: Trust & Curiosity --- */
-            
-            /* Primary/Trust: Deep Charcoal Blue */
             --color-trust: #1e293b; 
             --color-trust-dark: #0f172a;
-            
-            /* Accent/Curiosity: Electric Teal */
             --color-curiosity: #06b6d4;
             --color-curiosity-hover: #0891b2;
-            
-            /* Functional Colors */
-            --color-success: #22c55e; /* Lime Green */
-            --color-bg: #f8fafc;      /* Off-white background */
-            --color-surface: #ffffff; /* Pure white cards */
+            --color-success: #22c55e;
+            --color-bg: #f8fafc;
+            --color-surface: #ffffff;
             --color-border: #e2e8f0;
-            
-            /* Text */
             --text-main: #1e293b;
             --text-muted: #64748b;
             --text-inverted: #f1f5f9;
 
-            /* Spacing & Radius */
             --radius-md: 12px;
             --radius-lg: 20px;
             --radius-pill: 999px;
@@ -77,6 +90,7 @@
             --shadow-curiosity: 0 10px 30px -5px rgba(6, 182, 212, 0.3);
         }
 
+        html { scroll-behavior: smooth; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
@@ -108,6 +122,7 @@
             border-radius: var(--radius-pill);
             transition: all 0.2s ease;
             font-size: 1rem;
+            cursor: pointer;
         }
 
         .btn-primary {
@@ -141,9 +156,9 @@
             margin-bottom: 1rem;
         }
 
-        /* --- Header --- */
-        /* header {
-            background: rgba(255, 255, 255, 0.9);
+        /* --- Header Styles (Uncommented for use with fetched header) --- */
+        header {
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
             position: sticky;
             top: 0;
@@ -156,6 +171,9 @@
             justify-content: space-between;
             align-items: center;
             height: 72px;
+            padding: 0 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .logo {
@@ -171,12 +189,11 @@
         .nav-links { display: flex; gap: 2rem; }
         .nav-links a { color: var(--text-muted); font-weight: 600; font-size: 0.95rem; }
         .nav-links a:hover { color: var(--color-curiosity); }
+        .mobile-menu-btn { display: none; font-size: 1.5rem; color: var(--text-main); cursor: pointer; }
 
-        .mobile-menu-btn { display: none; font-size: 1.5rem; color: var(--text-main); } */
-
-        /* --- Hero Section (The "Gap") --- */
+        /* --- Hero Section --- */
         .hero {
-            padding-top: 100px; /* Gives space for header + gap */
+            padding-top: 100px;
             padding-bottom: 4rem;
             overflow: hidden;
         }
@@ -208,7 +225,7 @@
             max-width: 500px;
         }
 
-        /* Hero Chat Simulator - The "Hook" */
+        /* Chat Simulator */
         .chat-card {
             background: var(--color-surface);
             border-radius: 24px;
@@ -251,12 +268,10 @@
         .dot { width: 6px; height: 6px; background: #cbd5e1; border-radius: 50%; animation: bounce 1.4s infinite ease-in-out; }
         .dot:nth-child(1) { animation-delay: -0.32s; }
         .dot:nth-child(2) { animation-delay: -0.16s; }
-
         @keyframes bounce { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
 
-        /* --- Features Grid --- */
+        /* --- Sections --- */
         .section-padding { padding: 6rem 0; }
-        
         .section-header { text-align: center; margin-bottom: 4rem; max-width: 700px; margin-left: auto; margin-right: auto; }
         .section-header h2 { font-size: 2.5rem; font-weight: 800; color: var(--color-trust); margin-bottom: 1rem; }
         .section-header p { color: var(--text-muted); font-size: 1.1rem; }
@@ -290,150 +305,132 @@
             margin-bottom: 1.5rem;
         }
 
-        /* --- Snap & Solve (The "Magic Moment") --- */
-        .snap-section {
-            background: white;
-            overflow: hidden;
-        }
-
-        .snap-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            gap: 4rem;
-        }
-
+        /* --- Snap Section --- */
+        .snap-section { background: white; overflow: hidden; }
+        .snap-container { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 4rem; }
+        
         .snap-visual {
-            position: relative;
-            height: 400px;
-            background: #f1f5f9;
-            border-radius: var(--radius-lg);
-            display: flex; align-items: center; justify-content: center;
+            position: relative; height: 400px; background: #f1f5f9;
+            border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center;
         }
         
         .photo-card {
-            position: absolute;
-            width: 200px;
-            background: white;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: var(--shadow-card);
-            transform: rotate(-5deg) translateX(-60px);
-            z-index: 1;
+            position: absolute; width: 200px; background: white; padding: 10px;
+            border-radius: 10px; box-shadow: var(--shadow-card); transform: rotate(-5deg) translateX(-60px); z-index: 1;
         }
         .solution-card {
-            position: absolute;
-            width: 240px;
-            background: white;
-            padding: 20px;
-            border-radius: 15px;
-            border-left: 4px solid var(--color-success);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            transform: rotate(2deg) translateX(40px);
-            z-index: 2;
+            position: absolute; width: 240px; background: white; padding: 20px;
+            border-radius: 15px; border-left: 4px solid var(--color-success); box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transform: rotate(2deg) translateX(40px); z-index: 2;
         }
 
-        /* --- Parent Section (Trust Mode) --- */
-        .parent-section {
-            background-color: var(--color-trust);
-            color: white;
-            position: relative;
+        /* --- Safety Section --- */
+        .safety-section {
+            background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+            color: var(--text-main); position: relative; overflow: hidden;
         }
+        .safety-section::before {
+            content: ''; position: absolute; top: -10%; right: -5%; width: 400px; height: 400px;
+            background: rgba(45, 212, 191, 0.2); filter: blur(80px); border-radius: 50%; z-index: 0;
+        }
+        .safety-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center; position: relative; z-index: 1; }
         
-        /* Abstract bg pattern */
+        .lock-badge {
+            display: inline-flex; align-items: center; gap: 0.5rem; background: white;
+            color: #0f766e; border: 1px solid #99f6e4; padding: 0.5rem 1rem;
+            border-radius: var(--radius-pill); font-weight: 700; font-size: 0.85rem; margin-bottom: 1.5rem;
+        }
+
+        .comparison-wrapper {
+            background: #1e293b; border: 4px solid white; border-radius: 24px;
+            padding: 2rem; box-shadow: 0 20px 40px -5px rgba(15, 118, 110, 0.25); color: white;
+        }
+        .chat-row { display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start; }
+        .chat-avatar {
+            width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; font-size: 1rem; flex-shrink: 0;
+        }
+        .chat-msg {
+            background: rgba(255,255,255,0.1); padding: 0.75rem 1rem; border-radius: 12px;
+            font-size: 0.9rem; line-height: 1.5; color: #cbd5e1;
+        }
+
+        /* --- Parent Section --- */
+        .parent-section { background-color: var(--color-trust); color: white; position: relative; }
         .parent-section::before {
-            content: '';
-            position: absolute; top:0; left:0; width: 100%; height: 100%;
+            content: ''; position: absolute; top:0; left:0; width: 100%; height: 100%;
             background-image: radial-gradient(circle at 10% 10%, rgba(255,255,255,0.05) 0%, transparent 20%);
         }
-
-        .parent-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
+        .parent-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
         .parent-content h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem; }
         .parent-content p { color: #94a3b8; font-size: 1.1rem; margin-bottom: 2rem; }
-
-        .trust-item {
-            display: flex; gap: 1rem; margin-bottom: 1.5rem;
-            background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 12px;
-        }
+        .trust-item { display: flex; gap: 1rem; margin-bottom: 1.5rem; background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 12px; }
         .trust-icon { color: var(--color-success); font-size: 1.25rem; margin-top: 2px; }
-
         .dashboard-mockup {
-            background: white;
-            border-radius: var(--radius-lg);
-            padding: 1.5rem;
-            color: var(--text-main);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            background: white; border-radius: var(--radius-lg); padding: 1.5rem;
+            color: var(--text-main); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
 
         /* --- Pricing --- */
         .pricing-card {
-            background: var(--color-surface);
-            border: 1px solid var(--color-border);
-            border-radius: 20px;
-            padding: 2.5rem;
-            position: relative;
-            display: flex; flex-direction: column;
+            background: var(--color-surface); border: 1px solid var(--color-border);
+            border-radius: 20px; padding: 2.5rem; position: relative; display: flex; flex-direction: column;
         }
-
-        .pricing-card.featured {
-            border: 2px solid var(--color-curiosity);
-            box-shadow: var(--shadow-curiosity);
-        }
-
+        .pricing-card.featured { border: 2px solid var(--color-curiosity); box-shadow: var(--shadow-curiosity); }
         .price-tag { font-size: 3rem; font-weight: 800; color: var(--text-main); margin: 1rem 0 0.5rem; }
         .price-period { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; }
-
-        .feature-list li {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-            position: relative;
-            color: var(--text-muted);
-        }
+        .feature-list li { margin-bottom: 1rem; padding-left: 1.5rem; position: relative; color: var(--text-muted); }
         .feature-list li::before {
-            content: '\f00c';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
+            content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
             position: absolute; left: 0; color: var(--color-success);
         }
 
-        /* --- Footer --- */
-        /* footer {
-            background: var(--color-trust-dark);
-            color: #94a3b8;
-            padding: 4rem 0 2rem;
-            font-size: 0.95rem;
-        }
-        .footer-heading { color: white; font-weight: 700; margin-bottom: 1.25rem; font-size: 1.1rem; }
-        .footer-links li { margin-bottom: 0.75rem; }
-        .footer-links a:hover { color: var(--color-curiosity); } */
-
-        /* --- Mobile Responsive --- */
+        /* --- Responsive --- */
         @media (max-width: 968px) {
-            .hero-grid, .snap-container, .parent-grid { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+            .hero-grid, .snap-container, .parent-grid, .safety-grid { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
             .hero-content h1 { font-size: 2.5rem; }
-            .nav-links, .btn-header-desktop { display: none; }
+            .nav-links, .btn-header-desktop { display: none; position: absolute; top: 72px; left: 0; width: 100%; background: white; flex-direction: column; padding: 2rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+            .nav-links.active { display: flex; }
             .mobile-menu-btn { display: block; }
             .chat-card { margin: 0 1rem; transform: rotate(0); }
             .snap-visual { height: 300px; }
             .trust-item { text-align: left; }
+            .feature-grid { align-items: stretch !important; }
         }
     </style>
 </head>
 <body>
     <div id="header-placeholder"></div>
+
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
             <div class="hero-grid">
-                <div class="hero-content">
-                    <!-- <span class="badge">🚀 Trusted by 10,000+ Students</span> -->
-                    <h1>Don't just memorize.<br><span>Understand it.</span></h1>
+
+                <!-- REPLACE YOUR EXISTING HERO CONTENT DIV WITH THIS -->
+<div class="hero-content">
+    <!-- SEO Optimization: Added "Voice-First" to H1 for differentiation -->
+    <h1>India's First <span style="color: var(--color-curiosity);">Voice-Native</span> AI Tutor for Class 1-12</h1>
+    
+    <!-- Changed "Type, talk, snap" to focus on Voice friction removal -->
+    <p>Stop typing complex questions. Just <strong>tap the mic</strong> and ask in Hinglish. Braino solves Maths, Science & NCERT doubts instantly using Voice AI.</p>
+    
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2rem;">
+            <a href="https://play.google.com/store/apps/details?id=com.aitutorapp" class="btn btn-primary">
+            <i class="fas fa-microphone"></i> Speak Your Doubt
+        </a>
+        <a href="#how-it-works" class="btn btn-outline">
+            See Magic
+        </a>
+    </div>
+    
+    <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--text-muted); justify-content: center;">
+        <i class="fas fa-check-circle" style="color: var(--color-success);"></i> Hinglish Supported
+        <i class="fas fa-check-circle" style="color: var(--color-success); margin-left: 10px;"></i> CBSE/ICSE
+    </div>
+</div>
+                <!-- <div class="hero-content">
+                    <h1>AI Homework Helper & Doubt Solver for Class 1-12</h1>
                     <p>The AI tutor tailored to your grade level and board-aligned. Type, talk, or snap any question, and get explanations that actually make sense.</p>
                     
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2rem;">
@@ -450,7 +447,7 @@
                         <i class="fas fa-check-circle" style="color: var(--color-success); margin-left: 10px;"></i> ICSE
                         <i class="fas fa-check-circle" style="color: var(--color-success); margin-left: 10px;"></i> State Boards
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Interactive "Magic" Demo -->
                 <div class="chat-card">
@@ -461,7 +458,7 @@
                     
                     <div class="chat-body">
                         <div class="chat-bubble bubble-user">
-                            <!-- <i class="fas fa-camera"></i> &nbsp; [Image of Circuit Diagram] <br> -->
+                            <i class="fas fa-microphone" style="opacity: 0.7; margin-right: 5px;"></i> 
                             Why does the bulb get dimmer in series?
                         </div>
                         
@@ -484,13 +481,12 @@
     <section class="section-padding snap-section" id="how-it-works">
         <div class="container">
             <div class="section-header">
-                <h2>From "Confused" to "Clear" in seconds</h2>
-                <p>Textbooks can be boring. Braino brings concepts to life instantly.</p>
+                <h2>The Fastest Hinglish Doubt Solver</h2>
+    <p>Typing math is hard. Just speak, scan, or upload.</p>
             </div>
 
             <div class="snap-container">
                 <div class="snap-visual">
-                    <!-- Visual representation of photo to text -->
                     <div class="photo-card">
                         <div style="height: 120px; background: #cbd5e1; border-radius: 8px; display:flex; align-items:center; justify-content:center; color: #64748b;">
                             <i class="fas fa-image fa-2x"></i>
@@ -508,7 +504,6 @@
                         </p>
                     </div>
                     
-                    <!-- Arrow connecting them -->
                     <div style="position: absolute; z-index: 3; background: var(--color-trust); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
                         <i class="fas fa-arrow-right"></i>
                     </div>
@@ -539,41 +534,99 @@
             </div>
 
             <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fas fa-layer-group"></i></div>
-                    <h3>Grade-Smart Learning</h3>
-                    <p style="color: var(--text-muted);">Braino adjusts the complexity based on your class. You get answers that fit your level, helping you understand concepts without the confusion.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fas fa-microphone"></i></div>
-                    <h3>Voice-First Learning</h3>
-                    <p style="color: var(--text-muted);">Don't want to type? Just speak your question in English. Braino listens and responds instantly, making learning a conversation.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
-                    <h3>100% Distraction Free</h3>
-                    <p style="color: var(--text-muted);">Strict academic guardrails. No gaming talk, no social media distractions. Just pure learning.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fas fa-user-friends"></i></div>
-                    <h3>Dual Profiles</h3>
-                    <p style="color: var(--text-muted);">One account, two learners. Add a sibling and track progress separately, ensuring personalized learning for both.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fas fa-brain"></i></div>
-                    <h3>Adaptive Quizzes (Beta)</h3>
-                    <p style="color: var(--text-muted);">Braino notices where you struggle and creates custom mini-quizzes to fix your weak spots.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fas fa-list-ol"></i></div>
-                    <h3>Step-by-Step Logic</h3>
-                    <p style="color: var(--text-muted);">We don't just give the final answer. We break down the solution into simple steps so you actually understand the "how" and "why".</p>
-                </div>
+
+                <!-- CARD 1: Voice First (Your USP) -->
+    <div class="feature-card" style="border: 2px solid var(--color-curiosity);">
+        <div class="icon-box"><i class="fas fa-microphone-lines"></i></div>
+        <h3>Voice-First Engine</h3>
+        <p style="color: var(--text-muted);">Don't struggle with keyboards. Ask "Thermodynamics kya hai?" or "Solve this Integral" in natural Hinglish. We understand you.</p>
+    </div>
+
+    <!-- CARD 2: Visual/Snap -->
+    <div class="feature-card">
+        <div class="icon-box"><i class="fas fa-camera"></i></div>
+        <h3>Snap & Solve</h3>
+        <p style="color: var(--text-muted);">Stuck on a diagram or geometry? Take a photo. Our Vision AI analyzes and solves handwritten questions instantly.</p>
+    </div>
+
+    <!-- CARD 3: Grade Smart -->
+    <div class="feature-card">
+        <div class="icon-box"><i class="fas fa-layer-group"></i></div>
+        <h3>Curriculum Locked</h3>
+        <p style="color: var(--text-muted);">Strictly academic. Braino adapts answers to your Class 6-12 syllabus level (NCERT aligned).</p>
+    </div>
+
+    <!-- CARD 4: Logic -->
+    <div class="feature-card">
+        <div class="icon-box"><i class="fas fa-brain"></i></div>
+        <h3>Step-by-Step Logic</h3>
+        <p style="color: var(--text-muted);">No direct answers. We break down the solution into logic steps so you actually learn the concept.</p>
+    </div>
             </div>
         </div>
     </section>
 
-    <!-- PARENT SECTION (Trust Design) -->
+    <!-- SAFETY SECTION -->
+    <section class="section-padding safety-section">
+        <div class="container">
+            <div class="safety-grid">
+                
+                <div class="safety-content">
+                    <div class="lock-badge">
+                        <i class="fas fa-shield-alt"></i> Proprietary Academic Guardrails™
+                    </div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.1; color: #0f172a;">
+                        Generic AI connects to the Internet.<br>
+                        <span style="color: #0d9488;">Braino connects to the Syllabus.</span>
+                    </h2>
+                    <p style="color: #475569; font-size: 1.1rem; margin-bottom: 2rem; max-width: 550px;">
+                        Standard chatbots are trained to talk about anything. Braino is strictly "Curriculum-Locked." It refuses non-academic conversations, ensuring your child uses screen time <em>only</em> for studying.
+                    </p>
+                    
+                    <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; color: #334155; font-weight: 600;">
+                        <li><i class="fas fa-check" style="color: #0d9488; margin-right:8px;"></i> No Gaming Gossip</li>
+                        <li><i class="fas fa-check" style="color: #0d9488; margin-right:8px;"></i> No Inappropriate Content</li>
+                        <li><i class="fas fa-check" style="color: #0d9488; margin-right:8px;"></i> No Hallucinations</li>
+                        <li><i class="fas fa-check" style="color: #0d9488; margin-right:8px;"></i> 100% Textbook Focus</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-wrapper">
+                    <div style="text-align: center; margin-bottom: 1.5rem; color: #94a3b8; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700;">
+                        The Distraction Test
+                    </div>
+
+                    <div class="chat-row" style="opacity: 0.5;">
+                        <div class="chat-avatar" style="background: #ef4444; color: white;"><i class="fas fa-robot"></i></div>
+                        <div>
+                            <div style="font-size: 0.75rem; color: #fca5a5; margin-bottom: 4px; font-weight: 700;">Generic Chatbot</div>
+                            <div class="chat-msg">
+                                <strong>Student:</strong> Tell me about the latest GTA game.<br><br>
+                                <span style="color: #fca5a5;"><strong>Bot:</strong> Sure! Here are the cheat codes...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="height: 1px; background: rgba(255,255,255,0.1); margin: 1.5rem 0;"></div>
+
+                    <div class="chat-row">
+                        <div class="chat-avatar" style="background: #2dd4bf; color: #0f172a;"><i class="fas fa-brain"></i></div>
+                        <div>
+                            <div style="font-size: 0.75rem; color: #5eead4; margin-bottom: 4px; font-weight: 700;">Braino AI</div>
+                            <div class="chat-msg" style="background: rgba(45, 212, 191, 0.15); border: 1px solid rgba(45, 212, 191, 0.3); color: white;">
+                                <strong>Student:</strong> Tell me about the latest GTA game.<br><br>
+                                <span style="color: #5eead4;"><strong>Braino:</strong> I can't help with video games. But I can help you code a game in Python! 📚</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PARENT SECTION -->
     <section class="section-padding parent-section" id="parents">
         <div class="container">
             <div class="parent-grid">
@@ -607,13 +660,11 @@
                     </div>
                 </div>
 
-                <!-- Dashboard Mockup -->
                 <div class="dashboard-mockup">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
                         <h4 style="margin: 0;">Weekly Progress</h4>
                         <span style="font-size: 0.8rem; color: var(--text-muted);">Oct 12 - Oct 19</span>
                     </div>
-                    
                     <div style="margin-bottom: 1rem;">
                         <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.5rem;">
                             <span>Physics</span>
@@ -623,7 +674,6 @@
                             <div style="height: 100%; width: 85%; background: var(--color-success);"></div>
                         </div>
                     </div>
-
                     <div style="margin-bottom: 1rem;">
                         <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.5rem;">
                             <span>Math</span>
@@ -632,11 +682,6 @@
                         <div style="height: 8px; background: #f1f5f9; border-radius: 4px; overflow: hidden;">
                             <div style="height: 100%; width: 60%; background: #eab308;"></div>
                         </div>
-                    </div>
-
-                    <div style="padding: 1rem; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; font-size: 0.9rem; color: #166534; display: flex; gap: 0.5rem; margin-top: 1.5rem;">
-                        <i class="fas fa-check-circle" style="margin-top: 2px;"></i>
-                        <div><strong>Insight:</strong> Rahul mastered Physics this week!</div>
                     </div>
                 </div>
             </div>
@@ -714,50 +759,111 @@
         </div>
     </section>
 
+    <!-- SEO Content Block (Footer) -->
+    <!-- SEO Content Block (Integrated Design) -->
+    <section class="section-padding" style="border-top: 1px solid var(--color-border); background-color: white;">
+        <div class="container">
+            <!-- Uses your existing section-header style -->
+            <div class="section-header" style="margin-bottom: 3rem;">
+                <h2 style="font-size: 2rem;">India's Best AI Study App for CBSE, ICSE & State Boards</h2>
+            </div>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <!-- Main Text -->
+                <p style="text-align: center; color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; margin-bottom: 3rem;">
+                    Braino is the ultimate <strong style="color: var(--color-trust);">AI homework helper</strong> designed for Indian students. 
+                    Whether you are stuck on a complex <strong style="color: var(--color-trust);">Maths problem</strong>, a <strong style="color: var(--color-trust);">Physics concept</strong>, 
+                    or need <strong style="color: var(--color-trust);">NCERT solutions</strong>, Braino provides instant, accurate answers.
+                </p>
+
+                <!-- Feature Box (Styled like your other cards) -->
+                <div style="background: var(--color-bg); border-radius: var(--radius-lg); padding: 2.5rem; border: 1px solid var(--color-border);">
+                    <h3 style="text-align: center; font-size: 1.25rem; color: var(--color-trust); margin-bottom: 2rem;">
+                        Why Braino is the #1 Doubt Solving App
+                    </h3>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
+                        <!-- Item 1 -->
+                        <div style="display: flex; gap: 1rem; align-items: start;">
+                            <div style="width: 32px; height: 32px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--color-curiosity); box-shadow: var(--shadow-sm); flex-shrink: 0;">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <div>
+                                <strong style="display: block; color: var(--text-main); margin-bottom: 4px;">Maths Scanner</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-muted);">Solves Algebra & Calculus instantly from photos.</span>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div style="display: flex; gap: 1rem; align-items: start;">
+                            <div style="width: 32px; height: 32px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--color-curiosity); box-shadow: var(--shadow-sm); flex-shrink: 0;">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <div>
+                                <strong style="display: block; color: var(--text-main); margin-bottom: 4px;">Voice Search</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-muted);">Ask questions in Hinglish and get step-by-step logic.</span>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div style="display: flex; gap: 1rem; align-items: start;">
+                            <div style="width: 32px; height: 32px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--color-curiosity); box-shadow: var(--shadow-sm); flex-shrink: 0;">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <strong style="display: block; color: var(--text-main); margin-bottom: 4px;">Exam Prep</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-muted);">Complete syllabus coverage for Class 6 to 12.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div id="footer-placeholder"></div>
 
     <script>
-        fetch('footer.html')
+        fetch('footer.html?v=1.0')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
             }).catch(error => console.error('Footer load failed:', error));
 
-        fetch('header.html')
+        fetch('header.html?v=1.0')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
-                // --- MOBILE MENU LOGIC STARTS HERE ---
-        const menuBtn = document.getElementById('menuBtn');
-        const navLinks = document.getElementById('navLinks');
-        
-        if(menuBtn && navLinks) {
-            const icon = menuBtn.querySelector('i');
-            
-            // Toggle Menu
-            menuBtn.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
                 
-                // Toggle Icon
-                if (navLinks.classList.contains('active')) {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-times');
-                } else {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-            });
+                // --- MOBILE MENU LOGIC ---
+                // This must stay INSIDE the fetch because 'menuBtn' exists in header.html
+                const menuBtn = document.getElementById('menuBtn');
+                const navLinks = document.getElementById('navLinks');
+                
+                if(menuBtn && navLinks) {
+                    const icon = menuBtn.querySelector('i');
+                    
+                    menuBtn.addEventListener('click', function() {
+                        navLinks.classList.toggle('active');
+                        
+                        if (navLinks.classList.contains('active')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
 
-            // Close menu when clicking a link
-            navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                });
-            });
-        }
-        // --- MOBILE MENU LOGIC ENDS HERE ---
+                    // Close menu when clicking a link
+                    navLinks.querySelectorAll('a').forEach(link => {
+                        link.addEventListener('click', () => {
+                            navLinks.classList.remove('active');
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        });
+                    });
+                }
             });
     </script>
 
