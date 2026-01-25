@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions Class 10 Maths Chapter 4 Quadratic Equations - Braino</title>
+    <meta name="description" content="Step-by-step NCERT Solutions for Class 10 Maths Chapter 4 Quadratic Equations. Exercise 4.1, 4.2, 4.3 solutions with video explanations on Braino App.">
+
+    <!-- Fonts & Icons (Same as Index) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- JSON-LD SCHEMA FOR SEO (Education) -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "NCERT Solutions Class 10 Maths Chapter 4 Exercise 4.3 Quadratic Equations",
+  "description": "Detailed solutions for all questions in NCERT Class 10 Maths Chapter 4 Quadratic Equations, Exercise 4.3 (Nature of Roots and Quadratic Formula).",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Find the nature of the roots of the quadratic equation 2x² – 3x + 5 = 0. If the real roots exist, find them.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The equation 2x² – 3x + 5 = 0 has no real roots. \n\nSolution: \nComparing the equation 2x² – 3x + 5 = 0 with the standard quadratic equation ax² + bx + c = 0, we have: \na = 2, b = -3, c = 5 \nDiscriminant (D) = b² – 4ac \nD = (-3)² – 4(2)(5) \nD = 9 – 40 \nD = -31 \nSince the discriminant D is less than zero (D < 0), the given quadratic equation has no real roots."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Find the nature of the roots of the quadratic equation 3x² – 4√3x + 4 = 0. If the real roots exist, find them.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The equation 3x² – 4√3x + 4 = 0 has two equal real roots. The roots are x = 2/√3. \n\nSolution: \nComparing the equation 3x² – 4√3x + 4 = 0 with ax² + bx + c = 0, we have: \na = 3, b = -4√3, c = 4 \nDiscriminant (D) = b² – 4ac \nD = (-4√3)² – 4(3)(4) \nD = (16 × 3) – 48 \nD = 48 – 48 \nD = 0 \nSince the discriminant D is equal to zero (D = 0), the equation has two equal real roots. \nUsing the quadratic formula: x = [-b ± √D] / 2a \nx = [ -(-4√3) ± √0 ] / (2 × 3) \nx = 4√3 / 6 \nx = 2√3 / 3 \nTo rationalize: x = 2√3 / (√3 × √3) = 2/√3."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Find the value of k for the equation 2x² + kx + 3 = 0 so that it has two equal roots.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The value of k is ±2√6. \n\nSolution: \nFor a quadratic equation to have two equal real roots, its discriminant (D) must be equal to zero. \nGiven equation: 2x² + kx + 3 = 0 \nComparing with ax² + bx + c = 0, we have: \na = 2, b = k, c = 3 \nDiscriminant D = b² – 4ac \nSet D = 0: k² – 4(2)(3) = 0 \nk² – 24 = 0 \nk² = 24 \nk = ±√24 \nk = ±√(4 × 6) \nk = ±2√6"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it possible to design a rectangular mango grove whose length is twice its breadth, and the area is 800 m²? If so, find its length and breadth.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, it is possible. The length is 40 m and the breadth is 20 m. \n\nSolution: \nLet the breadth of the mango grove be x meters. \nLength = 2x meters. \nArea = Length × Breadth = (2x)(x) = 2x² \nGiven Area = 800 m². \n2x² = 800 \nx² = 400 \nx = ±√400 \nx = ±20 \nSince breadth cannot be negative, x = 20 meters. \nBreadth = 20 m \nLength = 2 × 20 = 40 m."
+      }
+    }
+  ]
+}
+</script>
+    <script>window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };</script>
+
+
+
+    <style>
+        /* --- 1. REUSING VARIABLES FROM INDEX.HTML --- */
+        :root {
+            --color-trust: #1e293b; 
+            --color-curiosity: #06b6d4; /* Your Brand Cyan */
+            --color-curiosity-hover: #0891b2;
+            --color-success: #22c55e;
+            --color-bg: #f8fafc;
+            --color-surface: #ffffff;
+            --color-border: #e2e8f0;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-card: 0 10px 30px -5px rgba(0,0,0,0.08);
+        }
+
+        /* --- 2. LAYOUT ESSENTIALS --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--color-bg); color: var(--text-main); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; transition: 0.2s; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.6rem 1.2rem; font-weight: 700; border-radius: 999px; font-size: 0.95rem; cursor: pointer; border: none; gap: 0.5rem; }
+        .btn-primary { background-color: var(--color-curiosity); color: white; box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3); }
+        .btn-primary:hover { background-color: var(--color-curiosity-hover); transform: translateY(-2px); }
+
+        /* --- 3. PAGE SPECIFIC LAYOUT --- */
+        .ncert-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr; /* Sidebar | Content */
+            gap: 2.5rem;
+            padding: 2rem 0 4rem;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs { padding: 1rem 0; padding-top: 100px; font-size: 0.9rem; color: var(--text-muted); 
+         display: flex;align-items: center;justify-content: flex-start !important;gap: 0;}
+        .breadcrumbs a:hover { color: var(--color-curiosity); }
+        .breadcrumbs a,
+.breadcrumbs span { 
+    flex-shrink: 0;
+}
+        .breadcrumbs span {  margin: 0 0.5rem; color: #cbd5e1; }
+
+        /* --- 4. SIDEBAR (CHAPTER LIST) --- */
+        .sidebar-sticky { position: sticky; top: 100px; }
+        
+        .chapter-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .chapter-header {
+            background: var(--color-trust);
+            color: white;
+            padding: 1rem;
+            font-weight: 700;
+        }
+
+        .chapter-list { list-style: none; overflow-y: auto; position: sticky;top: 80px;height: calc(80vh - 100px);scrollbar-width: thin;}
+        .chapter-list li { border-bottom: 1px solid var(--color-border); }
+        .chapter-list li:last-child { border-bottom: none; }
+        
+        .chapter-link {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.85rem 1rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .chapter-link:hover { background-color: #ecfeff; color: var(--color-curiosity); }
+        .chapter-link.active { background-color: #ecfeff; color: var(--color-curiosity); border-left: 4px solid var(--color-curiosity); font-weight: 700; }
+
+        /* --- 5. MAIN CONTENT --- */
+        .page-title { font-size: 2rem; font-weight: 800; color: var(--color-trust); margin-bottom: 0.5rem; }
+        .page-meta { color: var(--text-muted); margin-bottom: 2rem; }
+
+        /* Exercise Tabs */
+        .exercise-tabs {
+            display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 5px; margin-bottom: 2rem;
+            scrollbar-width: none; /* Firefox */
+        }
+        .exercise-tabs::-webkit-scrollbar { display: none; }
+        .ex-tab {
+            padding: 0.5rem 1.2rem; background: white; border: 1px solid var(--color-border);
+            border-radius: 99px; white-space: nowrap; font-weight: 600; color: var(--text-muted);
+        }
+        .ex-tab.active { background: var(--color-trust); color: white; border-color: var(--color-trust); }
+        .ex-tab:hover:not(.active) { border-color: var(--color-curiosity); color: var(--color-curiosity); }
+
+        /* Question Block */
+        .question-block {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .q-badge {
+            display: inline-block; background: #e0f2fe; color: var(--color-curiosity-hover);
+            font-weight: 700; font-size: 0.8rem; padding: 4px 12px; border-radius: 99px; margin-bottom: 1rem;
+        }
+
+        .q-text { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 1.5rem; }
+        
+        /* Math Formatting */
+        .math { font-family: 'Courier New', Courier, monospace; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; color: #d946ef; font-weight: 600; }
+
+        /* Video Placeholder (Designed to sell the App) */
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #0f172a;
+            border-radius: var(--radius-md);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center;
+            color: white;
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://placehold.co/800x450/1e293b/FFF?text=Braino+Video+Solution'); 
+            background-size: cover;
+        }
+
+        .play-btn-pulse {
+            width: 64px; height: 64px; background: var(--color-curiosity); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;
+            box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7);
+            animation: pulse-cyan 2s infinite;
+            margin-bottom: 1rem;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .play-btn-pulse:hover { transform: scale(1.1); }
+        
+        @keyframes pulse-cyan {
+            0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(6, 182, 212, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+        }
+
+        /* Text Solution */
+        .solution-step { position: relative; padding-left: 2rem; margin-bottom: 1.5rem; }
+        .solution-step::before {
+            content: ''; position: absolute; left: 0; top: 8px; width: 12px; height: 12px;
+            background: var(--color-success); border-radius: 50%;
+        }
+        .solution-step::after {
+            content: ''; position: absolute; left: 5px; top: 25px; width: 2px; height: 100%;
+            background: #e2e8f0;
+        }
+        .solution-step:last-child::after { display: none; }
+        
+        .step-title { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; color: var(--color-trust); }
+        .step-content { color: var(--text-muted); font-size: 0.95rem; }
+
+        .solution-content table {
+        width: 100%;
+        max-width: 400px; /* Keeps tables from getting too wide */
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-family: sans-serif;
+    }
+    .solution-content th, 
+    .solution-content td {
+        border: 1px solid #ddd;
+        padding: 8px 12px;
+        text-align: center;
+    }
+    .solution-content th {
+        background-color: #f1f5f9;
+        font-weight: bold;
+    }
+
+        /* In-Feed App Banner */
+        .app-nudge {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            border-radius: var(--radius-md); padding: 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+            color: white; margin: 3rem 0;
+            box-shadow: var(--shadow-card);
+        }
+
+        /* --- 6. MOBILE RESPONSIVE --- */
+        @media (max-width: 968px) {
+            .ncert-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+            .sidebar-sticky { display: none; } /* Hidden on mobile by default, usually converted to a dropdown */
+            .mobile-chapter-select { display: block; width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: white; font-weight: 700; margin-bottom: 1.5rem; }
+            .app-nudge { flex-direction: column; text-align: center; gap: 1.5rem; }
+            .page-title { font-size: 1.5rem; }
+        }
+        @media (min-width: 969px) { .mobile-chapter-select { display: none; } }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Injection -->
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="/">Home</a><span>/</span><a href="#">NCERT Solutions</a><span>/</span><a href="#">Class 10 Maths</a><span>/</span>Quadratic Equations
+        </nav>
+
+        <div class="ncert-layout">
+            
+            <!-- Sidebar: Chapter Navigation -->
+            <aside class="sidebar-wrapper">
+                <!-- Mobile Dropdown Placeholder -->
+                <select class="mobile-chapter-select" onchange="location = this.value;">
+                    <option value="#">Chapter 1: Real Numbers</option>
+                    <option value="#">Chapter 2: Polynomials</option>
+                    <option value="#">Chapter 3: Pair of Linear Equations in Two Variables</option>
+                    <option value="#">Chapter 4: Quadratic Equations</option>
+                    <option value="#">Chapter 5: Arithmetic Progressions</option>
+                    <option value="#">Chapter 6: Triangles</option>
+                    <option value="#">Chapter 7: Coordinate Geometry</option>
+                    <option value="#">Chapter 8: Introduction to Trigonometry</option>
+                    <option value="#">Chapter 9: Some Applications of Trigonometry</option>
+                    <option value="#">Chapter 10: Circles</option>
+                    <option value="#">Chapter 11: Areas Related to Circles</option>
+                    <option value="#">Chapter 12: Surface Areas and Volumes</option>
+                    <option value="#">Chapter 13: Statistics</option>
+                    <option value="#">Chapter 14: Probability</option>
+                </select>
+
+                <div class="chapter-card sidebar-sticky">
+                    <div class="chapter-header">
+                        Class 10 Maths
+                    </div>
+                    <ul class="chapter-list">
+    <!-- Chapter 1 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-1-exercise-1-1.html" class="chapter-link">
+            <span>01. Real Numbers</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 2 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-2-exercise-2-1.html" class="chapter-link">
+            <span>02. Polynomials</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 3 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-3-exercise-3-1.html" class="chapter-link">
+            <span>03. Pair of Linear Eq.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 4 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-4-exercise-4-1.html" class="chapter-link">
+            <span>04. Quadratic Equations</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 5 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-5-exercise-5-1.html" class="chapter-link">
+            <span>05. Arithmetic Progressions</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 6 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-6-exercise-6-1.html" class="chapter-link">
+            <span>06. Triangles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 7 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-7-exercise-7-1.html" class="chapter-link">
+            <span>07. Coordinate Geometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 8 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-8-exercise-8-1.html" class="chapter-link">
+            <span>08. Intro to Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 9 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-9-exercise-9-1.html" class="chapter-link">
+            <span>09. App. of Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 10 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-10-exercise-10-1.html" class="chapter-link">
+            <span>10. Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 11 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-11-exercise-11-1.html" class="chapter-link">
+            <span>11. Areas Related to Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 12 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-12-exercise-12-1.html" class="chapter-link">
+            <span>12. Surface Areas & Vol.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 13 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-13-exercise-13-1.html" class="chapter-link">
+            <span>13. Statistics</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 14 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-14-exercise-14-1.html" class="chapter-link">
+            <span>14. Probability</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+</ul>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main>
+    <h1 class="page-title">NCERT Solutions Class 10 Maths Chapter 4: Quadratic Equations</h1>
+    <p class="page-meta">Detailed solutions for Exercise 4.3 (Nature of Roots).</p>
+
+    <div class="exercise-tabs">
+        <a href="ncert-solutions-class-10-maths-chapter-4-exercise-4-1.html" class="ex-tab">Ex 4.1</a>
+    <a href="ncert-solutions-class-10-maths-chapter-4-exercise-4-2.html" class="ex-tab">Ex 4.2</a>
+    <a href="#" class="ex-tab active">Ex 4.3</a>
+    </div>
+
+    <!-- CONTAINER WHERE THE DESIGNED QUESTIONS WILL APPEAR -->
+    <div id="questions-container"></div>
+
+    <!-- ========================================== -->
+    <!-- PASTE GEMINI OUTPUT BELOW INSIDE THIS DIV -->
+    <!-- ========================================== -->
+    <div id="raw-content" style="display: none;">
+        #### **Q1. Find the nature of the roots of the following quadratic equations. If the real roots exist, find them:**
+**(i)** $2x^2 – 3x + 5 = 0$
+**(ii)** $3x^2 – 4\sqrt{3}x + 4 = 0$
+**(iii)** $2x^2 – 6x + 3 = 0$
+
+#### **A1. Solution:**
+We compare the given equations with $ax^2 + bx + c = 0$ to find the Discriminant $D = b^2 – 4ac$.
+*   If $D > 0$, there are two distinct real roots.
+*   If $D = 0$, there are two equal real roots.
+*   If $D < 0$, there are no real roots.
+
+**(i) $2x^2 – 3x + 5 = 0$**
+Here, $a = 2, b = -3, c = 5$.
+$D = b^2 - 4ac = (-3)^2 - 4(2)(5)$
+$D = 9 - 40 = -31$
+Since $D < 0$, **no real roots exist.**
+
+**(ii) $3x^2 – 4\sqrt{3}x + 4 = 0$**
+Here, $a = 3, b = -4\sqrt{3}, c = 4$.
+$D = b^2 - 4ac = (-4\sqrt{3})^2 - 4(3)(4)$
+$D = 48 - 48 = 0$
+Since $D = 0$, **two equal real roots exist.**
+Roots are given by $x = \frac{-b}{2a}$
+$x = \frac{-(-4\sqrt{3})}{2(3)} = \frac{4\sqrt{3}}{6} = \frac{2\sqrt{3}}{3}$
+**Roots are $\frac{2\sqrt{3}}{3}$ and $\frac{2\sqrt{3}}{3}$.**
+
+**(iii) $2x^2 – 6x + 3 = 0$**
+Here, $a = 2, b = -6, c = 3$.
+$D = b^2 - 4ac = (-6)^2 - 4(2)(3)$
+$D = 36 - 24 = 12$
+Since $D > 0$, **two distinct real roots exist.**
+Roots are given by quadratic formula: $x = \frac{-b \pm \sqrt{D}}{2a}$
+$x = \frac{-(-6) \pm \sqrt{12}}{2(2)} = \frac{6 \pm 2\sqrt{3}}{4}$
+$x = \frac{2(3 \pm \sqrt{3})}{4} = \frac{3 \pm \sqrt{3}}{2}$
+**Roots are $\frac{3 + \sqrt{3}}{2}$ and $\frac{3 - \sqrt{3}}{2}$.**
+
+#### **Q2. Find the values of $k$ for each of the following quadratic equations, so that they have two equal roots.**
+**(i)** $2x^2 + kx + 3 = 0$
+**(ii)** $k x (x – 2) + 6 = 0$
+
+#### **A2. Solution:**
+For equal roots, the Discriminant must be zero ($D = b^2 – 4ac = 0$).
+
+**(i) $2x^2 + kx + 3 = 0$**
+$a = 2, b = k, c = 3$.
+$D = k^2 - 4(2)(3) = k^2 - 24$
+For equal roots, $D = 0$:
+$k^2 - 24 = 0$
+$k^2 = 24$
+$k = \pm\sqrt{24} = \pm 2\sqrt{6}$
+**Answer: $k = 2\sqrt{6}$ or $k = -2\sqrt{6}$.**
+
+**(ii) $k x (x – 2) + 6 = 0$**
+Simplify: $kx^2 - 2kx + 6 = 0$.
+$a = k, b = -2k, c = 6$.
+$D = (-2k)^2 - 4(k)(6)$
+$D = 4k^2 - 24k$
+For equal roots, $D = 0$:
+$4k^2 - 24k = 0$
+$4k(k - 6) = 0$
+$k = 0$ or $k = 6$.
+Since $a = k$ cannot be 0 for a quadratic equation, we reject $k=0$.
+**Answer: $k = 6$.**
+
+#### **Q3. Is it possible to design a rectangular mango grove whose length is twice its breadth, and the area is $800 \text{ m}^2$? If so, find its length and breadth.**
+
+#### **A3. Solution:**
+Let the breadth be $x$ meters.
+Then, the length is $2x$ meters.
+Area = Length $\times$ Breadth
+$2x \cdot x = 800$
+$2x^2 = 800$
+$x^2 = 400$
+$x^2 - 400 = 0$
+Here $D = 0^2 - 4(1)(-400) = 1600 > 0$. **Yes, it is possible.**
+$x = \sqrt{400} = 20$ (Length cannot be negative, so ignore -20).
+Breadth = 20 m.
+Length = $2 \times 20 = 40$ m.
+**Answer: Length = 40 m, Breadth = 20 m.**
+
+#### **Q4. Is the following situation possible? If so, determine their present ages. The sum of the ages of two friends is 20 years. Four years ago, the product of their ages in years was 48.**
+
+#### **A4. Solution:**
+Let the age of the first friend be $x$.
+Then the age of the second friend is $20 - x$.
+**Four years ago:**
+Age of first friend = $x - 4$
+Age of second friend = $(20 - x) - 4 = 16 - x$
+**Product:**
+$(x - 4)(16 - x) = 48$
+$16x - x^2 - 64 + 4x = 48$
+$-x^2 + 20x - 64 - 48 = 0$
+$-x^2 + 20x - 112 = 0$
+$x^2 - 20x + 112 = 0$
+
+**Check Discriminant:**
+$a = 1, b = -20, c = 112$
+$D = (-20)^2 - 4(1)(112)$
+$D = 400 - 448 = -48$
+Since $D < 0$, no real roots exist.
+**Answer: This situation is not possible.**
+
+#### **Q5. Is it possible to design a rectangular park of perimeter 80 m and area $400 \text{ m}^2$? If so, find its length and breadth.**
+
+#### **A5. Solution:**
+Let length be $l$ and breadth be $b$.
+1.  Perimeter $= 2(l + b) = 80 \Rightarrow l + b = 40 \Rightarrow l = 40 - b$.
+2.  Area $= l \times b = 400$.
+
+Substitute $l$ in the area equation:
+$(40 - b)b = 400$
+$40b - b^2 = 400$
+$b^2 - 40b + 400 = 0$
+
+**Check Discriminant:**
+$a = 1, b = -40, c = 400$
+$D = (-40)^2 - 4(1)(400)$
+$D = 1600 - 1600 = 0$
+Since $D = 0$, equal real roots exist. **Yes, it is possible.**
+$b = \frac{-(-40)}{2(1)} = \frac{40}{2} = 20$.
+Breadth = 20 m.
+Length = $40 - 20 = 20$ m.
+(Since length equals breadth, it is a square).
+**Answer: Length = 20 m, Breadth = 20 m.**
+    </div>
+    <!-- ========================================== -->
+
+
+    <div class="app-nudge">
+    <div style="display: flex; gap: 1rem; align-items: center;">
+        <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display:flex; align-items:center; justify-content:center;">
+            <i class="fas fa-camera" style="font-size: 1.5rem; color: var(--color-curiosity);"></i>
+        </div>
+        <div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.2rem;">Snap a Photo of any Graph</h3>
+            <p style="font-size: 0.95rem; opacity: 0.8;">Braino AI can analyze geometry and graphs from photos instantly.</p>
+        </div>
+    </div>
+    <a href="#" class="btn btn-primary" style="background: white; color: var(--color-trust);">
+        Try Snap & Solve <i class="fas fa-external-link-alt"></i>
+    </a>
+</div>
+</main>
+
+
+        </div>
+    </div>
+
+    <!-- Footer Injection -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Load Footer
+        fetch('../footer.html?v=1.1')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
+        // Load Header & Init Mobile Menu
+        fetch('../header.html?v=1.1')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                // Initialize Mobile Menu (Same logic as index.html)
+                const menuBtn = document.getElementById('menuBtn');
+                const navLinks = document.getElementById('navLinks');
+                if(menuBtn && navLinks) {
+                    const icon = menuBtn.querySelector('i');
+                    menuBtn.addEventListener('click', function() {
+                        navLinks.classList.toggle('active');
+                        if (navLinks.classList.contains('active')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                }
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+    const rawText = document.getElementById('raw-content').innerHTML;
+    const container = document.getElementById('questions-container');
+
+    // 1. Split by "####" (Works for Q1, A1, etc.)
+    // We clean up empty splits immediately
+    const blocks = rawText.split('####').filter(b => b.trim().length > 0);
+
+    blocks.forEach((block, index) => {
+        // 2. Extract Title (First line) and Content (Rest)
+        let lines = block.trim().split('\n');
+        let titleLine = lines[0].replace(/\*/g, '').trim(); // Remove ** stars
+        let contentMarkdown = lines.slice(1).join('\n'); // Everything else
+
+        // 3. Convert Content to HTML
+        let contentHtml = marked.parse(contentMarkdown);
+
+        // 4. Determine if this is a Question or just a Solution
+        // If title starts with 'Q', we assume it's a question block.
+        // If it starts with 'A' or 'Solution', we treat it as an answer block.
+        let isAnswerOnly = titleLine.match(/^(A\d|Solution)/i);
+
+        const article = document.createElement('article');
+        article.className = 'question-block';
+        article.id = 'block-' + index;
+
+        if (isAnswerOnly) {
+            // RENDER STYLE: SOLUTION ONLY (Like your screenshot example)
+            article.innerHTML = `
+                <div class="q-badge" style="background:var(--color-trust);">Solution</div>
+                <h2 class="q-text" style="font-size: 1.2rem; color: #444;">${titleLine}</h2>
+                <div class="solution-content">
+                    <div class="solution-step" style="background: #fff; border-left: 4px solid var(--color-trust); padding: 1rem; margin-top:1rem;">
+                        <div class="step-content">${contentHtml}</div>
+                    </div>
+                </div>
+            `;
+        } else {
+            // RENDER STYLE: FULL QUESTION (Standard)
+            article.innerHTML = `
+                <div class="q-badge">Question</div>
+                <h2 class="q-text">${titleLine}</h2>
+                <div class="solution-content">
+                    <div class="step-content">${contentHtml}</div>
+                </div>
+                <div class="video-placeholder">
+                     <a href="#" class="play-btn-pulse"><i class="fas fa-play" style="margin-left:5px;"></i></a>
+                     <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Watch Video Explanation</h3>
+                </div>
+            `;
+        }
+
+        container.appendChild(article);
+    });
+
+    // 5. Render Math
+    if (window.MathJax) window.MathJax.typesetPromise();
+});
+
+    </script>
+</body>
+</html>

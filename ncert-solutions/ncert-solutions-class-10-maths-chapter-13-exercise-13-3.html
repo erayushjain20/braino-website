@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions Class 10 Maths Chapter 13 Statistics - Braino</title>
+    <meta name="description" content="Step-by-step NCERT Solutions for Class 10 Maths Chapter 13 Statistics. Exercise 13.1,13.2,13.3 solutions with video explanations on Braino App.">
+
+    <!-- Fonts & Icons (Same as Index) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- JSON-LD SCHEMA FOR SEO (Education) -->
+    <script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "If the median of the distribution given below is 28.5, find the values of x and y. (Class interval: 0-10, 10-20... Total Frequency: 60)",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Given the median is 28.5 and total frequency (N) is 60. By using the median formula and the equation x + y = 15 derived from the total frequency, we find that x = 8 and y = 7."
+}
+},
+{
+"@type": "Question",
+"name": "A life insurance agent found the following data for distribution of ages of 100 policy holders. Calculate the median age, if policies are given only to persons having age 18 years onwards but less than 60 year.",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "First, convert the 'Below' cumulative frequency distribution into a standard frequency distribution. Using N=100, the median class is found to be 35-40. Applying the median formula, the median age is calculated as 35.76 years."
+}
+},
+{
+"@type": "Question",
+"name": "The following table gives the distribution of the life time of 400 neon lamps. Find the median life time of a lamp.",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "With N=400, the median class is 3000-3500. Using the formula Median = l + [(N/2 - cf)/f] × h, where l=3000, cf=130, f=86, and h=500, the median life time is calculated to be approximately 3406.98 hours."
+}
+},
+{
+"@type": "Question",
+"name": "100 surnames were randomly picked up from a local telephone directory. Determine the median number of letters in the surnames. Find the mean and modal size.",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "For the given data: The Median number of letters is 8.05. The Mean number of letters is 8.32. The Modal size of the surnames is 7.88."
+}
+}
+]
+}
+</script>
+    <script>window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };</script>
+
+
+
+    <style>
+        /* --- 1. REUSING VARIABLES FROM INDEX.HTML --- */
+        :root {
+            --color-trust: #1e293b; 
+            --color-curiosity: #06b6d4; /* Your Brand Cyan */
+            --color-curiosity-hover: #0891b2;
+            --color-success: #22c55e;
+            --color-bg: #f8fafc;
+            --color-surface: #ffffff;
+            --color-border: #e2e8f0;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-card: 0 10px 30px -5px rgba(0,0,0,0.08);
+        }
+
+        /* --- 2. LAYOUT ESSENTIALS --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--color-bg); color: var(--text-main); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; transition: 0.2s; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.6rem 1.2rem; font-weight: 700; border-radius: 999px; font-size: 0.95rem; cursor: pointer; border: none; gap: 0.5rem; }
+        .btn-primary { background-color: var(--color-curiosity); color: white; box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3); }
+        .btn-primary:hover { background-color: var(--color-curiosity-hover); transform: translateY(-2px); }
+
+        /* --- 3. PAGE SPECIFIC LAYOUT --- */
+        .ncert-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr; /* Sidebar | Content */
+            gap: 2.5rem;
+            padding: 2rem 0 4rem;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs { padding: 1rem 0; padding-top: 100px; font-size: 0.9rem; color: var(--text-muted); 
+         display: flex;align-items: center;justify-content: flex-start !important;gap: 0;}
+        .breadcrumbs a:hover { color: var(--color-curiosity); }
+        .breadcrumbs a,
+.breadcrumbs span { 
+    flex-shrink: 0;
+}
+        .breadcrumbs span {  margin: 0 0.5rem; color: #cbd5e1; }
+
+        /* --- 4. SIDEBAR (CHAPTER LIST) --- */
+        .sidebar-sticky { position: sticky; top: 100px; }
+        
+        .chapter-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .chapter-header {
+            background: var(--color-trust);
+            color: white;
+            padding: 1rem;
+            font-weight: 700;
+        }
+
+        .chapter-list { list-style: none; overflow-y: auto; position: sticky;top: 80px;height: calc(80vh - 100px);scrollbar-width: thin;}
+        .chapter-list li { border-bottom: 1px solid var(--color-border); }
+        .chapter-list li:last-child { border-bottom: none; }
+        
+        .chapter-link {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.85rem 1rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .chapter-link:hover { background-color: #ecfeff; color: var(--color-curiosity); }
+        .chapter-link.active { background-color: #ecfeff; color: var(--color-curiosity); border-left: 4px solid var(--color-curiosity); font-weight: 700; }
+
+        /* --- 5. MAIN CONTENT --- */
+        .page-title { font-size: 2rem; font-weight: 800; color: var(--color-trust); margin-bottom: 0.5rem; }
+        .page-meta { color: var(--text-muted); margin-bottom: 2rem; }
+
+        /* Exercise Tabs */
+        .exercise-tabs {
+            display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 5px; margin-bottom: 2rem;
+            scrollbar-width: none; /* Firefox */
+        }
+        .exercise-tabs::-webkit-scrollbar { display: none; }
+        .ex-tab {
+            padding: 0.5rem 1.2rem; background: white; border: 1px solid var(--color-border);
+            border-radius: 99px; white-space: nowrap; font-weight: 600; color: var(--text-muted);
+        }
+        .ex-tab.active { background: var(--color-trust); color: white; border-color: var(--color-trust); }
+        .ex-tab:hover:not(.active) { border-color: var(--color-curiosity); color: var(--color-curiosity); }
+
+        /* Question Block */
+        .question-block {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .q-badge {
+            display: inline-block; background: #e0f2fe; color: var(--color-curiosity-hover);
+            font-weight: 700; font-size: 0.8rem; padding: 4px 12px; border-radius: 99px; margin-bottom: 1rem;
+        }
+
+        .q-text { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 1.5rem; }
+        
+        /* Math Formatting */
+        .math { font-family: 'Courier New', Courier, monospace; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; color: #d946ef; font-weight: 600; }
+
+        /* Video Placeholder (Designed to sell the App) */
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #0f172a;
+            border-radius: var(--radius-md);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center;
+            color: white;
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://placehold.co/800x450/1e293b/FFF?text=Braino+Video+Solution'); 
+            background-size: cover;
+        }
+
+        .play-btn-pulse {
+            width: 64px; height: 64px; background: var(--color-curiosity); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;
+            box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7);
+            animation: pulse-cyan 2s infinite;
+            margin-bottom: 1rem;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .play-btn-pulse:hover { transform: scale(1.1); }
+        
+        @keyframes pulse-cyan {
+            0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(6, 182, 212, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+        }
+
+        /* Text Solution */
+        .solution-step { position: relative; padding-left: 2rem; margin-bottom: 1.5rem; }
+        .solution-step::before {
+            content: ''; position: absolute; left: 0; top: 8px; width: 12px; height: 12px;
+            background: var(--color-success); border-radius: 50%;
+        }
+        .solution-step::after {
+            content: ''; position: absolute; left: 5px; top: 25px; width: 2px; height: 100%;
+            background: #e2e8f0;
+        }
+        .solution-step:last-child::after { display: none; }
+        
+        .step-title { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; color: var(--color-trust); }
+        .step-content { color: var(--text-muted); font-size: 0.95rem; }
+
+        .solution-content table {
+        width: 100%;
+        max-width: 400px; /* Keeps tables from getting too wide */
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-family: sans-serif;
+    }
+    .solution-content th, 
+    .solution-content td {
+        border: 1px solid #ddd;
+        padding: 8px 12px;
+        text-align: center;
+    }
+    .solution-content th {
+        background-color: #f1f5f9;
+        font-weight: bold;
+    }
+
+        /* In-Feed App Banner */
+        .app-nudge {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            border-radius: var(--radius-md); padding: 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+            color: white; margin: 3rem 0;
+            box-shadow: var(--shadow-card);
+        }
+
+        /* --- 6. MOBILE RESPONSIVE --- */
+        @media (max-width: 968px) {
+            .ncert-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+            .sidebar-sticky { display: none; } /* Hidden on mobile by default, usually converted to a dropdown */
+            .mobile-chapter-select { display: block; width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: white; font-weight: 700; margin-bottom: 1.5rem; }
+            .app-nudge { flex-direction: column; text-align: center; gap: 1.5rem; }
+            .page-title { font-size: 1.5rem; }
+        }
+        @media (min-width: 969px) { .mobile-chapter-select { display: none; } }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Injection -->
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="/">Home</a><span>/</span><a href="#">NCERT Solutions</a><span>/</span><a href="#">Class 10 Maths</a><span>/</span>Statistics
+        </nav>
+
+        <div class="ncert-layout">
+            
+            <!-- Sidebar: Chapter Navigation -->
+            <aside class="sidebar-wrapper">
+                <!-- Mobile Dropdown Placeholder -->
+                <select class="mobile-chapter-select" onchange="location = this.value;">
+                    <option value="#">Chapter 1: Real Numbers</option>
+                    <option value="#">Chapter 2: Polynomials</option>
+                    <option value="#">Chapter 3: Pair of Linear Equations in Two Variables</option>
+                    <option value="#">Chapter 4: Quadratic Equations</option>
+                    <option value="#">Chapter 5: Arithmetic Progressions</option>
+                    <option value="#">Chapter 6: Triangles</option>
+                    <option value="#">Chapter 7: Coordinate Geometry</option>
+                    <option value="#">Chapter 8: Introduction to Trigonometry</option>
+                    <option value="#">Chapter 9: Some Applications of Trigonometry</option>
+                    <option value="#">Chapter 10: Circles</option>
+                    <option value="#">Chapter 11: Areas Related to Circles</option>
+                    <option value="#">Chapter 12: Surface Areas and Volumes</option>
+                    <option value="#">Chapter 13: Statistics</option>
+                    <option value="#">Chapter 14: Probability</option>
+                </select>
+
+                <div class="chapter-card sidebar-sticky">
+                    <div class="chapter-header">
+                        Class 10 Maths
+                    </div>
+                    <ul class="chapter-list">
+    <!-- Chapter 1 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-1-exercise-1-1.html" class="chapter-link">
+            <span>01. Real Numbers</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 2 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-2-exercise-2-1.html" class="chapter-link">
+            <span>02. Polynomials</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 3 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-3-exercise-3-1.html" class="chapter-link">
+            <span>03. Pair of Linear Eq.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 4 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-4-exercise-4-1.html" class="chapter-link">
+            <span>04. Quadratic Equations</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 5 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-5-exercise-5-1.html" class="chapter-link">
+            <span>05. Arithmetic Progressions</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 6 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-6-exercise-6-1.html" class="chapter-link">
+            <span>06. Triangles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 7 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-7-exercise-7-1.html" class="chapter-link">
+            <span>07. Coordinate Geometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 8 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-8-exercise-8-1.html" class="chapter-link">
+            <span>08. Intro to Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 9 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-9-exercise-9-1.html" class="chapter-link">
+            <span>09. App. of Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 10 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-10-exercise-10-1.html" class="chapter-link">
+            <span>10. Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 11 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-11-exercise-11-1.html" class="chapter-link">
+            <span>11. Areas Related to Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 12 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-12-exercise-12-1.html" class="chapter-link">
+            <span>12. Surface Areas & Vol.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 13 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-13-exercise-13-1.html" class="chapter-link">
+            <span>13. Statistics</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 14 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-14-exercise-14-1.html" class="chapter-link">
+            <span>14. Probability</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+</ul>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main>
+        <h1 class="page-title">NCERT Solutions Class 10 Maths Chapter 13: Statistics</h1>
+<p class="page-meta">Detailed solutions for Exercise 13.3 (Median of Grouped Data).</p>
+<div class="exercise-tabs">
+<a href="ncert-solutions-class-10-maths-chapter-13-exercise-13-1.html" class="ex-tab">Ex 13.1</a>
+<a href="ncert-solutions-class-10-maths-chapter-13-exercise-13-2.html" class="ex-tab">Ex 13.2</a>
+<a href="#" class="ex-tab active">Ex 13.3</a>
+</div>
+
+    <!-- CONTAINER WHERE THE DESIGNED QUESTIONS WILL APPEAR -->
+    <div id="questions-container"></div>
+
+    <!-- ========================================== -->
+    <!-- PASTE GEMINI OUTPUT BELOW INSIDE THIS DIV -->
+    <!-- ========================================== -->
+    <div id="raw-content" style="display: none;">
+        #### **Q1. The following frequency distribution gives the monthly consumption of electricity of 68 consumers of a locality. Find the median, mean and mode of the data and compare them.**
+
+| Monthly consumption (in units) | 65-85 | 85-105 | 105-125 | 125-145 | 145-165 | 165-185 | 185-205 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Number of consumers** | 4 | 5 | 13 | 20 | 14 | 8 | 4 |
+
+#### **A1. Solution:**
+**1. Median:**
+$N = 68 \Rightarrow \frac{N}{2} = 34$.
+Cumulative Frequency (cf) just greater than 34 is 42, corresponding to class **125 - 145**.
+$l = 125, h = 20, f = 20, cf = 22$ (preceding class).
+
+Median = $l + \left( \frac{\frac{N}{2} - cf}{f} \right) \times h$
+$= 125 + \left( \frac{34 - 22}{20} \right) \times 20$
+$= 125 + 12 = 137$ units.
+
+**2. Mean:**
+Using Step Deviation Method ($a = 135, h = 20$).
+Mean $\bar{x} = 137.05$ units.
+
+**3. Mode:**
+Max frequency is 20. Modal class is **125 - 145**.
+$l = 125, f_1 = 20, f_0 = 13, f_2 = 14$.
+Mode = $125 + \left( \frac{20 - 13}{40 - 13 - 14} \right) \times 20$
+$= 125 + \frac{140}{13} = 135.76$ units.
+
+**Comparison:** Median (137) > Mean (137.05) > Mode (135.76). The three measures are approximately the same.
+
+#### **Q2. If the median of the distribution given below is 28.5, find the values of $x$ and $y$.**
+
+| Class interval | 0-10 | 10-20 | 20-30 | 30-40 | 40-50 | 50-60 | **Total** |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Frequency** | 5 | $x$ | 20 | 15 | $y$ | 5 | **60** |
+
+#### **A2. Solution:**
+Given: $N = 60$, Median = 28.5.
+Since Median is 28.5, the median class is **20 - 30**.
+$l = 20, h = 10, f = 20$.
+Cumulative Frequency ($cf$) of preceding class = $5 + x$.
+
+1. Equation from Total Frequency:
+$5 + x + 20 + 15 + y + 5 = 60$
+$45 + x + y = 60 \Rightarrow x + y = 15$ ...(i)
+
+2. Median Formula:
+Median = $l + \left( \frac{\frac{N}{2} - cf}{f} \right) \times h$
+$28.5 = 20 + \left( \frac{30 - (5 + x)}{20} \right) \times 10$
+$8.5 = \frac{25 - x}{2}$
+$17 = 25 - x \Rightarrow x = 8$.
+
+Substitute $x = 8$ in (i):
+$8 + y = 15 \Rightarrow y = 7$.
+**Values are $x = 8$ and $y = 7$.**
+
+#### **Q3. A life insurance agent found the following data for distribution of ages of 100 policy holders. Calculate the median age, if policies are given only to persons having age 18 years onwards but less than 60 year.**
+
+| Age (in years) | Below 20 | Below 25 | Below 30 | Below 35 | Below 40 | Below 45 | Below 50 | Below 55 | Below 60 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Number of policy holders** | 2 | 6 | 24 | 45 | 78 | 89 | 92 | 98 | 100 |
+
+#### **A3. Solution:**
+Convert cumulative frequency to simple frequency distribution:
+15-20: 2
+20-25: $6-2=4$
+25-30: $24-6=18$
+30-35: $45-24=21$
+35-40: $78-45=33$
+40-45: $89-78=11$
+45-50: $92-89=3$
+50-55: $98-92=6$
+55-60: $100-98=2$
+
+$N = 100 \Rightarrow \frac{N}{2} = 50$.
+Class with cf > 50 is **35 - 40** (cf = 78).
+$l = 35, h = 5, f = 33, cf = 45$.
+
+Median = $35 + \left( \frac{50 - 45}{33} \right) \times 5$
+$= 35 + \frac{25}{33} = 35 + 0.76$
+$= 35.76$ years.
+
+#### **Q4. The lengths of 40 leaves of a plant are measured correct to the nearest millimetre, and the data obtained is represented in the following table:**
+
+| Length (in mm) | 118-126 | 127-135 | 136-144 | 145-153 | 154-162 | 163-171 | 172-180 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Number of leaves** | 3 | 5 | 9 | 12 | 5 | 4 | 2 |
+
+**Find the median length of the leaves.**
+
+#### **A4. Solution:**
+The series is discontinuous. Convert to continuous by subtracting 0.5 from lower limit and adding 0.5 to upper limit.
+Classes: 117.5-126.5, 126.5-135.5, etc.
+
+$N = 40 \Rightarrow \frac{N}{2} = 20$.
+Cumulative frequencies: 3, 8, 17, 29, 34, 38, 40.
+Class with cf > 20 is **144.5 - 153.5** (cf = 29).
+$l = 144.5, h = 9, f = 12, cf = 17$.
+
+Median = $144.5 + \left( \frac{20 - 17}{12} \right) \times 9$
+$= 144.5 + \frac{3}{12} \times 9$
+$= 144.5 + 2.25 = 146.75$ mm.
+
+
+#### **Q5. The following table gives the distribution of the life time of 400 neon lamps:**
+
+| Life time (in hours) | 1500-2000 | 2000-2500 | 2500-3000 | 3000-3500 | 3500-4000 | 4000-4500 | 4500-5000 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Number of lamps** | 14 | 56 | 60 | 86 | 74 | 62 | 48 |
+
+**Find the median life time of a lamp.**
+
+#### **A5. Solution:**
+First, we calculate the cumulative frequencies ($cf$).
+
+| Life time (in hours) | Frequency ($f$) | Cumulative Frequency ($cf$) |
+| :--- | :---: | :---: |
+| 1500 - 2000 | 14 | 14 |
+| 2000 - 2500 | 56 | 70 |
+| 2500 - 3000 | 60 | 130 |
+| 3000 - 3500 | 86 | 216 |
+| 3500 - 4000 | 74 | 290 |
+| 4000 - 4500 | 62 | 352 |
+| 4500 - 5000 | 48 | 400 |
+| **Total** | **$N = 400$** | |
+
+Here, $N = 400$, so $\frac{N}{2} = 200$.
+The cumulative frequency just greater than 200 is 216, which corresponds to the class interval **3000 - 3500**.
+Thus, the median class is **3000 - 3500**.
+
+Given:
+Lower limit ($l$) = 3000
+Class size ($h$) = 500
+Frequency of median class ($f$) = 86
+Cumulative frequency of preceding class ($cf$) = 130
+
+Median = $l + \left( \frac{\frac{N}{2} - cf}{f} \right) \times h$
+$= 3000 + \left( \frac{200 - 130}{86} \right) \times 500$
+$= 3000 + \left( \frac{70}{86} \right) \times 500$
+$= 3000 + \frac{35000}{86}$
+$= 3000 + 406.976...$
+$\approx 3406.98$ hours.
+
+**The median life time of a lamp is 3406.98 hours.**
+
+#### **Q6. 100 surnames were randomly picked up from a local telephone directory and the frequency distribution of the number of letters in the English alphabets in the surnames was obtained as follows:**
+
+| Number of letters | 1-4 | 4-7 | 7-10 | 10-13 | 13-16 | 16-19 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Number of surnames** | 6 | 30 | 40 | 16 | 4 | 4 |
+
+**Determine the median number of letters in the surnames. Find the mean number of letters in the surnames? Also, find the modal size of the surnames.**
+
+#### **A6. Solution:**
+**1. Median:**
+$N = 100$, so $\frac{N}{2} = 50$.
+Cumulative frequencies:
+1-4: 6
+4-7: 36
+7-10: 76 (This is $> 50$, so median class is **7 - 10**)
+10-13: 92
+...
+
+Median Class: **7 - 10**
+$l = 7, h = 3, f = 40, cf = 36$.
+
+Median = $7 + \left( \frac{50 - 36}{40} \right) \times 3$
+$= 7 + \frac{14}{40} \times 3$
+$= 7 + \frac{42}{40} = 7 + 1.05 = 8.05$.
+
+**2. Mean:**
+Using Step Deviation Method ($a = 8.5, h = 3$).
+Class marks ($x_i$): 2.5, 5.5, 8.5, 11.5, 14.5, 17.5.
+Mean $\bar{x} = 8.32$.
+
+**3. Mode:**
+Maximum frequency is 40. Modal class is **7 - 10**.
+$l = 7, h = 3, f_1 = 40, f_0 = 30, f_2 = 16$.
+
+Mode = $7 + \left( \frac{40 - 30}{2(40) - 30 - 16} \right) \times 3$
+$= 7 + \left( \frac{10}{80 - 46} \right) \times 3$
+$= 7 + \frac{30}{34} = 7 + 0.88 = 7.88$.
+
+**Median = 8.05, Mean = 8.32, Mode = 7.88.**
+
+#### **Q7. The distribution below gives the weights of 30 students of a class. Find the median weight of the students.**
+
+| Weight (in kg) | 40-45 | 45-50 | 50-55 | 55-60 | 60-65 | 65-70 | 70-75 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Number of students** | 2 | 3 | 8 | 6 | 6 | 3 | 2 |
+
+#### **A7. Solution:**
+Calculate cumulative frequencies ($cf$):
+40-45: 2
+45-50: 5
+50-55: 13
+55-60: 19
+60-65: 25
+65-70: 28
+70-75: 30
+
+$N = 30$, so $\frac{N}{2} = 15$.
+Cumulative frequency just greater than 15 is 19, corresponding to class **55 - 60**.
+Median Class: **55 - 60**.
+$l = 55, h = 5, f = 6, cf = 13$.
+
+Median = $l + \left( \frac{\frac{N}{2} - cf}{f} \right) \times h$
+$= 55 + \left( \frac{15 - 13}{6} \right) \times 5$
+$= 55 + \frac{2}{6} \times 5$
+$= 55 + \frac{5}{3}$
+$= 55 + 1.666...$
+$\approx 56.67$ kg.
+
+**The median weight of the students is 56.67 kg.**
+    </div>
+    <!-- ========================================== -->
+
+
+    <div class="app-nudge">
+    <div style="display: flex; gap: 1rem; align-items: center;">
+        <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display:flex; align-items:center; justify-content:center;">
+            <i class="fas fa-camera" style="font-size: 1.5rem; color: var(--color-curiosity);"></i>
+        </div>
+        <div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.2rem;">Snap a Photo of any Graph</h3>
+            <p style="font-size: 0.95rem; opacity: 0.8;">Braino AI can analyze geometry and graphs from photos instantly.</p>
+        </div>
+    </div>
+    <a href="#" class="btn btn-primary" style="background: white; color: var(--color-trust);">
+        Try Snap & Solve <i class="fas fa-external-link-alt"></i>
+    </a>
+</div>
+</main>
+
+
+        </div>
+    </div>
+
+    <!-- Footer Injection -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Load Footer
+        fetch('../footer.html?v=1.1')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
+        // Load Header & Init Mobile Menu
+        fetch('../header.html?v=1.1')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                // Initialize Mobile Menu (Same logic as index.html)
+                const menuBtn = document.getElementById('menuBtn');
+                const navLinks = document.getElementById('navLinks');
+                if(menuBtn && navLinks) {
+                    const icon = menuBtn.querySelector('i');
+                    menuBtn.addEventListener('click', function() {
+                        navLinks.classList.toggle('active');
+                        if (navLinks.classList.contains('active')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                }
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+    const rawText = document.getElementById('raw-content').innerHTML;
+    const container = document.getElementById('questions-container');
+
+    // 1. Split by "####" (Works for Q1, A1, etc.)
+    // We clean up empty splits immediately
+    const blocks = rawText.split('####').filter(b => b.trim().length > 0);
+
+    blocks.forEach((block, index) => {
+        // 2. Extract Title (First line) and Content (Rest)
+        let lines = block.trim().split('\n');
+        let titleLine = lines[0].replace(/\*/g, '').trim(); // Remove ** stars
+        let contentMarkdown = lines.slice(1).join('\n'); // Everything else
+
+        // 3. Convert Content to HTML
+        let contentHtml = marked.parse(contentMarkdown);
+
+        // 4. Determine if this is a Question or just a Solution
+        // If title starts with 'Q', we assume it's a question block.
+        // If it starts with 'A' or 'Solution', we treat it as an answer block.
+        let isAnswerOnly = titleLine.match(/^(A\d|Solution)/i);
+
+        const article = document.createElement('article');
+        article.className = 'question-block';
+        article.id = 'block-' + index;
+
+        if (isAnswerOnly) {
+            // RENDER STYLE: SOLUTION ONLY (Like your screenshot example)
+            article.innerHTML = `
+                <div class="q-badge" style="background:var(--color-trust);">Solution</div>
+                <h2 class="q-text" style="font-size: 1.2rem; color: #444;">${titleLine}</h2>
+                <div class="solution-content">
+                    <div class="solution-step" style="background: #fff; border-left: 4px solid var(--color-trust); padding: 1rem; margin-top:1rem;">
+                        <div class="step-content">${contentHtml}</div>
+                    </div>
+                </div>
+            `;
+        } else {
+            // RENDER STYLE: FULL QUESTION (Standard)
+            article.innerHTML = `
+                <div class="q-badge">Question</div>
+                <h2 class="q-text">${titleLine}</h2>
+                <div class="solution-content">
+                    <div class="step-content">${contentHtml}</div>
+                </div>
+                <div class="video-placeholder">
+                     <a href="#" class="play-btn-pulse"><i class="fas fa-play" style="margin-left:5px;"></i></a>
+                     <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Watch Video Explanation</h3>
+                </div>
+            `;
+        }
+
+        container.appendChild(article);
+    });
+
+    // 5. Render Math
+    if (window.MathJax) window.MathJax.typesetPromise();
+});
+
+    </script>
+</body>
+</html>

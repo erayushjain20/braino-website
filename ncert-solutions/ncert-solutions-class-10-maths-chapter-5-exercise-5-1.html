@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions Class 10 Maths Chapter 5 Arithmetic Progressions - Braino</title>
+    <meta name="description" content="Step-by-step NCERT Solutions for Class 10 Maths Chapter 5 Arithmetic Progressions. Exercise 5.1, 5.2, 5.3, 5.4 solutions with video explanations on Braino App.">
+
+    <!-- Fonts & Icons (Same as Index) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- JSON-LD SCHEMA FOR SEO (Education) -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "QAPage",
+  "mainEntity": {
+    "@type": "Question",
+    "name": "In which of the following situations, does the list of numbers involved make an arithmetic progression, and why? (i) The taxi fare after each km when the fare is ₹ 15 for the first km and ₹ 8 for each additional km.",
+    "text": "In which of the following situations, does the list of numbers involved make an arithmetic progression, and why? (i) The taxi fare after each km when the fare is ₹ 15 for the first km and ₹ 8 for each additional km.",
+    "answerCount": 1,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Fare for 1st km = ₹ 15. Fare for 2nd km = 15 + 8 = 23. Fare for 3rd km = 23 + 8 = 31. The list of numbers is 15, 23, 31, ... Here, the difference between consecutive terms is constant (d = 8). Therefore, it forms an Arithmetic Progression (AP).",
+      "author": { "@type": "Organization", "name": "Braino AI" }
+    }
+  }
+}
+</script>
+    <script>window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };</script>
+
+
+
+    <style>
+        /* --- 1. REUSING VARIABLES FROM INDEX.HTML --- */
+        :root {
+            --color-trust: #1e293b; 
+            --color-curiosity: #06b6d4; /* Your Brand Cyan */
+            --color-curiosity-hover: #0891b2;
+            --color-success: #22c55e;
+            --color-bg: #f8fafc;
+            --color-surface: #ffffff;
+            --color-border: #e2e8f0;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-card: 0 10px 30px -5px rgba(0,0,0,0.08);
+        }
+
+        /* --- 2. LAYOUT ESSENTIALS --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--color-bg); color: var(--text-main); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; transition: 0.2s; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.6rem 1.2rem; font-weight: 700; border-radius: 999px; font-size: 0.95rem; cursor: pointer; border: none; gap: 0.5rem; }
+        .btn-primary { background-color: var(--color-curiosity); color: white; box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3); }
+        .btn-primary:hover { background-color: var(--color-curiosity-hover); transform: translateY(-2px); }
+
+        /* --- 3. PAGE SPECIFIC LAYOUT --- */
+        .ncert-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr; /* Sidebar | Content */
+            gap: 2.5rem;
+            padding: 2rem 0 4rem;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs { padding: 1rem 0; padding-top: 100px; font-size: 0.9rem; color: var(--text-muted); 
+         display: flex;align-items: center;justify-content: flex-start !important;gap: 0;}
+        .breadcrumbs a:hover { color: var(--color-curiosity); }
+        .breadcrumbs a,
+.breadcrumbs span { 
+    flex-shrink: 0;
+}
+        .breadcrumbs span {  margin: 0 0.5rem; color: #cbd5e1; }
+
+        /* --- 4. SIDEBAR (CHAPTER LIST) --- */
+        .sidebar-sticky { position: sticky; top: 100px; }
+        
+        .chapter-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .chapter-header {
+            background: var(--color-trust);
+            color: white;
+            padding: 1rem;
+            font-weight: 700;
+        }
+
+        .chapter-list { list-style: none; overflow-y: auto; position: sticky;top: 80px;height: calc(80vh - 100px);scrollbar-width: thin;}
+        .chapter-list li { border-bottom: 1px solid var(--color-border); }
+        .chapter-list li:last-child { border-bottom: none; }
+        
+        .chapter-link {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.85rem 1rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .chapter-link:hover { background-color: #ecfeff; color: var(--color-curiosity); }
+        .chapter-link.active { background-color: #ecfeff; color: var(--color-curiosity); border-left: 4px solid var(--color-curiosity); font-weight: 700; }
+
+        /* --- 5. MAIN CONTENT --- */
+        .page-title { font-size: 2rem; font-weight: 800; color: var(--color-trust); margin-bottom: 0.5rem; }
+        .page-meta { color: var(--text-muted); margin-bottom: 2rem; }
+
+        /* Exercise Tabs */
+        .exercise-tabs {
+            display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 5px; margin-bottom: 2rem;
+            scrollbar-width: none; /* Firefox */
+        }
+        .exercise-tabs::-webkit-scrollbar { display: none; }
+        .ex-tab {
+            padding: 0.5rem 1.2rem; background: white; border: 1px solid var(--color-border);
+            border-radius: 99px; white-space: nowrap; font-weight: 600; color: var(--text-muted);
+        }
+        .ex-tab.active { background: var(--color-trust); color: white; border-color: var(--color-trust); }
+        .ex-tab:hover:not(.active) { border-color: var(--color-curiosity); color: var(--color-curiosity); }
+
+        /* Question Block */
+        .question-block {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .q-badge {
+            display: inline-block; background: #e0f2fe; color: var(--color-curiosity-hover);
+            font-weight: 700; font-size: 0.8rem; padding: 4px 12px; border-radius: 99px; margin-bottom: 1rem;
+        }
+
+        .q-text { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 1.5rem; }
+        
+        /* Math Formatting */
+        .math { font-family: 'Courier New', Courier, monospace; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; color: #d946ef; font-weight: 600; }
+
+        /* Video Placeholder (Designed to sell the App) */
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #0f172a;
+            border-radius: var(--radius-md);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center;
+            color: white;
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://placehold.co/800x450/1e293b/FFF?text=Braino+Video+Solution'); 
+            background-size: cover;
+        }
+
+        .play-btn-pulse {
+            width: 64px; height: 64px; background: var(--color-curiosity); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;
+            box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7);
+            animation: pulse-cyan 2s infinite;
+            margin-bottom: 1rem;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .play-btn-pulse:hover { transform: scale(1.1); }
+        
+        @keyframes pulse-cyan {
+            0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(6, 182, 212, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+        }
+
+        /* Text Solution */
+        .solution-step { position: relative; padding-left: 2rem; margin-bottom: 1.5rem; }
+        .solution-step::before {
+            content: ''; position: absolute; left: 0; top: 8px; width: 12px; height: 12px;
+            background: var(--color-success); border-radius: 50%;
+        }
+        .solution-step::after {
+            content: ''; position: absolute; left: 5px; top: 25px; width: 2px; height: 100%;
+            background: #e2e8f0;
+        }
+        .solution-step:last-child::after { display: none; }
+        
+        .step-title { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; color: var(--color-trust); }
+        .step-content { color: var(--text-muted); font-size: 0.95rem; }
+
+        .solution-content table {
+        width: 100%;
+        max-width: 400px; /* Keeps tables from getting too wide */
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-family: sans-serif;
+    }
+    .solution-content th, 
+    .solution-content td {
+        border: 1px solid #ddd;
+        padding: 8px 12px;
+        text-align: center;
+    }
+    .solution-content th {
+        background-color: #f1f5f9;
+        font-weight: bold;
+    }
+
+        /* In-Feed App Banner */
+        .app-nudge {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            border-radius: var(--radius-md); padding: 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+            color: white; margin: 3rem 0;
+            box-shadow: var(--shadow-card);
+        }
+
+        /* --- 6. MOBILE RESPONSIVE --- */
+        @media (max-width: 968px) {
+            .ncert-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+            .sidebar-sticky { display: none; } /* Hidden on mobile by default, usually converted to a dropdown */
+            .mobile-chapter-select { display: block; width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: white; font-weight: 700; margin-bottom: 1.5rem; }
+            .app-nudge { flex-direction: column; text-align: center; gap: 1.5rem; }
+            .page-title { font-size: 1.5rem; }
+        }
+        @media (min-width: 969px) { .mobile-chapter-select { display: none; } }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Injection -->
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="/">Home</a><span>/</span><a href="#">NCERT Solutions</a><span>/</span><a href="#">Class 10 Maths</a><span>/</span>Arithmetic Progressions
+        </nav>
+
+        <div class="ncert-layout">
+            
+            <!-- Sidebar: Chapter Navigation -->
+            <aside class="sidebar-wrapper">
+                <!-- Mobile Dropdown Placeholder -->
+                <select class="mobile-chapter-select" onchange="location = this.value;">
+                    <option value="#">Chapter 1: Real Numbers</option>
+                    <option value="#">Chapter 2: Polynomials</option>
+                    <option value="#">Chapter 3: Pair of Linear Equations in Two Variables</option>
+                    <option value="#">Chapter 4: Quadratic Equations</option>
+                    <option value="#">Chapter 5: Arithmetic Progressions</option>
+                    <option value="#">Chapter 6: Triangles</option>
+                    <option value="#">Chapter 7: Coordinate Geometry</option>
+                    <option value="#">Chapter 8: Introduction to Trigonometry</option>
+                    <option value="#">Chapter 9: Some Applications of Trigonometry</option>
+                    <option value="#">Chapter 10: Circles</option>
+                    <option value="#">Chapter 11: Areas Related to Circles</option>
+                    <option value="#">Chapter 12: Surface Areas and Volumes</option>
+                    <option value="#">Chapter 13: Statistics</option>
+                    <option value="#">Chapter 14: Probability</option>
+                </select>
+
+                <div class="chapter-card sidebar-sticky">
+                    <div class="chapter-header">
+                        Class 10 Maths
+                    </div>
+                    <ul class="chapter-list">
+    <!-- Chapter 1 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-1-exercise-1-1.html" class="chapter-link">
+            <span>01. Real Numbers</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 2 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-2-exercise-2-1.html" class="chapter-link">
+            <span>02. Polynomials</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 3 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-3-exercise-3-1.html" class="chapter-link">
+            <span>03. Pair of Linear Eq.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 4 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-4-exercise-4-1.html" class="chapter-link">
+            <span>04. Quadratic Equations</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 5 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-5-exercise-5-1.html" class="chapter-link">
+            <span>05. Arithmetic Progressions</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 6 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-6-exercise-6-1.html" class="chapter-link">
+            <span>06. Triangles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 7 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-7-exercise-7-1.html" class="chapter-link">
+            <span>07. Coordinate Geometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 8 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-8-exercise-8-1.html" class="chapter-link">
+            <span>08. Intro to Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 9 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-9-exercise-9-1.html" class="chapter-link">
+            <span>09. App. of Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 10 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-10-exercise-10-1.html" class="chapter-link">
+            <span>10. Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 11 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-11-exercise-11-1.html" class="chapter-link">
+            <span>11. Areas Related to Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 12 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-12-exercise-12-1.html" class="chapter-link">
+            <span>12. Surface Areas & Vol.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 13 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-13-exercise-13-1.html" class="chapter-link">
+            <span>13. Statistics</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 14 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-14-exercise-14-1.html" class="chapter-link">
+            <span>14. Probability</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+</ul>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main>
+    <h1 class="page-title">NCERT Solutions Class 10 Maths Chapter 5: Arithmetic Progressions</h1>
+<p class="page-meta">Detailed solutions for Exercise 5.1 (Introduction to Arithmetic Progressions).</p>
+<div class="exercise-tabs">
+<a href="#" class="ex-tab active">Ex 5.1</a>
+<a href="ncert-solutions-class-10-maths-chapter-5-exercise-5-2.html" class="ex-tab">Ex 5.2</a>
+<a href="ncert-solutions-class-10-maths-chapter-5-exercise-5-3.html" class="ex-tab">Ex 5.3</a>
+</div>
+
+    <!-- CONTAINER WHERE THE DESIGNED QUESTIONS WILL APPEAR -->
+    <div id="questions-container"></div>
+
+    <!-- ========================================== -->
+    <!-- PASTE GEMINI OUTPUT BELOW INSIDE THIS DIV -->
+    <!-- ========================================== -->
+    <div id="raw-content" style="display: none;">
+#### **Q1. In which of the following situations, does the list of numbers involved make an arithmetic progression, and why?**
+
+**(i) The taxi fare after each km when the fare is ₹ 15 for the first km and ₹ 8 for each additional km.**
+**(ii) The amount of air present in a cylinder when a vacuum pump removes $\frac{1}{4}$ of the air remaining in the cylinder at a time.**
+**(iii) The cost of digging a well after every metre of digging, when it costs ₹ 150 for the first metre and rises by ₹ 50 for each subsequent metre.**
+**(iv) The amount of money in the account every year, when ₹ 10000 is deposited at compound interest at 8 % per annum.**
+
+#### **A1. Solution:**
+
+**(i)**
+Fare for 1st km = ₹ 15
+Fare for 2nd km = $15 + 8 = 23$
+Fare for 3rd km = $23 + 8 = 31$
+List: $15, 23, 31, 39, \dots$
+Since the difference between consecutive terms is constant ($d = 8$), **it is an AP.**
+
+**(ii)**
+Let initial volume = $V$.
+After 1st removal: $V - \frac{1}{4}V = \frac{3}{4}V$
+After 2nd removal: $\frac{3}{4}V - \frac{1}{4}(\frac{3}{4}V) = \frac{3}{4}V - \frac{3}{16}V = \frac{12V - 3V}{16} = \frac{9}{16}V = (\frac{3}{4})^2 V$
+List: $V, \frac{3}{4}V, (\frac{3}{4})^2 V, \dots$
+Difference 1: $\frac{3}{4}V - V = -\frac{1}{4}V$
+Difference 2: $\frac{9}{16}V - \frac{3}{4}V = \frac{9V - 12V}{16} = -\frac{3}{16}V$
+Differences are not constant. **It is NOT an AP.**
+
+**(iii)**
+Cost for 1st metre = ₹ 150
+Cost for 2nd metre = $150 + 50 = 200$
+Cost for 3rd metre = $200 + 50 = 250$
+List: $150, 200, 250, \dots$
+Difference is constant ($d = 50$). **It is an AP.**
+
+**(iv)**
+Principal = 10000, Rate = 8%.
+Year 1 Amount: $10000(1 + \frac{8}{100})^1$
+Year 2 Amount: $10000(1 + \frac{8}{100})^2$
+Year 3 Amount: $10000(1 + \frac{8}{100})^3$
+The terms increase by a factor (multiplication), not by a fixed difference. **It is NOT an AP.**
+
+---
+
+#### **Q2. Write first four terms of the AP, when the first term $a$ and the common difference $d$ are given as follows:**
+**(i)** $a = 10, d = 10$
+**(ii)** $a = -2, d = 0$
+**(iii)** $a = 4, d = -3$
+**(iv)** $a = -1, d = \frac{1}{2}$
+**(v)** $a = -1.25, d = -0.25$
+
+#### **A2. Solution:**
+
+**(i) $a = 10, d = 10$**
+$a_1 = 10$
+$a_2 = 10 + 10 = 20$
+$a_3 = 20 + 10 = 30$
+$a_4 = 30 + 10 = 40$
+**Terms: 10, 20, 30, 40**
+
+**(ii) $a = -2, d = 0$**
+$a_1 = -2$
+$a_2 = -2 + 0 = -2$
+$a_3 = -2$
+$a_4 = -2$
+**Terms: -2, -2, -2, -2**
+
+**(iii) $a = 4, d = -3$**
+$a_1 = 4$
+$a_2 = 4 - 3 = 1$
+$a_3 = 1 - 3 = -2$
+$a_4 = -2 - 3 = -5$
+**Terms: 4, 1, -2, -5**
+
+**(iv) $a = -1, d = \frac{1}{2}$**
+$a_1 = -1$
+$a_2 = -1 + 0.5 = -0.5$ (or $-\frac{1}{2}$)
+$a_3 = -0.5 + 0.5 = 0$
+$a_4 = 0 + 0.5 = 0.5$ (or $\frac{1}{2}$)
+**Terms: -1, $-\frac{1}{2}$, 0, $\frac{1}{2}$**
+
+**(v) $a = -1.25, d = -0.25$**
+$a_1 = -1.25$
+$a_2 = -1.25 - 0.25 = -1.50$
+$a_3 = -1.50 - 0.25 = -1.75$
+$a_4 = -1.75 - 0.25 = -2.00$
+**Terms: -1.25, -1.50, -1.75, -2.00**
+
+---
+
+#### **Q3. For the following APs, write the first term and the common difference:**
+**(i)** $3, 1, -1, -3, \dots$
+**(ii)** $-5, -1, 3, 7, \dots$
+**(iii)** $\frac{1}{3}, \frac{5}{3}, \frac{9}{3}, \frac{13}{3}, \dots$
+**(iv)** $0.6, 1.7, 2.8, 3.9, \dots$
+
+#### **A3. Solution:**
+
+**(i)** $a = 3$, $d = 1 - 3 = -2$. **Ans: $a=3, d=-2$**
+**(ii)** $a = -5$, $d = -1 - (-5) = -1 + 5 = 4$. **Ans: $a=-5, d=4$**
+**(iii)** $a = \frac{1}{3}$, $d = \frac{5}{3} - \frac{1}{3} = \frac{4}{3}$. **Ans: $a=\frac{1}{3}, d=\frac{4}{3}$**
+**(iv)** $a = 0.6$, $d = 1.7 - 0.6 = 1.1$. **Ans: $a=0.6, d=1.1$**
+
+---
+
+#### **Q4. Which of the following are APs? If they form an AP, find the common difference $d$ and write three more terms.**
+
+#### **A4. Solution:**
+**(i) $2, 4, 8, 16, \dots$**
+$4 - 2 = 2$
+$8 - 4 = 4$
+Difference is not constant. **Not an AP.**
+
+**(ii) $2, \frac{5}{2}, 3, \frac{7}{2}, \dots$**
+$\frac{5}{2} - 2 = 0.5$
+$3 - \frac{5}{2} = 0.5$
+Difference is constant. **It is an AP ($d=0.5$).**
+Next three terms:
+$3.5 + 0.5 = 4$
+$4 + 0.5 = 4.5$ ($\frac{9}{2}$)
+$4.5 + 0.5 = 5$
+
+**(iii) $-1.2, -3.2, -5.2, -7.2, \dots$**
+$-3.2 - (-1.2) = -2.0$
+$-5.2 - (-3.2) = -2.0$
+**It is an AP ($d=-2$).**
+Next three terms: $-9.2, -11.2, -13.2$.
+
+**(iv) $-10, -6, -2, 2, \dots$**
+$-6 - (-10) = 4$
+$-2 - (-6) = 4$
+**It is an AP ($d=4$).**
+Next three terms: $6, 10, 14$.
+
+**(v) $3, 3+\sqrt{2}, 3+2\sqrt{2}, 3+3\sqrt{2}, \dots$**
+$(3+\sqrt{2}) - 3 = \sqrt{2}$
+$(3+2\sqrt{2}) - (3+\sqrt{2}) = \sqrt{2}$
+**It is an AP ($d=\sqrt{2}$).**
+Next three terms: $3+4\sqrt{2}, 3+5\sqrt{2}, 3+6\sqrt{2}$.
+
+**(vi) $0.2, 0.22, 0.222, 0.2222, \dots$**
+$0.22 - 0.2 = 0.02$
+$0.222 - 0.22 = 0.002$
+Difference is not constant. **Not an AP.**
+
+**(vii) $0, -4, -8, -12, \dots$**
+$-4 - 0 = -4$
+$-8 - (-4) = -4$
+**It is an AP ($d=-4$).**
+Next three terms: $-16, -20, -24$.
+
+**(viii) $-\frac{1}{2}, -\frac{1}{2}, -\frac{1}{2}, -\frac{1}{2}, \dots$**
+$-\frac{1}{2} - (-\frac{1}{2}) = 0$
+**It is an AP ($d=0$).**
+Next three terms: $-\frac{1}{2}, -\frac{1}{2}, -\frac{1}{2}$.
+
+**(ix) $1, 3, 9, 27, \dots$**
+$3 - 1 = 2$
+$9 - 3 = 6$
+Difference is not constant. **Not an AP.**
+
+**(x) $a, 2a, 3a, 4a, \dots$**
+$2a - a = a$
+$3a - 2a = a$
+**It is an AP ($d=a$).**
+Next three terms: $5a, 6a, 7a$.
+
+**(xi) $a, a^2, a^3, a^4, \dots$**
+$a^2 - a = a(a-1)$
+$a^3 - a^2 = a^2(a-1)$
+Difference is not constant. **Not an AP.**
+
+**(xii) $\sqrt{2}, \sqrt{8}, \sqrt{18}, \sqrt{32}, \dots$**
+Simplify terms: $\sqrt{2}, 2\sqrt{2}, 3\sqrt{2}, 4\sqrt{2}$
+$2\sqrt{2} - \sqrt{2} = \sqrt{2}$
+$3\sqrt{2} - 2\sqrt{2} = \sqrt{2}$
+**It is an AP ($d=\sqrt{2}$).**
+Next three terms:
+$5\sqrt{2} = \sqrt{50}$
+$6\sqrt{2} = \sqrt{72}$
+$7\sqrt{2} = \sqrt{98}$
+
+**(xiii) $\sqrt{3}, \sqrt{6}, \sqrt{9}, \sqrt{12}, \dots$**
+$\sqrt{6} - \sqrt{3} = \sqrt{3}(\sqrt{2}-1)$
+$\sqrt{9} - \sqrt{6} = 3 - \sqrt{6}$
+Difference is not constant. **Not an AP.**
+
+**(xiv) $1^2, 3^2, 5^2, 7^2, \dots$**
+Values: $1, 9, 25, 49$
+$9 - 1 = 8$
+$25 - 9 = 16$
+Difference is not constant. **Not an AP.**
+
+**(xv) $1^2, 5^2, 7^2, 73, \dots$**
+Values: $1, 25, 49, 73$
+$25 - 1 = 24$
+$49 - 25 = 24$
+$73 - 49 = 24$
+**It is an AP ($d=24$).**
+Next three terms:
+$73 + 24 = 97$
+$97 + 24 = 121$
+$121 + 24 = 145$
+    </div>
+    <!-- ========================================== -->
+
+
+    <div class="app-nudge">
+    <div style="display: flex; gap: 1rem; align-items: center;">
+        <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display:flex; align-items:center; justify-content:center;">
+            <i class="fas fa-camera" style="font-size: 1.5rem; color: var(--color-curiosity);"></i>
+        </div>
+        <div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.2rem;">Snap a Photo of any Graph</h3>
+            <p style="font-size: 0.95rem; opacity: 0.8;">Braino AI can analyze geometry and graphs from photos instantly.</p>
+        </div>
+    </div>
+    <a href="#" class="btn btn-primary" style="background: white; color: var(--color-trust);">
+        Try Snap & Solve <i class="fas fa-external-link-alt"></i>
+    </a>
+</div>
+</main>
+
+
+        </div>
+    </div>
+
+    <!-- Footer Injection -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Load Footer
+        fetch('../footer.html?v=1.1')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
+        // Load Header & Init Mobile Menu
+        fetch('../header.html?v=1.1')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                // Initialize Mobile Menu (Same logic as index.html)
+                const menuBtn = document.getElementById('menuBtn');
+                const navLinks = document.getElementById('navLinks');
+                if(menuBtn && navLinks) {
+                    const icon = menuBtn.querySelector('i');
+                    menuBtn.addEventListener('click', function() {
+                        navLinks.classList.toggle('active');
+                        if (navLinks.classList.contains('active')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                }
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+    const rawText = document.getElementById('raw-content').innerHTML;
+    const container = document.getElementById('questions-container');
+
+    // 1. Split by "####" (Works for Q1, A1, etc.)
+    // We clean up empty splits immediately
+    const blocks = rawText.split('####').filter(b => b.trim().length > 0);
+
+    blocks.forEach((block, index) => {
+        // 2. Extract Title (First line) and Content (Rest)
+        let lines = block.trim().split('\n');
+        let titleLine = lines[0].replace(/\*/g, '').trim(); // Remove ** stars
+        let contentMarkdown = lines.slice(1).join('\n'); // Everything else
+
+        // 3. Convert Content to HTML
+        let contentHtml = marked.parse(contentMarkdown);
+
+        // 4. Determine if this is a Question or just a Solution
+        // If title starts with 'Q', we assume it's a question block.
+        // If it starts with 'A' or 'Solution', we treat it as an answer block.
+        let isAnswerOnly = titleLine.match(/^(A\d|Solution)/i);
+
+        const article = document.createElement('article');
+        article.className = 'question-block';
+        article.id = 'block-' + index;
+
+        if (isAnswerOnly) {
+            // RENDER STYLE: SOLUTION ONLY (Like your screenshot example)
+            article.innerHTML = `
+                <div class="q-badge" style="background:var(--color-trust);">Solution</div>
+                <h2 class="q-text" style="font-size: 1.2rem; color: #444;">${titleLine}</h2>
+                <div class="solution-content">
+                    <div class="solution-step" style="background: #fff; border-left: 4px solid var(--color-trust); padding: 1rem; margin-top:1rem;">
+                        <div class="step-content">${contentHtml}</div>
+                    </div>
+                </div>
+            `;
+        } else {
+            // RENDER STYLE: FULL QUESTION (Standard)
+            article.innerHTML = `
+                <div class="q-badge">Question</div>
+                <h2 class="q-text">${titleLine}</h2>
+                <div class="solution-content">
+                    <div class="step-content">${contentHtml}</div>
+                </div>
+                <div class="video-placeholder">
+                     <a href="#" class="play-btn-pulse"><i class="fas fa-play" style="margin-left:5px;"></i></a>
+                     <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Watch Video Explanation</h3>
+                </div>
+            `;
+        }
+
+        container.appendChild(article);
+    });
+
+    // 5. Render Math
+    if (window.MathJax) window.MathJax.typesetPromise();
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions Class 10 Maths Chapter 12 Surface Areas and Volumes - Braino</title>
+    <meta name="description" content="Step-by-step NCERT Solutions for Class 10 Maths Chapter 12 Surface Areas and Volumes. Exercise 12.1, 12.2 solutions with video explanations on Braino App.">
+
+    <!-- Fonts & Icons (Same as Index) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- JSON-LD SCHEMA FOR SEO (Education) -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Two cubes each of volume 64 cm³ are joined end to end. Find the surface area of the resulting cuboid.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Given volume of one cube = 64 cm³, the edge is 4 cm. When joined, the resulting cuboid has Length = 8 cm, Breadth = 4 cm, Height = 4 cm. The Surface Area = 2(lb + bh + hl) = 160 cm²."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A toy is in the form of a cone of radius 3.5 cm mounted on a hemisphere of same radius. The total height of the toy is 15.5 cm. Find the total surface area of the toy.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Radius = 3.5 cm. Height of cone = 15.5 - 3.5 = 12 cm. Slant height = 12.5 cm. Total Surface Area = CSA of cone + CSA of hemisphere = 214.5 cm²."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A cubical block of side 7 cm is surmounted by a hemisphere. What is the greatest diameter the hemisphere can have? Find the surface area of the solid.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The greatest diameter is equal to the side of the cube, which is 7 cm. The total surface area of the solid is 332.5 cm²."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A medicine capsule is in the shape of a cylinder with two hemispheres stuck to each of its ends. The length of the entire capsule is 14 mm and the diameter of the capsule is 5 mm. Find its surface area.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Radius = 2.5 mm. Height of cylindrical part = 14 - 5 = 9 mm. Surface Area = CSA of cylinder + 2 × CSA of hemisphere = 220 mm²."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A tent is in the shape of a cylinder surmounted by a conical top. If the height and diameter of the cylindrical part are 2.1 m and 4 m respectively, and the slant height of the top is 2.8 m, find the area of the canvas used for making the tent.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Radius = 2 m. Area of canvas = CSA of cylinder + CSA of cone = 44 m². The cost of canvas at ₹ 500 per m² is ₹ 22,000."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "From a solid cylinder whose height is 2.4 cm and diameter 1.4 cm, a conical cavity of the same height and same diameter is hollowed out. Find the total surface area of the remaining solid to the nearest cm².",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Total Surface Area = CSA of cylinder + CSA of cone + Area of base = 17.6 cm². Rounded to the nearest cm², it is 18 cm²."
+      }
+    }
+  ]
+}
+</script>
+    <script>window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };</script>
+
+
+
+    <style>
+        /* --- 1. REUSING VARIABLES FROM INDEX.HTML --- */
+        :root {
+            --color-trust: #1e293b; 
+            --color-curiosity: #06b6d4; /* Your Brand Cyan */
+            --color-curiosity-hover: #0891b2;
+            --color-success: #22c55e;
+            --color-bg: #f8fafc;
+            --color-surface: #ffffff;
+            --color-border: #e2e8f0;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-card: 0 10px 30px -5px rgba(0,0,0,0.08);
+        }
+
+        /* --- 2. LAYOUT ESSENTIALS --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--color-bg); color: var(--text-main); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; transition: 0.2s; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.6rem 1.2rem; font-weight: 700; border-radius: 999px; font-size: 0.95rem; cursor: pointer; border: none; gap: 0.5rem; }
+        .btn-primary { background-color: var(--color-curiosity); color: white; box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3); }
+        .btn-primary:hover { background-color: var(--color-curiosity-hover); transform: translateY(-2px); }
+
+        /* --- 3. PAGE SPECIFIC LAYOUT --- */
+        .ncert-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr; /* Sidebar | Content */
+            gap: 2.5rem;
+            padding: 2rem 0 4rem;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs { padding: 1rem 0; padding-top: 100px; font-size: 0.9rem; color: var(--text-muted); 
+         display: flex;align-items: center;justify-content: flex-start !important;gap: 0;}
+        .breadcrumbs a:hover { color: var(--color-curiosity); }
+        .breadcrumbs a,
+.breadcrumbs span { 
+    flex-shrink: 0;
+}
+        .breadcrumbs span {  margin: 0 0.5rem; color: #cbd5e1; }
+
+        /* --- 4. SIDEBAR (CHAPTER LIST) --- */
+        .sidebar-sticky { position: sticky; top: 100px; }
+        
+        .chapter-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .chapter-header {
+            background: var(--color-trust);
+            color: white;
+            padding: 1rem;
+            font-weight: 700;
+        }
+
+        .chapter-list { list-style: none; overflow-y: auto; position: sticky;top: 80px;height: calc(80vh - 100px);scrollbar-width: thin;}
+        .chapter-list li { border-bottom: 1px solid var(--color-border); }
+        .chapter-list li:last-child { border-bottom: none; }
+        
+        .chapter-link {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.85rem 1rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .chapter-link:hover { background-color: #ecfeff; color: var(--color-curiosity); }
+        .chapter-link.active { background-color: #ecfeff; color: var(--color-curiosity); border-left: 4px solid var(--color-curiosity); font-weight: 700; }
+
+        /* --- 5. MAIN CONTENT --- */
+        .page-title { font-size: 2rem; font-weight: 800; color: var(--color-trust); margin-bottom: 0.5rem; }
+        .page-meta { color: var(--text-muted); margin-bottom: 2rem; }
+
+        /* Exercise Tabs */
+        .exercise-tabs {
+            display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 5px; margin-bottom: 2rem;
+            scrollbar-width: none; /* Firefox */
+        }
+        .exercise-tabs::-webkit-scrollbar { display: none; }
+        .ex-tab {
+            padding: 0.5rem 1.2rem; background: white; border: 1px solid var(--color-border);
+            border-radius: 99px; white-space: nowrap; font-weight: 600; color: var(--text-muted);
+        }
+        .ex-tab.active { background: var(--color-trust); color: white; border-color: var(--color-trust); }
+        .ex-tab:hover:not(.active) { border-color: var(--color-curiosity); color: var(--color-curiosity); }
+
+        /* Question Block */
+        .question-block {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .q-badge {
+            display: inline-block; background: #e0f2fe; color: var(--color-curiosity-hover);
+            font-weight: 700; font-size: 0.8rem; padding: 4px 12px; border-radius: 99px; margin-bottom: 1rem;
+        }
+
+        .q-text { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 1.5rem; }
+        
+        /* Math Formatting */
+        .math { font-family: 'Courier New', Courier, monospace; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; color: #d946ef; font-weight: 600; }
+
+        /* Video Placeholder (Designed to sell the App) */
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #0f172a;
+            border-radius: var(--radius-md);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center;
+            color: white;
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://placehold.co/800x450/1e293b/FFF?text=Braino+Video+Solution'); 
+            background-size: cover;
+        }
+
+        .play-btn-pulse {
+            width: 64px; height: 64px; background: var(--color-curiosity); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;
+            box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7);
+            animation: pulse-cyan 2s infinite;
+            margin-bottom: 1rem;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .play-btn-pulse:hover { transform: scale(1.1); }
+        
+        @keyframes pulse-cyan {
+            0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(6, 182, 212, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+        }
+
+        /* Text Solution */
+        .solution-step { position: relative; padding-left: 2rem; margin-bottom: 1.5rem; }
+        .solution-step::before {
+            content: ''; position: absolute; left: 0; top: 8px; width: 12px; height: 12px;
+            background: var(--color-success); border-radius: 50%;
+        }
+        .solution-step::after {
+            content: ''; position: absolute; left: 5px; top: 25px; width: 2px; height: 100%;
+            background: #e2e8f0;
+        }
+        .solution-step:last-child::after { display: none; }
+        
+        .step-title { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; color: var(--color-trust); }
+        .step-content { color: var(--text-muted); font-size: 0.95rem; }
+
+        .solution-content table {
+        width: 100%;
+        max-width: 400px; /* Keeps tables from getting too wide */
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-family: sans-serif;
+    }
+    .solution-content th, 
+    .solution-content td {
+        border: 1px solid #ddd;
+        padding: 8px 12px;
+        text-align: center;
+    }
+    .solution-content th {
+        background-color: #f1f5f9;
+        font-weight: bold;
+    }
+
+        /* In-Feed App Banner */
+        .app-nudge {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            border-radius: var(--radius-md); padding: 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+            color: white; margin: 3rem 0;
+            box-shadow: var(--shadow-card);
+        }
+
+        /* --- 6. MOBILE RESPONSIVE --- */
+        @media (max-width: 968px) {
+            .ncert-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+            .sidebar-sticky { display: none; } /* Hidden on mobile by default, usually converted to a dropdown */
+            .mobile-chapter-select { display: block; width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: white; font-weight: 700; margin-bottom: 1.5rem; }
+            .app-nudge { flex-direction: column; text-align: center; gap: 1.5rem; }
+            .page-title { font-size: 1.5rem; }
+        }
+        @media (min-width: 969px) { .mobile-chapter-select { display: none; } }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Injection -->
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="/">Home</a><span>/</span><a href="#">NCERT Solutions</a><span>/</span><a href="#">Class 10 Maths</a><span>/</span>Surface Areas and Volumes
+        </nav>
+
+        <div class="ncert-layout">
+            
+            <!-- Sidebar: Chapter Navigation -->
+            <aside class="sidebar-wrapper">
+                <!-- Mobile Dropdown Placeholder -->
+                <select class="mobile-chapter-select" onchange="location = this.value;">
+                    <option value="#">Chapter 1: Real Numbers</option>
+                    <option value="#">Chapter 2: Polynomials</option>
+                    <option value="#">Chapter 3: Pair of Linear Equations in Two Variables</option>
+                    <option value="#">Chapter 4: Quadratic Equations</option>
+                    <option value="#">Chapter 5: Arithmetic Progressions</option>
+                    <option value="#">Chapter 6: Triangles</option>
+                    <option value="#">Chapter 7: Coordinate Geometry</option>
+                    <option value="#">Chapter 8: Introduction to Trigonometry</option>
+                    <option value="#">Chapter 9: Some Applications of Trigonometry</option>
+                    <option value="#">Chapter 10: Circles</option>
+                    <option value="#">Chapter 11: Areas Related to Circles</option>
+                    <option value="#">Chapter 12: Surface Areas and Volumes</option>
+                    <option value="#">Chapter 13: Statistics</option>
+                    <option value="#">Chapter 14: Probability</option>
+                </select>
+
+                <div class="chapter-card sidebar-sticky">
+                    <div class="chapter-header">
+                        Class 10 Maths
+                    </div>
+                    <ul class="chapter-list">
+    <!-- Chapter 1 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-1-exercise-1-1.html" class="chapter-link">
+            <span>01. Real Numbers</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 2 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-2-exercise-2-1.html" class="chapter-link">
+            <span>02. Polynomials</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 3 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-3-exercise-3-1.html" class="chapter-link">
+            <span>03. Pair of Linear Eq.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 4 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-4-exercise-4-1.html" class="chapter-link">
+            <span>04. Quadratic Equations</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 5 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-5-exercise-5-1.html" class="chapter-link">
+            <span>05. Arithmetic Progressions</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 6 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-6-exercise-6-1.html" class="chapter-link">
+            <span>06. Triangles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 7 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-7-exercise-7-1.html" class="chapter-link">
+            <span>07. Coordinate Geometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 8 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-8-exercise-8-1.html" class="chapter-link">
+            <span>08. Intro to Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 9 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-9-exercise-9-1.html" class="chapter-link">
+            <span>09. App. of Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 10 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-10-exercise-10-1.html" class="chapter-link">
+            <span>10. Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 11 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-11-exercise-11-1.html" class="chapter-link">
+            <span>11. Areas Related to Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 12 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-12-exercise-12-1.html" class="chapter-link">
+            <span>12. Surface Areas & Vol.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 13 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-13-exercise-13-1.html" class="chapter-link">
+            <span>13. Statistics</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 14 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-14-exercise-14-1.html" class="chapter-link">
+            <span>14. Probability</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+</ul>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main>
+    <h1 class="page-title">NCERT Solutions Class 10 Maths Chapter 12: Surface Areas and Volumes</h1>
+<p class="page-meta">Detailed solutions for Exercise 12.1 (Surface Area of Combination of Solids).</p>
+<div class="exercise-tabs">
+<a href="#" class="ex-tab active">Ex 12.1</a>
+<a href="ncert-solutions-class-10-maths-chapter-12-exercise-12-2.html" class="ex-tab">Ex 12.2</a>
+</div>
+
+    <!-- CONTAINER WHERE THE DESIGNED QUESTIONS WILL APPEAR -->
+    <div id="questions-container"></div>
+
+    <!-- ========================================== -->
+    <!-- PASTE GEMINI OUTPUT BELOW INSIDE THIS DIV -->
+    <!-- ========================================== -->
+    <div id="raw-content" style="display: none;">
+        #### **Q1. Two cubes each of volume 64 cm³ are joined end to end. Find the surface area of the resulting cuboid.**
+
+#### **A1. Solution:**
+Given: Volume of one cube = $64$ cm³.
+Let edge of the cube be $a$.
+$a^3 = 64 \Rightarrow a = \sqrt[3]{64} = 4$ cm.
+When two cubes are joined end to end, a cuboid is formed.
+Dimensions of the cuboid:
+Length ($l$) = $4 + 4 = 8$ cm.
+Breadth ($b$) = $4$ cm.
+Height ($h$) = $4$ cm.
+Surface Area of cuboid = $2(lb + bh + hl)$
+$= 2(8 \times 4 + 4 \times 4 + 4 \times 8)$
+$= 2(32 + 16 + 32)$
+$= 2(80) = 160$ cm².
+
+#### **Q2. A vessel is in the form of a hollow hemisphere mounted by a hollow cylinder. The diameter of the hemisphere is 14 cm and the total height of the vessel is 13 cm. Find the inner surface area of the vessel.**
+
+#### **A2. Solution:**
+Given: Diameter of hemisphere = 14 cm $\Rightarrow$ Radius ($r$) = 7 cm.
+Total height of vessel = 13 cm.
+Height of cylinder ($h$) = Total height $-$ Radius of hemisphere
+$h = 13 - 7 = 6$ cm.
+Radius of cylinder ($r$) = 7 cm.
+Inner Surface Area = CSA of cylinder + CSA of hemisphere
+$= 2\pi rh + 2\pi r^2$
+$= 2\pi r(h + r)$
+$= 2 \times \frac{22}{7} \times 7 \times (6 + 7)$
+$= 44 \times 13 = 572$ cm².
+
+#### **Q3. A toy is in the form of a cone of radius 3.5 cm mounted on a hemisphere of same radius. The total height of the toy is 15.5 cm. Find the total surface area of the toy.**
+
+#### **A3. Solution:**
+Given: Radius ($r$) = 3.5 cm = $\frac{7}{2}$ cm.
+Total height of toy = 15.5 cm.
+Height of cone ($h$) = Total height $-$ Radius of hemisphere
+$h = 15.5 - 3.5 = 12$ cm.
+Slant height of cone ($l$) = $\sqrt{r^2 + h^2}$
+$= \sqrt{(3.5)^2 + (12)^2} = \sqrt{12.25 + 144} = \sqrt{156.25} = 12.5$ cm.
+Total Surface Area = CSA of cone + CSA of hemisphere
+$= \pi rl + 2\pi r^2 = \pi r(l + 2r)$
+$= \frac{22}{7} \times 3.5 \times (12.5 + 2 \times 3.5)$
+$= \frac{22}{7} \times \frac{7}{2} \times (12.5 + 7)$
+$= 11 \times 19.5 = 214.5$ cm².
+
+#### **Q4. A cubical block of side 7 cm is surmounted by a hemisphere. What is the greatest diameter the hemisphere can have? Find the surface area of the solid.**
+
+#### **A4. Solution:**
+Given: Side of cubical block ($l$) = 7 cm.
+The greatest diameter the hemisphere can have is equal to the side of the cube.
+Diameter ($d$) = 7 cm $\Rightarrow$ Radius ($r$) = $\frac{7}{2}$ cm.
+
+Total Surface Area (TSA) of the solid = TSA of cube $-$ Area of base of hemisphere + CSA of hemisphere.
+$= 6l^2 - \pi r^2 + 2\pi r^2$
+$= 6l^2 + \pi r^2$
+$= 6(7)^2 + \frac{22}{7} \times \frac{7}{2} \times \frac{7}{2}$
+$= 6(49) + \frac{77}{2}$
+$= 294 + 38.5 = 332.5$ cm².
+
+#### **Q5. A hemispherical depression is cut out from one face of a cubical wooden block such that the diameter $l$ of the hemisphere is equal to the edge of the cube. Determine the surface area of the remaining solid.**
+
+#### **A5. Solution:**
+Given: Edge of cube = $l$.
+Diameter of hemisphere = $l$ $\Rightarrow$ Radius ($r$) = $\frac{l}{2}$.
+Surface Area of remaining solid = TSA of cube $-$ Area of circular base of hemisphere + CSA of hemisphere.
+$= 6l^2 - \pi r^2 + 2\pi r^2$
+$= 6l^2 + \pi r^2$
+$= 6l^2 + \pi \left(\frac{l}{2}\right)^2$
+$= 6l^2 + \frac{\pi l^2}{4}$
+$= \frac{l^2}{4} (24 + \pi)$ units².
+
+#### **Q6. A medicine capsule is in the shape of a cylinder with two hemispheres stuck to each of its ends. The length of the entire capsule is 14 mm and the diameter of the capsule is 5 mm. Find its surface area.**
+
+#### **A6. Solution:**
+Given: Total length = 14 mm. Diameter = 5 mm $\Rightarrow$ Radius ($r$) = 2.5 mm.
+Height of cylinder ($h$) = Total length $-$ $2 \times$ Radius of hemisphere
+$h = 14 - (2.5 + 2.5) = 14 - 5 = 9$ mm.
+Surface Area = CSA of cylinder + $2 \times$ CSA of hemisphere
+$= 2\pi rh + 2(2\pi r^2)$
+$= 2\pi r (h + 2r)$
+$= 2 \times \frac{22}{7} \times 2.5 \times (9 + 2 \times 2.5)$
+$= \frac{44}{7} \times 2.5 \times (9 + 5)$
+$= \frac{110}{7} \times 14 = 220$ mm².
+
+#### **Q7. A tent is in the shape of a cylinder surmounted by a conical top. If the height and diameter of the cylindrical part are 2.1 m and 4 m respectively, and the slant height of the top is 2.8 m, find the area of the canvas used for making the tent. Also, find the cost of the canvas of the tent at the rate of ₹ 500 per m². (Note that the base of the tent will not be covered with canvas.)**
+
+#### **A7. Solution:**
+Given:
+Cylinder: Radius ($r$) = 2 m, Height ($h$) = 2.1 m.
+Cone: Radius ($r$) = 2 m, Slant height ($l$) = 2.8 m.
+
+Area of canvas = CSA of cylinder + CSA of cone
+$= 2\pi rh + \pi rl$
+$= \pi r (2h + l)$
+$= \frac{22}{7} \times 2 \times (2 \times 2.1 + 2.8)$
+$= \frac{44}{7} \times (4.2 + 2.8)$
+$= \frac{44}{7} \times 7 = 44$ m².
+
+Cost of canvas = Area $\times$ Rate
+$= 44 \times 500 = \text{₹ } 22,000$.
+
+#### **Q8. From a solid cylinder whose height is 2.4 cm and diameter 1.4 cm, a conical cavity of the same height and same diameter is hollowed out. Find the total surface area of the remaining solid to the nearest cm².**
+
+#### **A8. Solution:**
+Given: Height ($h$) = 2.4 cm, Diameter = 1.4 cm $\Rightarrow$ Radius ($r$) = 0.7 cm.
+Slant height ($l$) = $\sqrt{r^2 + h^2} = \sqrt{(0.7)^2 + (2.4)^2} = \sqrt{0.49 + 5.76} = \sqrt{6.25} = 2.5$ cm.
+
+TSA of remaining solid = CSA of cylinder + CSA of cone + Area of cylindrical base (top is hollow).
+$= 2\pi rh + \pi rl + \pi r^2$
+$= \pi r (2h + l + r)$
+$= \frac{22}{7} \times 0.7 \times (2 \times 2.4 + 2.5 + 0.7)$
+$= 2.2 \times (4.8 + 2.5 + 0.7)$
+$= 2.2 \times 8 = 17.6$ cm².
+Nearest cm² $\approx 18$ cm².
+
+#### **Q9. A wooden article was made by scooping out a hemisphere from each end of a solid cylinder, as shown in the figure. If the height of the cylinder is 10 cm, and its base is of radius 3.5 cm, find the total surface area of the article.**
+
+#### **A9. Solution:**
+Given: Height of cylinder ($h$) = 10 cm, Radius ($r$) = 3.5 cm.
+TSA of article = CSA of cylinder + $2 \times$ CSA of hemisphere
+$= 2\pi rh + 2(2\pi r^2)$
+$= 2\pi r (h + 2r)$
+$= 2 \times \frac{22}{7} \times 3.5 \times (10 + 2 \times 3.5)$
+$= 22 \times (10 + 7)$
+$= 22 \times 17 = 374$ cm².
+    </div>
+    <!-- ========================================== -->
+
+
+    <div class="app-nudge">
+    <div style="display: flex; gap: 1rem; align-items: center;">
+        <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display:flex; align-items:center; justify-content:center;">
+            <i class="fas fa-camera" style="font-size: 1.5rem; color: var(--color-curiosity);"></i>
+        </div>
+        <div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.2rem;">Snap a Photo of any Graph</h3>
+            <p style="font-size: 0.95rem; opacity: 0.8;">Braino AI can analyze geometry and graphs from photos instantly.</p>
+        </div>
+    </div>
+    <a href="#" class="btn btn-primary" style="background: white; color: var(--color-trust);">
+        Try Snap & Solve <i class="fas fa-external-link-alt"></i>
+    </a>
+</div>
+</main>
+
+
+        </div>
+    </div>
+
+    <!-- Footer Injection -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Load Footer
+        fetch('../footer.html?v=1.1')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
+        // Load Header & Init Mobile Menu
+        fetch('../header.html?v=1.1')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                // Initialize Mobile Menu (Same logic as index.html)
+                const menuBtn = document.getElementById('menuBtn');
+                const navLinks = document.getElementById('navLinks');
+                if(menuBtn && navLinks) {
+                    const icon = menuBtn.querySelector('i');
+                    menuBtn.addEventListener('click', function() {
+                        navLinks.classList.toggle('active');
+                        if (navLinks.classList.contains('active')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                }
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+    const rawText = document.getElementById('raw-content').innerHTML;
+    const container = document.getElementById('questions-container');
+
+    // 1. Split by "####" (Works for Q1, A1, etc.)
+    // We clean up empty splits immediately
+    const blocks = rawText.split('####').filter(b => b.trim().length > 0);
+
+    blocks.forEach((block, index) => {
+        // 2. Extract Title (First line) and Content (Rest)
+        let lines = block.trim().split('\n');
+        let titleLine = lines[0].replace(/\*/g, '').trim(); // Remove ** stars
+        let contentMarkdown = lines.slice(1).join('\n'); // Everything else
+
+        // 3. Convert Content to HTML
+        let contentHtml = marked.parse(contentMarkdown);
+
+        // 4. Determine if this is a Question or just a Solution
+        // If title starts with 'Q', we assume it's a question block.
+        // If it starts with 'A' or 'Solution', we treat it as an answer block.
+        let isAnswerOnly = titleLine.match(/^(A\d|Solution)/i);
+
+        const article = document.createElement('article');
+        article.className = 'question-block';
+        article.id = 'block-' + index;
+
+        if (isAnswerOnly) {
+            // RENDER STYLE: SOLUTION ONLY (Like your screenshot example)
+            article.innerHTML = `
+                <div class="q-badge" style="background:var(--color-trust);">Solution</div>
+                <h2 class="q-text" style="font-size: 1.2rem; color: #444;">${titleLine}</h2>
+                <div class="solution-content">
+                    <div class="solution-step" style="background: #fff; border-left: 4px solid var(--color-trust); padding: 1rem; margin-top:1rem;">
+                        <div class="step-content">${contentHtml}</div>
+                    </div>
+                </div>
+            `;
+        } else {
+            // RENDER STYLE: FULL QUESTION (Standard)
+            article.innerHTML = `
+                <div class="q-badge">Question</div>
+                <h2 class="q-text">${titleLine}</h2>
+                <div class="solution-content">
+                    <div class="step-content">${contentHtml}</div>
+                </div>
+                <div class="video-placeholder">
+                     <a href="#" class="play-btn-pulse"><i class="fas fa-play" style="margin-left:5px;"></i></a>
+                     <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Watch Video Explanation</h3>
+                </div>
+            `;
+        }
+
+        container.appendChild(article);
+    });
+
+    // 5. Render Math
+    if (window.MathJax) window.MathJax.typesetPromise();
+});
+
+    </script>
+</body>
+</html>

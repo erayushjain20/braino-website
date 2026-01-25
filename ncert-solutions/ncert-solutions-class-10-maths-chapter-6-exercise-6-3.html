@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions Class 10 Maths Chapter 6 Triangles - Braino</title>
+    <meta name="description" content="Step-by-step NCERT Solutions for Class 10 Maths Chapter 6 Triangles. Exercise 6.1, 6.2, 6.3 solutions with video explanations on Braino App.">
+
+    <!-- Fonts & Icons (Same as Index) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- JSON-LD SCHEMA FOR SEO (Education) -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "In Fig. 6.35, ΔODC ~ ΔOBA, ∠BOC = 125° and ∠CDO = 70°. Find ∠DOC, ∠DCO and ∠OAB.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1. ∠DOC = 180° - 125° = 55° (Linear pair). 2. In ΔODC, ∠DCO = 180° - (70° + 55°) = 55° (Angle sum property). 3. Since ΔODC ~ ΔOBA, ∠OAB = ∠DCO = 55° (Corresponding angles of similar triangles)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "S and T are points on sides PR and QR of ΔPQR such that ∠P = ∠RTS. Show that ΔRPQ ~ ΔRTS.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In ΔRPQ and ΔRTS, ∠RPQ = ∠RTS (Given) and ∠R = ∠R (Common angle). Therefore, by AA similarity criterion, ΔRPQ ~ ΔRTS."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "D is a point on the side BC of a triangle ABC such that ∠ADC = ∠BAC. Show that CA² = CB · CD.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In ΔABC and ΔDAC, ∠BAC = ∠ADC (Given) and ∠C = ∠C (Common angle). By AA similarity criterion, ΔABC ~ ΔDAC. This implies corresponding sides are proportional: CB/CA = CA/CD. Cross-multiplying gives CA² = CB · CD."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A vertical pole of length 6 m casts a shadow 4 m long on the ground and at the same time a tower casts a shadow 28 m long. Find the height of the tower.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Let h be the height of the tower. Since the sun's altitude is the same, the triangles are similar. Ratio of heights = Ratio of shadows. 6/h = 4/28 => 6/h = 1/7 => h = 42. The height of the tower is 42 m."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Diagonals AC and BD of a trapezium ABCD with AB || DC intersect at O. Show that OA/OC = OB/OD.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In ΔOAB and ΔODC, ∠OAB = ∠OCD (Alternate interior angles) and ∠OBA = ∠ODC (Alternate interior angles). By AA similarity criterion, ΔOAB ~ ΔODC. Therefore, their corresponding sides are proportional: OA/OC = OB/OD."
+      }
+    }
+  ]
+}
+</script>
+    <script>window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };</script>
+
+
+
+    <style>
+        /* --- 1. REUSING VARIABLES FROM INDEX.HTML --- */
+        :root {
+            --color-trust: #1e293b; 
+            --color-curiosity: #06b6d4; /* Your Brand Cyan */
+            --color-curiosity-hover: #0891b2;
+            --color-success: #22c55e;
+            --color-bg: #f8fafc;
+            --color-surface: #ffffff;
+            --color-border: #e2e8f0;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-card: 0 10px 30px -5px rgba(0,0,0,0.08);
+        }
+
+        /* --- 2. LAYOUT ESSENTIALS --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--color-bg); color: var(--text-main); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; transition: 0.2s; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.6rem 1.2rem; font-weight: 700; border-radius: 999px; font-size: 0.95rem; cursor: pointer; border: none; gap: 0.5rem; }
+        .btn-primary { background-color: var(--color-curiosity); color: white; box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3); }
+        .btn-primary:hover { background-color: var(--color-curiosity-hover); transform: translateY(-2px); }
+
+        /* --- 3. PAGE SPECIFIC LAYOUT --- */
+        .ncert-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr; /* Sidebar | Content */
+            gap: 2.5rem;
+            padding: 2rem 0 4rem;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs { padding: 1rem 0; padding-top: 100px; font-size: 0.9rem; color: var(--text-muted); 
+         display: flex;align-items: center;justify-content: flex-start !important;gap: 0;}
+        .breadcrumbs a:hover { color: var(--color-curiosity); }
+        .breadcrumbs a,
+.breadcrumbs span { 
+    flex-shrink: 0;
+}
+        .breadcrumbs span {  margin: 0 0.5rem; color: #cbd5e1; }
+
+        /* --- 4. SIDEBAR (CHAPTER LIST) --- */
+        .sidebar-sticky { position: sticky; top: 100px; }
+        
+        .chapter-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .chapter-header {
+            background: var(--color-trust);
+            color: white;
+            padding: 1rem;
+            font-weight: 700;
+        }
+
+        .chapter-list { list-style: none; overflow-y: auto; position: sticky;top: 80px;height: calc(80vh - 100px);scrollbar-width: thin;}
+        .chapter-list li { border-bottom: 1px solid var(--color-border); }
+        .chapter-list li:last-child { border-bottom: none; }
+        
+        .chapter-link {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.85rem 1rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .chapter-link:hover { background-color: #ecfeff; color: var(--color-curiosity); }
+        .chapter-link.active { background-color: #ecfeff; color: var(--color-curiosity); border-left: 4px solid var(--color-curiosity); font-weight: 700; }
+
+        /* --- 5. MAIN CONTENT --- */
+        .page-title { font-size: 2rem; font-weight: 800; color: var(--color-trust); margin-bottom: 0.5rem; }
+        .page-meta { color: var(--text-muted); margin-bottom: 2rem; }
+
+        /* Exercise Tabs */
+        .exercise-tabs {
+            display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 5px; margin-bottom: 2rem;
+            scrollbar-width: none; /* Firefox */
+        }
+        .exercise-tabs::-webkit-scrollbar { display: none; }
+        .ex-tab {
+            padding: 0.5rem 1.2rem; background: white; border: 1px solid var(--color-border);
+            border-radius: 99px; white-space: nowrap; font-weight: 600; color: var(--text-muted);
+        }
+        .ex-tab.active { background: var(--color-trust); color: white; border-color: var(--color-trust); }
+        .ex-tab:hover:not(.active) { border-color: var(--color-curiosity); color: var(--color-curiosity); }
+
+        /* Question Block */
+        .question-block {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .q-badge {
+            display: inline-block; background: #e0f2fe; color: var(--color-curiosity-hover);
+            font-weight: 700; font-size: 0.8rem; padding: 4px 12px; border-radius: 99px; margin-bottom: 1rem;
+        }
+
+        .q-text { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 1.5rem; }
+        
+        /* Math Formatting */
+        .math { font-family: 'Courier New', Courier, monospace; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; color: #d946ef; font-weight: 600; }
+
+        /* Video Placeholder (Designed to sell the App) */
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #0f172a;
+            border-radius: var(--radius-md);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center;
+            color: white;
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://placehold.co/800x450/1e293b/FFF?text=Braino+Video+Solution'); 
+            background-size: cover;
+        }
+
+        .play-btn-pulse {
+            width: 64px; height: 64px; background: var(--color-curiosity); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;
+            box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7);
+            animation: pulse-cyan 2s infinite;
+            margin-bottom: 1rem;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .play-btn-pulse:hover { transform: scale(1.1); }
+        
+        @keyframes pulse-cyan {
+            0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(6, 182, 212, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+        }
+
+        /* Text Solution */
+        .solution-step { position: relative; padding-left: 2rem; margin-bottom: 1.5rem; }
+        .solution-step::before {
+            content: ''; position: absolute; left: 0; top: 8px; width: 12px; height: 12px;
+            background: var(--color-success); border-radius: 50%;
+        }
+        .solution-step::after {
+            content: ''; position: absolute; left: 5px; top: 25px; width: 2px; height: 100%;
+            background: #e2e8f0;
+        }
+        .solution-step:last-child::after { display: none; }
+        
+        .step-title { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; color: var(--color-trust); }
+        .step-content { color: var(--text-muted); font-size: 0.95rem; }
+
+        .solution-content table {
+        width: 100%;
+        max-width: 400px; /* Keeps tables from getting too wide */
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-family: sans-serif;
+    }
+    .solution-content th, 
+    .solution-content td {
+        border: 1px solid #ddd;
+        padding: 8px 12px;
+        text-align: center;
+    }
+    .solution-content th {
+        background-color: #f1f5f9;
+        font-weight: bold;
+    }
+
+        /* In-Feed App Banner */
+        .app-nudge {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            border-radius: var(--radius-md); padding: 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+            color: white; margin: 3rem 0;
+            box-shadow: var(--shadow-card);
+        }
+
+        /* --- 6. MOBILE RESPONSIVE --- */
+        @media (max-width: 968px) {
+            .ncert-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+            .sidebar-sticky { display: none; } /* Hidden on mobile by default, usually converted to a dropdown */
+            .mobile-chapter-select { display: block; width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: white; font-weight: 700; margin-bottom: 1.5rem; }
+            .app-nudge { flex-direction: column; text-align: center; gap: 1.5rem; }
+            .page-title { font-size: 1.5rem; }
+        }
+        @media (min-width: 969px) { .mobile-chapter-select { display: none; } }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Injection -->
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="/">Home</a><span>/</span><a href="#">NCERT Solutions</a><span>/</span><a href="#">Class 10 Maths</a><span>/</span>Triangles
+        </nav>
+
+        <div class="ncert-layout">
+            
+            <!-- Sidebar: Chapter Navigation -->
+            <aside class="sidebar-wrapper">
+                <!-- Mobile Dropdown Placeholder -->
+                <select class="mobile-chapter-select" onchange="location = this.value;">
+                    <option value="#">Chapter 1: Real Numbers</option>
+                    <option value="#">Chapter 2: Polynomials</option>
+                    <option value="#">Chapter 3: Pair of Linear Equations in Two Variables</option>
+                    <option value="#">Chapter 4: Quadratic Equations</option>
+                    <option value="#">Chapter 5: Arithmetic Progressions</option>
+                    <option value="#">Chapter 6: Triangles</option>
+                    <option value="#">Chapter 7: Coordinate Geometry</option>
+                    <option value="#">Chapter 8: Introduction to Trigonometry</option>
+                    <option value="#">Chapter 9: Some Applications of Trigonometry</option>
+                    <option value="#">Chapter 10: Circles</option>
+                    <option value="#">Chapter 11: Areas Related to Circles</option>
+                    <option value="#">Chapter 12: Surface Areas and Volumes</option>
+                    <option value="#">Chapter 13: Statistics</option>
+                    <option value="#">Chapter 14: Probability</option>
+                </select>
+
+                <div class="chapter-card sidebar-sticky">
+                    <div class="chapter-header">
+                        Class 10 Maths
+                    </div>
+                    <ul class="chapter-list">
+    <!-- Chapter 1 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-1-exercise-1-1.html" class="chapter-link">
+            <span>01. Real Numbers</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 2 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-2-exercise-2-1.html" class="chapter-link">
+            <span>02. Polynomials</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 3 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-3-exercise-3-1.html" class="chapter-link">
+            <span>03. Pair of Linear Eq.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 4 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-4-exercise-4-1.html" class="chapter-link">
+            <span>04. Quadratic Equations</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 5 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-5-exercise-5-1.html" class="chapter-link">
+            <span>05. Arithmetic Progressions</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 6 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-6-exercise-6-1.html" class="chapter-link">
+            <span>06. Triangles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 7 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-7-exercise-7-1.html" class="chapter-link">
+            <span>07. Coordinate Geometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 8 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-8-exercise-8-1.html" class="chapter-link">
+            <span>08. Intro to Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 9 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-9-exercise-9-1.html" class="chapter-link">
+            <span>09. App. of Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 10 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-10-exercise-10-1.html" class="chapter-link">
+            <span>10. Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 11 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-11-exercise-11-1.html" class="chapter-link">
+            <span>11. Areas Related to Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 12 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-12-exercise-12-1.html" class="chapter-link">
+            <span>12. Surface Areas & Vol.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 13 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-13-exercise-13-1.html" class="chapter-link">
+            <span>13. Statistics</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 14 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-14-exercise-14-1.html" class="chapter-link">
+            <span>14. Probability</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+</ul>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main>
+    <h1 class="page-title">NCERT Solutions Class 10 Maths Chapter 6: Triangles</h1>
+<p class="page-meta">Detailed solutions for Exercise 6.3 (Criteria for Similarity of Triangles).</p>
+<div class="exercise-tabs">
+    <a href="ncert-solutions-class-10-maths-chapter-6-exercise-6-1.html" class="ex-tab">Ex 6.1</a>
+    <a href="ncert-solutions-class-10-maths-chapter-6-exercise-6-2.html" class="ex-tab">Ex 6.2</a>
+    <a href="#" class="ex-tab active">Ex 6.3</a>
+</div>
+
+    <!-- CONTAINER WHERE THE DESIGNED QUESTIONS WILL APPEAR -->
+    <div id="questions-container"></div>
+
+    <!-- ========================================== -->
+    <!-- PASTE GEMINI OUTPUT BELOW INSIDE THIS DIV -->
+    <!-- ========================================== -->
+    <div id="raw-content" style="display: none;">
+        #### **Q1. State which pairs of triangles in Fig. 6.34 are similar. Write the similarity criterion used by you and also write the pairs of similar triangles in the symbolic form:**
+**(i) $\triangle ABC$ and $\triangle PQR$: $\angle A=60^\circ, \angle B=80^\circ, \angle C=40^\circ$; $\angle P=60^\circ, \angle Q=80^\circ, \angle R=40^\circ$**
+**(ii) $\triangle ABC$ and $\triangle PQR$: $AB=2, BC=2.5, AC=3$; $PQ=6, QR=4, PR=5$**
+**(iii) $\triangle LMP$ and $\triangle DEF$: $MP=2, LP=3, LM=2.7$; $DE=4, DF=6, EF=5$**
+**(iv) $\triangle MNL$ and $\triangle PQR$: $ML=5, MN=2.5, \angle M=70^\circ$; $PQ=6, QR=10, \angle Q=70^\circ$**
+**(v) $\triangle ABC$ and $\triangle DEF$: $AB=2.5, BC=3, \angle A=80^\circ$; $DF=5, EF=6, \angle F=80^\circ$**
+**(vi) $\triangle DEF$ and $\triangle PQR$: $\angle D=70^\circ, \angle E=80^\circ$; $\angle Q=80^\circ, \angle R=30^\circ$**
+
+#### **A1. Solution:**
+**(i)** In $\triangle ABC$ and $\triangle PQR$, corresponding angles are equal.
+**$\triangle ABC \sim \triangle PQR$ (AAA similarity criterion).**
+
+**(ii)** $\frac{AB}{QR} = \frac{2}{4} = \frac{1}{2}$; $\frac{BC}{RP} = \frac{2.5}{5} = \frac{1}{2}$; $\frac{AC}{PQ} = \frac{3}{6} = \frac{1}{2}$.
+**$\triangle ABC \sim \triangle QRP$ (SSS similarity criterion).**
+
+**(iii)** $\frac{MP}{DE} = \frac{2}{4} = \frac{1}{2}$; $\frac{LP}{DF} = \frac{3}{6} = \frac{1}{2}$; $\frac{LM}{EF} = \frac{2.7}{5} \neq \frac{1}{2}$.
+**Triangles are not similar.**
+
+**(iv)** In $\triangle MNL$ and $\triangle PQR$, $\frac{MN}{PQ} = \frac{2.5}{5} = \frac{1}{2}$ and $\frac{ML}{QR} = \frac{5}{10} = \frac{1}{2}$.
+Included angles: $\angle M = 70^\circ$ and $\angle Q = 70^\circ$.
+**$\triangle MNL \sim \triangle QPR$ (SAS similarity criterion).** *(Note: $PQ=5$ in textbook diagram for SAS to apply).*
+
+**(v)** In $\triangle ABC$, $\angle A=80^\circ$ is given, but side $AC$ (needed for SAS) is missing. In $\triangle DEF$, $\angle F=80^\circ$ is between $DF$ and $FE$.
+**Triangles are not similar.**
+
+**(vi)** In $\triangle DEF$, $\angle F = 180^\circ - (70^\circ + 80^\circ) = 30^\circ$.
+In $\triangle PQR$, $\angle P = 180^\circ - (80^\circ + 30^\circ) = 70^\circ$.
+**$\triangle DEF \sim \triangle PQR$ (AA similarity criterion).**
+
+#### **Q2. In Fig. 6.35, $\triangle ODC \sim \triangle OBA, \angle BOC = 125^\circ$ and $\angle CDO = 70^\circ$. Find $\angle DOC, \angle DCO$ and $\angle OAB$.**
+
+#### **A2. Solution:**
+1.  $\angle DOC + \angle BOC = 180^\circ$ (Linear pair)
+    $\angle DOC + 125^\circ = 180^\circ \Rightarrow \angle DOC = 55^\circ$.
+2.  In $\triangle ODC$: $\angle DCO + \angle CDO + \angle DOC = 180^\circ$
+    $\angle DCO + 70^\circ + 55^\circ = 180^\circ \Rightarrow \angle DCO = 180^\circ - 125^\circ = 55^\circ$.
+3.  Since $\triangle ODC \sim \triangle OBA$, $\angle OAB = \angle OCD$.
+    Therefore, $\angle OAB = 55^\circ$.
+**Ans: $55^\circ, 55^\circ, 55^\circ$**
+
+#### **Q3. Diagonals AC and BD of a trapezium ABCD with $AB \parallel DC$ intersect each other at the point O. Using a similarity criterion for two triangles, show that $\frac{OA}{OC} = \frac{OB}{OD}$.**
+
+#### **A3. Solution:**
+In $\triangle OAB$ and $\triangle ODC$:
+1. $\angle OAB = \angle OCD$ (Alternate interior angles as $AB \parallel DC$)
+2. $\angle OBA = \angle ODC$ (Alternate interior angles as $AB \parallel DC$)
+3. $\angle AOB = \angle COD$ (Vertically opposite angles)
+By AA similarity criterion, $\triangle OAB \sim \triangle ODC$.
+Since triangles are similar, their corresponding sides are proportional:
+$\frac{OA}{OC} = \frac{OB}{OD}$
+**Hence Proved.**
+
+#### **Q4. In Fig. 6.36, $\frac{QR}{QS} = \frac{QT}{PR}$ and $\angle 1 = \angle 2$. Show that $\triangle PQS \sim \triangle TQR$.**
+
+#### **A4. Solution:**
+Given $\angle 1 = \angle 2$ in $\triangle PQR$, therefore $PQ = PR$ (Sides opposite to equal angles are equal).
+Now, given $\frac{QR}{QS} = \frac{QT}{PR}$.
+Substitute $PR = PQ$ in the ratio:
+$\frac{QR}{QS} = \frac{QT}{PQ} \Rightarrow \frac{QS}{QR} = \frac{PQ}{QT}$
+In $\triangle PQS$ and $\triangle TQR$:
+1. $\frac{QS}{QR} = \frac{PQ}{QT}$ (Proven above)
+2. $\angle PQS = \angle TQR$ (Common angle, $\angle 1$)
+By SAS similarity criterion, $\triangle PQS \sim \triangle TQR$.
+**Hence Proved.**
+
+#### **Q5. S and T are points on sides PR and QR of $\triangle PQR$ such that $\angle P = \angle RTS$. Show that $\triangle RPQ \sim \triangle RTS$.**
+
+#### **A5. Solution:**
+In $\triangle RPQ$ and $\triangle RTS$:
+1. $\angle RPQ = \angle RTS$ (Given)
+2. $\angle R = \angle R$ (Common angle)
+By AA similarity criterion, $\triangle RPQ \sim \triangle RTS$.
+**Hence Proved.**
+
+#### **Q6. In Fig. 6.37, if $\triangle ABE \cong \triangle ACD$, show that $\triangle ADE \sim \triangle ABC$.**
+
+#### **A6. Solution:**
+Given $\triangle ABE \cong \triangle ACD$.
+By CPCT, $AB = AC$ and $AE = AD$.
+This implies $\frac{AB}{AC} = 1$ and $\frac{AD}{AE} = 1$.
+Therefore, $\frac{AD}{AB} = \frac{AE}{AC}$ ...(1)
+In $\triangle ADE$ and $\triangle ABC$:
+1. $\frac{AD}{AB} = \frac{AE}{AC}$ (From 1)
+2. $\angle DAE = \angle BAC$ (Common angle)
+By SAS similarity criterion, $\triangle ADE \sim \triangle ABC$.
+**Hence Proved.**
+
+#### **Q7. In Fig. 6.38, altitudes AD and CE of $\triangle ABC$ intersect each other at the point P. Show that:**
+**(i) $\triangle AEP \sim \triangle CDP$**
+**(ii) $\triangle ABD \sim \triangle CBE$**
+**(iii) $\triangle AEP \sim \triangle ADB$**
+**(iv) $\triangle PDC \sim \triangle BEC$**
+
+#### **A7. Solution:**
+**(i)** In $\triangle AEP$ and $\triangle CDP$:
+$\angle AEP = \angle CDP = 90^\circ$
+$\angle APE = \angle CPD$ (Vertically opposite angles)
+By AA similarity, $\triangle AEP \sim \triangle CDP$.
+
+**(ii)** In $\triangle ABD$ and $\triangle CBE$:
+$\angle ADB = \angle CEB = 90^\circ$
+$\angle B = \angle B$ (Common angle)
+By AA similarity, $\triangle ABD \sim \triangle CBE$.
+
+**(iii)** In $\triangle AEP$ and $\triangle ADB$:
+$\angle AEP = \angle ADB = 90^\circ$
+$\angle A = \angle A$ (Common angle)
+By AA similarity, $\triangle AEP \sim \triangle ADB$.
+
+**(iv)** In $\triangle PDC$ and $\triangle BEC$:
+$\angle PDC = \angle BEC = 90^\circ$
+$\angle C = \angle C$ (Common angle)
+By AA similarity, $\triangle PDC \sim \triangle BEC$.
+
+#### **Q8. E is a point on the side AD produced of a parallelogram ABCD and BE intersects CD at F. Show that $\triangle ABE \sim \triangle CFB$.**
+
+#### **A8. Solution:**
+In $\triangle ABE$ and $\triangle CFB$:
+1. $\angle A = \angle C$ (Opposite angles of a parallelogram are equal)
+2. $\angle AEB = \angle CBF$ (Alternate interior angles as $AD \parallel BC \Rightarrow AE \parallel BC$)
+By AA similarity criterion, $\triangle ABE \sim \triangle CFB$.
+**Hence Proved.**
+
+#### **Q9. In Fig. 6.39, ABC and AMP are two right triangles, right angled at B and M respectively. Prove that:**
+**(i) $\triangle ABC \sim \triangle AMP$**
+**(ii) $\frac{CA}{PA} = \frac{BC}{MP}$**
+
+#### **A9. Solution:**
+**(i)** In $\triangle ABC$ and $\triangle AMP$:
+$\angle ABC = \angle AMP = 90^\circ$ (Given)
+$\angle A = \angle A$ (Common angle)
+By AA similarity criterion, $\triangle ABC \sim \triangle AMP$.
+
+**(ii)** Since $\triangle ABC \sim \triangle AMP$, their corresponding sides are proportional:
+$\frac{CA}{PA} = \frac{BC}{MP}$
+**Hence Proved.**
+
+#### **Q10. CD and GH are respectively the bisectors of $\angle ACB$ and $\angle EGF$ such that D and H lie on sides AB and FE of $\triangle ABC$ and $\triangle EFG$ respectively. If $\triangle ABC \sim \triangle FEG$, show that:**
+**(i) $\frac{CD}{GH} = \frac{AC}{FG}$**
+**(ii) $\triangle DCB \sim \triangle HGE$**
+**(iii) $\triangle DCA \sim \triangle HGF$**
+
+#### **A10. Solution:**
+Given $\triangle ABC \sim \triangle FEG$.
+Therefore, $\angle A = \angle F, \angle B = \angle E$, and $\angle ACB = \angle FGE$.
+Since CD and GH are bisectors, $\angle ACD = \angle DCB = \frac{1}{2}\angle ACB$ and $\angle FGH = \angle HGE = \frac{1}{2}\angle FGE$.
+Thus, $\angle ACD = \angle FGH$ and $\angle DCB = \angle HGE$.
+
+**(iii)** In $\triangle DCA$ and $\triangle HGF$:
+$\angle A = \angle F$
+$\angle ACD = \angle FGH$
+By AA similarity, $\triangle DCA \sim \triangle HGF$.
+
+**(i)** From (iii), since $\triangle DCA \sim \triangle HGF$, corresponding sides are proportional:
+$\frac{CD}{GH} = \frac{AC}{FG}$
+
+**(ii)** In $\triangle DCB$ and $\triangle HGE$:
+$\angle B = \angle E$
+$\angle DCB = \angle HGE$
+By AA similarity, $\triangle DCB \sim \triangle HGE$.
+
+#### **Q11. In Fig. 6.40, E is a point on side CB produced of an isosceles triangle ABC with $AB = AC$. If $AD \perp BC$ and $EF \perp AC$, prove that $\triangle ABD \sim \triangle ECF$.**
+
+#### **A11. Solution:**
+In $\triangle ABC$, $AB = AC$, so $\angle ABD = \angle ECF$ (Angles opposite to equal sides are equal).
+In $\triangle ABD$ and $\triangle ECF$:
+1. $\angle ABD = \angle ECF$ (Proven above)
+2. $\angle ADB = \angle EFC = 90^\circ$ (Given $AD \perp BC, EF \perp AC$)
+By AA similarity criterion, $\triangle ABD \sim \triangle ECF$.
+**Hence Proved.**
+
+#### **Q12. Sides AB and BC and median AD of a triangle ABC are respectively proportional to sides PQ and QR and median PM of $\triangle PQR$. Show that $\triangle ABC \sim \triangle PQR$.**
+
+#### **A12. Solution:**
+Given: $\frac{AB}{PQ} = \frac{BC}{QR} = \frac{AD}{PM}$.
+Since AD and PM are medians, $BC = 2BD$ and $QR = 2QM$.
+$\frac{AB}{PQ} = \frac{2BD}{2QM} = \frac{AD}{PM} \Rightarrow \frac{AB}{PQ} = \frac{BD}{QM} = \frac{AD}{PM}$
+In $\triangle ABD$ and $\triangle PQM$, all three sides are proportional.
+By SSS similarity, $\triangle ABD \sim \triangle PQM$.
+Therefore, $\angle B = \angle Q$ (Corresponding angles of similar triangles).
+Now, in $\triangle ABC$ and $\triangle PQR$:
+1. $\frac{AB}{PQ} = \frac{BC}{QR}$ (Given)
+2. $\angle B = \angle Q$ (Proven above)
+By SAS similarity criterion, $\triangle ABC \sim \triangle PQR$.
+**Hence Proved.**
+
+#### **Q13. D is a point on the side BC of a triangle ABC such that $\angle ADC = \angle BAC$. Show that $CA^2 = CB \cdot CD$.**
+
+#### **A13. Solution:**
+In $\triangle ABC$ and $\triangle DAC$:
+1. $\angle BAC = \angle ADC$ (Given)
+2. $\angle C = \angle C$ (Common angle)
+By AA similarity criterion, $\triangle ABC \sim \triangle DAC$.
+Corresponding sides are proportional:
+$\frac{CB}{CA} = \frac{CA}{CD}$
+$CA^2 = CB \cdot CD$
+**Hence Proved.**
+
+#### **Q14. Sides AB and AC and median AD of a triangle ABC are respectively proportional to sides PQ and PR and median PM of another triangle PQR. Show that $\triangle ABC \sim \triangle PQR$.**
+
+#### **A14. Solution:**
+*Note: This is more complex than Q12 because BC/QR is not given. We extend medians.*
+Extend AD to E such that $AD = DE$ and join BE, CE. Similarly extend PM to N such that $PM = MN$.
+In quadrilateral ABEC, diagonals bisect each other, so it is a parallelogram. Thus $AC = BE$.
+Similarly, $PR = QN$.
+Given: $\frac{AB}{PQ} = \frac{AC}{PR} = \frac{AD}{PM}$.
+Substitute $AC = BE$ and $PR = QN$, and $AD/PM = 2AD/2PM = AE/PN$:
+$\frac{AB}{PQ} = \frac{BE}{QN} = \frac{AE}{PN}$.
+By SSS similarity, $\triangle ABE \sim \triangle PQN$.
+$\angle BAE = \angle QPN$.
+Similarly, we can prove $\triangle ACE \sim \triangle PRN$, so $\angle CAE = \angle RPN$.
+Adding both: $\angle BAE + \angle CAE = \angle QPN + \angle RPN \Rightarrow \angle BAC = \angle QPR$.
+Now in $\triangle ABC$ and $\triangle PQR$, using SAS ($\frac{AB}{PQ} = \frac{AC}{PR}$ and $\angle A = \angle P$):
+$\triangle ABC \sim \triangle PQR$.
+**Hence Proved.**
+
+#### **Q15. A vertical pole of length 6 m casts a shadow 4 m long on the ground and at the same time a tower casts a shadow 28 m long. Find the height of the tower.**
+
+#### **A15. Solution:**
+Let height of tower be $h$.
+The triangles formed by the pole and its shadow, and the tower and its shadow, are similar because the sun's altitude (angle of elevation) is the same at the same time.
+$\frac{\text{Height of pole}}{\text{Height of tower}} = \frac{\text{Shadow of pole}}{\text{Shadow of tower}}$
+$\frac{6}{h} = \frac{4}{28}$
+$\frac{6}{h} = \frac{1}{7}$
+$h = 6 \times 7 = 42$ m.
+**Ans: 42 m**
+
+#### **Q16. If AD and PM are medians of triangles ABC and PQR, respectively, where $\triangle ABC \sim \triangle PQR$, prove that $\frac{AB}{PQ} = \frac{AD}{PM}$.**
+
+#### **A16. Solution:**
+Given $\triangle ABC \sim \triangle PQR$.
+$\angle B = \angle Q$ and $\frac{AB}{PQ} = \frac{BC}{QR}$.
+Since AD and PM are medians, $BC = 2BD$ and $QR = 2QM$.
+$\frac{AB}{PQ} = \frac{2BD}{2QM} \Rightarrow \frac{AB}{PQ} = \frac{BD}{QM}$.
+In $\triangle ABD$ and $\triangle PQM$:
+1. $\frac{AB}{PQ} = \frac{BD}{QM}$
+2. $\angle B = \angle Q$
+By SAS similarity criterion, $\triangle ABD \sim \triangle PQM$.
+Therefore, corresponding sides are proportional:
+$\frac{AB}{PQ} = \frac{AD}{PM}$
+**Hence Proved.**
+    </div>
+    <!-- ========================================== -->
+
+
+    <div class="app-nudge">
+    <div style="display: flex; gap: 1rem; align-items: center;">
+        <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display:flex; align-items:center; justify-content:center;">
+            <i class="fas fa-camera" style="font-size: 1.5rem; color: var(--color-curiosity);"></i>
+        </div>
+        <div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.2rem;">Snap a Photo of any Graph</h3>
+            <p style="font-size: 0.95rem; opacity: 0.8;">Braino AI can analyze geometry and graphs from photos instantly.</p>
+        </div>
+    </div>
+    <a href="#" class="btn btn-primary" style="background: white; color: var(--color-trust);">
+        Try Snap & Solve <i class="fas fa-external-link-alt"></i>
+    </a>
+</div>
+</main>
+
+
+        </div>
+    </div>
+
+    <!-- Footer Injection -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Load Footer
+        fetch('../footer.html?v=1.1')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
+        // Load Header & Init Mobile Menu
+        fetch('../header.html?v=1.1')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                // Initialize Mobile Menu (Same logic as index.html)
+                const menuBtn = document.getElementById('menuBtn');
+                const navLinks = document.getElementById('navLinks');
+                if(menuBtn && navLinks) {
+                    const icon = menuBtn.querySelector('i');
+                    menuBtn.addEventListener('click', function() {
+                        navLinks.classList.toggle('active');
+                        if (navLinks.classList.contains('active')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                }
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+    const rawText = document.getElementById('raw-content').innerHTML;
+    const container = document.getElementById('questions-container');
+
+    // 1. Split by "####" (Works for Q1, A1, etc.)
+    // We clean up empty splits immediately
+    const blocks = rawText.split('####').filter(b => b.trim().length > 0);
+
+    blocks.forEach((block, index) => {
+        // 2. Extract Title (First line) and Content (Rest)
+        let lines = block.trim().split('\n');
+        let titleLine = lines[0].replace(/\*/g, '').trim(); // Remove ** stars
+        let contentMarkdown = lines.slice(1).join('\n'); // Everything else
+
+        // 3. Convert Content to HTML
+        let contentHtml = marked.parse(contentMarkdown);
+
+        // 4. Determine if this is a Question or just a Solution
+        // If title starts with 'Q', we assume it's a question block.
+        // If it starts with 'A' or 'Solution', we treat it as an answer block.
+        let isAnswerOnly = titleLine.match(/^(A\d|Solution)/i);
+
+        const article = document.createElement('article');
+        article.className = 'question-block';
+        article.id = 'block-' + index;
+
+        if (isAnswerOnly) {
+            // RENDER STYLE: SOLUTION ONLY (Like your screenshot example)
+            article.innerHTML = `
+                <div class="q-badge" style="background:var(--color-trust);">Solution</div>
+                <h2 class="q-text" style="font-size: 1.2rem; color: #444;">${titleLine}</h2>
+                <div class="solution-content">
+                    <div class="solution-step" style="background: #fff; border-left: 4px solid var(--color-trust); padding: 1rem; margin-top:1rem;">
+                        <div class="step-content">${contentHtml}</div>
+                    </div>
+                </div>
+            `;
+        } else {
+            // RENDER STYLE: FULL QUESTION (Standard)
+            article.innerHTML = `
+                <div class="q-badge">Question</div>
+                <h2 class="q-text">${titleLine}</h2>
+                <div class="solution-content">
+                    <div class="step-content">${contentHtml}</div>
+                </div>
+                <div class="video-placeholder">
+                     <a href="#" class="play-btn-pulse"><i class="fas fa-play" style="margin-left:5px;"></i></a>
+                     <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Watch Video Explanation</h3>
+                </div>
+            `;
+        }
+
+        container.appendChild(article);
+    });
+
+    // 5. Render Math
+    if (window.MathJax) window.MathJax.typesetPromise();
+});
+
+    </script>
+</body>
+</html>

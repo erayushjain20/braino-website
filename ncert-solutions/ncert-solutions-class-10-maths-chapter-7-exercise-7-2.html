@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions Class 10 Maths Chapter 7 Coordinate Geometry - Braino</title>
+    <meta name="description" content="Step-by-step NCERT Solutions for Class 10 Maths Chapter 7 Coordinate Geometry. Exercise 7.1, 7.2 solutions with video explanations on Braino App.">
+
+    <!-- Fonts & Icons (Same as Index) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- JSON-LD SCHEMA FOR SEO (Education) -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Find the coordinates of the point which divides the join of (– 1, 7) and (4, – 3) in the ratio 2 : 3.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Using the section formula, the coordinates are calculated as x = [2(4) + 3(-1)] / (2+3) = 1 and y = [2(-3) + 3(7)] / (2+3) = 3. The coordinates of the point are (1, 3)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Find the ratio in which the line segment joining the points (– 3, 10) and (6, – 8) is divided by (– 1, 6).",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Let the ratio be k : 1. Using the section formula for the x-coordinate: -1 = (6k - 3) / (k + 1). Solving this gives -k - 1 = 6k - 3, which results in 7k = 2 or k = 2/7. The ratio is 2 : 7."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "If (1, 2), (4, y), (x, 6) and (3, 5) are the vertices of a parallelogram taken in order, find x and y.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Since diagonals of a parallelogram bisect each other, the midpoint of (1, 2) and (x, 6) is the same as the midpoint of (4, y) and (3, 5). Equating the midpoints, we get (1+x)/2 = 7/2 which gives x = 6, and (2+6)/2 = (y+5)/2 which gives y = 3."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Find the coordinates of a point A, where AB is the diameter of a circle whose centre is (2, – 3) and B is (1, 4).",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The centre (2, -3) is the midpoint of diameter AB. Let A be (x, y). Then (x+1)/2 = 2 implies x = 3, and (y+4)/2 = -3 implies y = -10. The coordinates of A are (3, -10)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Find the area of a rhombus if its vertices are (3, 0), (4, 5), (– 1, 4) and (– 2, – 1) taken in order.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Area of a rhombus = 1/2 × (product of diagonals). Diagonal 1 (AC) = √32 = 4√2 and Diagonal 2 (BD) = √72 = 6√2. Area = 1/2 × 4√2 × 6√2 = 24 square units."
+      }
+    }
+  ]
+}
+</script>
+    <script>window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };</script>
+
+
+
+    <style>
+        /* --- 1. REUSING VARIABLES FROM INDEX.HTML --- */
+        :root {
+            --color-trust: #1e293b; 
+            --color-curiosity: #06b6d4; /* Your Brand Cyan */
+            --color-curiosity-hover: #0891b2;
+            --color-success: #22c55e;
+            --color-bg: #f8fafc;
+            --color-surface: #ffffff;
+            --color-border: #e2e8f0;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-card: 0 10px 30px -5px rgba(0,0,0,0.08);
+        }
+
+        /* --- 2. LAYOUT ESSENTIALS --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--color-bg); color: var(--text-main); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; transition: 0.2s; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.6rem 1.2rem; font-weight: 700; border-radius: 999px; font-size: 0.95rem; cursor: pointer; border: none; gap: 0.5rem; }
+        .btn-primary { background-color: var(--color-curiosity); color: white; box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3); }
+        .btn-primary:hover { background-color: var(--color-curiosity-hover); transform: translateY(-2px); }
+
+        /* --- 3. PAGE SPECIFIC LAYOUT --- */
+        .ncert-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr; /* Sidebar | Content */
+            gap: 2.5rem;
+            padding: 2rem 0 4rem;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs { padding: 1rem 0; padding-top: 100px; font-size: 0.9rem; color: var(--text-muted); 
+         display: flex;align-items: center;justify-content: flex-start !important;gap: 0;}
+        .breadcrumbs a:hover { color: var(--color-curiosity); }
+        .breadcrumbs a,
+.breadcrumbs span { 
+    flex-shrink: 0;
+}
+        .breadcrumbs span {  margin: 0 0.5rem; color: #cbd5e1; }
+
+        /* --- 4. SIDEBAR (CHAPTER LIST) --- */
+        .sidebar-sticky { position: sticky; top: 100px; }
+        
+        .chapter-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .chapter-header {
+            background: var(--color-trust);
+            color: white;
+            padding: 1rem;
+            font-weight: 700;
+        }
+
+        .chapter-list { list-style: none; overflow-y: auto; position: sticky;top: 80px;height: calc(80vh - 100px);scrollbar-width: thin;}
+        .chapter-list li { border-bottom: 1px solid var(--color-border); }
+        .chapter-list li:last-child { border-bottom: none; }
+        
+        .chapter-link {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.85rem 1rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .chapter-link:hover { background-color: #ecfeff; color: var(--color-curiosity); }
+        .chapter-link.active { background-color: #ecfeff; color: var(--color-curiosity); border-left: 4px solid var(--color-curiosity); font-weight: 700; }
+
+        /* --- 5. MAIN CONTENT --- */
+        .page-title { font-size: 2rem; font-weight: 800; color: var(--color-trust); margin-bottom: 0.5rem; }
+        .page-meta { color: var(--text-muted); margin-bottom: 2rem; }
+
+        /* Exercise Tabs */
+        .exercise-tabs {
+            display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 5px; margin-bottom: 2rem;
+            scrollbar-width: none; /* Firefox */
+        }
+        .exercise-tabs::-webkit-scrollbar { display: none; }
+        .ex-tab {
+            padding: 0.5rem 1.2rem; background: white; border: 1px solid var(--color-border);
+            border-radius: 99px; white-space: nowrap; font-weight: 600; color: var(--text-muted);
+        }
+        .ex-tab.active { background: var(--color-trust); color: white; border-color: var(--color-trust); }
+        .ex-tab:hover:not(.active) { border-color: var(--color-curiosity); color: var(--color-curiosity); }
+
+        /* Question Block */
+        .question-block {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .q-badge {
+            display: inline-block; background: #e0f2fe; color: var(--color-curiosity-hover);
+            font-weight: 700; font-size: 0.8rem; padding: 4px 12px; border-radius: 99px; margin-bottom: 1rem;
+        }
+
+        .q-text { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 1.5rem; }
+        
+        /* Math Formatting */
+        .math { font-family: 'Courier New', Courier, monospace; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; color: #d946ef; font-weight: 600; }
+
+        /* Video Placeholder (Designed to sell the App) */
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #0f172a;
+            border-radius: var(--radius-md);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center;
+            color: white;
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://placehold.co/800x450/1e293b/FFF?text=Braino+Video+Solution'); 
+            background-size: cover;
+        }
+
+        .play-btn-pulse {
+            width: 64px; height: 64px; background: var(--color-curiosity); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;
+            box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7);
+            animation: pulse-cyan 2s infinite;
+            margin-bottom: 1rem;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .play-btn-pulse:hover { transform: scale(1.1); }
+        
+        @keyframes pulse-cyan {
+            0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(6, 182, 212, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+        }
+
+        /* Text Solution */
+        .solution-step { position: relative; padding-left: 2rem; margin-bottom: 1.5rem; }
+        .solution-step::before {
+            content: ''; position: absolute; left: 0; top: 8px; width: 12px; height: 12px;
+            background: var(--color-success); border-radius: 50%;
+        }
+        .solution-step::after {
+            content: ''; position: absolute; left: 5px; top: 25px; width: 2px; height: 100%;
+            background: #e2e8f0;
+        }
+        .solution-step:last-child::after { display: none; }
+        
+        .step-title { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; color: var(--color-trust); }
+        .step-content { color: var(--text-muted); font-size: 0.95rem; }
+
+        .solution-content table {
+        width: 100%;
+        max-width: 400px; /* Keeps tables from getting too wide */
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-family: sans-serif;
+    }
+    .solution-content th, 
+    .solution-content td {
+        border: 1px solid #ddd;
+        padding: 8px 12px;
+        text-align: center;
+    }
+    .solution-content th {
+        background-color: #f1f5f9;
+        font-weight: bold;
+    }
+
+        /* In-Feed App Banner */
+        .app-nudge {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            border-radius: var(--radius-md); padding: 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+            color: white; margin: 3rem 0;
+            box-shadow: var(--shadow-card);
+        }
+
+        /* --- 6. MOBILE RESPONSIVE --- */
+        @media (max-width: 968px) {
+            .ncert-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+            .sidebar-sticky { display: none; } /* Hidden on mobile by default, usually converted to a dropdown */
+            .mobile-chapter-select { display: block; width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: white; font-weight: 700; margin-bottom: 1.5rem; }
+            .app-nudge { flex-direction: column; text-align: center; gap: 1.5rem; }
+            .page-title { font-size: 1.5rem; }
+        }
+        @media (min-width: 969px) { .mobile-chapter-select { display: none; } }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Injection -->
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="/">Home</a><span>/</span><a href="#">NCERT Solutions</a><span>/</span><a href="#">Class 10 Maths</a><span>/</span>Coordinate Geometry
+        </nav>
+
+        <div class="ncert-layout">
+            
+            <!-- Sidebar: Chapter Navigation -->
+            <aside class="sidebar-wrapper">
+                <!-- Mobile Dropdown Placeholder -->
+                <select class="mobile-chapter-select" onchange="location = this.value;">
+                    <option value="#">Chapter 1: Real Numbers</option>
+                    <option value="#">Chapter 2: Polynomials</option>
+                    <option value="#">Chapter 3: Pair of Linear Equations in Two Variables</option>
+                    <option value="#">Chapter 4: Quadratic Equations</option>
+                    <option value="#">Chapter 5: Arithmetic Progressions</option>
+                    <option value="#">Chapter 6: Triangles</option>
+                    <option value="#">Chapter 7: Coordinate Geometry</option>
+                    <option value="#">Chapter 8: Introduction to Trigonometry</option>
+                    <option value="#">Chapter 9: Some Applications of Trigonometry</option>
+                    <option value="#">Chapter 10: Circles</option>
+                    <option value="#">Chapter 11: Areas Related to Circles</option>
+                    <option value="#">Chapter 12: Surface Areas and Volumes</option>
+                    <option value="#">Chapter 13: Statistics</option>
+                    <option value="#">Chapter 14: Probability</option>
+                </select>
+
+                <div class="chapter-card sidebar-sticky">
+                    <div class="chapter-header">
+                        Class 10 Maths
+                    </div>
+                    <ul class="chapter-list">
+    <!-- Chapter 1 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-1-exercise-1-1.html" class="chapter-link">
+            <span>01. Real Numbers</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 2 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-2-exercise-2-1.html" class="chapter-link">
+            <span>02. Polynomials</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 3 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-3-exercise-3-1.html" class="chapter-link">
+            <span>03. Pair of Linear Eq.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 4 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-4-exercise-4-1.html" class="chapter-link">
+            <span>04. Quadratic Equations</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 5 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-5-exercise-5-1.html" class="chapter-link">
+            <span>05. Arithmetic Progressions</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 6 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-6-exercise-6-1.html" class="chapter-link">
+            <span>06. Triangles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 7 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-7-exercise-7-1.html" class="chapter-link">
+            <span>07. Coordinate Geometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 8 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-8-exercise-8-1.html" class="chapter-link">
+            <span>08. Intro to Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 9 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-9-exercise-9-1.html" class="chapter-link">
+            <span>09. App. of Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 10 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-10-exercise-10-1.html" class="chapter-link">
+            <span>10. Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 11 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-11-exercise-11-1.html" class="chapter-link">
+            <span>11. Areas Related to Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 12 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-12-exercise-12-1.html" class="chapter-link">
+            <span>12. Surface Areas & Vol.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 13 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-13-exercise-13-1.html" class="chapter-link">
+            <span>13. Statistics</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 14 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-14-exercise-14-1.html" class="chapter-link">
+            <span>14. Probability</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+</ul>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main>
+    <h1 class="page-title">NCERT Solutions Class 10 Maths Chapter 7: Coordinate Geometry</h1>
+<p class="page-meta">Detailed solutions for Exercise 7.2 (Section Formula).</p>
+<div class="exercise-tabs">
+<a href="ncert-solutions-class-10-maths-chapter-7-exercise-7-1.html" class="ex-tab">Ex 7.1</a>
+<a href="#" class="ex-tab active">Ex 7.2</a>
+</div>
+
+    <!-- CONTAINER WHERE THE DESIGNED QUESTIONS WILL APPEAR -->
+    <div id="questions-container"></div>
+
+    <!-- ========================================== -->
+    <!-- PASTE GEMINI OUTPUT BELOW INSIDE THIS DIV -->
+    <!-- ========================================== -->
+    <div id="raw-content" style="display: none;">
+        #### **Q1. Find the coordinates of the point which divides the join of (– 1, 7) and (4, – 3) in the ratio 2 : 3.**
+
+#### **A1. Solution:**
+Let $P(x, y)$ be the required point.
+$x_1 = -1, y_1 = 7$
+$x_2 = 4, y_2 = -3$
+$m_1 = 2, m_2 = 3$
+$x = \frac{2(4) + 3(-1)}{2+3} = \frac{8 - 3}{5} = \frac{5}{5} = 1$
+$y = \frac{2(-3) + 3(7)}{2+3} = \frac{-6 + 21}{5} = \frac{15}{5} = 3$
+**Ans: The coordinates are (1, 3).**
+
+#### **Q2. Find the coordinates of the points of trisection of the line segment joining (4, – 1) and (– 2, – 3).**
+
+#### **A2. Solution:**
+Trisection means dividing into 3 equal parts. Let points be $P$ and $Q$.
+$P$ divides $AB$ in ratio $1 : 2$.
+$x = \frac{1(-2) + 2(4)}{1+2} = \frac{6}{3} = 2$; $y = \frac{1(-3) + 2(-1)}{1+2} = \frac{-5}{3}$.
+$Q$ divides $AB$ in ratio $2 : 1$.
+$x = \frac{2(-2) + 1(4)}{2+1} = \frac{0}{3} = 0$; $y = \frac{2(-3) + 1(-1)}{2+1} = \frac{-7}{3}$.
+**Ans: Coordinates are $(2, -\frac{5}{3})$ and $(0, -\frac{7}{3})$.**
+
+#### **Q3. To conduct Sports Day activities, in your rectangular shaped school ground ABCD, lines have been drawn with chalk powder at a distance of 1 m each. 100 flower pots have been placed at a distance of 1 m from each other along AD. Niharika runs $\frac{1}{4}$th the distance AD on the 2nd line and posts a green flag. Preet runs $\frac{1}{5}$th the distance AD on the 8th line and posts a red flag. What is the distance between both the flags? If Rashmi has to post a blue flag exactly halfway between the line segment joining the two flags, where should she post her flag?**
+
+#### **A3. Solution:**
+Total distance AD = 100 m.
+Niharika's position (Green flag): $x = 2$, $y = \frac{1}{4} \times 100 = 25$. So, $G(2, 25)$.
+Preet's position (Red flag): $x = 8$, $y = \frac{1}{5} \times 100 = 20$. So, $R(8, 20)$.
+Distance $GR = \sqrt{(8-2)^2 + (20-25)^2} = \sqrt{6^2 + (-5)^2} = \sqrt{36 + 25} = \sqrt{61}$ m.
+Blue flag (Rashmi) is at midpoint of GR:
+$x = \frac{2+8}{2} = 5$; $y = \frac{25+20}{2} = 22.5$.
+**Ans: Distance is $\sqrt{61}$ m. Rashmi should post her flag on the 5th line at 22.5 m.**
+
+#### **Q4. Find the ratio in which the line segment joining the points (– 3, 10) and (6, – 8) is divided by (– 1, 6).**
+
+#### **A4. Solution:**
+Let the ratio be $k : 1$.
+Using section formula for $x$-coordinate:
+$-1 = \frac{k(6) + 1(-3)}{k+1}$
+$-k - 1 = 6k - 3$
+$2 = 7k \Rightarrow k = \frac{2}{7}$.
+**Ans: The ratio is 2 : 7.**
+
+#### **Q5. Find the ratio in which the line segment joining A(1, – 5) and B(– 4, 5) is divided by the x-axis. Also find the coordinates of the point of division.**
+
+#### **A5. Solution:**
+Point on x-axis is $P(x, 0)$. Let ratio be $k : 1$.
+Using $y$-coordinate:
+$0 = \frac{k(5) + 1(-5)}{k+1} \Rightarrow 5k - 5 = 0 \Rightarrow k = 1$.
+Ratio is $1 : 1$.
+Now find $x$: $x = \frac{1(-4) + 1(1)}{1+1} = \frac{-3}{2}$.
+**Ans: Ratio is 1 : 1. Point is $(-\frac{3}{2}, 0)$.**
+
+#### **Q6. If (1, 2), (4, y), (x, 6) and (3, 5) are the vertices of a parallelogram taken in order, find x and y.**
+
+#### **A6. Solution:**
+In a parallelogram, diagonals bisect each other. So, midpoint of diagonal AC = midpoint of diagonal BD.
+Midpoint of AC: $(\frac{1+x}{2}, \frac{2+6}{2}) = (\frac{1+x}{2}, 4)$
+Midpoint of BD: $(\frac{4+3}{2}, \frac{y+5}{2}) = (\frac{7}{2}, \frac{y+5}{2})$
+Equating coordinates:
+$\frac{1+x}{2} = \frac{7}{2} \Rightarrow 1+x = 7 \Rightarrow x = 6$
+$4 = \frac{y+5}{2} \Rightarrow 8 = y+5 \Rightarrow y = 3$
+**Ans: x = 6, y = 3.**
+
+#### **Q7. Find the coordinates of a point A, where AB is the diameter of a circle whose centre is (2, – 3) and B is (1, 4).**
+
+#### **A7. Solution:**
+Let $A$ be $(x, y)$. Centre $(2, -3)$ is the midpoint of AB.
+$2 = \frac{x+1}{2} \Rightarrow 4 = x+1 \Rightarrow x = 3$
+$-3 = \frac{y+4}{2} \Rightarrow -6 = y+4 \Rightarrow y = -10$
+**Ans: A is (3, -10).**
+
+#### **Q8. If A and B are (– 2, – 2) and (2, – 4), respectively, find the coordinates of P such that $AP = \frac{3}{7} AB$ and P lies on the line segment AB.**
+
+#### **A8. Solution:**
+$AP = \frac{3}{7} AB \Rightarrow PB = AB - \frac{3}{7} AB = \frac{4}{7} AB$.
+Ratio $AP : PB = 3 : 4$.
+$x = \frac{3(2) + 4(-2)}{3+4} = \frac{6-8}{7} = -\frac{2}{7}$
+$y = \frac{3(-4) + 4(-2)}{3+4} = \frac{-12-8}{7} = -\frac{20}{7}$
+**Ans: P is $(-\frac{2}{7}, -\frac{20}{7})$.**
+
+#### **Q9. Find the coordinates of the points which divide the line segment joining A(– 2, 2) and B(2, 8) into four equal parts.**
+
+#### **A9. Solution:**
+Let points be $P_1, P_2, P_3$.
+$P_2$ is midpoint of AB: $x = \frac{-2+2}{2} = 0, y = \frac{2+8}{2} = 5$. So $P_2(0, 5)$.
+$P_1$ is midpoint of $AP_2$: $x = \frac{-2+0}{2} = -1, y = \frac{2+5}{2} = 3.5$. So $P_1(-1, 3.5)$.
+$P_3$ is midpoint of $P_2B$: $x = \frac{0+2}{2} = 1, y = \frac{5+8}{2} = 6.5$. So $P_3(1, 6.5)$.
+**Ans: (-1, 3.5), (0, 5), and (1, 6.5).**
+
+#### **Q10. Find the area of a rhombus if its vertices are (3, 0), (4, 5), (– 1, 4) and (– 2, – 1) taken in order.**
+**(Hint: Area of a rhombus = $\frac{1}{2}$ (product of its diagonals))**
+
+#### **A10. Solution:**
+Let $A(3, 0), B(4, 5), C(-1, 4), D(-2, -1)$.
+Diagonal $d_1 (AC) = \sqrt{(-1-3)^2 + (4-0)^2} = \sqrt{(-4)^2 + 4^2} = \sqrt{16+16} = \sqrt{32} = 4\sqrt{2}$.
+Diagonal $d_2 (BD) = \sqrt{(-2-4)^2 + (-1-5)^2} = \sqrt{(-6)^2 + (-6)^2} = \sqrt{36+36} = \sqrt{72} = 6\sqrt{2}$.
+Area = $\frac{1}{2} \times 4\sqrt{2} \times 6\sqrt{2} = \frac{1}{2} \times 24 \times 2 = 24$ sq units.
+**Ans: 24 square units.**
+    </div>
+    <!-- ========================================== -->
+
+
+    <div class="app-nudge">
+    <div style="display: flex; gap: 1rem; align-items: center;">
+        <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display:flex; align-items:center; justify-content:center;">
+            <i class="fas fa-camera" style="font-size: 1.5rem; color: var(--color-curiosity);"></i>
+        </div>
+        <div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.2rem;">Snap a Photo of any Graph</h3>
+            <p style="font-size: 0.95rem; opacity: 0.8;">Braino AI can analyze geometry and graphs from photos instantly.</p>
+        </div>
+    </div>
+    <a href="#" class="btn btn-primary" style="background: white; color: var(--color-trust);">
+        Try Snap & Solve <i class="fas fa-external-link-alt"></i>
+    </a>
+</div>
+</main>
+
+
+        </div>
+    </div>
+
+    <!-- Footer Injection -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Load Footer
+        fetch('../footer.html?v=1.1')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
+        // Load Header & Init Mobile Menu
+        fetch('../header.html?v=1.1')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                // Initialize Mobile Menu (Same logic as index.html)
+                const menuBtn = document.getElementById('menuBtn');
+                const navLinks = document.getElementById('navLinks');
+                if(menuBtn && navLinks) {
+                    const icon = menuBtn.querySelector('i');
+                    menuBtn.addEventListener('click', function() {
+                        navLinks.classList.toggle('active');
+                        if (navLinks.classList.contains('active')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                }
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+    const rawText = document.getElementById('raw-content').innerHTML;
+    const container = document.getElementById('questions-container');
+
+    // 1. Split by "####" (Works for Q1, A1, etc.)
+    // We clean up empty splits immediately
+    const blocks = rawText.split('####').filter(b => b.trim().length > 0);
+
+    blocks.forEach((block, index) => {
+        // 2. Extract Title (First line) and Content (Rest)
+        let lines = block.trim().split('\n');
+        let titleLine = lines[0].replace(/\*/g, '').trim(); // Remove ** stars
+        let contentMarkdown = lines.slice(1).join('\n'); // Everything else
+
+        // 3. Convert Content to HTML
+        let contentHtml = marked.parse(contentMarkdown);
+
+        // 4. Determine if this is a Question or just a Solution
+        // If title starts with 'Q', we assume it's a question block.
+        // If it starts with 'A' or 'Solution', we treat it as an answer block.
+        let isAnswerOnly = titleLine.match(/^(A\d|Solution)/i);
+
+        const article = document.createElement('article');
+        article.className = 'question-block';
+        article.id = 'block-' + index;
+
+        if (isAnswerOnly) {
+            // RENDER STYLE: SOLUTION ONLY (Like your screenshot example)
+            article.innerHTML = `
+                <div class="q-badge" style="background:var(--color-trust);">Solution</div>
+                <h2 class="q-text" style="font-size: 1.2rem; color: #444;">${titleLine}</h2>
+                <div class="solution-content">
+                    <div class="solution-step" style="background: #fff; border-left: 4px solid var(--color-trust); padding: 1rem; margin-top:1rem;">
+                        <div class="step-content">${contentHtml}</div>
+                    </div>
+                </div>
+            `;
+        } else {
+            // RENDER STYLE: FULL QUESTION (Standard)
+            article.innerHTML = `
+                <div class="q-badge">Question</div>
+                <h2 class="q-text">${titleLine}</h2>
+                <div class="solution-content">
+                    <div class="step-content">${contentHtml}</div>
+                </div>
+                <div class="video-placeholder">
+                     <a href="#" class="play-btn-pulse"><i class="fas fa-play" style="margin-left:5px;"></i></a>
+                     <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Watch Video Explanation</h3>
+                </div>
+            `;
+        }
+
+        container.appendChild(article);
+    });
+
+    // 5. Render Math
+    if (window.MathJax) window.MathJax.typesetPromise();
+});
+
+    </script>
+</body>
+</html>

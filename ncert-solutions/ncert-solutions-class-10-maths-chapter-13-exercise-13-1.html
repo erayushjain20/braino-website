@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions Class 10 Maths Chapter 13 Statistics - Braino</title>
+    <meta name="description" content="Step-by-step NCERT Solutions for Class 10 Maths Chapter 13 Statistics. Exercise 13.1,13.2,13.3 solutions with video explanations on Braino App.">
+
+    <!-- Fonts & Icons (Same as Index) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- JSON-LD SCHEMA FOR SEO (Education) -->
+    <script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "Consider the following distribution of daily wages of 50 workers of a factory. Find the mean daily wages of the workers of the factory by using an appropriate method.",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Using the Assumed Mean Method with a = 550, the mean daily wages of the workers is calculated to be ₹ 545.20."
+}
+},
+{
+"@type": "Question",
+"name": "The following distribution shows the daily pocket allowance of children of a locality. The mean pocket allowance is ₹ 18. Find the missing frequency f.",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "By using the formula for the mean and substituting the given mean of 18, the missing frequency f is calculated to be 20."
+}
+},
+{
+"@type": "Question",
+"name": "In a retail market, fruit vendors were selling mangoes kept in packing boxes. Find the mean number of mangoes kept in a packing box.",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "After adjusting the discontinuous class intervals to continuous ones (e.g., 49.5-52.5) and using the Step Deviation Method, the mean number of mangoes is approximately 57.19."
+}
+},
+{
+"@type": "Question",
+"name": "A class teacher has the following absentee record of 40 students of a class for the whole term. Find the mean number of days a student was absent.",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Since the class sizes are unequal, the Direct Method is used. The mean number of days a student was absent is calculated to be 12.48 days."
+}
+}
+]
+}
+</script>
+    <script>window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };</script>
+
+
+
+    <style>
+        /* --- 1. REUSING VARIABLES FROM INDEX.HTML --- */
+        :root {
+            --color-trust: #1e293b; 
+            --color-curiosity: #06b6d4; /* Your Brand Cyan */
+            --color-curiosity-hover: #0891b2;
+            --color-success: #22c55e;
+            --color-bg: #f8fafc;
+            --color-surface: #ffffff;
+            --color-border: #e2e8f0;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-card: 0 10px 30px -5px rgba(0,0,0,0.08);
+        }
+
+        /* --- 2. LAYOUT ESSENTIALS --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--color-bg); color: var(--text-main); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; transition: 0.2s; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.6rem 1.2rem; font-weight: 700; border-radius: 999px; font-size: 0.95rem; cursor: pointer; border: none; gap: 0.5rem; }
+        .btn-primary { background-color: var(--color-curiosity); color: white; box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3); }
+        .btn-primary:hover { background-color: var(--color-curiosity-hover); transform: translateY(-2px); }
+
+        /* --- 3. PAGE SPECIFIC LAYOUT --- */
+        .ncert-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr; /* Sidebar | Content */
+            gap: 2.5rem;
+            padding: 2rem 0 4rem;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs { padding: 1rem 0; padding-top: 100px; font-size: 0.9rem; color: var(--text-muted); 
+         display: flex;align-items: center;justify-content: flex-start !important;gap: 0;}
+        .breadcrumbs a:hover { color: var(--color-curiosity); }
+        .breadcrumbs a,
+.breadcrumbs span { 
+    flex-shrink: 0;
+}
+        .breadcrumbs span {  margin: 0 0.5rem; color: #cbd5e1; }
+
+        /* --- 4. SIDEBAR (CHAPTER LIST) --- */
+        .sidebar-sticky { position: sticky; top: 100px; }
+        
+        .chapter-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .chapter-header {
+            background: var(--color-trust);
+            color: white;
+            padding: 1rem;
+            font-weight: 700;
+        }
+
+        .chapter-list { list-style: none; overflow-y: auto; position: sticky;top: 80px;height: calc(80vh - 100px);scrollbar-width: thin;}
+        .chapter-list li { border-bottom: 1px solid var(--color-border); }
+        .chapter-list li:last-child { border-bottom: none; }
+        
+        .chapter-link {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.85rem 1rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .chapter-link:hover { background-color: #ecfeff; color: var(--color-curiosity); }
+        .chapter-link.active { background-color: #ecfeff; color: var(--color-curiosity); border-left: 4px solid var(--color-curiosity); font-weight: 700; }
+
+        /* --- 5. MAIN CONTENT --- */
+        .page-title { font-size: 2rem; font-weight: 800; color: var(--color-trust); margin-bottom: 0.5rem; }
+        .page-meta { color: var(--text-muted); margin-bottom: 2rem; }
+
+        /* Exercise Tabs */
+        .exercise-tabs {
+            display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 5px; margin-bottom: 2rem;
+            scrollbar-width: none; /* Firefox */
+        }
+        .exercise-tabs::-webkit-scrollbar { display: none; }
+        .ex-tab {
+            padding: 0.5rem 1.2rem; background: white; border: 1px solid var(--color-border);
+            border-radius: 99px; white-space: nowrap; font-weight: 600; color: var(--text-muted);
+        }
+        .ex-tab.active { background: var(--color-trust); color: white; border-color: var(--color-trust); }
+        .ex-tab:hover:not(.active) { border-color: var(--color-curiosity); color: var(--color-curiosity); }
+
+        /* Question Block */
+        .question-block {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .q-badge {
+            display: inline-block; background: #e0f2fe; color: var(--color-curiosity-hover);
+            font-weight: 700; font-size: 0.8rem; padding: 4px 12px; border-radius: 99px; margin-bottom: 1rem;
+        }
+
+        .q-text { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 1.5rem; }
+        
+        /* Math Formatting */
+        .math { font-family: 'Courier New', Courier, monospace; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; color: #d946ef; font-weight: 600; }
+
+        /* Video Placeholder (Designed to sell the App) */
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #0f172a;
+            border-radius: var(--radius-md);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center;
+            color: white;
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://placehold.co/800x450/1e293b/FFF?text=Braino+Video+Solution'); 
+            background-size: cover;
+        }
+
+        .play-btn-pulse {
+            width: 64px; height: 64px; background: var(--color-curiosity); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;
+            box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7);
+            animation: pulse-cyan 2s infinite;
+            margin-bottom: 1rem;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .play-btn-pulse:hover { transform: scale(1.1); }
+        
+        @keyframes pulse-cyan {
+            0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(6, 182, 212, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+        }
+
+        /* Text Solution */
+        .solution-step { position: relative; padding-left: 2rem; margin-bottom: 1.5rem; }
+        .solution-step::before {
+            content: ''; position: absolute; left: 0; top: 8px; width: 12px; height: 12px;
+            background: var(--color-success); border-radius: 50%;
+        }
+        .solution-step::after {
+            content: ''; position: absolute; left: 5px; top: 25px; width: 2px; height: 100%;
+            background: #e2e8f0;
+        }
+        .solution-step:last-child::after { display: none; }
+        
+        .step-title { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; color: var(--color-trust); }
+        .step-content { color: var(--text-muted); font-size: 0.95rem; }
+
+        .solution-content table {
+        width: 100%;
+        max-width: 400px; /* Keeps tables from getting too wide */
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-family: sans-serif;
+    }
+    .solution-content th, 
+    .solution-content td {
+        border: 1px solid #ddd;
+        padding: 8px 12px;
+        text-align: center;
+    }
+    .solution-content th {
+        background-color: #f1f5f9;
+        font-weight: bold;
+    }
+
+        /* In-Feed App Banner */
+        .app-nudge {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            border-radius: var(--radius-md); padding: 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+            color: white; margin: 3rem 0;
+            box-shadow: var(--shadow-card);
+        }
+
+        /* --- 6. MOBILE RESPONSIVE --- */
+        @media (max-width: 968px) {
+            .ncert-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+            .sidebar-sticky { display: none; } /* Hidden on mobile by default, usually converted to a dropdown */
+            .mobile-chapter-select { display: block; width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: white; font-weight: 700; margin-bottom: 1.5rem; }
+            .app-nudge { flex-direction: column; text-align: center; gap: 1.5rem; }
+            .page-title { font-size: 1.5rem; }
+        }
+        @media (min-width: 969px) { .mobile-chapter-select { display: none; } }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Injection -->
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="/">Home</a><span>/</span><a href="#">NCERT Solutions</a><span>/</span><a href="#">Class 10 Maths</a><span>/</span>Statistics
+        </nav>
+
+        <div class="ncert-layout">
+            
+            <!-- Sidebar: Chapter Navigation -->
+            <aside class="sidebar-wrapper">
+                <!-- Mobile Dropdown Placeholder -->
+                <select class="mobile-chapter-select" onchange="location = this.value;">
+                    <option value="#">Chapter 1: Real Numbers</option>
+                    <option value="#">Chapter 2: Polynomials</option>
+                    <option value="#">Chapter 3: Pair of Linear Equations in Two Variables</option>
+                    <option value="#">Chapter 4: Quadratic Equations</option>
+                    <option value="#">Chapter 5: Arithmetic Progressions</option>
+                    <option value="#">Chapter 6: Triangles</option>
+                    <option value="#">Chapter 7: Coordinate Geometry</option>
+                    <option value="#">Chapter 8: Introduction to Trigonometry</option>
+                    <option value="#">Chapter 9: Some Applications of Trigonometry</option>
+                    <option value="#">Chapter 10: Circles</option>
+                    <option value="#">Chapter 11: Areas Related to Circles</option>
+                    <option value="#">Chapter 12: Surface Areas and Volumes</option>
+                    <option value="#">Chapter 13: Statistics</option>
+                    <option value="#">Chapter 14: Probability</option>
+                </select>
+
+                <div class="chapter-card sidebar-sticky">
+                    <div class="chapter-header">
+                        Class 10 Maths
+                    </div>
+                    <ul class="chapter-list">
+    <!-- Chapter 1 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-1-exercise-1-1.html" class="chapter-link">
+            <span>01. Real Numbers</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 2 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-2-exercise-2-1.html" class="chapter-link">
+            <span>02. Polynomials</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 3 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-3-exercise-3-1.html" class="chapter-link">
+            <span>03. Pair of Linear Eq.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 4 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-4-exercise-4-1.html" class="chapter-link">
+            <span>04. Quadratic Equations</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 5 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-5-exercise-5-1.html" class="chapter-link">
+            <span>05. Arithmetic Progressions</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 6 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-6-exercise-6-1.html" class="chapter-link">
+            <span>06. Triangles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 7 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-7-exercise-7-1.html" class="chapter-link">
+            <span>07. Coordinate Geometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 8 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-8-exercise-8-1.html" class="chapter-link">
+            <span>08. Intro to Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 9 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-9-exercise-9-1.html" class="chapter-link">
+            <span>09. App. of Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 10 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-10-exercise-10-1.html" class="chapter-link">
+            <span>10. Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 11 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-11-exercise-11-1.html" class="chapter-link">
+            <span>11. Areas Related to Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 12 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-12-exercise-12-1.html" class="chapter-link">
+            <span>12. Surface Areas & Vol.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 13 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-13-exercise-13-1.html" class="chapter-link">
+            <span>13. Statistics</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 14 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-14-exercise-14-1.html" class="chapter-link">
+            <span>14. Probability</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+</ul>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main>
+
+    <h1 class="page-title">NCERT Solutions Class 10 Maths Chapter 13: Statistics</h1>
+<p class="page-meta">Detailed solutions for Exercise 13.1 (Mean of Grouped Data).</p>
+<div class="exercise-tabs">
+<a href="#" class="ex-tab active">Ex 13.1</a>
+<a href="ncert-solutions-class-10-maths-chapter-13-exercise-13-2.html" class="ex-tab">Ex 13.2</a>
+<a href="ncert-solutions-class-10-maths-chapter-13-exercise-13-3.html" class="ex-tab">Ex 13.3</a>
+</div>
+
+    <!-- CONTAINER WHERE THE DESIGNED QUESTIONS WILL APPEAR -->
+    <div id="questions-container"></div>
+
+    <!-- ========================================== -->
+    <!-- PASTE GEMINI OUTPUT BELOW INSIDE THIS DIV -->
+    <!-- ========================================== -->
+    <div id="raw-content" style="display: none;">
+        #### **Q1. A survey was conducted by a group of students as a part of their environment awareness programme, in which they collected the following data regarding the number of plants in 20 houses in a locality. Find the mean number of plants per house.**
+
+| Number of plants | 0-2 | 2-4 | 4-6 | 6-8 | 8-10 | 10-12 | 12-14 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Number of houses** | 1 | 2 | 1 | 5 | 6 | 2 | 3 |
+
+**Which method did you use for finding the mean, and why?**
+
+#### **A1. Solution:**
+We use the **Direct Method** because the numerical values of $x_i$ and $f_i$ are small.
+
+| Number of plants (Class Interval) | Number of houses ($f_i$) | Class Mark ($x_i$) | $f_i x_i$ |
+| :--- | :---: | :---: | :---: |
+| 0 - 2 | 1 | 1 | 1 |
+| 2 - 4 | 2 | 3 | 6 |
+| 4 - 6 | 1 | 5 | 5 |
+| 6 - 8 | 5 | 7 | 35 |
+| 8 - 10 | 6 | 9 | 54 |
+| 10 - 12 | 2 | 11 | 22 |
+| 12 - 14 | 3 | 13 | 39 |
+| **Total** | **$\sum f_i = 20$** | | **$\sum f_i x_i = 162$** |
+
+Mean ($\bar{x}$) = $\frac{\sum f_i x_i}{\sum f_i}$
+$= \frac{162}{20} = 8.1$
+**Mean number of plants per house is 8.1.**
+
+#### **Q2. Consider the following distribution of daily wages of 50 workers of a factory.**
+
+| Daily wages (in ₹) | 500-520 | 520-540 | 540-560 | 560-580 | 580-600 |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Number of workers** | 12 | 14 | 8 | 6 | 10 |
+
+**Find the mean daily wages of the workers of the factory by using an appropriate method.**
+
+#### **A2. Solution:**
+We use the **Assumed Mean Method** to simplify calculations.
+Let Assumed Mean ($a$) = 550 (mid-value of 540-560).
+Class size ($h$) = 20.
+
+| Class Interval | Frequency ($f_i$) | Class Mark ($x_i$) | $d_i = x_i - a$ | $f_i d_i$ |
+| :--- | :---: | :---: | :---: | :---: |
+| 500 - 520 | 12 | 510 | -40 | -480 |
+| 520 - 540 | 14 | 530 | -20 | -280 |
+| 540 - 560 | 8 | 550 ($a$) | 0 | 0 |
+| 560 - 580 | 6 | 570 | 20 | 120 |
+| 580 - 600 | 10 | 590 | 40 | 400 |
+| **Total** | **$\sum f_i = 50$** | | | **$\sum f_i d_i = -240$** |
+
+Mean ($\bar{x}$) = $a + \frac{\sum f_i d_i}{\sum f_i}$
+$= 550 + \frac{-240}{50}$
+$= 550 - 4.8 = 545.2$
+**Mean daily wages of the workers is ₹ 545.20.**
+
+#### **Q3. The following distribution shows the daily pocket allowance of children of a locality. The mean pocket allowance is ₹ 18. Find the missing frequency $f$.**
+
+| Daily pocket allowance (in ₹) | 11-13 | 13-15 | 15-17 | 17-19 | 19-21 | 21-23 | 23-25 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Number of children** | 7 | 6 | 9 | 13 | $f$ | 5 | 4 |
+
+#### **A3. Solution:**
+Given: Mean ($\bar{x}$) = 18.
+We use the **Direct Method** (or Assumed Mean Method). Let's use Direct Method here for clarity.
+
+| Class Interval | Frequency ($f_i$) | Class Mark ($x_i$) | $f_i x_i$ |
+| :--- | :---: | :---: | :---: |
+| 11 - 13 | 7 | 12 | 84 |
+| 13 - 15 | 6 | 14 | 84 |
+| 15 - 17 | 9 | 16 | 144 |
+| 17 - 19 | 13 | 18 | 234 |
+| 19 - 21 | $f$ | 20 | $20f$ |
+| 21 - 23 | 5 | 22 | 110 |
+| 23 - 25 | 4 | 24 | 96 |
+| **Total** | **$\sum f_i = 44 + f$** | | **$\sum f_i x_i = 752 + 20f$** |
+
+Mean ($\bar{x}$) = $\frac{\sum f_i x_i}{\sum f_i}$
+$18 = \frac{752 + 20f}{44 + f}$
+$18(44 + f) = 752 + 20f$
+$792 + 18f = 752 + 20f$
+$792 - 752 = 20f - 18f$
+$40 = 2f$
+$f = 20$
+**The missing frequency $f$ is 20.**
+
+
+#### **Q4. Thirty women were examined in a hospital by a doctor and the number of heartbeats per minute were recorded and summarised as follows. Find the mean heartbeats per minute for these women, choosing a suitable method.**
+
+| Number of heartbeats per minute | 65-68 | 68-71 | 71-74 | 74-77 | 77-80 | 80-83 | 83-86 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Number of women** | 2 | 4 | 3 | 8 | 7 | 4 | 2 |
+
+#### **A4. Solution:**
+We use the **Assumed Mean Method**.
+Let Assumed Mean ($a$) = 75.5.
+Class size ($h$) = 3.
+
+| Class Interval | Frequency ($f_i$) | Class Mark ($x_i$) | $d_i = x_i - a$ | $f_i d_i$ |
+| :--- | :---: | :---: | :---: | :---: |
+| 65 - 68 | 2 | 66.5 | -9 | -18 |
+| 68 - 71 | 4 | 69.5 | -6 | -24 |
+| 71 - 74 | 3 | 72.5 | -3 | -9 |
+| 74 - 77 | 8 | 75.5 ($a$) | 0 | 0 |
+| 77 - 80 | 7 | 78.5 | 3 | 21 |
+| 80 - 83 | 4 | 81.5 | 6 | 24 |
+| 83 - 86 | 2 | 84.5 | 9 | 18 |
+| **Total** | **$\sum f_i = 30$** | | | **$\sum f_i d_i = 12$** |
+
+Mean ($\bar{x}$) = $a + \frac{\sum f_i d_i}{\sum f_i}$
+$= 75.5 + \frac{12}{30}$
+$= 75.5 + 0.4 = 75.9$
+**Mean heartbeats per minute is 75.9.**
+
+#### **Q5. In a retail market, fruit vendors were selling mangoes kept in packing boxes. These boxes contained varying numbers of mangoes. The following was the distribution of mangoes according to the number of boxes.**
+
+| Number of mangoes | 50-52 | 53-55 | 56-58 | 59-61 | 62-64 |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Number of boxes** | 15 | 110 | 135 | 115 | 25 |
+
+**Find the mean number of mangoes kept in a packing box. Which method of finding the mean did you choose?**
+
+#### **A5. Solution:**
+The class intervals are not continuous. We make them continuous by subtracting 0.5 from the lower limit and adding 0.5 to the upper limit (though for finding class marks $x_i$, the result remains the same).
+We use the **Step Deviation Method**.
+Let Assumed Mean ($a$) = 57.
+Class size ($h$) = 3.
+
+| Class Interval | Frequency ($f_i$) | Class Mark ($x_i$) | $u_i = \frac{x_i - a}{h}$ | $f_i u_i$ |
+| :--- | :---: | :---: | :---: | :---: |
+| 49.5 - 52.5 | 15 | 51 | -2 | -30 |
+| 52.5 - 55.5 | 110 | 54 | -1 | -110 |
+| 55.5 - 58.5 | 135 | 57 ($a$) | 0 | 0 |
+| 58.5 - 61.5 | 115 | 60 | 1 | 115 |
+| 61.5 - 64.5 | 25 | 63 | 2 | 50 |
+| **Total** | **$\sum f_i = 400$** | | | **$\sum f_i u_i = 25$** |
+
+Mean ($\bar{x}$) = $a + (\frac{\sum f_i u_i}{\sum f_i}) \times h$
+$= 57 + (\frac{25}{400}) \times 3$
+$= 57 + \frac{3}{16} = 57 + 0.1875$
+$= 57.19$ (approx).
+**Mean number of mangoes is 57.19.**
+
+#### **Q6. The table below shows the daily expenditure on food of 25 households in a locality.**
+
+| Daily expenditure (in ₹) | 100-150 | 150-200 | 200-250 | 250-300 | 300-350 |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Number of households** | 4 | 5 | 12 | 2 | 2 |
+
+**Find the mean daily expenditure on food by a suitable method.**
+
+#### **A6. Solution:**
+We use the **Step Deviation Method**.
+Let Assumed Mean ($a$) = 225.
+Class size ($h$) = 50.
+
+| Class Interval | Frequency ($f_i$) | Class Mark ($x_i$) | $u_i = \frac{x_i - a}{h}$ | $f_i u_i$ |
+| :--- | :---: | :---: | :---: | :---: |
+| 100 - 150 | 4 | 125 | -2 | -8 |
+| 150 - 200 | 5 | 175 | -1 | -5 |
+| 200 - 250 | 12 | 225 ($a$) | 0 | 0 |
+| 250 - 300 | 2 | 275 | 1 | 2 |
+| 300 - 350 | 2 | 325 | 2 | 4 |
+| **Total** | **$\sum f_i = 25$** | | | **$\sum f_i u_i = -7$** |
+
+Mean ($\bar{x}$) = $a + (\frac{\sum f_i u_i}{\sum f_i}) \times h$
+$= 225 + (\frac{-7}{25}) \times 50$
+$= 225 + (-7 \times 2)$
+$= 225 - 14 = 211$.
+**Mean daily expenditure is ₹ 211.**
+
+#### **Q7. To find out the concentration of SO₂ in the air (in parts per million, i.e., ppm), the data was collected for 30 localities in a certain city and is presented below:**
+
+| Concentration of SO₂ (in ppm) | 0.00-0.04 | 0.04-0.08 | 0.08-0.12 | 0.12-0.16 | 0.16-0.20 | 0.20-0.24 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Frequency** | 4 | 9 | 9 | 2 | 4 | 2 |
+
+**Find the mean concentration of SO₂ in the air.**
+
+#### **A7. Solution:**
+We use the **Step Deviation Method**.
+Let Assumed Mean ($a$) = 0.10.
+Class size ($h$) = 0.04.
+
+| Class Interval | Frequency ($f_i$) | Class Mark ($x_i$) | $u_i = \frac{x_i - a}{h}$ | $f_i u_i$ |
+| :--- | :---: | :---: | :---: | :---: |
+| 0.00 - 0.04 | 4 | 0.02 | -2 | -8 |
+| 0.04 - 0.08 | 9 | 0.06 | -1 | -9 |
+| 0.08 - 0.12 | 9 | 0.10 ($a$) | 0 | 0 |
+| 0.12 - 0.16 | 2 | 0.14 | 1 | 2 |
+| 0.16 - 0.20 | 4 | 0.18 | 2 | 8 |
+| 0.20 - 0.24 | 2 | 0.22 | 3 | 6 |
+| **Total** | **$\sum f_i = 30$** | | | **$\sum f_i u_i = -1$** |
+
+Mean ($\bar{x}$) = $a + (\frac{\sum f_i u_i}{\sum f_i}) \times h$
+$= 0.10 + (\frac{-1}{30}) \times 0.04$
+$= 0.10 - 0.00133...$
+$= 0.099$ ppm (approx).
+**Mean concentration of SO₂ is 0.099 ppm.**
+
+#### **Q8. A class teacher has the following absentee record of 40 students of a class for the whole term. Find the mean number of days a student was absent.**
+
+| Number of days | 0-6 | 6-10 | 10-14 | 14-20 | 20-28 | 28-38 | 38-40 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Number of students** | 11 | 10 | 7 | 4 | 4 | 3 | 1 |
+
+#### **A8. Solution:**
+Here, the class sizes are unequal. We use the **Direct Method**.
+
+| Class Interval | Frequency ($f_i$) | Class Mark ($x_i$) | $f_i x_i$ |
+| :--- | :---: | :---: | :---: |
+| 0 - 6 | 11 | 3 | 33 |
+| 6 - 10 | 10 | 8 | 80 |
+| 10 - 14 | 7 | 12 | 84 |
+| 14 - 20 | 4 | 17 | 68 |
+| 20 - 28 | 4 | 24 | 96 |
+| 28 - 38 | 3 | 33 | 99 |
+| 38 - 40 | 1 | 39 | 39 |
+| **Total** | **$\sum f_i = 40$** | | **$\sum f_i x_i = 499$** |
+
+Mean ($\bar{x}$) = $\frac{\sum f_i x_i}{\sum f_i}$
+$= \frac{499}{40} = 12.475$.
+**Mean number of days absent is 12.48 days.**
+
+#### **Q9. The following table gives the literacy rate (in percentage) of 35 cities. Find the mean literacy rate.**
+
+| Literacy rate (in %) | 45-55 | 55-65 | 65-75 | 75-85 | 85-95 |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Number of cities** | 3 | 10 | 11 | 8 | 3 |
+
+#### **A9. Solution:**
+We use the **Step Deviation Method**.
+Let Assumed Mean ($a$) = 70.
+Class size ($h$) = 10.
+
+| Class Interval | Frequency ($f_i$) | Class Mark ($x_i$) | $u_i = \frac{x_i - a}{h}$ | $f_i u_i$ |
+| :--- | :---: | :---: | :---: | :---: |
+| 45 - 55 | 3 | 50 | -2 | -6 |
+| 55 - 65 | 10 | 60 | -1 | -10 |
+| 65 - 75 | 11 | 70 ($a$) | 0 | 0 |
+| 75 - 85 | 8 | 80 | 1 | 8 |
+| 85 - 95 | 3 | 90 | 2 | 6 |
+| **Total** | **$\sum f_i = 35$** | | | **$\sum f_i u_i = -2$** |
+
+Mean ($\bar{x}$) = $a + (\frac{\sum f_i u_i}{\sum f_i}) \times h$
+$= 70 + (\frac{-2}{35}) \times 10$
+$= 70 - \frac{4}{7}$
+$= 70 - 0.57 = 69.43$.
+**Mean literacy rate is 69.43%.**
+    </div>
+    <!-- ========================================== -->
+
+
+    <div class="app-nudge">
+    <div style="display: flex; gap: 1rem; align-items: center;">
+        <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display:flex; align-items:center; justify-content:center;">
+            <i class="fas fa-camera" style="font-size: 1.5rem; color: var(--color-curiosity);"></i>
+        </div>
+        <div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.2rem;">Snap a Photo of any Graph</h3>
+            <p style="font-size: 0.95rem; opacity: 0.8;">Braino AI can analyze geometry and graphs from photos instantly.</p>
+        </div>
+    </div>
+    <a href="#" class="btn btn-primary" style="background: white; color: var(--color-trust);">
+        Try Snap & Solve <i class="fas fa-external-link-alt"></i>
+    </a>
+</div>
+</main>
+
+
+        </div>
+    </div>
+
+    <!-- Footer Injection -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Load Footer
+        fetch('../footer.html?v=1.1')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
+        // Load Header & Init Mobile Menu
+        fetch('../header.html?v=1.1')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                // Initialize Mobile Menu (Same logic as index.html)
+                const menuBtn = document.getElementById('menuBtn');
+                const navLinks = document.getElementById('navLinks');
+                if(menuBtn && navLinks) {
+                    const icon = menuBtn.querySelector('i');
+                    menuBtn.addEventListener('click', function() {
+                        navLinks.classList.toggle('active');
+                        if (navLinks.classList.contains('active')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                }
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+    const rawText = document.getElementById('raw-content').innerHTML;
+    const container = document.getElementById('questions-container');
+
+    // 1. Split by "####" (Works for Q1, A1, etc.)
+    // We clean up empty splits immediately
+    const blocks = rawText.split('####').filter(b => b.trim().length > 0);
+
+    blocks.forEach((block, index) => {
+        // 2. Extract Title (First line) and Content (Rest)
+        let lines = block.trim().split('\n');
+        let titleLine = lines[0].replace(/\*/g, '').trim(); // Remove ** stars
+        let contentMarkdown = lines.slice(1).join('\n'); // Everything else
+
+        // 3. Convert Content to HTML
+        let contentHtml = marked.parse(contentMarkdown);
+
+        // 4. Determine if this is a Question or just a Solution
+        // If title starts with 'Q', we assume it's a question block.
+        // If it starts with 'A' or 'Solution', we treat it as an answer block.
+        let isAnswerOnly = titleLine.match(/^(A\d|Solution)/i);
+
+        const article = document.createElement('article');
+        article.className = 'question-block';
+        article.id = 'block-' + index;
+
+        if (isAnswerOnly) {
+            // RENDER STYLE: SOLUTION ONLY (Like your screenshot example)
+            article.innerHTML = `
+                <div class="q-badge" style="background:var(--color-trust);">Solution</div>
+                <h2 class="q-text" style="font-size: 1.2rem; color: #444;">${titleLine}</h2>
+                <div class="solution-content">
+                    <div class="solution-step" style="background: #fff; border-left: 4px solid var(--color-trust); padding: 1rem; margin-top:1rem;">
+                        <div class="step-content">${contentHtml}</div>
+                    </div>
+                </div>
+            `;
+        } else {
+            // RENDER STYLE: FULL QUESTION (Standard)
+            article.innerHTML = `
+                <div class="q-badge">Question</div>
+                <h2 class="q-text">${titleLine}</h2>
+                <div class="solution-content">
+                    <div class="step-content">${contentHtml}</div>
+                </div>
+                <div class="video-placeholder">
+                     <a href="#" class="play-btn-pulse"><i class="fas fa-play" style="margin-left:5px;"></i></a>
+                     <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Watch Video Explanation</h3>
+                </div>
+            `;
+        }
+
+        container.appendChild(article);
+    });
+
+    // 5. Render Math
+    if (window.MathJax) window.MathJax.typesetPromise();
+});
+
+    </script>
+</body>
+</html>

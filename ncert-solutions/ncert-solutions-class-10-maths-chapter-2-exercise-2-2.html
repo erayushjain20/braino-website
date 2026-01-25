@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions Class 10 Maths Chapter 2 Polynomials - Braino</title>
+    <meta name="description" content="Step-by-step NCERT Solutions for Class 10 Maths Chapter 2 Polynomials. Exercise 2.1, 2.2 solutions with video explanations on Braino App.">
+
+    <!-- Fonts & Icons (Same as Index) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- JSON-LD SCHEMA FOR SEO (Education) -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Find the zeroes of the quadratic polynomial x² – 2x – 8 and verify the relationship between the zeroes and the coefficients.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The polynomial is x² – 2x – 8 = (x – 4)(x + 2). The zeroes are 4 and -2. Sum of zeroes = 4 + (-2) = 2 = -(-2)/1 = -(coefficient of x)/(coefficient of x²). Product of zeroes = 4 × (-2) = -8 = -8/1 = (constant term)/(coefficient of x²). The relationship is verified."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Find the zeroes of the quadratic polynomial 6x² – 3 – 7x and verify the relationship between the zeroes and the coefficients.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Arranging the polynomial: 6x² – 7x – 3 = (3x + 1)(2x – 3). The zeroes are -1/3 and 3/2. Sum of zeroes = -1/3 + 3/2 = 7/6 = -(-7)/6 = -b/a. Product of zeroes = (-1/3) × (3/2) = -3/6 = c/a. The relationship is verified."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Find a quadratic polynomial each with the given numbers as the sum and product of its zeroes respectively: 1/4, – 1",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Let the polynomial be ax² + bx + c. Sum of zeroes = -b/a = 1/4. Product of zeroes = c/a = -1. If a = 4, then b = -1 and c = -4. Therefore, the quadratic polynomial is 4x² – x – 4."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Find a quadratic polynomial each with the given numbers as the sum and product of its zeroes respectively: √2, 1/3",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sum of zeroes = √2, Product of zeroes = 1/3. Using the formula k[x² – (sum)x + (product)], we get x² – √2x + 1/3. Multiplying by 3 to clear the denominator, the polynomial is 3x² – 3√2x + 1."
+      }
+    }
+  ]
+}
+</script>
+
+    <style>
+        /* --- 1. REUSING VARIABLES FROM INDEX.HTML --- */
+        :root {
+            --color-trust: #1e293b; 
+            --color-curiosity: #06b6d4; /* Your Brand Cyan */
+            --color-curiosity-hover: #0891b2;
+            --color-success: #22c55e;
+            --color-bg: #f8fafc;
+            --color-surface: #ffffff;
+            --color-border: #e2e8f0;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-card: 0 10px 30px -5px rgba(0,0,0,0.08);
+        }
+
+        /* --- 2. LAYOUT ESSENTIALS --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--color-bg); color: var(--text-main); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; transition: 0.2s; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.6rem 1.2rem; font-weight: 700; border-radius: 999px; font-size: 0.95rem; cursor: pointer; border: none; gap: 0.5rem; }
+        .btn-primary { background-color: var(--color-curiosity); color: white; box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3); }
+        .btn-primary:hover { background-color: var(--color-curiosity-hover); transform: translateY(-2px); }
+
+        /* --- 3. PAGE SPECIFIC LAYOUT --- */
+        .ncert-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr; /* Sidebar | Content */
+            gap: 2.5rem;
+            padding: 2rem 0 4rem;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs { padding: 1rem 0; padding-top: 100px; font-size: 0.9rem; color: var(--text-muted); 
+         display: flex;align-items: center;justify-content: flex-start !important;gap: 0;}
+        .breadcrumbs a:hover { color: var(--color-curiosity); }
+        .breadcrumbs a,
+.breadcrumbs span { 
+    flex-shrink: 0;
+}
+        .breadcrumbs span {  margin: 0 0.5rem; color: #cbd5e1; }
+
+        /* --- 4. SIDEBAR (CHAPTER LIST) --- */
+        .sidebar-sticky { position: sticky; top: 100px; }
+        
+        .chapter-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .chapter-header {
+            background: var(--color-trust);
+            color: white;
+            padding: 1rem;
+            font-weight: 700;
+        }
+
+        .chapter-list { list-style: none; overflow-y: auto; position: sticky;top: 80px;height: calc(80vh - 100px);scrollbar-width: thin;}
+        .chapter-list li { border-bottom: 1px solid var(--color-border); }
+        .chapter-list li:last-child { border-bottom: none; }
+        
+        .chapter-link {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.85rem 1rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .chapter-link:hover { background-color: #ecfeff; color: var(--color-curiosity); }
+        .chapter-link.active { background-color: #ecfeff; color: var(--color-curiosity); border-left: 4px solid var(--color-curiosity); font-weight: 700; }
+
+        /* --- 5. MAIN CONTENT --- */
+        .page-title { font-size: 2rem; font-weight: 800; color: var(--color-trust); margin-bottom: 0.5rem; }
+        .page-meta { color: var(--text-muted); margin-bottom: 2rem; }
+
+        /* Exercise Tabs */
+        .exercise-tabs {
+            display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 5px; margin-bottom: 2rem;
+            scrollbar-width: none; /* Firefox */
+        }
+        .exercise-tabs::-webkit-scrollbar { display: none; }
+        .ex-tab {
+            padding: 0.5rem 1.2rem; background: white; border: 1px solid var(--color-border);
+            border-radius: 99px; white-space: nowrap; font-weight: 600; color: var(--text-muted);
+        }
+        .ex-tab.active { background: var(--color-trust); color: white; border-color: var(--color-trust); }
+        .ex-tab:hover:not(.active) { border-color: var(--color-curiosity); color: var(--color-curiosity); }
+
+        /* Question Block */
+        .question-block {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .q-badge {
+            display: inline-block; background: #e0f2fe; color: var(--color-curiosity-hover);
+            font-weight: 700; font-size: 0.8rem; padding: 4px 12px; border-radius: 99px; margin-bottom: 1rem;
+        }
+
+        .q-text { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 1.5rem; }
+        
+        /* Math Formatting */
+        .math { font-family: 'Courier New', Courier, monospace; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; color: #d946ef; font-weight: 600; }
+
+        /* Video Placeholder (Designed to sell the App) */
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #0f172a;
+            border-radius: var(--radius-md);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center;
+            color: white;
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://placehold.co/800x450/1e293b/FFF?text=Braino+Video+Solution'); 
+            background-size: cover;
+        }
+
+        .play-btn-pulse {
+            width: 64px; height: 64px; background: var(--color-curiosity); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;
+            box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7);
+            animation: pulse-cyan 2s infinite;
+            margin-bottom: 1rem;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .play-btn-pulse:hover { transform: scale(1.1); }
+        
+        @keyframes pulse-cyan {
+            0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(6, 182, 212, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+        }
+
+        /* Text Solution */
+        .solution-step { position: relative; padding-left: 2rem; margin-bottom: 1.5rem; }
+        .solution-step::before {
+            content: ''; position: absolute; left: 0; top: 8px; width: 12px; height: 12px;
+            background: var(--color-success); border-radius: 50%;
+        }
+        .solution-step::after {
+            content: ''; position: absolute; left: 5px; top: 25px; width: 2px; height: 100%;
+            background: #e2e8f0;
+        }
+        .solution-step:last-child::after { display: none; }
+        
+        .step-title { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; color: var(--color-trust); }
+        .step-content { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* In-Feed App Banner */
+        .app-nudge {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            border-radius: var(--radius-md); padding: 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+            color: white; margin: 3rem 0;
+            box-shadow: var(--shadow-card);
+        }
+
+        /* --- 6. MOBILE RESPONSIVE --- */
+        @media (max-width: 968px) {
+            .ncert-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+            .sidebar-sticky { display: none; } /* Hidden on mobile by default, usually converted to a dropdown */
+            .mobile-chapter-select { display: block; width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: white; font-weight: 700; margin-bottom: 1.5rem; }
+            .app-nudge { flex-direction: column; text-align: center; gap: 1.5rem; }
+            .page-title { font-size: 1.5rem; }
+        }
+        @media (min-width: 969px) { .mobile-chapter-select { display: none; } }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Injection -->
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="/">Home</a><span>/</span><a href="#">NCERT Solutions</a><span>/</span><a href="#">Class 10 Maths</a><span>/</span>Polynomials
+        </nav>
+
+        <div class="ncert-layout">
+            
+            <!-- Sidebar: Chapter Navigation -->
+            <aside class="sidebar-wrapper">
+                <!-- Mobile Dropdown Placeholder -->
+                <select class="mobile-chapter-select" onchange="location = this.value;">
+                    <option value="#">Chapter 1: Real Numbers</option>
+                    <option value="#">Chapter 2: Polynomials</option>
+                    <option value="#">Chapter 3: Pair of Linear Equations in Two Variables</option>
+                    <option value="#">Chapter 4: Quadratic Equations</option>
+                    <option value="#">Chapter 5: Arithmetic Progressions</option>
+                    <option value="#">Chapter 6: Triangles</option>
+                    <option value="#">Chapter 7: Coordinate Geometry</option>
+                    <option value="#">Chapter 8: Introduction to Trigonometry</option>
+                    <option value="#">Chapter 9: Some Applications of Trigonometry</option>
+                    <option value="#">Chapter 10: Circles</option>
+                    <option value="#">Chapter 11: Areas Related to Circles</option>
+                    <option value="#">Chapter 12: Surface Areas and Volumes</option>
+                    <option value="#">Chapter 13: Statistics</option>
+                    <option value="#">Chapter 14: Probability</option>
+                </select>
+
+                <div class="chapter-card sidebar-sticky">
+                    <div class="chapter-header">
+                        Class 10 Maths
+                    </div>
+                    <ul class="chapter-list">
+    <!-- Chapter 1 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-1-exercise-1-1.html" class="chapter-link">
+            <span>01. Real Numbers</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 2 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-2-exercise-2-1.html" class="chapter-link">
+            <span>02. Polynomials</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 3 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-3-exercise-3-1.html" class="chapter-link">
+            <span>03. Pair of Linear Eq.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 4 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-4-exercise-4-1.html" class="chapter-link">
+            <span>04. Quadratic Equations</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 5 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-5-exercise-5-1.html" class="chapter-link">
+            <span>05. Arithmetic Progressions</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 6 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-6-exercise-6-1.html" class="chapter-link">
+            <span>06. Triangles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 7 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-7-exercise-7-1.html" class="chapter-link">
+            <span>07. Coordinate Geometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 8 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-8-exercise-8-1.html" class="chapter-link">
+            <span>08. Intro to Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 9 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-9-exercise-9-1.html" class="chapter-link">
+            <span>09. App. of Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 10 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-10-exercise-10-1.html" class="chapter-link">
+            <span>10. Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 11 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-11-exercise-11-1.html" class="chapter-link">
+            <span>11. Areas Related to Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 12 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-12-exercise-12-1.html" class="chapter-link">
+            <span>12. Surface Areas & Vol.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 13 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-13-exercise-13-1.html" class="chapter-link">
+            <span>13. Statistics</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 14 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-14-exercise-14-1.html" class="chapter-link">
+            <span>14. Probability</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+</ul>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main>
+                <h1 class="page-title">NCERT Solutions Class 10 Maths Chapter 2: Polynomials</h1>
+<p class="page-meta">Detailed solutions for Exercise 2.2 (Relationship between Zeroes and Coefficients).</p>
+
+<!-- Exercise Selector -->
+<div class="exercise-tabs">
+    <a href="ncert-solutions-class-10-maths-chapter-2-exercise-2-1.html" class="ex-tab">Ex 2.1</a>
+    <a href="#" class="ex-tab active">Ex 2.2</a>
+</div>
+
+<!-- QUESTION 1 -->
+<article class="question-block" id="q1">
+    <div class="q-badge">Exercise 2.2 • Q1</div>
+    <h2 class="q-text">Find the zeroes of the following quadratic polynomials and verify the relationship between the zeroes and the coefficients.<br>
+    (i) <span class="math">x² - 2x - 8</span> &nbsp; (ii) <span class="math">4s² - 4s + 1</span> &nbsp; (iii) <span class="math">6x² - 3 - 7x</span><br>
+    (iv) <span class="math">4u² + 8u</span> &nbsp; (v) <span class="math">t² - 15</span> &nbsp; (vi) <span class="math">3x² - x - 4</span></h2>
+
+    <div class="video-placeholder">
+        <a href="https://play.google.com/store/apps/details?id=com.aitutorapp" class="play-btn-pulse">
+            <i class="fas fa-play" style="margin-left:5px;"></i>
+        </a>
+        <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Watch Video Solution</h3>
+        <p style="font-size:0.9rem; opacity:0.8;">Step-by-step factorization explained on Braino App.</p>
+    </div>
+
+    <div class="solution-content">
+        <!-- Q1 PART (i) -->
+        <div class="solution-step">
+            <div class="step-title">(i) <span class="math">x² - 2x - 8</span></div>
+            <div class="step-content">
+                <strong>Step 1: Find Zeroes</strong><br>
+                Split middle term: <span class="math">x² - 4x + 2x - 8</span><br>
+                <span class="math">x(x - 4) + 2(x - 4)</span><br>
+                <span class="math">(x - 4)(x + 2)</span><br>
+                Zeroes are <strong>4</strong> and <strong>-2</strong>.<br><br>
+                <strong>Step 2: Verify Relationship</strong><br>
+                Here a = 1, b = -2, c = -8<br>
+                Sum of zeroes = 4 + (-2) = <strong>2</strong><br>
+                -b/a = -(-2)/1 = <strong>2</strong> (Matched)<br><br>
+                Product of zeroes = 4 × (-2) = <strong>-8</strong><br>
+                c/a = -8/1 = <strong>-8</strong> (Matched)
+            </div>
+        </div>
+
+        <!-- Q1 PART (ii) -->
+        <div class="solution-step">
+            <div class="step-title">(ii) <span class="math">4s² - 4s + 1</span></div>
+            <div class="step-content">
+                <strong>Step 1: Find Zeroes</strong><br>
+                <span class="math">(2s - 1)² = 0</span><br>
+                Zeroes are <strong>1/2</strong> and <strong>1/2</strong>.<br><br>
+                <strong>Step 2: Verification</strong> (a=4, b=-4, c=1)<br>
+                Sum = 1/2 + 1/2 = <strong>1</strong><br>
+                -b/a = -(-4)/4 = <strong>1</strong> (Verified)<br><br>
+                Product = 1/2 × 1/2 = <strong>1/4</strong><br>
+                c/a = 1/4 (Verified)
+            </div>
+        </div>
+
+        <!-- Q1 PART (iii) -->
+        <div class="solution-step">
+            <div class="step-title">(iii) <span class="math">6x² - 3 - 7x</span></div>
+            <div class="step-content">
+                Rearrange first: <span class="math">6x² - 7x - 3</span><br>
+                <strong>Step 1: Find Zeroes</strong><br>
+                <span class="math">6x² - 9x + 2x - 3</span><br>
+                <span class="math">3x(2x - 3) + 1(2x - 3)</span><br>
+                <span class="math">(3x + 1)(2x - 3)</span><br>
+                Zeroes are <strong>-1/3</strong> and <strong>3/2</strong>.<br><br>
+                <strong>Step 2: Verification</strong> (a=6, b=-7, c=-3)<br>
+                Sum = -1/3 + 3/2 = (-2+9)/6 = <strong>7/6</strong><br>
+                -b/a = -(-7)/6 = <strong>7/6</strong> (Verified)<br><br>
+                Product = -1/3 × 3/2 = -3/6 = <strong>-1/2</strong><br>
+                c/a = -3/6 = <strong>-1/2</strong> (Verified)
+            </div>
+        </div>
+
+        <!-- Q1 PART (iv) -->
+        <div class="solution-step">
+            <div class="step-title">(iv) <span class="math">4u² + 8u</span></div>
+            <div class="step-content">
+                <strong>Step 1: Find Zeroes</strong><br>
+                Take 4u common: <span class="math">4u(u + 2)</span><br>
+                Zeroes are <strong>0</strong> and <strong>-2</strong>.<br><br>
+                <strong>Step 2: Verification</strong> (a=4, b=8, c=0)<br>
+                Sum = 0 + (-2) = <strong>-2</strong><br>
+                -b/a = -8/4 = <strong>-2</strong> (Verified)<br><br>
+                Product = 0 × (-2) = <strong>0</strong><br>
+                c/a = 0/4 = <strong>0</strong> (Verified)
+            </div>
+        </div>
+
+        <!-- Q1 PART (v) -->
+        <div class="solution-step">
+            <div class="step-title">(v) <span class="math">t² - 15</span></div>
+            <div class="step-content">
+                <strong>Step 1: Find Zeroes</strong><br>
+                Using <span class="math">a² - b² = (a-b)(a+b)</span><br>
+                <span class="math">t² - (&#8730;15)² = (t - &#8730;15)(t + &#8730;15)</span><br>
+                Zeroes are <strong>&#8730;15</strong> and <strong>-&#8730;15</strong>.<br><br>
+                <strong>Step 2: Verification</strong> (a=1, b=0, c=-15)<br>
+                Sum = &#8730;15 - &#8730;15 = <strong>0</strong><br>
+                -b/a = -0/1 = <strong>0</strong> (Verified)<br><br>
+                Product = &#8730;15 × -&#8730;15 = <strong>-15</strong><br>
+                c/a = -15/1 = <strong>-15</strong> (Verified)
+            </div>
+        </div>
+
+        <!-- Q1 PART (vi) -->
+        <div class="solution-step">
+            <div class="step-title">(vi) <span class="math">3x² - x - 4</span></div>
+            <div class="step-content">
+                <strong>Step 1: Find Zeroes</strong><br>
+                <span class="math">3x² - 4x + 3x - 4</span><br>
+                <span class="math">x(3x - 4) + 1(3x - 4)</span><br>
+                <span class="math">(x + 1)(3x - 4)</span><br>
+                Zeroes are <strong>-1</strong> and <strong>4/3</strong>.<br><br>
+                <strong>Step 2: Verification</strong> (a=3, b=-1, c=-4)<br>
+                Sum = -1 + 4/3 = 1/3<br>
+                -b/a = -(-1)/3 = <strong>1/3</strong> (Verified)<br><br>
+                Product = -1 × 4/3 = <strong>-4/3</strong><br>
+                c/a = <strong>-4/3</strong> (Verified)
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- APP NUDGE -->
+<div class="app-nudge">
+    <div style="display: flex; gap: 1rem; align-items: center;">
+        <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display:flex; align-items:center; justify-content:center;">
+            <i class="fas fa-calculator" style="font-size: 1.5rem; color: var(--color-curiosity);"></i>
+        </div>
+        <div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.2rem;">Hate verifying coefficients?</h3>
+            <p style="font-size: 0.95rem; opacity: 0.8;">Just speak "Find zeroes of 3x square minus x minus 4" in Braino.</p>
+        </div>
+    </div>
+    <a href="https://play.google.com/store/apps/details?id=com.aitutorapp" class="btn btn-primary" style="background: white; color: var(--color-trust);">
+        Solve in 2 Seconds <i class="fas fa-external-link-alt"></i>
+    </a>
+</div>
+
+<!-- QUESTION 2 -->
+<article class="question-block" id="q2">
+    <div class="q-badge">Exercise 2.2 • Q2</div>
+    <h2 class="q-text">Find a quadratic polynomial each with the given numbers as the sum and product of its zeroes respectively.<br>
+    (i) <span class="math">1/4, -1</span> &nbsp; (ii) <span class="math">&#8730;2, 1/3</span> &nbsp; (iii) <span class="math">0, &#8730;5</span><br>
+    (iv) <span class="math">1, 1</span> &nbsp; (v) <span class="math">-1/4, 1/4</span> &nbsp; (vi) <span class="math">4, 1</span></h2>
+
+    <div class="video-placeholder">
+        <a href="https://play.google.com/store/apps/details?id=com.aitutorapp" class="play-btn-pulse">
+            <i class="fas fa-play" style="margin-left:5px;"></i>
+        </a>
+        <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Watch Video Solution</h3>
+    </div>
+
+    <div class="solution-content">
+        <div class="solution-step">
+            <div class="step-title">Formula Used</div>
+            <div class="step-content">
+                Quadratic Polynomial = <span class="math">k [x² - (Sum of zeroes)x + (Product of zeroes)]</span>
+            </div>
+        </div>
+
+        <div class="solution-step">
+            <div class="step-title">(i) Sum = 1/4, Product = -1</div>
+            <div class="step-content">
+                <span class="math">x² - (1/4)x + (-1)</span><br>
+                <span class="math">x² - x/4 - 1</span><br>
+                To remove fraction, multiply by 4:<br>
+                <strong>Answer: <span class="math">4x² - x - 4</span></strong>
+            </div>
+        </div>
+
+        <div class="solution-step">
+            <div class="step-title">(ii) Sum = &#8730;2, Product = 1/3</div>
+            <div class="step-content">
+                <span class="math">x² - (&#8730;2)x + (1/3)</span><br>
+                Multiply by 3 to remove fraction:<br>
+                <strong>Answer: <span class="math">3x² - 3&#8730;2x + 1</span></strong>
+            </div>
+        </div>
+
+        <div class="solution-step">
+            <div class="step-title">(iii) Sum = 0, Product = &#8730;5</div>
+            <div class="step-content">
+                <span class="math">x² - (0)x + &#8730;5</span><br>
+                <strong>Answer: <span class="math">x² + &#8730;5</span></strong>
+            </div>
+        </div>
+
+        <div class="solution-step">
+            <div class="step-title">(iv) Sum = 1, Product = 1</div>
+            <div class="step-content">
+                <span class="math">x² - (1)x + 1</span><br>
+                <strong>Answer: <span class="math">x² - x + 1</span></strong>
+            </div>
+        </div>
+
+        <div class="solution-step">
+            <div class="step-title">(v) Sum = -1/4, Product = 1/4</div>
+            <div class="step-content">
+                <span class="math">x² - (-1/4)x + 1/4</span><br>
+                <span class="math">x² + x/4 + 1/4</span><br>
+                Multiply by 4:<br>
+                <strong>Answer: <span class="math">4x² + x + 1</span></strong>
+            </div>
+        </div>
+
+        <div class="solution-step">
+            <div class="step-title">(vi) Sum = 4, Product = 1</div>
+            <div class="step-content">
+                <span class="math">x² - (4)x + 1</span><br>
+                <strong>Answer: <span class="math">x² - 4x + 1</span></strong>
+            </div>
+        </div>
+    </div>
+</article>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer Injection -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Load Footer
+        fetch('../footer.html?v=1.1')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
+        // Load Header & Init Mobile Menu
+        fetch('../header.html?v=1.1')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                // Initialize Mobile Menu (Same logic as index.html)
+                const menuBtn = document.getElementById('menuBtn');
+                const navLinks = document.getElementById('navLinks');
+                if(menuBtn && navLinks) {
+                    const icon = menuBtn.querySelector('i');
+                    menuBtn.addEventListener('click', function() {
+                        navLinks.classList.toggle('active');
+                        if (navLinks.classList.contains('active')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                }
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions Class 10 Maths Chapter 11 Areas Related to Circles - Braino</title>
+    <meta name="description" content="Step-by-step NCERT Solutions for Class 10 Maths Chapter 11 Areas Related to Circles. Exercise 11.1 solutions with video explanations on Braino App.">
+
+    <!-- Fonts & Icons (Same as Index) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- JSON-LD SCHEMA FOR SEO (Education) -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Find the area of a sector of a circle with radius 6 cm if angle of the sector is 60°.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Given radius (r) = 6 cm and angle (θ) = 60°. Area of sector = (θ/360) × πr² = (60/360) × (22/7) × 6 × 6 = 132/7 cm²."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Find the area of a quadrant of a circle whose circumference is 22 cm.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Circumference (2πr) = 22 cm gives r = 7/2 cm. For a quadrant, θ = 90°. Area = (1/4) × πr² = (1/4) × (22/7) × (7/2) × (7/2) = 77/8 cm²."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "The length of the minute hand of a clock is 14 cm. Find the area swept by the minute hand in 5 minutes.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Angle swept in 5 minutes = (360/60) × 5 = 30°. Area swept = (θ/360) × πr² = (30/360) × (22/7) × 14 × 14 = 154/3 cm²."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A chord of a circle of radius 10 cm subtends a right angle at the centre. Find the area of the minor segment.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Area of minor segment = Area of sector - Area of triangle. Area of sector (90°) = 78.5 cm². Area of triangle = (1/2) × 10 × 10 = 50 cm². Minor segment area = 78.5 - 50 = 28.5 cm²."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A horse is tied to a peg at one corner of a square shaped grass field of side 15 m by means of a 5 m long rope. Find the grazing area.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The horse grazes a quadrant with r = 5 m and θ = 90°. Grazing area = (1/4) × 3.14 × 5 × 5 = 19.625 m²."
+      }
+    }
+  ]
+}
+</script>
+    <script>window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };</script>
+
+
+
+    <style>
+        /* --- 1. REUSING VARIABLES FROM INDEX.HTML --- */
+        :root {
+            --color-trust: #1e293b; 
+            --color-curiosity: #06b6d4; /* Your Brand Cyan */
+            --color-curiosity-hover: #0891b2;
+            --color-success: #22c55e;
+            --color-bg: #f8fafc;
+            --color-surface: #ffffff;
+            --color-border: #e2e8f0;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-card: 0 10px 30px -5px rgba(0,0,0,0.08);
+        }
+
+        /* --- 2. LAYOUT ESSENTIALS --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--color-bg); color: var(--text-main); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; transition: 0.2s; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.6rem 1.2rem; font-weight: 700; border-radius: 999px; font-size: 0.95rem; cursor: pointer; border: none; gap: 0.5rem; }
+        .btn-primary { background-color: var(--color-curiosity); color: white; box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3); }
+        .btn-primary:hover { background-color: var(--color-curiosity-hover); transform: translateY(-2px); }
+
+        /* --- 3. PAGE SPECIFIC LAYOUT --- */
+        .ncert-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr; /* Sidebar | Content */
+            gap: 2.5rem;
+            padding: 2rem 0 4rem;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs { padding: 1rem 0; padding-top: 100px; font-size: 0.9rem; color: var(--text-muted); 
+         display: flex;align-items: center;justify-content: flex-start !important;gap: 0;}
+        .breadcrumbs a:hover { color: var(--color-curiosity); }
+        .breadcrumbs a,
+.breadcrumbs span { 
+    flex-shrink: 0;
+}
+        .breadcrumbs span {  margin: 0 0.5rem; color: #cbd5e1; }
+
+        /* --- 4. SIDEBAR (CHAPTER LIST) --- */
+        .sidebar-sticky { position: sticky; top: 100px; }
+        
+        .chapter-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .chapter-header {
+            background: var(--color-trust);
+            color: white;
+            padding: 1rem;
+            font-weight: 700;
+        }
+
+        .chapter-list { list-style: none; overflow-y: auto; position: sticky;top: 80px;height: calc(80vh - 100px);scrollbar-width: thin;}
+        .chapter-list li { border-bottom: 1px solid var(--color-border); }
+        .chapter-list li:last-child { border-bottom: none; }
+        
+        .chapter-link {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.85rem 1rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .chapter-link:hover { background-color: #ecfeff; color: var(--color-curiosity); }
+        .chapter-link.active { background-color: #ecfeff; color: var(--color-curiosity); border-left: 4px solid var(--color-curiosity); font-weight: 700; }
+
+        /* --- 5. MAIN CONTENT --- */
+        .page-title { font-size: 2rem; font-weight: 800; color: var(--color-trust); margin-bottom: 0.5rem; }
+        .page-meta { color: var(--text-muted); margin-bottom: 2rem; }
+
+        /* Exercise Tabs */
+        .exercise-tabs {
+            display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 5px; margin-bottom: 2rem;
+            scrollbar-width: none; /* Firefox */
+        }
+        .exercise-tabs::-webkit-scrollbar { display: none; }
+        .ex-tab {
+            padding: 0.5rem 1.2rem; background: white; border: 1px solid var(--color-border);
+            border-radius: 99px; white-space: nowrap; font-weight: 600; color: var(--text-muted);
+        }
+        .ex-tab.active { background: var(--color-trust); color: white; border-color: var(--color-trust); }
+        .ex-tab:hover:not(.active) { border-color: var(--color-curiosity); color: var(--color-curiosity); }
+
+        /* Question Block */
+        .question-block {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .q-badge {
+            display: inline-block; background: #e0f2fe; color: var(--color-curiosity-hover);
+            font-weight: 700; font-size: 0.8rem; padding: 4px 12px; border-radius: 99px; margin-bottom: 1rem;
+        }
+
+        .q-text { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 1.5rem; }
+        
+        /* Math Formatting */
+        .math { font-family: 'Courier New', Courier, monospace; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; color: #d946ef; font-weight: 600; }
+
+        /* Video Placeholder (Designed to sell the App) */
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #0f172a;
+            border-radius: var(--radius-md);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center;
+            color: white;
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://placehold.co/800x450/1e293b/FFF?text=Braino+Video+Solution'); 
+            background-size: cover;
+        }
+
+        .play-btn-pulse {
+            width: 64px; height: 64px; background: var(--color-curiosity); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;
+            box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7);
+            animation: pulse-cyan 2s infinite;
+            margin-bottom: 1rem;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .play-btn-pulse:hover { transform: scale(1.1); }
+        
+        @keyframes pulse-cyan {
+            0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(6, 182, 212, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+        }
+
+        /* Text Solution */
+        .solution-step { position: relative; padding-left: 2rem; margin-bottom: 1.5rem; }
+        .solution-step::before {
+            content: ''; position: absolute; left: 0; top: 8px; width: 12px; height: 12px;
+            background: var(--color-success); border-radius: 50%;
+        }
+        .solution-step::after {
+            content: ''; position: absolute; left: 5px; top: 25px; width: 2px; height: 100%;
+            background: #e2e8f0;
+        }
+        .solution-step:last-child::after { display: none; }
+        
+        .step-title { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; color: var(--color-trust); }
+        .step-content { color: var(--text-muted); font-size: 0.95rem; }
+
+        .solution-content table {
+        width: 100%;
+        max-width: 400px; /* Keeps tables from getting too wide */
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-family: sans-serif;
+    }
+    .solution-content th, 
+    .solution-content td {
+        border: 1px solid #ddd;
+        padding: 8px 12px;
+        text-align: center;
+    }
+    .solution-content th {
+        background-color: #f1f5f9;
+        font-weight: bold;
+    }
+
+        /* In-Feed App Banner */
+        .app-nudge {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            border-radius: var(--radius-md); padding: 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+            color: white; margin: 3rem 0;
+            box-shadow: var(--shadow-card);
+        }
+
+        /* --- 6. MOBILE RESPONSIVE --- */
+        @media (max-width: 968px) {
+            .ncert-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+            .sidebar-sticky { display: none; } /* Hidden on mobile by default, usually converted to a dropdown */
+            .mobile-chapter-select { display: block; width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: white; font-weight: 700; margin-bottom: 1.5rem; }
+            .app-nudge { flex-direction: column; text-align: center; gap: 1.5rem; }
+            .page-title { font-size: 1.5rem; }
+        }
+        @media (min-width: 969px) { .mobile-chapter-select { display: none; } }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Injection -->
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="/">Home</a><span>/</span><a href="#">NCERT Solutions</a><span>/</span><a href="#">Class 10 Maths</a><span>/</span>Areas Related to Circles
+        </nav>
+
+        <div class="ncert-layout">
+            
+            <!-- Sidebar: Chapter Navigation -->
+            <aside class="sidebar-wrapper">
+                <!-- Mobile Dropdown Placeholder -->
+                <select class="mobile-chapter-select" onchange="location = this.value;">
+                    <option value="#">Chapter 1: Real Numbers</option>
+                    <option value="#">Chapter 2: Polynomials</option>
+                    <option value="#">Chapter 3: Pair of Linear Equations in Two Variables</option>
+                    <option value="#">Chapter 4: Quadratic Equations</option>
+                    <option value="#">Chapter 5: Arithmetic Progressions</option>
+                    <option value="#">Chapter 6: Triangles</option>
+                    <option value="#">Chapter 7: Coordinate Geometry</option>
+                    <option value="#">Chapter 8: Introduction to Trigonometry</option>
+                    <option value="#">Chapter 9: Some Applications of Trigonometry</option>
+                    <option value="#">Chapter 10: Circles</option>
+                    <option value="#">Chapter 11: Areas Related to Circles</option>
+                    <option value="#">Chapter 12: Surface Areas and Volumes</option>
+                    <option value="#">Chapter 13: Statistics</option>
+                    <option value="#">Chapter 14: Probability</option>
+                </select>
+
+                <div class="chapter-card sidebar-sticky">
+                    <div class="chapter-header">
+                        Class 10 Maths
+                    </div>
+                    <ul class="chapter-list">
+    <!-- Chapter 1 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-1-exercise-1-1.html" class="chapter-link">
+            <span>01. Real Numbers</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 2 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-2-exercise-2-1.html" class="chapter-link">
+            <span>02. Polynomials</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 3 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-3-exercise-3-1.html" class="chapter-link">
+            <span>03. Pair of Linear Eq.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 4 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-4-exercise-4-1.html" class="chapter-link">
+            <span>04. Quadratic Equations</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 5 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-5-exercise-5-1.html" class="chapter-link">
+            <span>05. Arithmetic Progressions</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 6 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-6-exercise-6-1.html" class="chapter-link">
+            <span>06. Triangles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 7 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-7-exercise-7-1.html" class="chapter-link">
+            <span>07. Coordinate Geometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 8 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-8-exercise-8-1.html" class="chapter-link">
+            <span>08. Intro to Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 9 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-9-exercise-9-1.html" class="chapter-link">
+            <span>09. App. of Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 10 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-10-exercise-10-1.html" class="chapter-link">
+            <span>10. Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 11 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-11-exercise-11-1.html" class="chapter-link">
+            <span>11. Areas Related to Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 12 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-12-exercise-12-1.html" class="chapter-link">
+            <span>12. Surface Areas & Vol.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 13 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-13-exercise-13-1.html" class="chapter-link">
+            <span>13. Statistics</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 14 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-14-exercise-14-1.html" class="chapter-link">
+            <span>14. Probability</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+</ul>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main>
+    <h1 class="page-title">NCERT Solutions Class 10 Maths Chapter 11: Areas Related to Circles</h1>
+<p class="page-meta">Detailed solutions for Exercise 11.1 (Area of Sector and Segment).</p>
+<div class="exercise-tabs">
+<a href="#" class="ex-tab active">Ex 11.1</a>
+</div>
+
+    <!-- CONTAINER WHERE THE DESIGNED QUESTIONS WILL APPEAR -->
+    <div id="questions-container"></div>
+
+    <!-- ========================================== -->
+    <!-- PASTE GEMINI OUTPUT BELOW INSIDE THIS DIV -->
+    <!-- ========================================== -->
+    <div id="raw-content" style="display: none;">
+        #### **Q1. Find the area of a sector of a circle with radius 6 cm if angle of the sector is $60^\circ$.**
+
+#### **A1. Solution:**
+Given: Radius ($r$) = 6 cm, Angle ($\theta$) = $60^\circ$.
+Area of the sector = $\frac{\theta}{360^\circ} \times \pi r^2$
+$= \frac{60^\circ}{360^\circ} \times \frac{22}{7} \times 6 \times 6$
+$= \frac{1}{6} \times \frac{22}{7} \times 36$
+$= \frac{132}{7}$ cm²
+
+
+
+#### **Q2. Find the area of a quadrant of a circle whose circumference is 22 cm.**
+
+#### **A2. Solution:**
+Given: Circumference ($2\pi r$) = 22 cm.
+$2 \times \frac{22}{7} \times r = 22 \Rightarrow r = \frac{7}{2}$ cm.
+For a quadrant, $\theta = 90^\circ$.
+Area of quadrant = $\frac{1}{4} \times \pi r^2$
+$= \frac{1}{4} \times \frac{22}{7} \times \frac{7}{2} \times \frac{7}{2} = \frac{77}{8}$ cm²
+
+
+
+#### **Q3. The length of the minute hand of a clock is 14 cm. Find the area swept by the minute hand in 5 minutes.**
+
+#### **A3. Solution:**
+Length of minute hand ($r$) = 14 cm.
+Angle swept in 60 min = $360^\circ$.
+Angle swept in 5 min ($\theta$) = $\frac{360^\circ}{60} \times 5 = 30^\circ$.
+Area swept = $\frac{30^\circ}{360^\circ} \times \frac{22}{7} \times 14 \times 14$
+$= \frac{1}{12} \times 22 \times 2 \times 14 = \frac{154}{3}$ cm²
+
+
+
+#### **Q4. A chord of a circle of radius 10 cm subtends a right angle at the centre. Find the area of the corresponding: (i) minor segment (ii) major sector. (Use $\pi = 3.14$)**
+
+#### **A4. Solution:**
+Given: $r = 10$ cm, $\theta = 90^\circ$.
+(i) Area of minor segment = Area of sector - Area of $\Delta OAB$
+$= (\frac{90^\circ}{360^\circ} \times 3.14 \times 10^2) - (\frac{1}{2} \times 10 \times 10)$
+$= 78.5 - 50 = 28.5$ cm².
+(ii) Area of major sector = Area of circle - Area of minor sector
+$= (3.14 \times 10^2) - 78.5 = 314 - 78.5 = 235.5$ cm².
+
+
+
+#### **Q5. In a circle of radius 21 cm, an arc subtends an angle of $60^\circ$ at the centre. Find: (i) arc length (ii) area of sector (iii) area of segment.**
+
+#### **A5. Solution:**
+Given: $r = 21$ cm, $\theta = 60^\circ$.
+(i) Arc length = $\frac{60^\circ}{360^\circ} \times 2 \times \frac{22}{7} \times 21 = 22$ cm.
+(ii) Area of sector = $\frac{60^\circ}{360^\circ} \times \frac{22}{7} \times 21^2 = 231$ cm².
+(iii) Area of segment = Sector area - Area of equilateral $\Delta OAB$
+$= 231 - (\frac{\sqrt{3}}{4} \times 21^2) = (231 - \frac{441\sqrt{3}}{4})$ cm².
+
+
+
+#### **Q6. A chord of a circle of radius 15 cm subtends $60^\circ$ at the centre. Find areas of minor and major segments. (Use $\pi=3.14, \sqrt{3}=1.73$)**
+
+#### **A6. Solution:**
+Area of minor sector = $\frac{60^\circ}{360^\circ} \times 3.14 \times 15^2 = 117.75$ cm².
+Area of $\Delta OAB = \frac{\sqrt{3}}{4} \times 15^2 = \frac{1.73 \times 225}{4} = 97.3125$ cm².
+Minor segment area = $117.75 - 97.3125 = 20.4375$ cm².
+Major segment area = Area of circle - Minor segment
+$= (3.14 \times 15^2) - 20.4375 = 706.5 - 20.4375 = 686.0625$ cm².
+
+
+
+#### **Q7. A chord of a circle of radius 12 cm subtends $120^\circ$ at the centre. Find the area of the corresponding segment. (Use $\pi=3.14, \sqrt{3}=1.73$)**
+
+#### **A7. Solution:**
+Area of sector = $\frac{120^\circ}{360^\circ} \times 3.14 \times 12^2 = 150.72$ cm².
+Area of $\Delta OAB = r^2 \sin(\frac{\theta}{2}) \cos(\frac{\theta}{2}) = 12^2 \sin 60^\circ \cos 60^\circ = 144 \times \frac{\sqrt{3}}{2} \times \frac{1}{2} = 36\sqrt{3}$.
+Area of $\Delta OAB = 36 \times 1.73 = 62.28$ cm².
+Area of segment = $150.72 - 62.28 = 88.44$ cm².
+
+
+
+#### **Q8. A horse is tied to a corner of a square field (side 15m) with a 5m rope. Find: (i) grazing area (ii) increase if rope is 10m. (Use $\pi=3.14$)**
+
+#### **A8. Solution:**
+(i) Grazing area ($r=5, \theta=90^\circ$) = $\frac{1}{4} \times 3.14 \times 5^2 = 19.625$ m².
+(ii) Area with 10m rope = $\frac{1}{4} \times 3.14 \times 10^2 = 78.5$ m².
+Increase in area = $78.5 - 19.625 = 58.875$ m².
+
+
+
+#### **Q9. A brooch (diameter 35mm) has 5 diameters dividing it into 10 sectors. Find: (i) total silver wire (ii) area of each sector.**
+
+#### **A9. Solution:**
+(i) Total wire = Circumference + 5 × Diameter
+$= (\frac{22}{7} \times 35) + (5 \times 35) = 110 + 175 = 285$ mm.
+(ii) Area of each sector = $\frac{1}{10} \times \text{Area of circle}$
+$= \frac{1}{10} \times \frac{22}{7} \times \frac{35}{2} \times \frac{35}{2} = \frac{385}{4} = 96.25$ mm².
+
+
+
+#### **Q10. An umbrella has 8 ribs (radius 45cm). Find area between two consecutive ribs.**
+
+#### **A10. Solution:**
+Angle between two ribs ($\theta$) = $\frac{360^\circ}{8} = 45^\circ$.
+Area = $\frac{45^\circ}{360^\circ} \times \frac{22}{7} \times 45^2 = \frac{1}{8} \times \frac{22}{7} \times 2025 = \frac{22275}{28}$ cm².
+
+
+
+#### **Q11. A car has two wipers (blade 25cm, angle $115^\circ$). Find total area cleaned.**
+
+#### **A11. Solution:**
+Total area = $2 \times (\text{Area of one sector})$
+$= 2 \times \frac{115^\circ}{360^\circ} \times \frac{22}{7} \times 25^2 = \frac{23}{18} \times \frac{11}{7} \times 625 = \frac{158125}{126}$ cm².
+
+
+
+#### **Q12. A lighthouse spreads light over $80^\circ$ to 16.5 km. Find the area. (Use $\pi=3.14$)**
+
+#### **A12. Solution:**
+Area = $\frac{80^\circ}{360^\circ} \times 3.14 \times 16.5^2$
+$= \frac{2}{9} \times 3.14 \times 272.25 = 189.97$ km².
+
+
+
+#### **Q13. A round table cover (radius 28cm) has 6 designs. Find cost at ₹0.35 per cm². (Use $\sqrt{3}=1.7$)**
+
+#### **A13. Solution:**
+For 6 designs, $\theta = 60^\circ$.
+Area of 1 design = Area of sector - Area of $\Delta$
+$= (\frac{60^\circ}{360^\circ} \times \frac{22}{7} \times 28^2) - (\frac{\sqrt{3}}{4} \times 28^2) = 410.67 - 333.2 = 77.47$ cm².
+Total Area = $6 \times 77.47 = 464.82$ cm².
+Cost = $464.82 \times 0.35 = ₹ 162.68$.
+
+
+
+#### **Q14. Area of a sector of angle $p$ (in degrees) of a circle with radius $R$ is:**
+**(A) $\frac{p}{180} \times 2\pi R$ (B) $\frac{p}{180} \times \pi R^2$ (C) $\frac{p}{360} \times 2\pi R$ (D) $\frac{p}{720} \times 2\pi R^2$**
+
+#### **A14. Solution:**
+Area = $\frac{p}{360} \times \pi R^2$. Multiplying numerator and denominator by 2:
+Area = $\frac{p}{720} \times 2\pi R^2$.
+**Correct Option: (D)**
+    </div>
+    <!-- ========================================== -->
+
+
+    <div class="app-nudge">
+    <div style="display: flex; gap: 1rem; align-items: center;">
+        <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display:flex; align-items:center; justify-content:center;">
+            <i class="fas fa-camera" style="font-size: 1.5rem; color: var(--color-curiosity);"></i>
+        </div>
+        <div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.2rem;">Snap a Photo of any Graph</h3>
+            <p style="font-size: 0.95rem; opacity: 0.8;">Braino AI can analyze geometry and graphs from photos instantly.</p>
+        </div>
+    </div>
+    <a href="#" class="btn btn-primary" style="background: white; color: var(--color-trust);">
+        Try Snap & Solve <i class="fas fa-external-link-alt"></i>
+    </a>
+</div>
+</main>
+
+
+        </div>
+    </div>
+
+    <!-- Footer Injection -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Load Footer
+        fetch('../footer.html?v=1.1')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
+        // Load Header & Init Mobile Menu
+        fetch('../header.html?v=1.1')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                // Initialize Mobile Menu (Same logic as index.html)
+                const menuBtn = document.getElementById('menuBtn');
+                const navLinks = document.getElementById('navLinks');
+                if(menuBtn && navLinks) {
+                    const icon = menuBtn.querySelector('i');
+                    menuBtn.addEventListener('click', function() {
+                        navLinks.classList.toggle('active');
+                        if (navLinks.classList.contains('active')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                }
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+    const rawText = document.getElementById('raw-content').innerHTML;
+    const container = document.getElementById('questions-container');
+
+    // 1. Split by "####" (Works for Q1, A1, etc.)
+    // We clean up empty splits immediately
+    const blocks = rawText.split('####').filter(b => b.trim().length > 0);
+
+    blocks.forEach((block, index) => {
+        // 2. Extract Title (First line) and Content (Rest)
+        let lines = block.trim().split('\n');
+        let titleLine = lines[0].replace(/\*/g, '').trim(); // Remove ** stars
+        let contentMarkdown = lines.slice(1).join('\n'); // Everything else
+
+        // 3. Convert Content to HTML
+        let contentHtml = marked.parse(contentMarkdown);
+
+        // 4. Determine if this is a Question or just a Solution
+        // If title starts with 'Q', we assume it's a question block.
+        // If it starts with 'A' or 'Solution', we treat it as an answer block.
+        let isAnswerOnly = titleLine.match(/^(A\d|Solution)/i);
+
+        const article = document.createElement('article');
+        article.className = 'question-block';
+        article.id = 'block-' + index;
+
+        if (isAnswerOnly) {
+            // RENDER STYLE: SOLUTION ONLY (Like your screenshot example)
+            article.innerHTML = `
+                <div class="q-badge" style="background:var(--color-trust);">Solution</div>
+                <h2 class="q-text" style="font-size: 1.2rem; color: #444;">${titleLine}</h2>
+                <div class="solution-content">
+                    <div class="solution-step" style="background: #fff; border-left: 4px solid var(--color-trust); padding: 1rem; margin-top:1rem;">
+                        <div class="step-content">${contentHtml}</div>
+                    </div>
+                </div>
+            `;
+        } else {
+            // RENDER STYLE: FULL QUESTION (Standard)
+            article.innerHTML = `
+                <div class="q-badge">Question</div>
+                <h2 class="q-text">${titleLine}</h2>
+                <div class="solution-content">
+                    <div class="step-content">${contentHtml}</div>
+                </div>
+                <div class="video-placeholder">
+                     <a href="#" class="play-btn-pulse"><i class="fas fa-play" style="margin-left:5px;"></i></a>
+                     <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Watch Video Explanation</h3>
+                </div>
+            `;
+        }
+
+        container.appendChild(article);
+    });
+
+    // 5. Render Math
+    if (window.MathJax) window.MathJax.typesetPromise();
+});
+
+    </script>
+</body>
+</html>

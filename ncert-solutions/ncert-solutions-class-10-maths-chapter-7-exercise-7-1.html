@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions Class 10 Maths Chapter 7 Coordinate Geometry - Braino</title>
+    <meta name="description" content="Step-by-step NCERT Solutions for Class 10 Maths Chapter 7 Coordinate Geometry. Exercise 7.1, 7.2 solutions with video explanations on Braino App.">
+
+    <!-- Fonts & Icons (Same as Index) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- JSON-LD SCHEMA FOR SEO (Education) -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Find the distance between the points (2, 3) and (4, 1).",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Using the distance formula, d = √[(4-2)² + (1-3)²] = √[2² + (-2)²] = √[4 + 4] = √8 = 2√2 units."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Determine if the points (1, 5), (2, 3) and (– 2, – 11) are collinear.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The points are not collinear. By calculating the distances, AB = √5, BC = √212, and AC = √265. Since the sum of any two distances (AB + BC) is not equal to the third distance (AC), the points do not lie on a straight line."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Check whether (5, – 2), (6, 4) and (7, – 2) are the vertices of an isosceles triangle.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, they are vertices of an isosceles triangle. Calculation shows AB = √37 and BC = √37. Since two sides are equal, it is an isosceles triangle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Find the point on the x-axis which is equidistant from (2, – 5) and (– 2, 9).",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Let the point be (x, 0). Solving (x-2)² + (0 - (-5))² = (x - (-2))² + (0-9)² gives x = -7. Therefore, the point is (-7, 0)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Find the values of y for which the distance between the points P(2, – 3) and Q(10, y) is 10 units.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Using the distance formula, (10-2)² + (y + 3)² = 10². This simplifies to the quadratic equation y² + 6y - 27 = 0. Solving this gives y = 3 or y = -9."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Find a relation between x and y such that the point (x, y) is equidistant from the point (3, 6) and (– 3, 4).",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By setting the distances equal: (x-3)² + (y-6)² = (x+3)² + (y-4)². Expanding and simplifying leads to the relation 3x + y - 5 = 0."
+      }
+    }
+  ]
+}
+</script>
+    <script>window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };</script>
+
+
+
+    <style>
+        /* --- 1. REUSING VARIABLES FROM INDEX.HTML --- */
+        :root {
+            --color-trust: #1e293b; 
+            --color-curiosity: #06b6d4; /* Your Brand Cyan */
+            --color-curiosity-hover: #0891b2;
+            --color-success: #22c55e;
+            --color-bg: #f8fafc;
+            --color-surface: #ffffff;
+            --color-border: #e2e8f0;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-card: 0 10px 30px -5px rgba(0,0,0,0.08);
+        }
+
+        /* --- 2. LAYOUT ESSENTIALS --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--color-bg); color: var(--text-main); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; transition: 0.2s; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.6rem 1.2rem; font-weight: 700; border-radius: 999px; font-size: 0.95rem; cursor: pointer; border: none; gap: 0.5rem; }
+        .btn-primary { background-color: var(--color-curiosity); color: white; box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3); }
+        .btn-primary:hover { background-color: var(--color-curiosity-hover); transform: translateY(-2px); }
+
+        /* --- 3. PAGE SPECIFIC LAYOUT --- */
+        .ncert-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr; /* Sidebar | Content */
+            gap: 2.5rem;
+            padding: 2rem 0 4rem;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs { padding: 1rem 0; padding-top: 100px; font-size: 0.9rem; color: var(--text-muted); 
+         display: flex;align-items: center;justify-content: flex-start !important;gap: 0;}
+        .breadcrumbs a:hover { color: var(--color-curiosity); }
+        .breadcrumbs a,
+.breadcrumbs span { 
+    flex-shrink: 0;
+}
+        .breadcrumbs span {  margin: 0 0.5rem; color: #cbd5e1; }
+
+        /* --- 4. SIDEBAR (CHAPTER LIST) --- */
+        .sidebar-sticky { position: sticky; top: 100px; }
+        
+        .chapter-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .chapter-header {
+            background: var(--color-trust);
+            color: white;
+            padding: 1rem;
+            font-weight: 700;
+        }
+
+        .chapter-list { list-style: none; overflow-y: auto; position: sticky;top: 80px;height: calc(80vh - 100px);scrollbar-width: thin;}
+        .chapter-list li { border-bottom: 1px solid var(--color-border); }
+        .chapter-list li:last-child { border-bottom: none; }
+        
+        .chapter-link {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.85rem 1rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .chapter-link:hover { background-color: #ecfeff; color: var(--color-curiosity); }
+        .chapter-link.active { background-color: #ecfeff; color: var(--color-curiosity); border-left: 4px solid var(--color-curiosity); font-weight: 700; }
+
+        /* --- 5. MAIN CONTENT --- */
+        .page-title { font-size: 2rem; font-weight: 800; color: var(--color-trust); margin-bottom: 0.5rem; }
+        .page-meta { color: var(--text-muted); margin-bottom: 2rem; }
+
+        /* Exercise Tabs */
+        .exercise-tabs {
+            display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 5px; margin-bottom: 2rem;
+            scrollbar-width: none; /* Firefox */
+        }
+        .exercise-tabs::-webkit-scrollbar { display: none; }
+        .ex-tab {
+            padding: 0.5rem 1.2rem; background: white; border: 1px solid var(--color-border);
+            border-radius: 99px; white-space: nowrap; font-weight: 600; color: var(--text-muted);
+        }
+        .ex-tab.active { background: var(--color-trust); color: white; border-color: var(--color-trust); }
+        .ex-tab:hover:not(.active) { border-color: var(--color-curiosity); color: var(--color-curiosity); }
+
+        /* Question Block */
+        .question-block {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .q-badge {
+            display: inline-block; background: #e0f2fe; color: var(--color-curiosity-hover);
+            font-weight: 700; font-size: 0.8rem; padding: 4px 12px; border-radius: 99px; margin-bottom: 1rem;
+        }
+
+        .q-text { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 1.5rem; }
+        
+        /* Math Formatting */
+        .math { font-family: 'Courier New', Courier, monospace; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; color: #d946ef; font-weight: 600; }
+
+        /* Video Placeholder (Designed to sell the App) */
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #0f172a;
+            border-radius: var(--radius-md);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center;
+            color: white;
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://placehold.co/800x450/1e293b/FFF?text=Braino+Video+Solution'); 
+            background-size: cover;
+        }
+
+        .play-btn-pulse {
+            width: 64px; height: 64px; background: var(--color-curiosity); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;
+            box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7);
+            animation: pulse-cyan 2s infinite;
+            margin-bottom: 1rem;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .play-btn-pulse:hover { transform: scale(1.1); }
+        
+        @keyframes pulse-cyan {
+            0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(6, 182, 212, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+        }
+
+        /* Text Solution */
+        .solution-step { position: relative; padding-left: 2rem; margin-bottom: 1.5rem; }
+        .solution-step::before {
+            content: ''; position: absolute; left: 0; top: 8px; width: 12px; height: 12px;
+            background: var(--color-success); border-radius: 50%;
+        }
+        .solution-step::after {
+            content: ''; position: absolute; left: 5px; top: 25px; width: 2px; height: 100%;
+            background: #e2e8f0;
+        }
+        .solution-step:last-child::after { display: none; }
+        
+        .step-title { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; color: var(--color-trust); }
+        .step-content { color: var(--text-muted); font-size: 0.95rem; }
+
+        .solution-content table {
+        width: 100%;
+        max-width: 400px; /* Keeps tables from getting too wide */
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-family: sans-serif;
+    }
+    .solution-content th, 
+    .solution-content td {
+        border: 1px solid #ddd;
+        padding: 8px 12px;
+        text-align: center;
+    }
+    .solution-content th {
+        background-color: #f1f5f9;
+        font-weight: bold;
+    }
+
+        /* In-Feed App Banner */
+        .app-nudge {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            border-radius: var(--radius-md); padding: 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+            color: white; margin: 3rem 0;
+            box-shadow: var(--shadow-card);
+        }
+
+        /* --- 6. MOBILE RESPONSIVE --- */
+        @media (max-width: 968px) {
+            .ncert-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+            .sidebar-sticky { display: none; } /* Hidden on mobile by default, usually converted to a dropdown */
+            .mobile-chapter-select { display: block; width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: white; font-weight: 700; margin-bottom: 1.5rem; }
+            .app-nudge { flex-direction: column; text-align: center; gap: 1.5rem; }
+            .page-title { font-size: 1.5rem; }
+        }
+        @media (min-width: 969px) { .mobile-chapter-select { display: none; } }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Injection -->
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="/">Home</a><span>/</span><a href="#">NCERT Solutions</a><span>/</span><a href="#">Class 10 Maths</a><span>/</span>Coordinate Geometry
+        </nav>
+
+        <div class="ncert-layout">
+            
+            <!-- Sidebar: Chapter Navigation -->
+            <aside class="sidebar-wrapper">
+                <!-- Mobile Dropdown Placeholder -->
+                <select class="mobile-chapter-select" onchange="location = this.value;">
+                    <option value="#">Chapter 1: Real Numbers</option>
+                    <option value="#">Chapter 2: Polynomials</option>
+                    <option value="#">Chapter 3: Pair of Linear Equations in Two Variables</option>
+                    <option value="#">Chapter 4: Quadratic Equations</option>
+                    <option value="#">Chapter 5: Arithmetic Progressions</option>
+                    <option value="#">Chapter 6: Triangles</option>
+                    <option value="#">Chapter 7: Coordinate Geometry</option>
+                    <option value="#">Chapter 8: Introduction to Trigonometry</option>
+                    <option value="#">Chapter 9: Some Applications of Trigonometry</option>
+                    <option value="#">Chapter 10: Circles</option>
+                    <option value="#">Chapter 11: Areas Related to Circles</option>
+                    <option value="#">Chapter 12: Surface Areas and Volumes</option>
+                    <option value="#">Chapter 13: Statistics</option>
+                    <option value="#">Chapter 14: Probability</option>
+                </select>
+
+                <div class="chapter-card sidebar-sticky">
+                    <div class="chapter-header">
+                        Class 10 Maths
+                    </div>
+                    <ul class="chapter-list">
+    <!-- Chapter 1 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-1-exercise-1-1.html" class="chapter-link">
+            <span>01. Real Numbers</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 2 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-2-exercise-2-1.html" class="chapter-link">
+            <span>02. Polynomials</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 3 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-3-exercise-3-1.html" class="chapter-link">
+            <span>03. Pair of Linear Eq.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 4 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-4-exercise-4-1.html" class="chapter-link">
+            <span>04. Quadratic Equations</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 5 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-5-exercise-5-1.html" class="chapter-link">
+            <span>05. Arithmetic Progressions</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 6 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-6-exercise-6-1.html" class="chapter-link">
+            <span>06. Triangles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 7 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-7-exercise-7-1.html" class="chapter-link">
+            <span>07. Coordinate Geometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 8 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-8-exercise-8-1.html" class="chapter-link">
+            <span>08. Intro to Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 9 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-9-exercise-9-1.html" class="chapter-link">
+            <span>09. App. of Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 10 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-10-exercise-10-1.html" class="chapter-link">
+            <span>10. Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 11 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-11-exercise-11-1.html" class="chapter-link">
+            <span>11. Areas Related to Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 12 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-12-exercise-12-1.html" class="chapter-link">
+            <span>12. Surface Areas & Vol.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 13 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-13-exercise-13-1.html" class="chapter-link">
+            <span>13. Statistics</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 14 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-14-exercise-14-1.html" class="chapter-link">
+            <span>14. Probability</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+</ul>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main>
+    <h1 class="page-title">NCERT Solutions Class 10 Maths Chapter 7: Coordinate Geometry</h1>
+<p class="page-meta">Detailed solutions for Exercise 7.1 (Distance Formula).</p>
+<div class="exercise-tabs">
+<a href="#" class="ex-tab active">Ex 7.1</a>
+<a href="ncert-solutions-class-10-maths-chapter-7-exercise-7-2.html" class="ex-tab">Ex 7.2</a>
+</div>
+
+    <!-- CONTAINER WHERE THE DESIGNED QUESTIONS WILL APPEAR -->
+    <div id="questions-container"></div>
+
+    <!-- ========================================== -->
+    <!-- PASTE GEMINI OUTPUT BELOW INSIDE THIS DIV -->
+    <!-- ========================================== -->
+    <div id="raw-content" style="display: none;">
+        #### **Q1. Find the distance between the following pairs of points:**
+**(i) (2, 3), (4, 1)**
+**(ii) (– 5, 7), (– 1, 3)**
+**(iii) (a, b), (– a, – b)**
+
+#### **A1. Solution:**
+**(i)** $x_1=2, y_1=3, x_2=4, y_2=1$
+$d = \sqrt{(4-2)^2 + (1-3)^2} = \sqrt{2^2 + (-2)^2} = \sqrt{4+4} = \sqrt{8} = 2\sqrt{2}$ units.
+
+**(ii)** $x_1=-5, y_1=7, x_2=-1, y_2=3$
+$d = \sqrt{(-1 - (-5))^2 + (3-7)^2} = \sqrt{4^2 + (-4)^2} = \sqrt{16+16} = \sqrt{32} = 4\sqrt{2}$ units.
+
+**(iii)** $x_1=a, y_1=b, x_2=-a, y_2=-b$
+$d = \sqrt{(-a-a)^2 + (-b-b)^2} = \sqrt{(-2a)^2 + (-2b)^2} = \sqrt{4a^2 + 4b^2} = 2\sqrt{a^2+b^2}$ units.
+
+#### **Q2. Find the distance between the points (0, 0) and (36, 15). Can you now find the distance between the two towns A and B discussed in Section 7.2?**
+
+#### **A2. Solution:**
+Points are (0, 0) and (36, 15).
+$d = \sqrt{(36-0)^2 + (15-0)^2} = \sqrt{36^2 + 15^2}$
+$d = \sqrt{1296 + 225} = \sqrt{1521} = 39$.
+Yes, the distance between town A and B is 39 km.
+
+#### **Q3. Determine if the points (1, 5), (2, 3) and (– 2, – 11) are collinear.**
+
+#### **A3. Solution:**
+Let $A(1, 5), B(2, 3), C(-2, -11)$.
+$AB = \sqrt{(2-1)^2 + (3-5)^2} = \sqrt{1^2 + (-2)^2} = \sqrt{5} \approx 2.24$
+$BC = \sqrt{(-2-2)^2 + (-11-3)^2} = \sqrt{(-4)^2 + (-14)^2} = \sqrt{16 + 196} = \sqrt{212} \approx 14.56$
+$AC = \sqrt{(-2-1)^2 + (-11-5)^2} = \sqrt{(-3)^2 + (-16)^2} = \sqrt{9 + 256} = \sqrt{265} \approx 16.28$
+Since $AB + BC \neq AC$, the points are **not collinear**.
+
+#### **Q4. Check whether (5, – 2), (6, 4) and (7, – 2) are the vertices of an isosceles triangle.**
+
+#### **A4. Solution:**
+Let $A(5, -2), B(6, 4), C(7, -2)$.
+$AB = \sqrt{(6-5)^2 + (4 - (-2))^2} = \sqrt{1^2 + 6^2} = \sqrt{37}$
+$BC = \sqrt{(7-6)^2 + (-2-4)^2} = \sqrt{1^2 + (-6)^2} = \sqrt{37}$
+$AC = \sqrt{(7-5)^2 + (-2 - (-2))^2} = \sqrt{2^2 + 0} = 2$
+Since $AB = BC$, the triangle is **isosceles**.
+
+#### **Q5. In a classroom, 4 friends are seated at the points A, B, C and D as shown in Fig. 7.8. Champa and Chameli walk into the class and after observing for a few minutes Champa asks Chameli, “Don’t you think ABCD is a square?” Chameli disagrees. Using distance formula, find which of them is correct.**
+
+#### **A5. Solution:**
+From the figure, coordinates are: $A(3, 4), B(6, 7), C(9, 4), D(6, 1)$.
+$AB = \sqrt{3^2 + 3^2} = \sqrt{18} = 3\sqrt{2}$
+$BC = \sqrt{3^2 + (-3)^2} = \sqrt{18} = 3\sqrt{2}$
+$CD = \sqrt{(-3)^2 + (-3)^2} = \sqrt{18} = 3\sqrt{2}$
+$DA = \sqrt{(-3)^2 + 3^2} = \sqrt{18} = 3\sqrt{2}$
+All sides are equal. Now check diagonals:
+$AC = \sqrt{(9-3)^2 + (4-4)^2} = \sqrt{6^2} = 6$
+$BD = \sqrt{(6-6)^2 + (1-7)^2} = \sqrt{(-6)^2} = 6$
+Since all sides are equal and diagonals are equal, it is a square. **Champa is correct.**
+
+#### **Q6. Name the type of quadrilateral formed, if any, by the following points, and give reasons for your answer:**
+**(i) (– 1, – 2), (1, 0), (– 1, 2), (– 3, 0)**
+**(ii) (– 3, 5), (3, 1), (0, 3), (– 1, – 4)**
+**(iii) (4, 5), (7, 6), (4, 3), (1, 2)**
+
+#### **A6. Solution:**
+**(i)** Let $A(-1, -2), B(1, 0), C(-1, 2), D(-3, 0)$.
+$AB = BC = CD = DA = \sqrt{8}$. Diagonals $AC = BD = 4$.
+Sides equal, diagonals equal $\Rightarrow$ **Square**.
+
+**(ii)** Let $A(-3, 5), B(3, 1), C(0, 3), D(-1, -4)$.
+Calculate $AB = \sqrt{52}, BC = \sqrt{13}, AC = \sqrt{13}$.
+Since $AC + BC = AB$ ($\sqrt{13} + \sqrt{13} = 2\sqrt{13} = \sqrt{52}$), points A, B, C are collinear.
+**No quadrilateral is formed.**
+
+**(iii)** Let $A(4, 5), B(7, 6), C(4, 3), D(1, 2)$.
+$AB = \sqrt{10}, BC = \sqrt{18}, CD = \sqrt{10}, DA = \sqrt{18}$.
+$AC = \sqrt{4} = 2, BD = \sqrt{52}$.
+Opposite sides equal, diagonals not equal $\Rightarrow$ **Parallelogram**.
+
+#### **Q7. Find the point on the x-axis which is equidistant from (2, – 5) and (– 2, 9).**
+
+#### **A7. Solution:**
+Let point on x-axis be $P(x, 0)$. Given $A(2, -5)$ and $B(-2, 9)$.
+$PA^2 = PB^2$
+$(x-2)^2 + (0 - (-5))^2 = (x - (-2))^2 + (0-9)^2$
+$x^2 - 4x + 4 + 25 = x^2 + 4x + 4 + 81$
+$-4x + 29 = 4x + 85$
+$-8x = 56 \Rightarrow x = -7$.
+**Ans: (-7, 0)**
+
+#### **Q8. Find the values of y for which the distance between the points P(2, – 3) and Q(10, y) is 10 units.**
+
+#### **A8. Solution:**
+$PQ = 10 \Rightarrow PQ^2 = 100$.
+$(10-2)^2 + (y - (-3))^2 = 100$
+$8^2 + (y+3)^2 = 100$
+$64 + y^2 + 6y + 9 = 100$
+$y^2 + 6y - 27 = 0$
+$(y+9)(y-3) = 0 \Rightarrow y = -9$ or $y = 3$.
+**Ans: y = 3, -9**
+
+#### **Q9. If Q(0, 1) is equidistant from P(5, – 3) and R(x, 6), find the values of x. Also find the distances QR and PR.**
+
+#### **A9. Solution:**
+$QP^2 = QR^2$
+$(5-0)^2 + (-3-1)^2 = (x-0)^2 + (6-1)^2$
+$25 + 16 = x^2 + 25$
+$x^2 = 16 \Rightarrow x = \pm 4$.
+If $x = 4$: $QR = \sqrt{4^2 + 5^2} = \sqrt{41}$; $PR = \sqrt{(4-5)^2 + (6 - (-3))^2} = \sqrt{1+81} = \sqrt{82}$.
+If $x = -4$: $QR = \sqrt{(-4)^2 + 5^2} = \sqrt{41}$; $PR = \sqrt{(-4-5)^2 + (6 - (-3))^2} = \sqrt{81+81} = 9\sqrt{2}$.
+**Ans: $x = \pm 4, QR = \sqrt{41}, PR = \sqrt{82} \text{ or } 9\sqrt{2}$**
+
+#### **Q10. Find a relation between x and y such that the point (x, y) is equidistant from the point (3, 6) and (– 3, 4).**
+
+#### **A10. Solution:**
+Let $P(x, y), A(3, 6), B(-3, 4)$.
+$PA^2 = PB^2$
+$(x-3)^2 + (y-6)^2 = (x+3)^2 + (y-4)^2$
+$x^2 - 6x + 9 + y^2 - 12y + 36 = x^2 + 6x + 9 + y^2 - 8y + 16$
+$-6x - 12y + 45 = 6x - 8y + 25$
+$12x + 4y = 20$
+$3x + y = 5$ (Dividing by 4)
+**Ans: $3x + y - 5 = 0$**
+    </div>
+    <!-- ========================================== -->
+
+
+    <div class="app-nudge">
+    <div style="display: flex; gap: 1rem; align-items: center;">
+        <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display:flex; align-items:center; justify-content:center;">
+            <i class="fas fa-camera" style="font-size: 1.5rem; color: var(--color-curiosity);"></i>
+        </div>
+        <div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.2rem;">Snap a Photo of any Graph</h3>
+            <p style="font-size: 0.95rem; opacity: 0.8;">Braino AI can analyze geometry and graphs from photos instantly.</p>
+        </div>
+    </div>
+    <a href="#" class="btn btn-primary" style="background: white; color: var(--color-trust);">
+        Try Snap & Solve <i class="fas fa-external-link-alt"></i>
+    </a>
+</div>
+</main>
+
+
+        </div>
+    </div>
+
+    <!-- Footer Injection -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Load Footer
+        fetch('../footer.html?v=1.1')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
+        // Load Header & Init Mobile Menu
+        fetch('../header.html?v=1.1')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                // Initialize Mobile Menu (Same logic as index.html)
+                const menuBtn = document.getElementById('menuBtn');
+                const navLinks = document.getElementById('navLinks');
+                if(menuBtn && navLinks) {
+                    const icon = menuBtn.querySelector('i');
+                    menuBtn.addEventListener('click', function() {
+                        navLinks.classList.toggle('active');
+                        if (navLinks.classList.contains('active')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                }
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+    const rawText = document.getElementById('raw-content').innerHTML;
+    const container = document.getElementById('questions-container');
+
+    // 1. Split by "####" (Works for Q1, A1, etc.)
+    // We clean up empty splits immediately
+    const blocks = rawText.split('####').filter(b => b.trim().length > 0);
+
+    blocks.forEach((block, index) => {
+        // 2. Extract Title (First line) and Content (Rest)
+        let lines = block.trim().split('\n');
+        let titleLine = lines[0].replace(/\*/g, '').trim(); // Remove ** stars
+        let contentMarkdown = lines.slice(1).join('\n'); // Everything else
+
+        // 3. Convert Content to HTML
+        let contentHtml = marked.parse(contentMarkdown);
+
+        // 4. Determine if this is a Question or just a Solution
+        // If title starts with 'Q', we assume it's a question block.
+        // If it starts with 'A' or 'Solution', we treat it as an answer block.
+        let isAnswerOnly = titleLine.match(/^(A\d|Solution)/i);
+
+        const article = document.createElement('article');
+        article.className = 'question-block';
+        article.id = 'block-' + index;
+
+        if (isAnswerOnly) {
+            // RENDER STYLE: SOLUTION ONLY (Like your screenshot example)
+            article.innerHTML = `
+                <div class="q-badge" style="background:var(--color-trust);">Solution</div>
+                <h2 class="q-text" style="font-size: 1.2rem; color: #444;">${titleLine}</h2>
+                <div class="solution-content">
+                    <div class="solution-step" style="background: #fff; border-left: 4px solid var(--color-trust); padding: 1rem; margin-top:1rem;">
+                        <div class="step-content">${contentHtml}</div>
+                    </div>
+                </div>
+            `;
+        } else {
+            // RENDER STYLE: FULL QUESTION (Standard)
+            article.innerHTML = `
+                <div class="q-badge">Question</div>
+                <h2 class="q-text">${titleLine}</h2>
+                <div class="solution-content">
+                    <div class="step-content">${contentHtml}</div>
+                </div>
+                <div class="video-placeholder">
+                     <a href="#" class="play-btn-pulse"><i class="fas fa-play" style="margin-left:5px;"></i></a>
+                     <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Watch Video Explanation</h3>
+                </div>
+            `;
+        }
+
+        container.appendChild(article);
+    });
+
+    // 5. Render Math
+    if (window.MathJax) window.MathJax.typesetPromise();
+});
+
+    </script>
+</body>
+</html>

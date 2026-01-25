@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions Class 10 Maths Chapter 5 Arithmetic Progressions - Braino</title>
+    <meta name="description" content="Step-by-step NCERT Solutions for Class 10 Maths Chapter 5 Arithmetic Progressions. Exercise 5.1, 5.2, 5.3, 5.4 solutions with video explanations on Braino App.">
+
+    <!-- Fonts & Icons (Same as Index) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- JSON-LD SCHEMA FOR SEO (Education) -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many terms of the AP: 9, 17, 25, ... must be taken to give a sum of 636?",
+    "text": "How many terms of the AP: 9, 17, 25, ... must be taken to give a sum of 636?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Given AP: 9, 17, 25, ... here a = 9, d = 8, and S_n = 636. Using S_n = n/2 [2a + (n - 1)d], we get 636 = n/2 [18 + (n - 1)8]. Simplifying gives 636 = n [9 + 4n - 4], which leads to the quadratic equation 4n^2 + 5n - 636 = 0. Solving for n using the quadratic formula, we get n = 12. Therefore, 12 terms must be taken.",
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Find the sum of the first 40 positive integers divisible by 6.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The first 40 positive integers divisible by 6 are 6, 12, 18, ..., 240. This is an AP with a = 6, d = 6, and n = 40. Using the sum formula S_n = n/2 (a + l), we get S_40 = 40/2 (6 + 240) = 20 * 246 = 4920. The sum is 4920.",
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A contract on construction job specifies a penalty for delay: ₹ 200 for the first day, ₹ 250 for the second day, etc. How much penalty is paid for a 30-day delay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The total penalty is ₹ 27,750. This is calculated as the sum of an AP with a=200, d=50, and n=30."
+      }
+    }
+  ]
+}
+</script>
+    <script>window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };</script>
+
+
+
+    <style>
+        /* --- 1. REUSING VARIABLES FROM INDEX.HTML --- */
+        :root {
+            --color-trust: #1e293b; 
+            --color-curiosity: #06b6d4; /* Your Brand Cyan */
+            --color-curiosity-hover: #0891b2;
+            --color-success: #22c55e;
+            --color-bg: #f8fafc;
+            --color-surface: #ffffff;
+            --color-border: #e2e8f0;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-card: 0 10px 30px -5px rgba(0,0,0,0.08);
+        }
+
+        /* --- 2. LAYOUT ESSENTIALS --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--color-bg); color: var(--text-main); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; transition: 0.2s; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.6rem 1.2rem; font-weight: 700; border-radius: 999px; font-size: 0.95rem; cursor: pointer; border: none; gap: 0.5rem; }
+        .btn-primary { background-color: var(--color-curiosity); color: white; box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3); }
+        .btn-primary:hover { background-color: var(--color-curiosity-hover); transform: translateY(-2px); }
+
+        /* --- 3. PAGE SPECIFIC LAYOUT --- */
+        .ncert-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr; /* Sidebar | Content */
+            gap: 2.5rem;
+            padding: 2rem 0 4rem;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs { padding: 1rem 0; padding-top: 100px; font-size: 0.9rem; color: var(--text-muted); 
+         display: flex;align-items: center;justify-content: flex-start !important;gap: 0;}
+        .breadcrumbs a:hover { color: var(--color-curiosity); }
+        .breadcrumbs a,
+.breadcrumbs span { 
+    flex-shrink: 0;
+}
+        .breadcrumbs span {  margin: 0 0.5rem; color: #cbd5e1; }
+
+        /* --- 4. SIDEBAR (CHAPTER LIST) --- */
+        .sidebar-sticky { position: sticky; top: 100px; }
+        
+        .chapter-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .chapter-header {
+            background: var(--color-trust);
+            color: white;
+            padding: 1rem;
+            font-weight: 700;
+        }
+
+        .chapter-list { list-style: none; overflow-y: auto; position: sticky;top: 80px;height: calc(80vh - 100px);scrollbar-width: thin;}
+        .chapter-list li { border-bottom: 1px solid var(--color-border); }
+        .chapter-list li:last-child { border-bottom: none; }
+        
+        .chapter-link {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.85rem 1rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .chapter-link:hover { background-color: #ecfeff; color: var(--color-curiosity); }
+        .chapter-link.active { background-color: #ecfeff; color: var(--color-curiosity); border-left: 4px solid var(--color-curiosity); font-weight: 700; }
+
+        /* --- 5. MAIN CONTENT --- */
+        .page-title { font-size: 2rem; font-weight: 800; color: var(--color-trust); margin-bottom: 0.5rem; }
+        .page-meta { color: var(--text-muted); margin-bottom: 2rem; }
+
+        /* Exercise Tabs */
+        .exercise-tabs {
+            display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 5px; margin-bottom: 2rem;
+            scrollbar-width: none; /* Firefox */
+        }
+        .exercise-tabs::-webkit-scrollbar { display: none; }
+        .ex-tab {
+            padding: 0.5rem 1.2rem; background: white; border: 1px solid var(--color-border);
+            border-radius: 99px; white-space: nowrap; font-weight: 600; color: var(--text-muted);
+        }
+        .ex-tab.active { background: var(--color-trust); color: white; border-color: var(--color-trust); }
+        .ex-tab:hover:not(.active) { border-color: var(--color-curiosity); color: var(--color-curiosity); }
+
+        /* Question Block */
+        .question-block {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .q-badge {
+            display: inline-block; background: #e0f2fe; color: var(--color-curiosity-hover);
+            font-weight: 700; font-size: 0.8rem; padding: 4px 12px; border-radius: 99px; margin-bottom: 1rem;
+        }
+
+        .q-text { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 1.5rem; }
+        
+        /* Math Formatting */
+        .math { font-family: 'Courier New', Courier, monospace; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; color: #d946ef; font-weight: 600; }
+
+        /* Video Placeholder (Designed to sell the App) */
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #0f172a;
+            border-radius: var(--radius-md);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center;
+            color: white;
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://placehold.co/800x450/1e293b/FFF?text=Braino+Video+Solution'); 
+            background-size: cover;
+        }
+
+        .play-btn-pulse {
+            width: 64px; height: 64px; background: var(--color-curiosity); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;
+            box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7);
+            animation: pulse-cyan 2s infinite;
+            margin-bottom: 1rem;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .play-btn-pulse:hover { transform: scale(1.1); }
+        
+        @keyframes pulse-cyan {
+            0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(6, 182, 212, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+        }
+
+        /* Text Solution */
+        .solution-step { position: relative; padding-left: 2rem; margin-bottom: 1.5rem; }
+        .solution-step::before {
+            content: ''; position: absolute; left: 0; top: 8px; width: 12px; height: 12px;
+            background: var(--color-success); border-radius: 50%;
+        }
+        .solution-step::after {
+            content: ''; position: absolute; left: 5px; top: 25px; width: 2px; height: 100%;
+            background: #e2e8f0;
+        }
+        .solution-step:last-child::after { display: none; }
+        
+        .step-title { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; color: var(--color-trust); }
+        .step-content { color: var(--text-muted); font-size: 0.95rem; }
+
+        .solution-content table {
+        width: 100%;
+        max-width: 400px; /* Keeps tables from getting too wide */
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-family: sans-serif;
+    }
+    .solution-content th, 
+    .solution-content td {
+        border: 1px solid #ddd;
+        padding: 8px 12px;
+        text-align: center;
+    }
+    .solution-content th {
+        background-color: #f1f5f9;
+        font-weight: bold;
+    }
+
+        /* In-Feed App Banner */
+        .app-nudge {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            border-radius: var(--radius-md); padding: 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+            color: white; margin: 3rem 0;
+            box-shadow: var(--shadow-card);
+        }
+
+        /* --- 6. MOBILE RESPONSIVE --- */
+        @media (max-width: 968px) {
+            .ncert-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+            .sidebar-sticky { display: none; } /* Hidden on mobile by default, usually converted to a dropdown */
+            .mobile-chapter-select { display: block; width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: white; font-weight: 700; margin-bottom: 1.5rem; }
+            .app-nudge { flex-direction: column; text-align: center; gap: 1.5rem; }
+            .page-title { font-size: 1.5rem; }
+        }
+        @media (min-width: 969px) { .mobile-chapter-select { display: none; } }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Injection -->
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="/">Home</a><span>/</span><a href="#">NCERT Solutions</a><span>/</span><a href="#">Class 10 Maths</a><span>/</span>Arithmetic Progressions
+        </nav>
+
+        <div class="ncert-layout">
+            
+            <!-- Sidebar: Chapter Navigation -->
+            <aside class="sidebar-wrapper">
+                <!-- Mobile Dropdown Placeholder -->
+                <select class="mobile-chapter-select" onchange="location = this.value;">
+                    <option value="#">Chapter 1: Real Numbers</option>
+                    <option value="#">Chapter 2: Polynomials</option>
+                    <option value="#">Chapter 3: Pair of Linear Equations in Two Variables</option>
+                    <option value="#">Chapter 4: Quadratic Equations</option>
+                    <option value="#">Chapter 5: Arithmetic Progressions</option>
+                    <option value="#">Chapter 6: Triangles</option>
+                    <option value="#">Chapter 7: Coordinate Geometry</option>
+                    <option value="#">Chapter 8: Introduction to Trigonometry</option>
+                    <option value="#">Chapter 9: Some Applications of Trigonometry</option>
+                    <option value="#">Chapter 10: Circles</option>
+                    <option value="#">Chapter 11: Areas Related to Circles</option>
+                    <option value="#">Chapter 12: Surface Areas and Volumes</option>
+                    <option value="#">Chapter 13: Statistics</option>
+                    <option value="#">Chapter 14: Probability</option>
+                </select>
+
+                <div class="chapter-card sidebar-sticky">
+                    <div class="chapter-header">
+                        Class 10 Maths
+                    </div>
+                    <ul class="chapter-list">
+    <!-- Chapter 1 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-1-exercise-1-1.html" class="chapter-link">
+            <span>01. Real Numbers</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 2 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-2-exercise-2-1.html" class="chapter-link">
+            <span>02. Polynomials</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 3 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-3-exercise-3-1.html" class="chapter-link">
+            <span>03. Pair of Linear Eq.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 4 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-4-exercise-4-1.html" class="chapter-link">
+            <span>04. Quadratic Equations</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 5 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-5-exercise-5-1.html" class="chapter-link">
+            <span>05. Arithmetic Progressions</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 6 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-6-exercise-6-1.html" class="chapter-link">
+            <span>06. Triangles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 7 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-7-exercise-7-1.html" class="chapter-link">
+            <span>07. Coordinate Geometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 8 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-8-exercise-8-1.html" class="chapter-link">
+            <span>08. Intro to Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 9 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-9-exercise-9-1.html" class="chapter-link">
+            <span>09. App. of Trigonometry</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 10 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-10-exercise-10-1.html" class="chapter-link">
+            <span>10. Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 11 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-11-exercise-11-1.html" class="chapter-link">
+            <span>11. Areas Related to Circles</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 12 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-12-exercise-12-1.html" class="chapter-link">
+            <span>12. Surface Areas & Vol.</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 13 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-13-exercise-13-1.html" class="chapter-link">
+            <span>13. Statistics</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+
+    <!-- Chapter 14 -->
+    <li>
+        <a href="ncert-solutions-class-10-maths-chapter-14-exercise-14-1.html" class="chapter-link">
+            <span>14. Probability</span> 
+            <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.5;"></i>
+        </a>
+    </li>
+</ul>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main>
+    <h1 class="page-title">NCERT Solutions Class 10 Maths Chapter 5: Arithmetic Progressions</h1>
+<p class="page-meta">Detailed solutions for Exercise 5.3 (Sum of first $n$ terms of an AP).</p>
+<div class="exercise-tabs">
+<a href="ncert-solutions-class-10-maths-chapter-5-exercise-5-1.html" class="ex-tab">Ex 5.1</a>
+<a href="ncert-solutions-class-10-maths-chapter-5-exercise-5-2.html" class="ex-tab">Ex 5.2</a>
+<a href="#" class="ex-tab active">Ex 5.3</a>
+</div>
+
+    <!-- CONTAINER WHERE THE DESIGNED QUESTIONS WILL APPEAR -->
+    <div id="questions-container"></div>
+
+    <!-- ========================================== -->
+    <!-- PASTE GEMINI OUTPUT BELOW INSIDE THIS DIV -->
+    <!-- ========================================== -->
+    <div id="raw-content" style="display: none;">
+        #### **Q1. Find the sum of the following APs:**
+**(i) $2, 7, 12, \dots$ to 10 terms.**
+**(ii) $-37, -33, -29, \dots$ to 12 terms.**
+**(iii) $0.6, 1.7, 2.8, \dots$ to 100 terms.**
+**(iv) $\frac{1}{15}, \frac{1}{12}, \frac{1}{10}, \dots$ to 11 terms.**
+
+#### **A1. Solution:**
+**(i)** $a=2, d=7-2=5, n=10$.
+$S_{10} = \frac{10}{2}[2(2) + (10-1)5]$
+$= 5[4 + 45] = 5 \times 49 = 245$.
+**Ans: 245**
+
+**(ii)** $a=-37, d=-33 - (-37) = 4, n=12$.
+$S_{12} = \frac{12}{2}[2(-37) + (11)4]$
+$= 6[-74 + 44] = 6 \times (-30) = -180$.
+**Ans: -180**
+
+**(iii)** $a=0.6, d=1.7-0.6=1.1, n=100$.
+$S_{100} = \frac{100}{2}[2(0.6) + 99(1.1)]$
+$= 50[1.2 + 108.9] = 50 \times 110.1 = 5505$.
+**Ans: 5505**
+
+**(iv)** $a=\frac{1}{15}, d=\frac{1}{12} - \frac{1}{15} = \frac{5-4}{60} = \frac{1}{60}, n=11$.
+$S_{11} = \frac{11}{2}[2(\frac{1}{15}) + 10(\frac{1}{60})]$
+$= \frac{11}{2}[\frac{2}{15} + \frac{1}{6}] = \frac{11}{2}[\frac{4+5}{30}] = \frac{11}{2} \times \frac{9}{30} = \frac{33}{20}$.
+**Ans: $\frac{33}{20}$**
+
+#### **Q2. Find the sums given below:**
+**(i) $7 + 10\frac{1}{2} + 14 + \dots + 84$**
+**(ii) $34 + 32 + 30 + \dots + 10$**
+**(iii) $-5 + (-8) + (-11) + \dots + (-230)$**
+
+#### **A2. Solution:**
+**(i)** $a=7, d=3.5 (\frac{7}{2}), l=84$.
+Find $n$: $84 = 7 + (n-1)3.5 \Rightarrow 77 = (n-1)3.5 \Rightarrow 22 = n-1 \Rightarrow n = 23$.
+$S_{23} = \frac{23}{2}(7 + 84) = \frac{23}{2}(91) = \frac{2093}{2} = 1046.5$.
+**Ans: 1046.5**
+
+**(ii)** $a=34, d=-2, l=10$.
+Find $n$: $10 = 34 + (n-1)(-2) \Rightarrow -24 = (n-1)(-2) \Rightarrow 12 = n-1 \Rightarrow n = 13$.
+$S_{13} = \frac{13}{2}(34 + 10) = \frac{13}{2}(44) = 13 \times 22 = 286$.
+**Ans: 286**
+
+**(iii)** $a=-5, d=-3, l=-230$.
+Find $n$: $-230 = -5 + (n-1)(-3) \Rightarrow -225 = (n-1)(-3) \Rightarrow 75 = n-1 \Rightarrow n = 76$.
+$S_{76} = \frac{76}{2}(-5 + (-230)) = 38 \times (-235) = -8930$.
+**Ans: -8930**
+
+#### **Q3. In an AP:**
+**(i) given $a = 5, d = 3, a_n = 50$, find $n$ and $S_n$.**
+**(ii) given $a = 7, a_{13} = 35$, find $d$ and $S_{13}$.**
+**(iii) given $a_{12} = 37, d = 3$, find $a$ and $S_{12}$.**
+**(iv) given $a_3 = 15, S_{10} = 125$, find $d$ and $a_{10}$.**
+**(v) given $d = 5, S_9 = 75$, find $a$ and $a_9$.**
+**(vi) given $a = 2, d = 8, S_n = 90$, find $n$ and $a_n$.**
+**(vii) given $a = 8, a_n = 62, S_n = 210$, find $n$ and $d$.**
+**(viii) given $a_n = 4, d = 2, S_n = -14$, find $n$ and $a$.**
+**(ix) given $a = 3, n = 8, S = 192$, find $d$.**
+**(x) given $l = 28, S = 144$, and there are total 9 terms. Find $a$.**
+
+#### **A3. Solution:**
+**(i)** $50 = 5 + (n-1)3 \Rightarrow 45 = 3(n-1) \Rightarrow 15 = n-1 \Rightarrow n=16$.
+$S_{16} = \frac{16}{2}(5+50) = 8 \times 55 = 440$.
+**Ans: $n=16, S_{16}=440$**
+
+**(ii)** $35 = 7 + 12d \Rightarrow 28 = 12d \Rightarrow d = \frac{28}{12} = \frac{7}{3}$.
+$S_{13} = \frac{13}{2}(7+35) = \frac{13}{2}(42) = 13 \times 21 = 273$.
+**Ans: $d=\frac{7}{3}, S_{13}=273$**
+
+**(iii)** $37 = a + 11(3) \Rightarrow 37 = a + 33 \Rightarrow a = 4$.
+$S_{12} = \frac{12}{2}(4+37) = 6 \times 41 = 246$.
+**Ans: $a=4, S_{12}=246$**
+
+**(iv)** $a+2d=15$ ...(1)
+$S_{10} = \frac{10}{2}[2a+9d] = 125 \Rightarrow 5(2a+9d) = 125 \Rightarrow 2a+9d=25$ ...(2)
+Multiply (1) by 2: $2a+4d=30$. Subtract from (2): $5d = -5 \Rightarrow d = -1$.
+From (1): $a - 2 = 15 \Rightarrow a = 17$.
+$a_{10} = 17 + 9(-1) = 8$.
+**Ans: $d=-1, a_{10}=8$**
+
+**(v)** $75 = \frac{9}{2}[2a + 8(5)] \Rightarrow \frac{150}{9} = 2a + 40 \Rightarrow \frac{50}{3} - 40 = 2a$.
+$2a = \frac{50-120}{3} = -\frac{70}{3} \Rightarrow a = -\frac{35}{3}$.
+$a_9 = -\frac{35}{3} + 8(5) = \frac{-35+120}{3} = \frac{85}{3}$.
+**Ans: $a=-\frac{35}{3}, a_9=\frac{85}{3}$**
+
+**(vi)** $90 = \frac{n}{2}[2(2) + (n-1)8] \Rightarrow 180 = n[4 + 8n - 8] \Rightarrow 180 = n[8n-4]$.
+$180 = 4n(2n-1) \Rightarrow 45 = 2n^2 - n \Rightarrow 2n^2 - n - 45 = 0$.
+$2n^2 - 10n + 9n - 45 = 0 \Rightarrow 2n(n-5) + 9(n-5) = 0$.
+Since $n$ must be positive, $n=5$.
+$a_5 = 2 + 4(8) = 34$.
+**Ans: $n=5, a_5=34$**
+
+**(vii)** $S_n = \frac{n}{2}(a+a_n) \Rightarrow 210 = \frac{n}{2}(8+62) \Rightarrow 210 = 35n \Rightarrow n=6$.
+$a_6 = 8 + 5d = 62 \Rightarrow 5d = 54 \Rightarrow d = \frac{54}{5} = 10.8$.
+**Ans: $n=6, d=\frac{54}{5}$**
+
+**(viii)** $a_n = a + (n-1)2 = 4 \Rightarrow a = 4 - 2(n-1) \Rightarrow a = 6 - 2n$.
+$S_n = \frac{n}{2}(a+4) = -14 \Rightarrow n(a+4) = -28$.
+Substitute $a$: $n(6-2n+4) = -28 \Rightarrow n(10-2n) = -28 \Rightarrow 10n - 2n^2 = -28$.
+$2n^2 - 10n - 28 = 0 \Rightarrow n^2 - 5n - 14 = 0$.
+$(n-7)(n+2)=0$. Since $n>0, n=7$.
+$a = 6 - 2(7) = -8$.
+**Ans: $n=7, a=-8$**
+
+**(ix)** $192 = \frac{8}{2}[2(3) + 7d] \Rightarrow 192 = 4[6+7d] \Rightarrow 48 = 6+7d$.
+$42 = 7d \Rightarrow d = 6$.
+**Ans: $d=6$**
+
+**(x)** $S = \frac{n}{2}(a+l) \Rightarrow 144 = \frac{9}{2}(a+28)$.
+$32 = a + 28 \Rightarrow a = 4$.
+**Ans: $a=4$**
+
+#### **Q4. How many terms of the AP: $9, 17, 25, \dots$ must be taken to give a sum of 636?**
+#### **A4. Solution:**
+$a=9, d=8, S_n=636$.
+$636 = \frac{n}{2}[18 + (n-1)8] \Rightarrow 636 = n[9 + 4(n-1)] \Rightarrow 636 = n[4n+5]$.
+$4n^2 + 5n - 636 = 0$.
+$n = \frac{-5 \pm \sqrt{25 - 4(4)(-636)}}{8} = \frac{-5 \pm \sqrt{25 + 10176}}{8} = \frac{-5 \pm \sqrt{10201}}{8}$.
+$n = \frac{-5 \pm 101}{8}$.
+Taking positive: $n = \frac{96}{8} = 12$.
+**Ans: 12 terms**
+
+#### **Q5. The first term of an AP is 5, the last term is 45 and the sum is 400. Find the number of terms and the common difference.**
+#### **A5. Solution:**
+$a=5, l=45, S_n=400$.
+$400 = \frac{n}{2}(5+45) \Rightarrow 400 = 25n \Rightarrow n = 16$.
+$a_{16} = 5 + 15d = 45 \Rightarrow 15d = 40 \Rightarrow d = \frac{40}{15} = \frac{8}{3}$.
+**Ans: $n=16, d=\frac{8}{3}$**
+
+#### **Q6. The first and the last terms of an AP are 17 and 350 respectively. If the common difference is 9, how many terms are there and what is their sum?**
+#### **A6. Solution:**
+$a=17, l=350, d=9$.
+$350 = 17 + (n-1)9 \Rightarrow 333 = (n-1)9 \Rightarrow 37 = n-1 \Rightarrow n = 38$.
+$S_{38} = \frac{38}{2}(17+350) = 19 \times 367 = 6973$.
+**Ans: $n=38, \text{Sum}=6973$**
+
+#### **Q7. Find the sum of first 22 terms of an AP in which $d = 7$ and 22nd term is 149.**
+#### **A7. Solution:**
+$d=7, a_{22}=149$.
+$a + 21(7) = 149 \Rightarrow a + 147 = 149 \Rightarrow a = 2$.
+$S_{22} = \frac{22}{2}(2+149) = 11 \times 151 = 1661$.
+**Ans: 1661**
+
+#### **Q8. Find the sum of first 51 terms of an AP whose second and third terms are 14 and 18 respectively.**
+#### **A8. Solution:**
+$a_2 = 14, a_3 = 18 \Rightarrow d = 18 - 14 = 4$.
+$a = 14 - 4 = 10$.
+$S_{51} = \frac{51}{2}[2(10) + 50(4)] = \frac{51}{2}[20 + 200] = \frac{51}{2}(220) = 51 \times 110 = 5610$.
+**Ans: 5610**
+
+#### **Q9. If the sum of first 7 terms of an AP is 49 and that of 17 terms is 289, find the sum of first $n$ terms.**
+#### **A9. Solution:**
+$S_7 = 49 \Rightarrow \frac{7}{2}(2a+6d) = 49 \Rightarrow 7(a+3d) = 49 \Rightarrow a+3d=7$.
+$S_{17} = 289 \Rightarrow \frac{17}{2}(2a+16d) = 289 \Rightarrow 17(a+8d) = 289 \Rightarrow a+8d=17$.
+Subtracting: $5d = 10 \Rightarrow d = 2$.
+$a + 3(2) = 7 \Rightarrow a = 1$.
+$S_n = \frac{n}{2}[2(1) + (n-1)2] = \frac{n}{2}[2 + 2n - 2] = \frac{n}{2}[2n] = n^2$.
+**Ans: $n^2$**
+
+#### **Q10. Show that $a_1, a_2, \dots, a_n, \dots$ form an AP where $a_n$ is defined as below:**
+**(i) $a_n = 3 + 4n$**
+**(ii) $a_n = 9 - 5n$**
+**Also find the sum of the first 15 terms in each case.**
+
+#### **A10. Solution:**
+**(i) $a_n = 3 + 4n$**
+Terms: $a_1=7, a_2=11, a_3=15$.
+$d = 11-7=4, 15-11=4$. Since difference is constant, it is an AP.
+$S_{15} = \frac{15}{2}(7 + a_{15})$. $a_{15} = 3 + 60 = 63$.
+$S_{15} = \frac{15}{2}(7+63) = \frac{15}{2}(70) = 15 \times 35 = 525$.
+**Ans: 525**
+
+**(ii) $a_n = 9 - 5n$**
+Terms: $a_1=4, a_2=-1, a_3=-6$.
+$d = -1-4=-5$. It is an AP.
+$a_{15} = 9 - 5(15) = 9 - 75 = -66$.
+$S_{15} = \frac{15}{2}(4 + (-66)) = \frac{15}{2}(-62) = 15 \times (-31) = -465$.
+**Ans: -465**
+
+#### **Q11. If the sum of the first $n$ terms of an AP is $4n - n^2$, what is the first term (that is $S_1$)? What is the sum of first two terms? What is the second term? Similarly, find the 3rd, the 10th and the $n^{th}$ terms.**
+#### **A11. Solution:**
+$S_n = 4n - n^2$.
+$S_1 = 4(1) - 1^2 = 3$. First term $a_1 = 3$.
+$S_2 = 4(2) - 2^2 = 8 - 4 = 4$.
+$a_2 = S_2 - S_1 = 4 - 3 = 1$.
+$S_3 = 4(3) - 3^2 = 12 - 9 = 3$.
+$a_3 = S_3 - S_2 = 3 - 4 = -1$.
+Common difference $d = a_2 - a_1 = 1 - 3 = -2$.
+$a_{10} = 3 + 9(-2) = 3 - 18 = -15$.
+$a_n = 3 + (n-1)(-2) = 3 - 2n + 2 = 5 - 2n$.
+**Ans: $S_1=3, S_2=4, a_2=1, a_3=-1, a_{10}=-15, a_n=5-2n$**
+
+#### **Q12. Find the sum of the first 40 positive integers divisible by 6.**
+#### **A12. Solution:**
+Series: $6, 12, 18, \dots$
+$a=6, d=6, n=40$.
+$S_{40} = \frac{40}{2}[2(6) + 39(6)] = 20[12 + 234] = 20(246) = 4920$.
+**Ans: 4920**
+
+#### **Q13. Find the sum of the first 15 multiples of 8.**
+#### **A13. Solution:**
+Series: $8, 16, 24, \dots$
+$a=8, d=8, n=15$.
+$S_{15} = \frac{15}{2}[2(8) + 14(8)] = \frac{15}{2}[16 + 112] = \frac{15}{2}(128) = 15 \times 64 = 960$.
+**Ans: 960**
+
+#### **Q14. Find the sum of the odd numbers between 0 and 50.**
+#### **A14. Solution:**
+Series: $1, 3, 5, \dots, 49$.
+$a=1, d=2, l=49$.
+$49 = 1 + (n-1)2 \Rightarrow 48 = 2(n-1) \Rightarrow 24 = n-1 \Rightarrow n = 25$.
+$S_{25} = \frac{25}{2}(1 + 49) = \frac{25}{2}(50) = 25 \times 25 = 625$.
+**Ans: 625**
+
+#### **Q15. A contract on construction job specifies a penalty for delay of completion beyond a certain date as follows: ₹ 200 for the first day, ₹ 250 for the second day, ₹ 300 for the third day, etc., the penalty for each succeeding day being ₹ 50 more than for the preceding day. How much money the contractor has to pay as penalty, if he has delayed the work by 30 days?**
+#### **A15. Solution:**
+$a=200, d=50, n=30$.
+$S_{30} = \frac{30}{2}[2(200) + 29(50)] = 15[400 + 1450] = 15(1850) = 27750$.
+**Ans: ₹ 27,750**
+
+#### **Q16. A sum of ₹ 700 is to be used to give seven cash prizes to students of a school for their overall academic performance. If each prize is ₹ 20 less than its preceding prize, find the value of each of the prizes.**
+#### **A16. Solution:**
+$n=7, S_7=700, d=-20$.
+$700 = \frac{7}{2}[2a + 6(-20)]$
+$200 = 2a - 120$ (Dividing by 3.5 or multiplying by 2/7)
+$320 = 2a \Rightarrow a = 160$.
+Prizes: $160, 140, 120, 100, 80, 60, 40$.
+**Ans: ₹ 160, 140, 120, 100, 80, 60, 40**
+
+#### **Q17. In a school, students thought of planting trees in and around the school to reduce air pollution. It was decided that the number of trees, that each section of each class will plant, will be the same as the class, in which they are studying, e.g., a section of Class I will plant 1 tree, a section of Class II will plant 2 trees and so on till Class XII. There are three sections of each class. How many trees will be planted by the students?**
+#### **A17. Solution:**
+Trees per class:
+Class I: $1 \times 3 = 3$
+Class II: $2 \times 3 = 6$
+...
+Class XII: $12 \times 3 = 36$
+Series: $3, 6, 9, \dots, 36$.
+$n=12$.
+$S_{12} = \frac{12}{2}(3 + 36) = 6(39) = 234$.
+**Ans: 234 trees**
+
+#### **Q18. A spiral is made up of successive semicircles, with centres alternately at A and B, starting with centre at A, of radii 0.5 cm, 1.0 cm, 1.5 cm, 2.0 cm, ... as shown in the figure. What is the total length of such a spiral made up of thirteen consecutive semicircles? (Take $\pi = \frac{22}{7}$)**
+#### **A18. Solution:**
+Length of semicircle = $\pi r$.
+$L_1 = \pi(0.5)$, $L_2 = \pi(1.0)$, $L_3 = \pi(1.5)$.
+$a = 0.5\pi, d = 0.5\pi, n = 13$.
+Total Length $S_{13} = \frac{13}{2}[2(0.5\pi) + 12(0.5\pi)]$
+$S_{13} = \frac{13}{2}[\pi + 6\pi] = \frac{13}{2}(7\pi) = \frac{13}{2} \times 7 \times \frac{22}{7}$
+$S_{13} = 13 \times 11 = 143$.
+**Ans: 143 cm**
+
+#### **Q19. 200 logs are stacked in the following manner: 20 logs in the bottom row, 19 in the next row, 18 in the row next to it and so on. In how many rows are the 200 logs placed and how many logs are in the top row?**
+#### **A19. Solution:**
+$S_n = 200, a = 20, d = -1$.
+$200 = \frac{n}{2}[2(20) + (n-1)(-1)]$
+$400 = n[40 - n + 1] \Rightarrow 400 = n[41 - n] \Rightarrow 400 = 41n - n^2$.
+$n^2 - 41n + 400 = 0$.
+$n^2 - 16n - 25n + 400 = 0 \Rightarrow (n-16)(n-25) = 0$.
+$n=16$ or $n=25$.
+If $n=25$: $a_{25} = 20 + 24(-1) = -4$ (Logs cannot be negative).
+Therefore, $n=16$.
+$a_{16} = 20 + 15(-1) = 5$.
+**Ans: 16 rows, 5 logs in top row**
+
+#### **Q20. In a potato race, a bucket is placed at the starting point, which is 5 m from the first potato, and the other potatoes are placed 3 m apart in a straight line. There are 10 potatoes in the line. A competitor starts from the bucket, picks up the nearest potato, runs back with it, drops it in the bucket, runs back to pick up the next potato, runs to the bucket to drop it in, and she continues in the same way until all the potatoes are in the bucket. What is the total distance the competitor has to run?**
+#### **A20. Solution:**
+Distance for 1st potato: $2 \times 5 = 10$.
+Distance for 2nd potato: $2 \times (5+3) = 16$.
+Distance for 3rd potato: $2 \times (5+3+3) = 22$.
+Series: $10, 16, 22, \dots$ ($n=10, d=6$).
+$S_{10} = \frac{10}{2}[2(10) + 9(6)] = 5[20 + 54] = 5(74) = 370$.
+**Ans: 370 m**
+    </div>
+    <!-- ========================================== -->
+
+
+    <div class="app-nudge">
+    <div style="display: flex; gap: 1rem; align-items: center;">
+        <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display:flex; align-items:center; justify-content:center;">
+            <i class="fas fa-camera" style="font-size: 1.5rem; color: var(--color-curiosity);"></i>
+        </div>
+        <div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.2rem;">Snap a Photo of any Graph</h3>
+            <p style="font-size: 0.95rem; opacity: 0.8;">Braino AI can analyze geometry and graphs from photos instantly.</p>
+        </div>
+    </div>
+    <a href="#" class="btn btn-primary" style="background: white; color: var(--color-trust);">
+        Try Snap & Solve <i class="fas fa-external-link-alt"></i>
+    </a>
+</div>
+</main>
+
+
+        </div>
+    </div>
+
+    <!-- Footer Injection -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Load Footer
+        fetch('../footer.html?v=1.1')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
+        // Load Header & Init Mobile Menu
+        fetch('../header.html?v=1.1')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                // Initialize Mobile Menu (Same logic as index.html)
+                const menuBtn = document.getElementById('menuBtn');
+                const navLinks = document.getElementById('navLinks');
+                if(menuBtn && navLinks) {
+                    const icon = menuBtn.querySelector('i');
+                    menuBtn.addEventListener('click', function() {
+                        navLinks.classList.toggle('active');
+                        if (navLinks.classList.contains('active')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                }
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+    const rawText = document.getElementById('raw-content').innerHTML;
+    const container = document.getElementById('questions-container');
+
+    // 1. Split by "####" (Works for Q1, A1, etc.)
+    // We clean up empty splits immediately
+    const blocks = rawText.split('####').filter(b => b.trim().length > 0);
+
+    blocks.forEach((block, index) => {
+        // 2. Extract Title (First line) and Content (Rest)
+        let lines = block.trim().split('\n');
+        let titleLine = lines[0].replace(/\*/g, '').trim(); // Remove ** stars
+        let contentMarkdown = lines.slice(1).join('\n'); // Everything else
+
+        // 3. Convert Content to HTML
+        let contentHtml = marked.parse(contentMarkdown);
+
+        // 4. Determine if this is a Question or just a Solution
+        // If title starts with 'Q', we assume it's a question block.
+        // If it starts with 'A' or 'Solution', we treat it as an answer block.
+        let isAnswerOnly = titleLine.match(/^(A\d|Solution)/i);
+
+        const article = document.createElement('article');
+        article.className = 'question-block';
+        article.id = 'block-' + index;
+
+        if (isAnswerOnly) {
+            // RENDER STYLE: SOLUTION ONLY (Like your screenshot example)
+            article.innerHTML = `
+                <div class="q-badge" style="background:var(--color-trust);">Solution</div>
+                <h2 class="q-text" style="font-size: 1.2rem; color: #444;">${titleLine}</h2>
+                <div class="solution-content">
+                    <div class="solution-step" style="background: #fff; border-left: 4px solid var(--color-trust); padding: 1rem; margin-top:1rem;">
+                        <div class="step-content">${contentHtml}</div>
+                    </div>
+                </div>
+            `;
+        } else {
+            // RENDER STYLE: FULL QUESTION (Standard)
+            article.innerHTML = `
+                <div class="q-badge">Question</div>
+                <h2 class="q-text">${titleLine}</h2>
+                <div class="solution-content">
+                    <div class="step-content">${contentHtml}</div>
+                </div>
+                <div class="video-placeholder">
+                     <a href="#" class="play-btn-pulse"><i class="fas fa-play" style="margin-left:5px;"></i></a>
+                     <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Watch Video Explanation</h3>
+                </div>
+            `;
+        }
+
+        container.appendChild(article);
+    });
+
+    // 5. Render Math
+    if (window.MathJax) window.MathJax.typesetPromise();
+});
+
+    </script>
+</body>
+</html>
