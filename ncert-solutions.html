@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions - Select Class & Subject | Braino AI</title>
+    <meta name="description" content="Free NCERT Solutions for Class 6 to 12. Maths, Science, Physics, Chemistry, Biology.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-trust: #1e293b; 
+            --color-curiosity: #06b6d4;
+            --color-bg: #f8fafc;
+            --color-border: #e2e8f0;
+            --radius-lg: 16px;
+        }
+
+        body { margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; background: var(--color-bg); }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* HERO */
+        .hub-hero {
+            background: white;
+            padding: 120px 0 3rem;
+            text-align: center;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .hub-hero h1 { color: var(--color-trust); font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .hub-hero p { color: #64748b; font-size: 1.1rem; }
+
+        /* CLASS SELECTION TABS */
+        .class-selector {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .class-tab {
+            padding: 0.8rem 1.5rem;
+            background: white;
+            border: 1px solid var(--color-border);
+            border-radius: 50px;
+            font-weight: 700;
+            color: #64748b;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .class-tab:hover, .class-tab.active {
+            background: var(--color-trust);
+            color: white;
+            border-color: var(--color-trust);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(30, 41, 59, 0.2);
+        }
+
+        /* SUBJECT GRID */
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 3rem 0;
+            display: none; /* Hidden by default, shown via JS */
+            animation: fadeIn 0.4s ease;
+        }
+        
+        .subject-grid.active { display: grid; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* SUBJECT CARD */
+        .sub-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            border: 1px solid var(--color-border);
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .sub-card:hover {
+            border-color: var(--color-curiosity);
+            box-shadow: 0 10px 30px -5px rgba(6, 182, 212, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .sub-icon {
+            width: 60px; height: 60px;
+            background: #ecfeff;
+            color: var(--color-curiosity);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem;
+        }
+
+        .sub-info h3 { margin: 0 0 0.3rem; color: var(--color-trust); font-size: 1.25rem; }
+        .sub-info p { margin: 0; color: #94a3b8; font-size: 0.9rem; }
+        .arrow { margin-left: auto; color: #cbd5e1; }
+
+        /* EMPTY STATE */
+        .coming-soon {
+            text-align: center;
+            padding: 3rem;
+            color: #94a3b8;
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px dashed var(--color-border);
+            display: none;
+        }
+        .coming-soon.active { display: block; }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <section class="hub-hero">
+        <div class="container">
+            <h1>NCERT Solutions</h1>
+            <p>Select your Class to find free solutions.</p>
+            
+            <div class="class-selector">
+                <!-- Add 'active' to Class 10 initially -->
+                <div class="class-tab" onclick="switchClass('9')">Class 9</div>
+                <div class="class-tab active" onclick="switchClass('10')">Class 10</div>
+                <div class="class-tab" onclick="switchClass('11')">Class 11</div>
+                <div class="class-tab" onclick="switchClass('12')">Class 12</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        
+        <!-- CLASS 10 CONTENT (Active by default) -->
+        <div id="content-10" class="subject-grid active">
+            <!-- MATHS -->
+            <a href="/class-10-maths.html" class="sub-card">
+                <div class="sub-icon"><i class="fas fa-calculator"></i></div>
+                <div class="sub-info">
+                    <h3>Mathematics</h3>
+                    <p>Real Numbers, Polynomials...</p>
+                </div>
+                <i class="fas fa-arrow-right arrow"></i>
+            </a>
+
+            <!-- SCIENCE (Placeholder) -->
+            <a href="#" class="sub-card" style="opacity: 0.6;">
+                <div class="sub-icon" style="background: #f0fdf4; color: #16a34a;"><i class="fas fa-flask"></i></div>
+                <div class="sub-info">
+                    <h3>Science</h3>
+                    <p>Coming Soon...</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- CLASS 9 CONTENT (Hidden) -->
+        <div id="content-9" class="coming-soon">
+            <h3>Class 9 Solutions are coming next week!</h3>
+        </div>
+
+        <!-- CLASS 11 CONTENT (Hidden) -->
+        <div id="content-11" class="coming-soon">
+            <h3>Class 11 Solutions are coming soon.</h3>
+        </div>
+
+        <!-- CLASS 12 CONTENT (Hidden) -->
+        <div id="content-12" class="coming-soon">
+            <h3>Class 12 Solutions are coming soon.</h3>
+        </div>
+
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Load Header/Footer
+        fetch('footer.html?v=1.0').then(r => r.text()).then(d => document.getElementById('footer-placeholder').innerHTML = d);
+        fetch('header.html?v=1.0').then(r => r.text()).then(d => {
+            document.getElementById('header-placeholder').innerHTML = d;
+            // Mobile Menu Logic Here (Copy from previous code)
+        });
+
+        // Tab Switching Logic
+        function switchClass(classNum) {
+            // 1. Remove active from all tabs
+            document.querySelectorAll('.class-tab').forEach(t => t.classList.remove('active'));
+            // 2. Add active to clicked tab
+            event.target.classList.add('active');
+
+            // 3. Hide all content grids
+            document.querySelectorAll('.subject-grid, .coming-soon').forEach(g => g.classList.remove('active'));
+
+            // 4. Show selected content
+            const target = document.getElementById('content-' + classNum);
+            if(target) target.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

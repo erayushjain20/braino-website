@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Solutions Class 10 Maths - Braino AI</title>
+    <meta name="description" content="Free NCERT Solutions for Class 10 Maths. Chapter-wise solutions for Real Numbers, Polynomials, Trigonometry and more.">
+    
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* --- INHERITED VARIABLES (Matches index.html) --- */
+        :root {
+            --color-trust: #1e293b; 
+            --color-trust-dark: #0f172a;
+            --color-curiosity: #06b6d4;
+            --color-curiosity-hover: #0891b2;
+            --color-bg: #f8fafc;
+            --color-surface: #ffffff;
+            --color-border: #e2e8f0;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --shadow-card: 0 10px 30px -5px rgba(0,0,0,0.08);
+            --radius-lg: 16px;
+        }
+
+        /* --- PAGE SPECIFIC STYLES --- */
+        body {
+            margin: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--color-bg);
+            color: var(--text-main);
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.2s; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* HERO SECTION */
+        .page-hero {
+            padding-top: 120px; /* Space for fixed header */
+            padding-bottom: 3rem;
+            text-align: center;
+            background: linear-gradient(180deg, white 0%, var(--color-bg) 100%);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .page-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--color-trust);
+            margin-bottom: 1rem;
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        .breadcrumb a:hover { color: var(--color-curiosity); }
+
+        /* GRID LAYOUT */
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0;
+        }
+
+        /* CHAPTER CARD DESIGN */
+        .chapter-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-border);
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-card);
+            border-color: var(--color-curiosity);
+        }
+
+        /* Decorative Number watermark */
+        .chapter-number-bg {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 6rem;
+            font-weight: 800;
+            color: var(--color-bg);
+            opacity: 0.5;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .card-header {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .ch-badge {
+            display: inline-block;
+            background: #ecfeff;
+            color: var(--color-curiosity-hover);
+            font-weight: 700;
+            font-size: 0.8rem;
+            padding: 4px 12px;
+            border-radius: 99px;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-header h3 {
+            margin: 0;
+            font-size: 1.35rem;
+            color: var(--color-trust);
+        }
+
+        /* EXERCISE LIST INSIDE CARD */
+        .ex-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .ex-btn {
+            background: var(--color-bg);
+            border: 1px solid var(--color-border);
+            color: var(--text-muted);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .ex-btn:hover {
+            background: var(--color-trust);
+            color: white;
+            border-color: var(--color-trust);
+        }
+        
+        /* Mobile adjustment */
+        @media (max-width: 768px) {
+            .chapter-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header will be loaded here -->
+    <div id="header-placeholder"></div>
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="/">Home</a> <span>/</span> <span>NCERT Solutions</span> <span>/</span> Class 10 Maths
+            </nav>
+            <h1>Class 10 Maths NCERT Solutions</h1>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+                Step-by-step video and text solutions for all chapters. Updated for 2024-25 syllabus.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="container">
+        <div class="chapter-grid">
+
+    <!-- CHAPTER 1: Real Numbers -->
+    <div class="chapter-card">
+        <div class="chapter-number-bg">01</div>
+        <div class="card-header">
+            <span class="ch-badge">Real Numbers</span>
+            <h3>Chapter 1</h3>
+        </div>
+        <div class="ex-list">
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-1-exercise-1-1.html" class="ex-btn">Ex 1.1</a>
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-1-exercise-1-2.html" class="ex-btn">Ex 1.2</a>
+        </div>
+    </div>
+
+    <!-- CHAPTER 2: Polynomials -->
+    <div class="chapter-card">
+        <div class="chapter-number-bg">02</div>
+        <div class="card-header">
+            <span class="ch-badge">Polynomials</span>
+            <h3>Chapter 2</h3>
+        </div>
+        <div class="ex-list">
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-2-exercise-2-1.html" class="ex-btn">Ex 2.1</a>
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-2-exercise-2-2.html" class="ex-btn">Ex 2.2</a>
+        </div>
+    </div>
+
+    <!-- CHAPTER 3: Pair of Linear Equations -->
+    <div class="chapter-card">
+        <div class="chapter-number-bg">03</div>
+        <div class="card-header">
+            <span class="ch-badge">Linear Equations</span>
+            <h3>Chapter 3</h3>
+        </div>
+        <div class="ex-list">
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-3-exercise-3-1.html" class="ex-btn">Ex 3.1</a>
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-3-exercise-3-2.html" class="ex-btn">Ex 3.2</a>
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-3-exercise-3-3.html" class="ex-btn">Ex 3.3</a>
+        </div>
+    </div>
+
+    <!-- CHAPTER 4: Quadratic Equations -->
+    <div class="chapter-card">
+        <div class="chapter-number-bg">04</div>
+        <div class="card-header">
+            <span class="ch-badge">Quadratic Equations</span>
+            <h3>Chapter 4</h3>
+        </div>
+        <div class="ex-list">
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-4-exercise-4-1.html" class="ex-btn">Ex 4.1</a>
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-4-exercise-4-2.html" class="ex-btn">Ex 4.2</a>
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-4-exercise-4-3.html" class="ex-btn">Ex 4.3</a>
+        </div>
+    </div>
+
+    <!-- CHAPTER 5: Arithmetic Progressions -->
+    <div class="chapter-card">
+        <div class="chapter-number-bg">05</div>
+        <div class="card-header">
+            <span class="ch-badge">Arithmetic Progressions</span>
+            <h3>Chapter 5</h3>
+        </div>
+        <div class="ex-list">
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-5-exercise-5-1.html" class="ex-btn">Ex 5.1</a>
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-5-exercise-5-2.html" class="ex-btn">Ex 5.2</a>
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-5-exercise-5-3.html" class="ex-btn">Ex 5.3</a>
+        </div>
+    </div>
+
+    <!-- CHAPTER 6: Triangles -->
+    <div class="chapter-card">
+        <div class="chapter-number-bg">06</div>
+        <div class="card-header">
+            <span class="ch-badge">Triangles</span>
+            <h3>Chapter 6</h3>
+        </div>
+        <div class="ex-list">
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-6-exercise-6-1.html" class="ex-btn">Ex 6.1</a>
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-6-exercise-6-2.html" class="ex-btn">Ex 6.2</a>
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-6-exercise-6-3.html" class="ex-btn">Ex 6.3</a>
+        </div>
+    </div>
+
+    <!-- CHAPTER 7: Coordinate Geometry -->
+    <div class="chapter-card">
+        <div class="chapter-number-bg">07</div>
+        <div class="card-header">
+            <span class="ch-badge">Coordinate Geometry</span>
+            <h3>Chapter 7</h3>
+        </div>
+        <div class="ex-list">
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-7-exercise-7-1.html" class="ex-btn">Ex 7.1</a>
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-7-exercise-7-2.html" class="ex-btn">Ex 7.2</a>
+        </div>
+    </div>
+
+    <!-- CHAPTER 8: Trigonometry -->
+    <div class="chapter-card">
+        <div class="chapter-number-bg">08</div>
+        <div class="card-header">
+            <span class="ch-badge">Trigonometry</span>
+            <h3>Chapter 8</h3>
+        </div>
+        <div class="ex-list">
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-8-exercise-8-1.html" class="ex-btn">Ex 8.1</a>
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-8-exercise-8-2.html" class="ex-btn">Ex 8.2</a>
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-8-exercise-8-3.html" class="ex-btn">Ex 8.3</a>
+        </div>
+    </div>
+
+    <!-- CHAPTER 9: Applications of Trigonometry -->
+    <div class="chapter-card">
+        <div class="chapter-number-bg">09</div>
+        <div class="card-header">
+            <span class="ch-badge">App. of Trigonometry</span>
+            <h3>Chapter 9</h3>
+        </div>
+        <div class="ex-list">
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-9-exercise-9-1.html" class="ex-btn">Ex 9.1</a>
+        </div>
+    </div>
+
+    <!-- CHAPTER 10: Circles -->
+    <div class="chapter-card">
+        <div class="chapter-number-bg">10</div>
+        <div class="card-header">
+            <span class="ch-badge">Circles</span>
+            <h3>Chapter 10</h3>
+        </div>
+        <div class="ex-list">
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-10-exercise-10-1.html" class="ex-btn">Ex 10.1</a>
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-10-exercise-10-2.html" class="ex-btn">Ex 10.2</a>
+        </div>
+    </div>
+
+    <!-- CHAPTER 11: Areas Related to Circles -->
+    <div class="chapter-card">
+        <div class="chapter-number-bg">11</div>
+        <div class="card-header">
+            <span class="ch-badge">Areas Related to Circles</span>
+            <h3>Chapter 11</h3>
+        </div>
+        <div class="ex-list">
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-11-exercise-11-1.html" class="ex-btn">Ex 11.1</a>
+        </div>
+    </div>
+
+    <!-- CHAPTER 12: Surface Areas and Volumes -->
+    <div class="chapter-card">
+        <div class="chapter-number-bg">12</div>
+        <div class="card-header">
+            <span class="ch-badge">Surface Areas & Volumes</span>
+            <h3>Chapter 12</h3>
+        </div>
+        <div class="ex-list">
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-12-exercise-12-1.html" class="ex-btn">Ex 12.1</a>
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-12-exercise-12-2.html" class="ex-btn">Ex 12.2</a>
+        </div>
+    </div>
+
+    <!-- CHAPTER 13: Statistics -->
+    <div class="chapter-card">
+        <div class="chapter-number-bg">13</div>
+        <div class="card-header">
+            <span class="ch-badge">Statistics</span>
+            <h3>Chapter 13</h3>
+        </div>
+        <div class="ex-list">
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-13-exercise-13-1.html" class="ex-btn">Ex 13.1</a>
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-13-exercise-13-2.html" class="ex-btn">Ex 13.2</a>
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-13-exercise-13-3.html" class="ex-btn">Ex 13.3</a>
+        </div>
+    </div>
+
+    <!-- CHAPTER 14: Probability -->
+    <div class="chapter-card">
+        <div class="chapter-number-bg">14</div>
+        <div class="card-header">
+            <span class="ch-badge">Probability</span>
+            <h3>Chapter 14</h3>
+        </div>
+        <div class="ex-list">
+            <a href="/ncert-solutions/ncert-solutions-class-10-maths-chapter-14-exercise-14-1.html" class="ex-btn">Ex 14.1</a>
+        </div>
+    </div>
+
+</div>
+    </section>
+
+    <!-- Footer will be loaded here -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPT FOR HEADER/FOOTER -->
+    <script>
+        fetch('footer.html?v=1.0')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
+        fetch('header.html?v=1.0')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                // Init Mobile Menu
+                const menuBtn = document.getElementById('menuBtn');
+                const navLinks = document.getElementById('navLinks');
+                if(menuBtn && navLinks) {
+                    const icon = menuBtn.querySelector('i');
+                    menuBtn.addEventListener('click', function() {
+                        navLinks.classList.toggle('active');
+                        if (navLinks.classList.contains('active')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                }
+            });
+    </script>
+</body>
+</html>
