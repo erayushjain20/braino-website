@@ -1,32 +1,178 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Homepage -->
   <url>
-    <loc>https://braino.in/</loc>
-    <changefreq>daily</changefreq>
+    <loc>https://www.braino.in/</loc>
+    <lastmod>2026-01-25</lastmod>
     <priority>1.0</priority>
   </url>
-
-  <!-- Partner / Educator Program -->
   <url>
-    <loc>https://braino.in/partner.html</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://www.braino.in/partner.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/class-10-maths.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-1-exercise-1-1.html</loc>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.8</priority>
   </url>
-
-  <!-- Pricing page (if live) -->
   <url>
-    <loc>https://braino.in/pricing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-1-exercise-1-2.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
   </url>
-
-  <!-- Contact page -->
   <url>
-    <loc>https://braino.in/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-2-exercise-2-1.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-2-exercise-2-2.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-3-exercise-3-1.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-3-exercise-3-2.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-3-exercise-3-3.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-4-exercise-4-1.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-4-exercise-4-2.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-4-exercise-4-3.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-5-exercise-5-1.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-5-exercise-5-2.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-5-exercise-5-3.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-6-exercise-6-1.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-6-exercise-6-2.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-6-exercise-6-3.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-7-exercise-7-1.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-7-exercise-7-2.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-8-exercise-8-1.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-8-exercise-8-2.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-8-exercise-8-3.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-9-exercise-9-1.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-10-exercise-10-1.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-10-exercise-10-2.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-11-exercise-11-1.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-12-exercise-12-1.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-12-exercise-12-2.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-13-exercise-13-1.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-13-exercise-13-2.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-13-exercise-13-3.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.braino.in/ncert-solutions/ncert-solutions-class-10-maths-chapter-14-exercise-14-1.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>
