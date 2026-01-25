@@ -615,22 +615,6 @@ Cost of each article = $2(6) + 3 = 12 + 3 = 15$.
 **Answer: Number of articles = 6, Cost of each article = ₹15.**
     </div>
     <!-- ========================================== -->
-
-
-    <div class="app-nudge">
-    <div style="display: flex; gap: 1rem; align-items: center;">
-        <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display:flex; align-items:center; justify-content:center;">
-            <i class="fas fa-camera" style="font-size: 1.5rem; color: var(--color-curiosity);"></i>
-        </div>
-        <div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 0.2rem;">Snap a Photo of any Graph</h3>
-            <p style="font-size: 0.95rem; opacity: 0.8;">Braino AI can analyze geometry and graphs from photos instantly.</p>
-        </div>
-    </div>
-    <a href="#" class="btn btn-primary" style="background: white; color: var(--color-trust);">
-        Try Snap & Solve <i class="fas fa-external-link-alt"></i>
-    </a>
-</div>
 </main>
 
 
@@ -679,17 +663,13 @@ Cost of each article = $2(6) + 3 = 12 + 3 = 15$.
     const blocks = rawText.split('####').filter(b => b.trim().length > 0);
 
     blocks.forEach((block, index) => {
-        // 2. Extract Title (First line) and Content (Rest)
+        // 1. Text Parsing
         let lines = block.trim().split('\n');
-        let titleLine = lines[0].replace(/\*/g, '').trim(); // Remove ** stars
-        let contentMarkdown = lines.slice(1).join('\n'); // Everything else
-
-        // 3. Convert Content to HTML
+        let titleLine = lines[0].replace(/\*/g, '').trim(); 
+        let contentMarkdown = lines.slice(1).join('\n'); 
         let contentHtml = marked.parse(contentMarkdown);
 
-        // 4. Determine if this is a Question or just a Solution
-        // If title starts with 'Q', we assume it's a question block.
-        // If it starts with 'A' or 'Solution', we treat it as an answer block.
+        // 2. Check if it is Question or Answer
         let isAnswerOnly = titleLine.match(/^(A\d|Solution)/i);
 
         const article = document.createElement('article');
@@ -697,7 +677,7 @@ Cost of each article = $2(6) + 3 = 12 + 3 = 15$.
         article.id = 'block-' + index;
 
         if (isAnswerOnly) {
-            // RENDER STYLE: SOLUTION ONLY (Like your screenshot example)
+            // --- STYLE 1: ONLY SOLUTION ---
             article.innerHTML = `
                 <div class="q-badge" style="background:var(--color-trust);">Solution</div>
                 <h2 class="q-text" style="font-size: 1.2rem; color: #444;">${titleLine}</h2>
@@ -708,16 +688,29 @@ Cost of each article = $2(6) + 3 = 12 + 3 = 15$.
                 </div>
             `;
         } else {
-            // RENDER STYLE: FULL QUESTION (Standard)
+            // --- STYLE 2: QUESTION + AI NUDGE (No Video) ---
             article.innerHTML = `
                 <div class="q-badge">Question</div>
                 <h2 class="q-text">${titleLine}</h2>
-                <div class="solution-content">
+                
+                <div class="solution-content" style="margin-bottom: 1.5rem;">
                     <div class="step-content">${contentHtml}</div>
                 </div>
-                <div class="video-placeholder">
-                     <a href="#" class="play-btn-pulse"><i class="fas fa-play" style="margin-left:5px;"></i></a>
-                     <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Watch Video Explanation</h3>
+
+                <!-- NEW AI SNAP PHOTO BLOCK -->
+                <div class="ai-nudge-card" style="background: #1e293b; color: white; border-radius: 12px; padding: 1.5rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; justify-content: space-between; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                    <div style="display: flex; gap: 1rem; align-items: center;">
+                        <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.15); border-radius: 50%; display:flex; align-items:center; justify-content:center; flex-shrink: 0;">
+                            <i class="fas fa-camera" style="font-size: 1.4rem; color: #06b6d4;"></i>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1.1rem; margin: 0 0 0.3rem 0; font-weight: 700; color: white;">Stuck on this Question?</h3>
+                            <p style="font-size: 0.9rem; margin: 0; opacity: 0.9; color: #cbd5e1;">Need a deeper explanation? Speak your doubt or Snap a photo for a detailed, step-by-step solution from Braino AI.</p>
+                        </div>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.aitutorapp" style="background: white; color: #1e293b; padding: 0.6rem 1.2rem; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.9rem; white-space: nowrap; display: inline-flex; align-items: center; gap: 5px;">
+                        Try Now <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             `;
         }
